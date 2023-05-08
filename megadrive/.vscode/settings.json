@@ -1,4 +1,7 @@
 {
-    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Chromium, IndentWidth: 4, SortIncludes: false}",
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Microsoft, IndentWidth: 4, SortIncludes: false}",
     "editor.formatOnSave": false,
+    "files.associations": {
+        "*.h": "c"
+    },
 }
