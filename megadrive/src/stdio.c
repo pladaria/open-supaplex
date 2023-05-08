@@ -5,6 +5,16 @@ int snprintf(char *str, size_t size, const char *format, ...)
     return 0;
 }
 
+int fprintf(FILE *stream, const char *format, ...)
+{
+    return 0;
+}
+
+int printf(const char *format, ...)
+{
+    return 0;
+}
+
 long int ftell(FILE *stream)
 {
     return 0;

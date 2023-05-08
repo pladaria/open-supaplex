@@ -67,6 +67,9 @@ void destroyLogging(void)
 
 void spLog(LogLevel level, const char *format, ...)
 {
+#ifdef __MEGADRIVE__
+    return;
+#else
     char buffer[0x800];
 
     if (gLogLevel > level)
@@ -86,5 +89,6 @@ void spLog(LogLevel level, const char *format, ...)
     SDL_Log("%s", buffer);
 #else
     printf("%s\n", buffer);
+#endif
 #endif
 }

@@ -1,8 +1,10 @@
 #ifndef _STDDEF_H
 #define _STDDEF_H 1
 
-#define size_t unsigned int
+#define __MEGADRIVE__ 1
 
-#define NULL 0
+#include "genesis.h" /* includes type definitions for basic data types, NULL, etc */
+
+#define size_t int
 
 #endif
