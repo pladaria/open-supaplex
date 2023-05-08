@@ -2,6 +2,7 @@
 #define _STDDEF_H 1
 
 #define __MEGADRIVE__ 1
+#define HAVE_SDL 1
 
 #include "genesis.h" /* includes type definitions for basic data types, NULL, etc */
 
