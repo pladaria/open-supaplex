@@ -140,11 +140,11 @@ void emulateClock()
 
     if (sLastTickCount == 0)
     {
-        sLastTickCount = getTime();
+        sLastTickCount = getTicks();
         return;
     }
 
-    sRemainingTicks += getTime() - sLastTickCount;
+    sRemainingTicks += getTicks() - sLastTickCount;
 
     while (sRemainingTicks > sClockInterval)
     {
@@ -152,7 +152,7 @@ void emulateClock()
         sRemainingTicks -= sClockInterval;
     }
 
-    sLastTickCount = getTime();
+    sLastTickCount = getTicks();
 }
 
 void handleSystemEvents()
@@ -173,7 +173,7 @@ void handleSystemEvents()
     emulateClock();
 }
 
-uint32_t getTime(void)
+uint32_t getTicks(void)
 {
     return SDL_GetTicks();
 }

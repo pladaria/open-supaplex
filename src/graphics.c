@@ -1317,14 +1317,14 @@ void limitFPS()
 
     if (sLastFrameTime != 0)
     {
-        uint32_t duration = (getTime() - sLastFrameTime);
+        uint32_t duration = (getTicks() - sLastFrameTime);
         if (duration < kFrameDuration)
         {
             waitTime(kFrameDuration - duration);
         }
     }
 
-    sLastFrameTime = getTime();
+    sLastFrameTime = getTicks();
 }
 
 void videoLoop() //   proc near       ; CODE XREF: crt?2+52p crt?1+3Ep ...
@@ -1353,17 +1353,17 @@ void videoLoop() //   proc near       ; CODE XREF: crt?2+52p crt?1+3Ep ...
 
     if (gFrameRateReferenceTime == 0)
     {
-        gFrameRateReferenceTime = getTime();
+        gFrameRateReferenceTime = getTicks();
     }
     else
     {
-        uint32_t difference = getTime() - gFrameRateReferenceTime;
+        uint32_t difference = getTicks() - gFrameRateReferenceTime;
 
         if (difference > 1000)
         {
             gFrameRate = sNumberOfFrames * 1000.f / difference;
             sNumberOfFrames = 0;
-            gFrameRateReferenceTime = getTime();
+            gFrameRateReferenceTime = getTicks();
         }
     }
 }
@@ -1474,12 +1474,12 @@ void setPalette(ColorPalette palette) // sub_4D836   proc near       ; CODE XREF
 
 void startTrackingRenderDeltaTime()
 {
-    gRenderDeltaTime = getTime();
+    gRenderDeltaTime = getTicks();
 }
 
 uint32_t updateRenderDeltaTime()
 {
-    uint32_t duration = getTime() - gRenderDeltaTime;
-    gRenderDeltaTime = getTime();
+    uint32_t duration = getTicks() - gRenderDeltaTime;
+    gRenderDeltaTime = getTicks();
     return duration;
 }

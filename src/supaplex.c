@@ -4058,13 +4058,13 @@ void initializeGameInfo() // sub_48A20   proc near       ; CODE XREF: start+32F
 
 void handleGameIterationStarted()
 {
-    gGameIterationStartTime = getTime();
+    gGameIterationStartTime = getTicks();
 }
 
 void handleGameIterationFinished()
 {
     const float kOriginalIterationDuration = 1000.0 / 35; // 35 iterations per second in the original game
-    float currentIterationDuration = getTime() - gGameIterationStartTime;
+    float currentIterationDuration = getTicks() - gGameIterationStartTime;
 
     float targetIterationDuration = kOriginalIterationDuration * kSpeedTimeFactors[gGameSpeed];
 
@@ -4082,17 +4082,17 @@ void handleGameIterationFinished()
 
     if (gGameIterationRateReferenceTime == 0)
     {
-        gGameIterationRateReferenceTime = getTime();
+        gGameIterationRateReferenceTime = getTicks();
     }
     else
     {
-        uint32_t difference = getTime() - gGameIterationRateReferenceTime;
+        uint32_t difference = getTicks() - gGameIterationRateReferenceTime;
 
         if (difference > 1000)
         {
             gGameIterationRate = gNumberOfGameIterations * 1000.f / difference;
             gNumberOfGameIterations = 0;
-            gGameIterationRateReferenceTime = getTime();
+            gGameIterationRateReferenceTime = getTicks();
         }
     }
 }
@@ -5799,10 +5799,10 @@ void updateTerminalTiles(int16_t position) // movefun5  proc near       ; DATA X
 }
 
 /// Updates the random seed using the clock
-void generateRandomSeedFromClock() // getTime    proc near       ; CODE XREF: start:doesNotHaveCommandLinep
+void generateRandomSeedFromClock() // getTicks    proc near       ; CODE XREF: start:doesNotHaveCommandLinep
                     // ; handleGameUserInput+669p ...
 {
-    uint32_t timeInMilliseconds = getTime();
+    uint32_t timeInMilliseconds = getTicks();
     // In order to keep the same behavior and values, this code will convert
     // the time in milliseconds to the clock count, as described in
     // http://vitaly_filatov.tripod.com/ng/asm/asm_029.1.html
