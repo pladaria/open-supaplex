@@ -7,8 +7,12 @@ dev:
 	make opensupaplex
 	$(BLASTEM) "$(CURDIR)/out/rom.bin"
 
+prepare:
+	ln
+
 opensupaplex:
-	docker run --rm -ti -v "${PWD}":/src -v "${PWD}/../src:/src/src/supaplex" -u $(USER_NAME):$(USER_GROUP) sgdk
+	sh prepare.sh
+	docker run --rm -ti -v "${PWD}":/src -u $(USER_NAME):$(USER_GROUP) sgdk
 
 clean:
 	rm -rf out
