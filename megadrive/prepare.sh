@@ -10,6 +10,6 @@ rm -rf src/supaplex/3ds \
     src/supaplex/ps2 \
     src/supaplex/psp \
     src/supaplex/psp2 \
-    src/supaplex/sdl2 \
+    src/supaplex/sdl1 \
     src/supaplex/wii \
     src/supaplex/wiiu
