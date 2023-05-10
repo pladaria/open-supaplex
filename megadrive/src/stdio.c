@@ -15,6 +15,11 @@ int printf(const char *format, ...)
     return 0;
 }
 
+int vfprintf(FILE *stream, const char *format, ...)
+{
+    return 0;
+}
+
 long int ftell(FILE *stream)
 {
     return 0;

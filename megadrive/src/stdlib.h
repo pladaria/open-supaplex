@@ -1,7 +1,7 @@
 #ifndef _STDLIB_H
 #define _STDLIB_H 1
 
-#include <stddef.h>
+#include "stddef.h"
 
 #define exit(n) (SYS_die(NULL))
 
