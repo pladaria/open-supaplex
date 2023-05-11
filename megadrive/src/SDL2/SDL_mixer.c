@@ -2,7 +2,6 @@
 
 void Mix_Quit(void)
 {
-
 }
 
 int Mix_PlayMusic(Mix_Music *music, int loops) {

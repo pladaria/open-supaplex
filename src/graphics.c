@@ -1120,9 +1120,9 @@ void renderAdvancedOptionsMenu(AdvancedOptionsMenu *menu)
     static const uint8_t kEntryTextColorIndex = 254;
     static const uint8_t kSelectedEntryTextColorIndex = 255;
 
-    setGlobalPaletteColor(kTitleTextColorIndex, (Color) { 255, 255, 255 });
-    setGlobalPaletteColor(kEntryTextColorIndex, (Color) { 180, 180, 180 });
-    setGlobalPaletteColor(kSelectedEntryTextColorIndex, (Color) { 224, 16, 16 });
+    setGlobalPaletteColor(kTitleTextColorIndex, (Color) { 255, 255, 255, 255 });
+    setGlobalPaletteColor(kEntryTextColorIndex, (Color) { 180, 180, 180, 255 });
+    setGlobalPaletteColor(kSelectedEntryTextColorIndex, (Color) { 224, 16, 16, 255 });
 
     const uint16_t kMenuTitleX = (kScreenWidth - strlen(menu->title) * kBitmapFontCharacter6Width) / 2;
 

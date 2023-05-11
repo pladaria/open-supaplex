@@ -16,12 +16,6 @@ typedef struct _Mix_Music Mix_Music;
 
 typedef enum
 {
-    SDL_FALSE = 0,
-    SDL_TRUE = 1
-} SDL_bool;
-
-typedef enum
-{
     MIX_NO_FADING,
     MIX_FADING_OUT,
     MIX_FADING_IN
@@ -54,7 +48,6 @@ typedef struct Mix_Chunk
     Uint8 volume;
 } Mix_Chunk;
 
-void SDL_InitSubSystem(Uint32 flags);
 void Mix_Quit(void);
 int Mix_PlayMusic(Mix_Music *music, int loops);
 void Mix_PauseMusic(void);

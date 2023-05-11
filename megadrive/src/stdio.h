@@ -1,7 +1,7 @@
 #ifndef _STDIO_H
 #define _STDIO_H 1
 
-#include <stddef.h>
+#include <stdlib.h>
 
 struct _IO_FILE;
 typedef struct _IO_FILE FILE;
