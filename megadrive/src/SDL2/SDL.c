@@ -207,7 +207,7 @@ Uint16 SDL_Swap16(Uint16 x)
     return 0;
 }
 
-Uint16 SwapLE16(Uint16 x)
+Uint16 SDL_SwapLE16(Uint16 x)
 {
     return 0;
 }

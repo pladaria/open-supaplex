@@ -1527,7 +1527,13 @@ void runAdvancedOptionsRootMenu()
     }
 }
 
-int main(int argc, char *argv[])
+#ifdef __MEGADRIVE__
+#define __MAIN_FUNCTION__ supaplex_main
+#else
+#define __MAIN_FUNCTION__ main
+#endif
+
+int __MAIN_FUNCTION__(int argc, char *argv[])
 {
     parseCommandLineOptions(argc, argv);
 
@@ -8417,6 +8423,10 @@ void sub_4C407() //   proc near       ; CODE XREF: runMainMenu+5Dp
 
 void scrollLeftToMainMenu() //loc_4C44F:              ; CODE XREF: handleGfxTutorOptionClick+9p
 {
+#ifdef __MEGADRIVE__
+    // @TODO pladaria
+    return;
+#else
     uint8_t *currentScreenPixels = malloc(kFullScreenFramebufferLength);
     memcpy(currentScreenPixels, gScreenPixels, kFullScreenFramebufferLength);
 
@@ -8474,6 +8484,7 @@ void scrollLeftToMainMenu() //loc_4C44F:              ; CODE XREF: handleGfxTuto
     // area in the main menu.
     //
     saveLastMouseAreaBitmap();
+#endif
 }
 
 void drawFailedLevelResultScreen() // sub_4C4F9   proc near       ; CODE XREF: sub_4C407+11p
@@ -8517,6 +8528,10 @@ void drawFailedLevelResultScreen() // sub_4C4F9   proc near       ; CODE XREF: s
 
 void scrollRightToNewScreen() // sub_4C5AF   proc near       ; CODE XREF: handleGfxTutorOptionClick+3p
 {
+#ifdef __MEGADRIVE__
+    // @TODO pladaria
+    return;
+#else
     videoLoop();
 
     uint8_t *screenPixelsBackup = malloc(kFullScreenFramebufferLength);
@@ -8560,6 +8575,7 @@ void scrollRightToNewScreen() // sub_4C5AF   proc near       ; CODE XREF: handle
     }
 
     free(screenPixelsBackup);
+#endif
 }
 
 void handleOptionsStandardClick() // sub_4C705  proc near       ; CODE XREF: code:5ADBp

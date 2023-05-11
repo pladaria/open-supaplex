@@ -1,3 +1,6 @@
 #include "genesis.h"
+#include "supaplex.h"
 
-#include "./supaplex/supaplex.c"
+int main(bool hardReset) {
+    return supaplex_main(0, NULL);
+}

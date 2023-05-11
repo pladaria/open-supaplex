@@ -34,3 +34,18 @@ int fclose(FILE *stream)
 {
     return 0;
 }
+
+FILE *fopen(const char *filename, const char *mode)
+{
+    return NULL;
+}
+
+size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)
+{
+    return 0;
+}
+
+size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
+{
+    return 0;
+}

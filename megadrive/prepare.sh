@@ -15,4 +15,8 @@ rm -rf src/supaplex/3ds \
     src/supaplex/psp2 \
     src/supaplex/sdl1 \
     src/supaplex/wii \
+    src/supaplex/sdl2 \
+    src/supaplex/sdl_common \
+    src/supaplex/lib \
+    src/supaplex/config.c \
     src/supaplex/wiiu

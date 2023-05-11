@@ -19,5 +19,8 @@ int vfprintf(FILE *stream, const char *format, ...);
 long int ftell(FILE *stream);
 int fseek(FILE *stream, long int offset, int whence);
 int fclose(FILE *stream);
+FILE *fopen(const char *filename, const char *mode);
+size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);
+size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
 
 #endif

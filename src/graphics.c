@@ -1329,6 +1329,9 @@ void limitFPS()
 
 void videoLoop() //   proc near       ; CODE XREF: crt?2+52p crt?1+3Ep ...
 {
+#ifdef __MEGADRIVE__
+    return;
+#else
     if (gShouldShowFPS)
     {
         char frameRateString[5] = "";
@@ -1366,6 +1369,7 @@ void videoLoop() //   proc near       ; CODE XREF: crt?2+52p crt?1+3Ep ...
             gFrameRateReferenceTime = getTicks();
         }
     }
+#endif
 }
 
 void convertPaletteDataToPalette(ColorPaletteData paletteData, ColorPalette outPalette)

@@ -893,7 +893,7 @@ SDL_GameController *SDL_GameControllerOpen(int joystick_index);
 Sint16 SDL_GameControllerGetAxis(SDL_GameController *gamecontroller, SDL_GameControllerAxis axis);
 Uint8 SDL_GameControllerGetButton(SDL_GameController *gamecontroller, SDL_GameControllerButton button);
 Uint16 SDL_Swap16(Uint16 x);
-Uint16 SwapLE16(Uint16 x);
+Uint16 SDL_SwapLE16(Uint16 x);
 void SDL_Delay(Uint32 ms);
 
 #endif
