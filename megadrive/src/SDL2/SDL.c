@@ -74,3 +74,20 @@ int SDL_BlitSurface(SDL_Surface *src, const SDL_Rect *srcrect, SDL_Surface *dst,
 {
     return 0;
 }
+
+int SDL_GetRendererOutputSize(SDL_Renderer *renderer, int *w, int *h)
+{
+    return 0;
+}
+
+int SDL_RenderClear(SDL_Renderer * renderer) {
+    return 0;
+}
+
+int SDL_ShowCursor(int toggle) {
+    return 0;
+}
+
+int SDL_RenderCopy(SDL_Renderer *renderer, SDL_Texture *texture, const SDL_Rect *srcrect, const SDL_Rect *dstrect) {
+    return 0;
+}

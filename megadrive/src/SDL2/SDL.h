@@ -23,7 +23,11 @@
 #define SDL_INIT_VIDEO 0x00000020u
 
 // events
-#define SDL_QUIT 0x100
+typedef enum
+{
+    SDL_QUIT = 0x100,
+    SDL_WINDOWEVENT = 0x200,
+} SDL_EventType;
 
 #define SDL_PIXELFORMAT_RGB24 1 /* I don't care */
 
@@ -62,6 +66,22 @@ typedef struct SDL_Color
     Uint8 a;
 } SDL_Color;
 
+typedef struct SDL_Palette
+{
+    int ncolors;
+    SDL_Color *colors;
+    Uint32 version;
+    int refcount;
+} SDL_Palette;
+
+typedef struct SDL_PixelFormat
+{
+    Uint32 format;
+    SDL_Palette *palette;
+    // add fields as needed
+    struct SDL_PixelFormat *next;
+} SDL_PixelFormat;
+
 typedef struct SDL_Rect
 {
     int x, y;
@@ -75,7 +95,10 @@ typedef struct SDL_Window
 
 typedef struct SDL_Surface
 {
-    // fill if needed
+    void *pixels;
+    SDL_PixelFormat *format;
+    int pitch;
+    // add fields as needed
 } SDL_Surface;
 
 typedef struct SDL_Texture
@@ -95,6 +118,11 @@ typedef union {
 
 typedef int (*SDL_EventFilter)(void *userdata, SDL_Event *event);
 
+// Mouse
+#define SDL_BUTTON(X) (1 << ((X)-1))
+#define SDL_BUTTON_LEFT 1
+#define SDL_BUTTON_RIGHT 3
+
 int SDL_Init(Uint32 flags);
 Uint32 SDL_GetTicks(void);
 void SDL_Quit(void);
@@ -111,5 +139,9 @@ SDL_Surface *SDL_CreateRGBSurfaceWithFormat(Uint32 flags, int width, int height,
 SDL_Surface *SDL_CreateRGBSurface(Uint32 flags, int width, int height, int depth, Uint32 Rmask, Uint32 Gmask,
                                   Uint32 Bmask, Uint32 Amask);
 int SDL_BlitSurface(SDL_Surface *src, const SDL_Rect *srcrect, SDL_Surface *dst, SDL_Rect *dstrect);
+int SDL_GetRendererOutputSize(SDL_Renderer *renderer, int *w, int *h);
+int SDL_RenderClear(SDL_Renderer *renderer);
+int SDL_ShowCursor(int toggle);
+int SDL_RenderCopy(SDL_Renderer *renderer, SDL_Texture *texture, const SDL_Rect *srcrect, const SDL_Rect *dstrect);
 
 #endif
