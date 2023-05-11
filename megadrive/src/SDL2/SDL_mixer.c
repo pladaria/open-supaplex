@@ -1,8 +1,5 @@
 #include "SDL_mixer.h"
 
-void SDL_InitSubSystem(Uint32 flags) {
-}
-
 void Mix_Quit(void)
 {
 
@@ -41,4 +38,25 @@ void Mix_ResumeMusic(void) {
 
 int Mix_OpenAudio(int frequency, Uint16 format, int channels, int chunksize) {
     return 0;
+}
+
+int Mix_PlayChannel(int channel, Mix_Chunk *chunk, int loops) {
+    return 0;
+}
+
+int Mix_Volume(int channel, int volume) {
+    return 0;
+}
+
+int Mix_Init(int flags) {
+    return 0;
+}
+
+int Mix_QuerySpec(int *frequency, Uint16 *format, int *channels) {
+    return 0;
+}
+
+Mix_Music *Mix_LoadMUS(const char *file)
+{
+    return NULL;
 }

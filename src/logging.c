@@ -67,6 +67,7 @@ void destroyLogging(void)
 
 void spLog(LogLevel level, const char *format, ...)
 {
+    // @TODO pladaria: implement logging
 #ifdef __MEGADRIVE__
     return;
 #else

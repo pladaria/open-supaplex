@@ -3,8 +3,7 @@
 
 /** blame copilot for this */
 #define ceilf(x) ((int) x + 1.0f);
-
-/** blame copilot for this */
 #define roundf(x) ((int) x + 0.5f);
+#define floorf(x) ((int) x);
 
 #endif

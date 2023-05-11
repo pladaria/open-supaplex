@@ -1,13 +1,12 @@
 #ifndef _SDL_MIXER_H
 #define _SDL_MIXER_H 1
 
-#include "../stddef.h"
 #include "SDL.h"
 
 #define SDL_MIX_MAXVOLUME 128
 #define MIX_MAX_VOLUME SDL_MIX_MAXVOLUME
 
-#define AUDIO_S16LSB
+#define AUDIO_S16LSB 0x8010
 #define MIX_DEFAULT_FORMAT AUDIO_S16LSB
 
 // Mix init flags
@@ -68,5 +67,11 @@ void Mix_CloseAudio(void);
 void Mix_ResumeMusic(void);
 int Mix_OpenAudio(int frequency, Uint16 format, int channels, int chunksize);
 int Mix_PlayChannel(int channel, Mix_Chunk *chunk, int loops);
+int Mix_Volume(int channel, int volume);
+int Mix_Init(int flags);
+int Mix_QuerySpec(int *frequency, Uint16 *format, int *channels);
+Mix_Music *Mix_LoadMUS(const char *file);
+
+#define Mix_GetError SDL_GetError
 
 #endif
