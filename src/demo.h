@@ -23,7 +23,7 @@
 
 #include "globals.h"
 
-extern uint16_t kOriginalDemoFileSizes[10]; // word_599DC
+extern const uint16_t kOriginalDemoFileSizes[10]; // word_599DC
 
 typedef struct {
     uint8_t levelNumber;
@@ -33,7 +33,7 @@ typedef struct {
 // These are literally the first 4 bytes of the original files, used by the spfix version to detect when a demo from
 // the original game was being parsed (since those had a different format).
 //
-extern FirstOriginalDemoFileChunk kOriginalDemoFirstFileChunks[10]; // word_599E4
+extern const FirstOriginalDemoFileChunk kOriginalDemoFirstFileChunks[10]; // word_599E4
 
 #define kMaxDemoInputSteps 48648
 #define kMaxBaseDemoSize 1 + kMaxDemoInputSteps + 1

@@ -57,7 +57,11 @@ extern ColorPaletteData gTitle2PaletteData;
 #define kPanelBitmapHeight 24
 extern uint8_t gCurrentPanelHeight;
 
-#define kFullScreenFramebufferLength (kScreenWidth * kScreenHeight) // We only use 16 colors, but SDL doesn't support that mode, so we use 256 colors
+#ifdef __MEGADRIVE__
+#define kFullScreenFramebufferLength 1
+#else
+#define kFullScreenFramebufferLength (kScreenWidth * kScreenHeight) /* We only use 16 colors, but SDL doesn't support that mode, so we use 256 colors */
+#endif
 
 // This buffer has the contents of TITLE2.DAT after it's been "decoded" (i.e. after picking the different channels
 // every 40 bytes and forming the 4 bit palette index for each pixel).

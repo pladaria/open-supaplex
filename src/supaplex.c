@@ -4071,7 +4071,7 @@ void handleGameIterationFinished()
 
     if (gFastMode != FastModeTypeNone)
     {
-        targetIterationDuration = 0;
+        targetIterationDuration = 0.f;
     }
 
     if (currentIterationDuration < targetIterationDuration)
@@ -4081,6 +4081,10 @@ void handleGameIterationFinished()
 
     gNumberOfGameIterations++;
 
+#ifdef __MEGADRIVE__
+    // @TODO pladaria: this produces compiler errors due to missing helper functions for float conversion
+    return;
+#else
     if (gGameIterationRateReferenceTime == 0)
     {
         gGameIterationRateReferenceTime = getTicks();
@@ -4096,6 +4100,7 @@ void handleGameIterationFinished()
             gGameIterationRateReferenceTime = getTicks();
         }
     }
+#endif
 }
 
 void runLevel() //    proc near       ; CODE XREF: start+35Cp
@@ -9726,6 +9731,9 @@ void initializeMouse() //   proc near       ; CODE XREF: start+299p
 void getMouseStatus(uint16_t *mouseX, uint16_t *mouseY, uint16_t *mouseButtonStatus) //   proc near       ; CODE XREF: waitForKeyMouseOrJoystick:mouseIsClickedp
 //                    ; waitForKeyMouseOrJoystick+3Ep ...
 {
+#ifdef __MEGADRIVE__
+    return;
+#else
     // Returns coordinate X in CX (0-320) and coordinate Y in DX (0-200).
     // Also button status in BX.
 
@@ -9809,6 +9817,7 @@ void getMouseStatus(uint16_t *mouseX, uint16_t *mouseY, uint16_t *mouseButtonSta
         *mouseButtonStatus = (rightButtonPressed << 1
                                 | leftButtonPressed);
     }
+#endif
 }
 
 #define COPY_LEVEL_DATA(__dest, __size) \

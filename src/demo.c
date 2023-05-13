@@ -19,7 +19,7 @@
 
 #include <string.h>
 
-uint16_t kOriginalDemoFileSizes[10] = { // word_599DC
+const uint16_t kOriginalDemoFileSizes[10] = { // word_599DC
     0x00CE, 0x016A, 0x0146, 0x00CD, 0x024D,
     0x012C, 0x01A7, 0x01FB, 0x01D2, 0x02FD
 };
@@ -27,7 +27,7 @@ uint16_t kOriginalDemoFileSizes[10] = { // word_599DC
 // These are literally the first 4 bytes of the original files, used by the spfix version to detect when a demo from
 // the original game was being parsed (since those had a different format).
 //
-FirstOriginalDemoFileChunk kOriginalDemoFirstFileChunks[10] = { // word_599E4
+const FirstOriginalDemoFileChunk kOriginalDemoFirstFileChunks[10] = { // word_599E4
     { 0x01, { 0xF0, 0xF0, 0xF1 } },
     { 0x03, { 0xF0, 0x50, 0xF3 } },
     { 0x07, { 0xF0, 0x60, 0xF4 } },
