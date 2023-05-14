@@ -227,7 +227,12 @@ typedef struct
     uint8_t completedAllLevels; // Still not 100% sure
 } PlayerEntry;
 
+#ifdef __MEGADRIVE__
+#define kNumberOfPlayers 2 /* @TODO pladaria: increase this*/
+#else
 #define kNumberOfPlayers 20
+#endif
+
 //static const int kPlayerEntryLength = 128;
 extern PlayerEntry gPlayerListData[kNumberOfPlayers]; // 0x8A9C -> word_58DAC
 

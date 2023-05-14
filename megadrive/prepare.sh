@@ -9,6 +9,7 @@ rm -rf src/supaplex/3ds \
     src/supaplex/apple \
     src/supaplex/config.c \
     src/supaplex/graphics.c \
+    src/supaplex/savegame.c \
     src/supaplex/lib \
     src/supaplex/nds \
     src/supaplex/nx \

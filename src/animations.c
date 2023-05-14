@@ -17,7 +17,7 @@
 
 #include "animations.h"
 
-const MurphyAnimationDescriptor kMurphyAnimationDescriptors[50] = { // someBinaryData_5110E
+const MurphyAnimationDescriptor kMurphyAnimationDescriptors[1] = { // someBinaryData_5110E
     { // 0
         0x06ac, // -> dfe
         0xff0c, // -> e00
@@ -27,7 +27,7 @@ const MurphyAnimationDescriptor kMurphyAnimationDescriptors[50] = { // someBinar
         0x0000, // -> e08
         0xfffe, // -> e0a
         0x0000, // -> e0c
-    }, { // 1
+    }/*, { // 1
         0x06ac, // -> e0e
         0xff0c, // -> e10
         0x0002, // -> e12
@@ -469,9 +469,10 @@ const MurphyAnimationDescriptor kMurphyAnimationDescriptors[50] = { // someBinar
         0x0000, // -> 111a
         0x0000, // -> 111c
     }
+    */
 };
 
-const AnimationFrameCoordinates kMurphyAnimationFrameCoordinates[37] = {
+const AnimationFrameCoordinates kMurphyAnimationFrameCoordinates[1] = {
     { // 0
         {
             { 0, 66 }, // -> 0x2ae6 -> 111e
@@ -485,6 +486,7 @@ const AnimationFrameCoordinates kMurphyAnimationFrameCoordinates[37] = {
         },
         8
     },
+    /*
     { // 1
         {
             { 48, 66 }, // -> 0x2aec -> 1130
@@ -969,6 +971,7 @@ const AnimationFrameCoordinates kMurphyAnimationFrameCoordinates[37] = {
         },
         3
     },
+    */
 };
 
 const Point kBugFrameCoordinates[16] = { // binaryData_51582

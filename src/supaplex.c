@@ -8027,7 +8027,7 @@ void prepareRankingTextEntries() // sub_4BF8D  proc near       ; CODE XREF: draw
 
     RankingEntry rankingEntries[kNumberOfPlayers];
 
-    for (int i = 0; i < 20; ++i)
+    for (int i = 0; i < kNumberOfPlayers; ++i)
     {
 //loc_4BFA2:              ; CODE XREF: prepareRankingTextEntries+38j
         RankingEntry *rankingEntry = &rankingEntries[i];
@@ -8072,7 +8072,7 @@ void prepareRankingTextEntries() // sub_4BF8D  proc near       ; CODE XREF: draw
     }
     while (numberOfChanges > 0);
 
-    for (int i = 0; i < 20; ++i)
+    for (int i = 0; i < kNumberOfPlayers; ++i)
     {
 //loc_4C04B:              ; CODE XREF: prepareRankingTextEntries+CFj
         if (rankingEntries[i].playerIndex == gCurrentPlayerIndex)
@@ -8084,7 +8084,7 @@ void prepareRankingTextEntries() // sub_4BF8D  proc near       ; CODE XREF: draw
 //loc_4C061:
 //    di = 0x883C; <- entry 2 of gRankingTextEntries
 
-    for (int i = 0; i < 20; ++i)
+    for (int i = 0; i < kNumberOfPlayers; ++i)
     {
         RankingEntry *rankingEntry = &rankingEntries[i];
         char *textEntry = gRankingTextEntries[i + 2]; // No idea why the first two are always empty

@@ -37,7 +37,7 @@ struct _Mix_Music
     int fade_step;
     int fade_steps;
 
-    char filename[1024];
+    char filename[1]; // 1024
 };
 
 typedef struct Mix_Chunk

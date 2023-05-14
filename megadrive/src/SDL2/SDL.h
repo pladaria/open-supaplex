@@ -6,7 +6,6 @@
 #define Sint16 short
 #define Uint32 unsigned long
 #define Sint32 long
-#define Sint64 long long
 
 #ifndef NULL
 #define NULL 0
@@ -27,7 +26,7 @@
 #define SDL_INIT_VIDEO 0x00000020u
 #define SDL_INIT_JOYSTICK 0x00000200u
 
-typedef Sint64 SDL_TouchID;
+typedef Sint32 SDL_TouchID; // should be Sint64
 
 // events
 typedef enum

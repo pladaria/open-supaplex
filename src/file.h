@@ -25,7 +25,11 @@
 // installed. For those original resources bundled with the game, the openReadonlyFile function will be used.
 // Other files will be opened with openWritableFile.
 //
+#ifdef __MEGADRIVE__
+#define kMaxFilePathLength 1
+#else
 #define kMaxFilePathLength 256
+#endif
 
 void getReadonlyFilePath(const char *pathname, char outPath[kMaxFilePathLength]);
 void getWritableFilePath(const char *pathname, char outPath[kMaxFilePathLength]);

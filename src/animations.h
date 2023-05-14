@@ -33,7 +33,7 @@ typedef struct {
     uint16_t currentFrame; // Not used in the original code, I will use it to keep track of the current animation frame
 } MurphyAnimationDescriptor;
 
-extern const MurphyAnimationDescriptor kMurphyAnimationDescriptors[50];
+extern const MurphyAnimationDescriptor kMurphyAnimationDescriptors[1]; // 50
 
 typedef struct
 {
@@ -43,11 +43,11 @@ typedef struct
 
 typedef struct
 {
-    Point coordinates[105];
+    Point coordinates[8]; // 105
     uint8_t numberOfCoordinates;
 } AnimationFrameCoordinates;
 
-extern const AnimationFrameCoordinates kMurphyAnimationFrameCoordinates[37];
+extern const AnimationFrameCoordinates kMurphyAnimationFrameCoordinates[1]; // 37
 extern const Point kBugFrameCoordinates[16]; // binaryData_51582
 extern Point kZonkSlideLeftAnimationFrameCoordinates[8]; // binaryData_515A4
 extern const Point kZonkSlideRightAnimationFrameCoordinates[8]; // binaryData_515B4
@@ -59,3 +59,4 @@ extern const Point kSnikSnakAnimationFrameCoordinates[48];
 extern const Point kElectronAnimationFrameCoordinates[48];
 
 #endif /* animations_h */
+
