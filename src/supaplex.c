@@ -475,56 +475,56 @@ void updateElectronMovementDown(int16_t position, uint8_t frame);
 void updateElectronMovementRight(int16_t position, uint8_t frame);
 void updateElectronMovementLeft(int16_t position, uint8_t frame);
 
-static const FrameBasedMovingFunction kElectronMovingFunctions[] = {
-    updateElectronTurnLeft,
-    updateElectronTurnLeft,
-    updateElectronTurnLeft,
-    updateElectronTurnLeft,
-    updateElectronTurnLeft,
-    updateElectronTurnLeft,
-    updateElectronTurnLeft,
-    updateElectronTurnLeft,
-    updateElectronTurnRight,
-    updateElectronTurnRight,
-    updateElectronTurnRight,
-    updateElectronTurnRight,
-    updateElectronTurnRight,
-    updateElectronTurnRight,
-    updateElectronTurnRight,
-    updateElectronTurnRight,
-    updateElectronMovementUp,
-    updateElectronMovementUp,
-    updateElectronMovementUp,
-    updateElectronMovementUp,
-    updateElectronMovementUp,
-    updateElectronMovementUp,
-    updateElectronMovementUp,
-    updateElectronMovementUp,
-    updateElectronMovementDown,
-    updateElectronMovementDown,
-    updateElectronMovementDown,
-    updateElectronMovementDown,
-    updateElectronMovementDown,
-    updateElectronMovementDown,
-    updateElectronMovementDown,
-    updateElectronMovementDown,
-    updateElectronMovementRight,
-    updateElectronMovementRight,
-    updateElectronMovementRight,
-    updateElectronMovementRight,
-    updateElectronMovementRight,
-    updateElectronMovementRight,
-    updateElectronMovementRight,
-    updateElectronMovementRight,
-    updateElectronMovementLeft,
-    updateElectronMovementLeft,
-    updateElectronMovementLeft,
-    updateElectronMovementLeft,
-    updateElectronMovementLeft,
-    updateElectronMovementLeft,
-    updateElectronMovementLeft,
-    updateElectronMovementLeft,
-};
+// static const FrameBasedMovingFunction kElectronMovingFunctions[] = {
+//     updateElectronTurnLeft,
+//     updateElectronTurnLeft,
+//     updateElectronTurnLeft,
+//     updateElectronTurnLeft,
+//     updateElectronTurnLeft,
+//     updateElectronTurnLeft,
+//     updateElectronTurnLeft,
+//     updateElectronTurnLeft,
+//     updateElectronTurnRight,
+//     updateElectronTurnRight,
+//     updateElectronTurnRight,
+//     updateElectronTurnRight,
+//     updateElectronTurnRight,
+//     updateElectronTurnRight,
+//     updateElectronTurnRight,
+//     updateElectronTurnRight,
+//     updateElectronMovementUp,
+//     updateElectronMovementUp,
+//     updateElectronMovementUp,
+//     updateElectronMovementUp,
+//     updateElectronMovementUp,
+//     updateElectronMovementUp,
+//     updateElectronMovementUp,
+//     updateElectronMovementUp,
+//     updateElectronMovementDown,
+//     updateElectronMovementDown,
+//     updateElectronMovementDown,
+//     updateElectronMovementDown,
+//     updateElectronMovementDown,
+//     updateElectronMovementDown,
+//     updateElectronMovementDown,
+//     updateElectronMovementDown,
+//     updateElectronMovementRight,
+//     updateElectronMovementRight,
+//     updateElectronMovementRight,
+//     updateElectronMovementRight,
+//     updateElectronMovementRight,
+//     updateElectronMovementRight,
+//     updateElectronMovementRight,
+//     updateElectronMovementRight,
+//     updateElectronMovementLeft,
+//     updateElectronMovementLeft,
+//     updateElectronMovementLeft,
+//     updateElectronMovementLeft,
+//     updateElectronMovementLeft,
+//     updateElectronMovementLeft,
+//     updateElectronMovementLeft,
+//     updateElectronMovementLeft,
+// };
 
 void updateSnikSnakTurnLeft(int16_t position, uint8_t frame);
 void updateSnikSnakTurnRight(int16_t position, uint8_t frame);
@@ -533,56 +533,56 @@ void updateSnikSnakMovementLeft(int16_t position, uint8_t frame);
 void updateSnikSnakMovementDown(int16_t position, uint8_t frame);
 void updateSnikSnakMovementRight(int16_t position, uint8_t frame);
 
-static const FrameBasedMovingFunction kSnikSnakMovingFunctions[48] = {
-    updateSnikSnakTurnLeft,
-    updateSnikSnakTurnLeft,
-    updateSnikSnakTurnLeft,
-    updateSnikSnakTurnLeft,
-    updateSnikSnakTurnLeft,
-    updateSnikSnakTurnLeft,
-    updateSnikSnakTurnLeft,
-    updateSnikSnakTurnLeft,
-    updateSnikSnakTurnRight,
-    updateSnikSnakTurnRight,
-    updateSnikSnakTurnRight,
-    updateSnikSnakTurnRight,
-    updateSnikSnakTurnRight,
-    updateSnikSnakTurnRight,
-    updateSnikSnakTurnRight,
-    updateSnikSnakTurnRight,
-    updateSnikSnakMovementUp,
-    updateSnikSnakMovementUp,
-    updateSnikSnakMovementUp,
-    updateSnikSnakMovementUp,
-    updateSnikSnakMovementUp,
-    updateSnikSnakMovementUp,
-    updateSnikSnakMovementUp,
-    updateSnikSnakMovementUp,
-    updateSnikSnakMovementLeft,
-    updateSnikSnakMovementLeft,
-    updateSnikSnakMovementLeft,
-    updateSnikSnakMovementLeft,
-    updateSnikSnakMovementLeft,
-    updateSnikSnakMovementLeft,
-    updateSnikSnakMovementLeft,
-    updateSnikSnakMovementLeft,
-    updateSnikSnakMovementDown,
-    updateSnikSnakMovementDown,
-    updateSnikSnakMovementDown,
-    updateSnikSnakMovementDown,
-    updateSnikSnakMovementDown,
-    updateSnikSnakMovementDown,
-    updateSnikSnakMovementDown,
-    updateSnikSnakMovementDown,
-    updateSnikSnakMovementRight,
-    updateSnikSnakMovementRight,
-    updateSnikSnakMovementRight,
-    updateSnikSnakMovementRight,
-    updateSnikSnakMovementRight,
-    updateSnikSnakMovementRight,
-    updateSnikSnakMovementRight,
-    updateSnikSnakMovementRight,
-};
+// static const FrameBasedMovingFunction kSnikSnakMovingFunctions[48] = {
+//     updateSnikSnakTurnLeft,
+//     updateSnikSnakTurnLeft,
+//     updateSnikSnakTurnLeft,
+//     updateSnikSnakTurnLeft,
+//     updateSnikSnakTurnLeft,
+//     updateSnikSnakTurnLeft,
+//     updateSnikSnakTurnLeft,
+//     updateSnikSnakTurnLeft,
+//     updateSnikSnakTurnRight,
+//     updateSnikSnakTurnRight,
+//     updateSnikSnakTurnRight,
+//     updateSnikSnakTurnRight,
+//     updateSnikSnakTurnRight,
+//     updateSnikSnakTurnRight,
+//     updateSnikSnakTurnRight,
+//     updateSnikSnakTurnRight,
+//     updateSnikSnakMovementUp,
+//     updateSnikSnakMovementUp,
+//     updateSnikSnakMovementUp,
+//     updateSnikSnakMovementUp,
+//     updateSnikSnakMovementUp,
+//     updateSnikSnakMovementUp,
+//     updateSnikSnakMovementUp,
+//     updateSnikSnakMovementUp,
+//     updateSnikSnakMovementLeft,
+//     updateSnikSnakMovementLeft,
+//     updateSnikSnakMovementLeft,
+//     updateSnikSnakMovementLeft,
+//     updateSnikSnakMovementLeft,
+//     updateSnikSnakMovementLeft,
+//     updateSnikSnakMovementLeft,
+//     updateSnikSnakMovementLeft,
+//     updateSnikSnakMovementDown,
+//     updateSnikSnakMovementDown,
+//     updateSnikSnakMovementDown,
+//     updateSnikSnakMovementDown,
+//     updateSnikSnakMovementDown,
+//     updateSnikSnakMovementDown,
+//     updateSnikSnakMovementDown,
+//     updateSnikSnakMovementDown,
+//     updateSnikSnakMovementRight,
+//     updateSnikSnakMovementRight,
+//     updateSnikSnakMovementRight,
+//     updateSnikSnakMovementRight,
+//     updateSnikSnakMovementRight,
+//     updateSnikSnakMovementRight,
+//     updateSnikSnakMovementRight,
+//     updateSnikSnakMovementRight,
+// };
 
 void throttledRotateLevelSet(uint8_t descending);
 void rotateLevelSet(uint8_t descending);
@@ -621,7 +621,7 @@ void savePlayerListData(void);
 void saveHallOfFameData(void);
 void getMouseStatus(uint16_t *mouseX, uint16_t *mouseY, uint16_t *mouseButtonStatus);
 void drawMainMenuButtonBorders(void);
-void drawMainMenuButtonBorder(ButtonBorderDescriptor border, uint8_t color);
+// void drawMainMenuButtonBorder(ButtonBorderDescriptor border, uint8_t color);
 void generateRandomSeedFromClock(void);
 void initializeFadePalette(void);
 void initializeMouse(void);
@@ -638,10 +638,10 @@ void scrollRightToNewScreen(void);
 void scrollLeftToMainMenu(void);
 void convertNumberTo3DigitStringWithPadding0(uint8_t number, char numberString[3]);
 void changePlayerCurrentLevelState(void);
-void updateHallOfFameEntries(void);
+// void updateHallOfFameEntries(void);
 void drawSoundTypeOptionsSelection(uint8_t *destBuffer);
 void dimOptionsButtonText(size_t startX, size_t startY, size_t width, size_t height, uint8_t *destBuffer);
-void drawOptionsMenuLine(ButtonBorderDescriptor border, uint8_t color, uint8_t *destBuffer);
+// void drawOptionsMenuLine(ButtonBorderDescriptor border, uint8_t color, uint8_t *destBuffer);
 void highlightOptionsButtonText(size_t startX, size_t startY, size_t width, size_t height, uint8_t *destBuffer);
 void drawAudioOptionsSelection(uint8_t *destBuffer);
 void drawInputOptionsSelection(uint8_t *destBuffer);
@@ -673,7 +673,7 @@ void restoreOriginalFancyTiles(void);
 void updateMovingObjects(void);
 int16_t updateMurphy(int16_t position);
 int16_t updateMurphyAnimation(int16_t position);
-int16_t updateMurphyAnimationInfo(int16_t position, MurphyAnimationDescriptor unknownMurphyData);
+// int16_t updateMurphyAnimationInfo(int16_t position, MurphyAnimationDescriptor unknownMurphyData);
 int16_t handleMurphyDirectionRight(int16_t position);
 int16_t handleMurphyDirectionDown(int16_t position);
 int16_t handleMurphyDirectionLeft(int16_t position);
@@ -1186,8 +1186,8 @@ void handleMoveScrollOptionSelection()
 
 void handleRecordDemoOptionSelection()
 {
-    recordDemo(gAdvancedMenuRecordDemoIndex);
-    gShouldCloseAdvancedMenu = 1;
+    // recordDemo(gAdvancedMenuRecordDemoIndex);
+    // gShouldCloseAdvancedMenu = 1;
 }
 
 void handlePlayDemoOptionSelection()
@@ -1902,149 +1902,149 @@ void slideDownGameDash() // proc near     ; CODE XREF: start:isNotFastMode2p
 /// @param shouldYieldCpu If 1, will sleep the thread for a bit to prevent 100% CPU usage.
 void int9handler(uint8_t shouldYieldCpu) // proc far        ; DATA XREF: setint9+1Fo
 {
-    updateKeyboardState();
+//     updateKeyboardState();
 
-    // 01ED:0659
+//     // 01ED:0659
 
-    if (gIsLeftAltPressed && gIsEnterPressed)
-    {
-        toggleFullscreen();
-    }
+//     if (gIsLeftAltPressed && gIsEnterPressed)
+//     {
+//         toggleFullscreen();
+//     }
 
-//storeKey:               ; CODE XREF: int9handler+2Bj
-    if (gIsInMainMenu == 0)
-    {
-        if (gIsNumpadMultiplyPressed) // Key * in the numpad, restore speed
-        {
-            gGameSpeed = kDefaultGameSpeed;
-            updateDemoRecordingLowestSpeed();
-        }
-//checkSlash:             ; CODE XREF: int9handler+3Ej
-//                ; int9handler+45j
-        else if (gIsNumpadDividePressed) // Keypad / -> fastest playback seed
-        {
-            gGameSpeed = kNumberOfGameSpeeds - 1;
-            updateDemoRecordingLowestSpeed();
-        }
-//checkPlus:              ; CODE XREF: int9handler+54j
-        else if (gIsGameSpeedChangeButtonPressed == 0)
-        {
-            if (isIncreaseGameSpeedButtonPressed())
-            {
-                increaseGameSpeed();
-            }
-//checkMinus:             ; CODE XREF: int9handler+65j
-//                ; int9handler+71j
-            else if (isDecreaseGameSpeedButtonPressed())
-            {
-                decreaseGameSpeed();
-            }
-        }
+// //storeKey:               ; CODE XREF: int9handler+2Bj
+//     if (gIsInMainMenu == 0)
+//     {
+//         if (gIsNumpadMultiplyPressed) // Key * in the numpad, restore speed
+//         {
+//             gGameSpeed = kDefaultGameSpeed;
+//             updateDemoRecordingLowestSpeed();
+//         }
+// //checkSlash:             ; CODE XREF: int9handler+3Ej
+// //                ; int9handler+45j
+//         else if (gIsNumpadDividePressed) // Keypad / -> fastest playback seed
+//         {
+//             gGameSpeed = kNumberOfGameSpeeds - 1;
+//             updateDemoRecordingLowestSpeed();
+//         }
+// //checkPlus:              ; CODE XREF: int9handler+54j
+//         else if (gIsGameSpeedChangeButtonPressed == 0)
+//         {
+//             if (isIncreaseGameSpeedButtonPressed())
+//             {
+//                 increaseGameSpeed();
+//             }
+// //checkMinus:             ; CODE XREF: int9handler+65j
+// //                ; int9handler+71j
+//             else if (isDecreaseGameSpeedButtonPressed())
+//             {
+//                 decreaseGameSpeed();
+//             }
+//         }
 
-        gIsGameSpeedChangeButtonPressed = (isIncreaseGameSpeedButtonPressed()
-                                           || isDecreaseGameSpeedButtonPressed());
-    }
+//         gIsGameSpeedChangeButtonPressed = (isIncreaseGameSpeedButtonPressed()
+//                                            || isDecreaseGameSpeedButtonPressed());
+//     }
 
-//checkX:                 ; CODE XREF: int9handler+39j
-//                ; int9handler+60j ...
-    if (gIsXKeyPressed && gIsLeftAltPressed != 0)
-    {
-        gShouldExitLevel = 1;
-        gShouldExitGame = 1;
-    }
+// //checkX:                 ; CODE XREF: int9handler+39j
+// //                ; int9handler+60j ...
+//     if (gIsXKeyPressed && gIsLeftAltPressed != 0)
+//     {
+//         gShouldExitLevel = 1;
+//         gShouldExitGame = 1;
+//     }
 
-    if (shouldYieldCpu)
-    {
-        waitTime(10); // Avoid burning the CPU
-    }
+//     if (shouldYieldCpu)
+//     {
+//         waitTime(10); // Avoid burning the CPU
+//     }
 }
 
 void readConfig() //  proc near       ; CODE XREF: start:loc_46F0Fp
 {
-    if (gFastMode == FastModeTypeUltra)
-    {
-        return;
-    }
+//     if (gFastMode == FastModeTypeUltra)
+//     {
+//         return;
+//     }
 
-    FILE *file = openWritableFile("SUPAPLEX.CFG", "rb");
-    if (file == NULL)
-    {
-    if (errno == ENOENT || errno == ENOSYS || errno == EIO) // ax == 2? ax has error code, 2 is file not found (http://stanislavs.org/helppc/dos_error_codes.html)
-        {
-//loc_47551:              //; CODE XREF: readConfig+Fj
-                       // ; readConfig+17j
-            activateCombinedSound();
-            isMusicEnabled = 1;
-            isFXEnabled = 1;
-            isJoystickEnabled = 0;
-            return;
-        }
-        else
-        {
-            exitWithError("Error opening SUPAPLEX.CFG\n");
-        }
-    }
+//     FILE *file = openWritableFile("SUPAPLEX.CFG", "rb");
+//     if (file == NULL)
+//     {
+//     if (errno == ENOENT || errno == ENOSYS || errno == EIO) // ax == 2? ax has error code, 2 is file not found (http://stanislavs.org/helppc/dos_error_codes.html)
+//         {
+// //loc_47551:              //; CODE XREF: readConfig+Fj
+//                        // ; readConfig+17j
+//             activateCombinedSound();
+//             isMusicEnabled = 1;
+//             isFXEnabled = 1;
+//             isJoystickEnabled = 0;
+//             return;
+//         }
+//         else
+//         {
+//             exitWithError("Error opening SUPAPLEX.CFG\n");
+//         }
+//     }
 
-//loc_474BE:             // ; CODE XREF: readConfig+8j
+// //loc_474BE:             // ; CODE XREF: readConfig+8j
 
-    uint8_t configData[kConfigDataLength];
+//     uint8_t configData[kConfigDataLength];
 
-    size_t bytes = fileReadBytes(configData, sizeof(configData), file);
+//     size_t bytes = fileReadBytes(configData, sizeof(configData), file);
 
-    if (fclose(file) != 0)
-    {
-        exitWithError("Error closing SUPAPLEX.CFG\n");
-    }
+//     if (fclose(file) != 0)
+//     {
+//         exitWithError("Error closing SUPAPLEX.CFG\n");
+//     }
 
-//loc_474DF:             // ; CODE XREF: readConfig+39j
-    if (bytes < sizeof(configData))
-    {
-        exitWithError("Error reading SUPAPLEX.CFG\n");
-    }
+// //loc_474DF:             // ; CODE XREF: readConfig+39j
+//     if (bytes < sizeof(configData))
+//     {
+//         exitWithError("Error reading SUPAPLEX.CFG\n");
+//     }
 
-//loc_474E5:             // ; CODE XREF: readConfig+3Fj
-    uint8_t soundSetting = configData[0];
+// //loc_474E5:             // ; CODE XREF: readConfig+3Fj
+//     uint8_t soundSetting = configData[0];
 
-    if (soundSetting == 's')
-    {
-        activateInternalSamplesSound();
-    }
-    else if (soundSetting == 'a')
-    {
-        activateAdlibSound();
-    }
-    else if (soundSetting == 'b')
-    {
-        activateSoundBlasterSound();
-    }
-    else if (soundSetting == 'r')
-    {
-        activateRolandSound();
-    }
-    else if (soundSetting == 'c')
-    {
-        activateCombinedSound();
-    }
-    else
-    {
-        activateInternalStandardSound();
-    }
+//     if (soundSetting == 's')
+//     {
+//         activateInternalSamplesSound();
+//     }
+//     else if (soundSetting == 'a')
+//     {
+//         activateAdlibSound();
+//     }
+//     else if (soundSetting == 'b')
+//     {
+//         activateSoundBlasterSound();
+//     }
+//     else if (soundSetting == 'r')
+//     {
+//         activateRolandSound();
+//     }
+//     else if (soundSetting == 'c')
+//     {
+//         activateCombinedSound();
+//     }
+//     else
+//     {
+//         activateInternalStandardSound();
+//     }
 
-//loc_4751D:             // ; CODE XREF: readConfig+4Fj
-               // ; readConfig+59j ...
+// //loc_4751D:             // ; CODE XREF: readConfig+4Fj
+//                // ; readConfig+59j ...
 
-    isJoystickEnabled = 0;
-    if (configData[1] == 'j')
-    {
-        isJoystickEnabled = 1;
-        // calibrateJoystick(); not needed anymore
-    }
+//     isJoystickEnabled = 0;
+//     if (configData[1] == 'j')
+//     {
+//         isJoystickEnabled = 1;
+//         // calibrateJoystick(); not needed anymore
+//     }
 
-//loc_47530:              //; CODE XREF: readConfig+85j
-    isMusicEnabled = (configData[2] == 'm');
+// //loc_47530:              //; CODE XREF: readConfig+85j
+//     isMusicEnabled = (configData[2] == 'm');
 
-//loc_47540:              //; CODE XREF: readConfig+98j
-    isFXEnabled = (configData[3] == 'x');
+// //loc_47540:              //; CODE XREF: readConfig+98j
+//     isFXEnabled = (configData[3] == 'x');
 }
 
 void saveConfiguration() // sub_4755A      proc near               ; CODE XREF: code:loc_4CAECp
@@ -2132,152 +2132,153 @@ void saveConfiguration() // sub_4755A      proc near               ; CODE XREF: 
 uint8_t readDemoFiles() //    proc near       ; CODE XREF: readEverything+12p
                   //  ; handleDemoOptionClickp ...
 {
-    // 01ED:09A6
+    return 0;
+//     // 01ED:09A6
 
-    gDemoCurrentInputIndex = 0;
-    word_5A33C = 0;
+//     gDemoCurrentInputIndex = 0;
+//     word_5A33C = 0;
 
-    memset(&gDemos.demoFirstIndices, 0xFF, sizeof(gDemos.demoFirstIndices)); // fills 11 words (22 bytes) with 0xFFFF
+//     memset(&gDemos.demoFirstIndices, 0xFF, sizeof(gDemos.demoFirstIndices)); // fills 11 words (22 bytes) with 0xFFFF
 
-    for (int i = 0; i < kNumberOfDemos; ++i)
-    {
-//loc_47629:              //; CODE XREF: readDemoFiles+175j
-        gSelectedOriginalDemoLevelNumber = 0;
-        char *filename = gDemo0BinFilename;
+//     for (int i = 0; i < kNumberOfDemos; ++i)
+//     {
+// //loc_47629:              //; CODE XREF: readDemoFiles+175j
+//         gSelectedOriginalDemoLevelNumber = 0;
+//         char *filename = gDemo0BinFilename;
 
-        if (gIsSPDemoAvailableToRun == 1)
-        {
-            filename = demoFileName;
-        }
-        else
-        {
-//loc_4763C:             // ; CODE XREF: readDemoFiles+2Cj
-            gDemo0BinFilename[4] = '0' + i; // Replaces the number in "DEMO0.BIN" with the right value
-        }
+//         if (gIsSPDemoAvailableToRun == 1)
+//         {
+//             filename = demoFileName;
+//         }
+//         else
+//         {
+// //loc_4763C:             // ; CODE XREF: readDemoFiles+2Cj
+//             gDemo0BinFilename[4] = '0' + i; // Replaces the number in "DEMO0.BIN" with the right value
+//         }
 
-//loc_47647:             // ; CODE XREF: readDemoFiles+31j
-        FILE *file = openWritableFileWithReadonlyFallback(filename, "rb");
-        if (file == NULL)
-        {
-            return i;
-        }
+// //loc_47647:             // ; CODE XREF: readDemoFiles+31j
+//         FILE *file = openWritableFileWithReadonlyFallback(filename, "rb");
+//         if (file == NULL)
+//         {
+//             return i;
+//         }
 
-//loc_47651:              //; CODE XREF: readDemoFiles+43j
-        if (gIsSPDemoAvailableToRun == 1)
-        {
-            if (gSelectedOriginalDemoFromCommandLineLevelNumber == 0)
-            {
-                fseek(file, kLevelDataLength, SEEK_SET);
-            }
-        }
-        else
-        {
-//loc_47674:             // ; CODE XREF: readDemoFiles+52j
-            int result = fseek(file, 0, SEEK_END);
-            long fileSize = ftell(file);
+// //loc_47651:              //; CODE XREF: readDemoFiles+43j
+//         if (gIsSPDemoAvailableToRun == 1)
+//         {
+//             if (gSelectedOriginalDemoFromCommandLineLevelNumber == 0)
+//             {
+//                 fseek(file, kLevelDataLength, SEEK_SET);
+//             }
+//         }
+//         else
+//         {
+// //loc_47674:             // ; CODE XREF: readDemoFiles+52j
+//             int result = fseek(file, 0, SEEK_END);
+//             long fileSize = ftell(file);
 
-            // this is probably to support old level formats
-            if (result == 0
-                && fileSize < kLevelDataLength)
-            {
-                gSelectedOriginalDemoLevelNumber = getLevelNumberFromOriginalDemoFile(file, fileSize);
-            }
+//             // this is probably to support old level formats
+//             if (result == 0
+//                 && fileSize < kLevelDataLength)
+//             {
+//                 gSelectedOriginalDemoLevelNumber = getLevelNumberFromOriginalDemoFile(file, fileSize);
+//             }
 
-//loc_47690:             // ; CODE XREF: readDemoFiles+76j readDemoFiles+7Aj ...
-            fseek(file, 0, SEEK_SET);
+// //loc_47690:             // ; CODE XREF: readDemoFiles+76j readDemoFiles+7Aj ...
+//             fseek(file, 0, SEEK_SET);
 
-            if (gSelectedOriginalDemoLevelNumber == 0)
-            {
-                Level *level = &gDemos.level[i];
-                size_t bytes = fileReadBytes(level, kLevelDataLength, file);
+//             if (gSelectedOriginalDemoLevelNumber == 0)
+//             {
+//                 Level *level = &gDemos.level[i];
+//                 size_t bytes = fileReadBytes(level, kLevelDataLength, file);
 
-                if (bytes < kLevelDataLength)
-                {
-                    return i;
-                }
+//                 if (bytes < kLevelDataLength)
+//                 {
+//                     return i;
+//                 }
 
-//loc_476D3:           //   ; CODE XREF: readDemoFiles+C5j
-                gDemoRandomSeeds[i] = level->randomSeed;
-            }
-        }
+// //loc_476D3:           //   ; CODE XREF: readDemoFiles+C5j
+//                 gDemoRandomSeeds[i] = level->randomSeed;
+//             }
+//         }
 
-//loc_476DB:             // ; CODE XREF: readDemoFiles+59j readDemoFiles+69j ...
-        uint16_t maxNumberOfBytesToRead = kMaxDemoInputSteps + 1; // 48649
-        maxNumberOfBytesToRead -= gDemoCurrentInputIndex;
+// //loc_476DB:             // ; CODE XREF: readDemoFiles+59j readDemoFiles+69j ...
+//         uint16_t maxNumberOfBytesToRead = kMaxDemoInputSteps + 1; // 48649
+//         maxNumberOfBytesToRead -= gDemoCurrentInputIndex;
 
-        if (maxNumberOfBytesToRead > kMaxDemoInputSteps + 1) // weird way of checking if gDemoCurrentInputIndex < 0 ????
-        {
-            maxNumberOfBytesToRead = 0;
-        }
+//         if (maxNumberOfBytesToRead > kMaxDemoInputSteps + 1) // weird way of checking if gDemoCurrentInputIndex < 0 ????
+//         {
+//             maxNumberOfBytesToRead = 0;
+//         }
 
-        uint16_t numberOfDemoBytesRead = 0;
+//         uint16_t numberOfDemoBytesRead = 0;
 
-//loc_476EA:             // ; CODE XREF: readDemoFiles+DDj
-        if (maxNumberOfBytesToRead == 0)
-        {
-            numberOfDemoBytesRead = 0;
-        }
-        else
-        {
-//loc_476F3:              // ; CODE XREF: readDemoFiles+E4j
-            numberOfDemoBytesRead = fileReadBytes(&gDemos.demoData[gDemoCurrentInputIndex], maxNumberOfBytesToRead, file);
+// //loc_476EA:             // ; CODE XREF: readDemoFiles+DDj
+//         if (maxNumberOfBytesToRead == 0)
+//         {
+//             numberOfDemoBytesRead = 0;
+//         }
+//         else
+//         {
+// //loc_476F3:              // ; CODE XREF: readDemoFiles+E4j
+//             numberOfDemoBytesRead = fileReadBytes(&gDemos.demoData[gDemoCurrentInputIndex], maxNumberOfBytesToRead, file);
 
-            if (numberOfDemoBytesRead == 0)
-            {
-                if (fclose(file) != 0)
-                {
-                    exitWithError("Error closing DEMO file");
-                }
-                return i;
-            }
+//             if (numberOfDemoBytesRead == 0)
+//             {
+//                 if (fclose(file) != 0)
+//                 {
+//                     exitWithError("Error closing DEMO file");
+//                 }
+//                 return i;
+//             }
 
-//loc_47719:             // ; CODE XREF: readDemoFiles+FCj
-        }
+// //loc_47719:             // ; CODE XREF: readDemoFiles+FCj
+//         }
 
-//loc_4771A:             // ; CODE XREF: readDemoFiles+E8j
-        if (fclose(file) != 0)
-        {
-            exitWithError("Error closing DEMO file");
-        }
+// //loc_4771A:             // ; CODE XREF: readDemoFiles+E8j
+//         if (fclose(file) != 0)
+//         {
+//             exitWithError("Error closing DEMO file");
+//         }
 
-//loc_47729:              ; CODE XREF: readDemoFiles+11Bj
-        gDemos.demoData[gDemoCurrentInputIndex] = gDemos.demoData[gDemoCurrentInputIndex] & 0x7F; // this removes the MSB from the levelNumber that was added in the speed fix mods
-        int isZero = (gSelectedOriginalDemoLevelNumber == 0);
-        gSelectedOriginalDemoLevelNumber = 0;
-        if (isZero)
-        {
-            gDemos.demoData[gDemoCurrentInputIndex] = gDemos.demoData[gDemoCurrentInputIndex] | 0x80; // This sets the MSB?? maybe the "interpreter" later needs it
-        }
+// //loc_47729:              ; CODE XREF: readDemoFiles+11Bj
+//         gDemos.demoData[gDemoCurrentInputIndex] = gDemos.demoData[gDemoCurrentInputIndex] & 0x7F; // this removes the MSB from the levelNumber that was added in the speed fix mods
+//         int isZero = (gSelectedOriginalDemoLevelNumber == 0);
+//         gSelectedOriginalDemoLevelNumber = 0;
+//         if (isZero)
+//         {
+//             gDemos.demoData[gDemoCurrentInputIndex] = gDemos.demoData[gDemoCurrentInputIndex] | 0x80; // This sets the MSB?? maybe the "interpreter" later needs it
+//         }
 
-//loc_47743:             // ; CODE XREF: readDemoFiles+134j
-        uint16_t demoLastByteIndex = gDemoCurrentInputIndex + numberOfDemoBytesRead - 1;
-        // cx = bx; // bx here has the value of gDemoCurrentInputIndex
-        // bx += numberOfDemoBytesRead; // ax here has the number of bytes read regarding the level itself (levelNumber + inputSteps)
-        // push(ds);
-        // push(es);
-        // pop(ds);
-        // assume ds:nothing
-        // bx--;
-        if (demoLastByteIndex == 0xFFFF // this would mean bx was 0. is this possible?
-            || numberOfDemoBytesRead <= 1 // this means the demo is empty (only has levelNumber or nothing)
-            || gDemos.demoData[demoLastByteIndex] != 0xFF)
-        {
-//loc_4775A:             // ; CODE XREF: readDemoFiles+145j
-           // ; readDemoFiles+14Aj
-            if (demoLastByteIndex < sizeof(BaseDemo))
-            {
-                numberOfDemoBytesRead++;
-                gDemos.demoData[demoLastByteIndex + 1] = 0xFF;
-            }
-        }
+// //loc_47743:             // ; CODE XREF: readDemoFiles+134j
+//         uint16_t demoLastByteIndex = gDemoCurrentInputIndex + numberOfDemoBytesRead - 1;
+//         // cx = bx; // bx here has the value of gDemoCurrentInputIndex
+//         // bx += numberOfDemoBytesRead; // ax here has the number of bytes read regarding the level itself (levelNumber + inputSteps)
+//         // push(ds);
+//         // push(es);
+//         // pop(ds);
+//         // assume ds:nothing
+//         // bx--;
+//         if (demoLastByteIndex == 0xFFFF // this would mean bx was 0. is this possible?
+//             || numberOfDemoBytesRead <= 1 // this means the demo is empty (only has levelNumber or nothing)
+//             || gDemos.demoData[demoLastByteIndex] != 0xFF)
+//         {
+// //loc_4775A:             // ; CODE XREF: readDemoFiles+145j
+//            // ; readDemoFiles+14Aj
+//             if (demoLastByteIndex < sizeof(BaseDemo))
+//             {
+//                 numberOfDemoBytesRead++;
+//                 gDemos.demoData[demoLastByteIndex + 1] = 0xFF;
+//             }
+//         }
 
-//loc_47765:             // ; CODE XREF: readDemoFiles+14Fj
-                   // ; readDemoFiles+155j
-        gDemos.demoFirstIndices[i] = gDemoCurrentInputIndex;
-        gDemoCurrentInputIndex += numberOfDemoBytesRead;
-    }
+// //loc_47765:             // ; CODE XREF: readDemoFiles+14Fj
+//                    // ; readDemoFiles+155j
+//         gDemos.demoFirstIndices[i] = gDemoCurrentInputIndex;
+//         gDemoCurrentInputIndex += numberOfDemoBytesRead;
+//     }
 
-    return kNumberOfDemos;
+//     return kNumberOfDemos;
 }
 
 void openCreditsBlock() // proc near      ; CODE XREF: start+2E9p
@@ -2649,1127 +2650,1127 @@ void waitForKeyMouseOrJoystick() // sub_47E98  proc near       ; CODE XREF: reco
 
 void updateZonkTiles(int16_t position) //   proc near       ; DATA XREF: data:160Co
 {
-    // 01ED:132D
+//     // 01ED:132D
 
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *belowLeftTile = &gCurrentLevelState[position + kLevelWidth - 1];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *belowRightTile = &gCurrentLevelState[position + kLevelWidth + 1];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
-    StatefulLevelTile *aboveRightTile = &gCurrentLevelState[position - kLevelWidth + 1];
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *belowLeftTile = &gCurrentLevelState[position + kLevelWidth - 1];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *belowRightTile = &gCurrentLevelState[position + kLevelWidth + 1];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+//     StatefulLevelTile *aboveRightTile = &gCurrentLevelState[position - kLevelWidth + 1];
 
-    if (currentTile->tile != LevelTileTypeZonk) // cmp byte ptr leveldata[si], 1
-    {
-        return;
-    }
+//     if (currentTile->tile != LevelTileTypeZonk) // cmp byte ptr leveldata[si], 1
+//     {
+//         return;
+//     }
 
-//loc_47F98:              ; CODE XREF: movefun+5j
-    uint8_t shouldSkipFirstPartOfLoop = 0;
+// //loc_47F98:              ; CODE XREF: movefun+5j
+//     uint8_t shouldSkipFirstPartOfLoop = 0;
 
-    if (currentTile->tile != LevelTileTypeZonk
-        || currentTile->state != 0)
-    {
-        shouldSkipFirstPartOfLoop = 1; // used to emulate "jmp loc_48035"
-    }
-    else
-    {
-//loc_47FA4:              ; CODE XREF: movefun+Fj
-        if (gAreZonksFrozen == 2)
-        {
-            return;
-        }
+//     if (currentTile->tile != LevelTileTypeZonk
+//         || currentTile->state != 0)
+//     {
+//         shouldSkipFirstPartOfLoop = 1; // used to emulate "jmp loc_48035"
+//     }
+//     else
+//     {
+// //loc_47FA4:              ; CODE XREF: movefun+Fj
+//         if (gAreZonksFrozen == 2)
+//         {
+//             return;
+//         }
 
-//loc_47FAC:              ; CODE XREF: movefun+19j
-        // Check if the zonk can just fall vertically
-        if (belowTile->tile == LevelTileTypeSpace && belowTile->state == 0)
-        {
-//loc_47FF4:              ; CODE XREF: movefun+23j
-            currentTile->state = 0x40;
-            shouldSkipFirstPartOfLoop = 1; // used to emulate "jmp loc_48035"
-        }
-        else
-        {
-            // Check if below the zonk is another object that could be used to slide down left or right
-            if (belowTile->state != 0
-                || (belowTile->tile != LevelTileTypeZonk
-                    && belowTile->tile != LevelTileTypeInfotron
-                    && belowTile->tile != LevelTileTypeChip))
-            {
-                return;
-            }
+// //loc_47FAC:              ; CODE XREF: movefun+19j
+//         // Check if the zonk can just fall vertically
+//         if (belowTile->tile == LevelTileTypeSpace && belowTile->state == 0)
+//         {
+// //loc_47FF4:              ; CODE XREF: movefun+23j
+//             currentTile->state = 0x40;
+//             shouldSkipFirstPartOfLoop = 1; // used to emulate "jmp loc_48035"
+//         }
+//         else
+//         {
+//             // Check if below the zonk is another object that could be used to slide down left or right
+//             if (belowTile->state != 0
+//                 || (belowTile->tile != LevelTileTypeZonk
+//                     && belowTile->tile != LevelTileTypeInfotron
+//                     && belowTile->tile != LevelTileTypeChip))
+//             {
+//                 return;
+//             }
 
-//loc_47FC5:              ; CODE XREF: movefun+28j
-//                ; movefun+2Dj ...
-            // Check if it can fall to the left side...
-            if ((belowLeftTile->tile == LevelTileTypeSpace && belowLeftTile->state == 0)
-                || (belowLeftTile->tile == 0x88 && belowLeftTile->state == 0x88)
-                || (belowLeftTile->tile == 0xAA && belowLeftTile->state == 0xAA))
-            {
-//loc_47FFB:              ; CODE XREF: movefun+3Aj
-//                ; movefun+42j ...
-                // ...but only if the left tile is empty
-                if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-                {
-//loc_48004:              ; CODE XREF: movefun+70j
-                    currentTile->state = 0x50;
-                    leftTile->state = 0x88;
-                    leftTile->tile = 0x88;
-                    shouldSkipFirstPartOfLoop = 1; // used to emulate "jmp loc_48035"
-                }
-            }
-        }
-    }
+// //loc_47FC5:              ; CODE XREF: movefun+28j
+// //                ; movefun+2Dj ...
+//             // Check if it can fall to the left side...
+//             if ((belowLeftTile->tile == LevelTileTypeSpace && belowLeftTile->state == 0)
+//                 || (belowLeftTile->tile == 0x88 && belowLeftTile->state == 0x88)
+//                 || (belowLeftTile->tile == 0xAA && belowLeftTile->state == 0xAA))
+//             {
+// //loc_47FFB:              ; CODE XREF: movefun+3Aj
+// //                ; movefun+42j ...
+//                 // ...but only if the left tile is empty
+//                 if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//                 {
+// //loc_48004:              ; CODE XREF: movefun+70j
+//                     currentTile->state = 0x50;
+//                     leftTile->state = 0x88;
+//                     leftTile->tile = 0x88;
+//                     shouldSkipFirstPartOfLoop = 1; // used to emulate "jmp loc_48035"
+//                 }
+//             }
+//         }
+//     }
 
-    uint8_t shouldSkipTo_loc_481C6 = 0;
+//     uint8_t shouldSkipTo_loc_481C6 = 0;
 
-    do
-    {
-//loc_47FDC:              ; CODE XREF: movefun+72j
-//                ; movefun+1F1j
-        if (shouldSkipFirstPartOfLoop == 0) // used to emulate "jmp loc_48035"
-        {
-            // Checks if it can fall to the right side
-            if ((belowRightTile->state != 0 || belowRightTile->tile != LevelTileTypeSpace)
-                && (belowRightTile->state != 0x88 || belowRightTile->tile != 0x88)
-                && (belowRightTile->state != 0xAA || belowRightTile->tile != 0xAA))
-            {
-                return;
-            }
-            else
-            {
-//loc_48011:              ; CODE XREF: movefun+51j
-//                ; movefun+59j ...
-                // Only if the right tile is empty or... other circumstances?
-                if ((rightTile->state != 0 || rightTile->tile != LevelTileTypeSpace)
-                    && ((rightTile->state != 0x99 || rightTile->tile != 0x99)
-                        || (aboveRightTile->state != 0 || aboveRightTile->tile != LevelTileTypeZonk)))
-                {
-                    return;
-                }
+//     do
+//     {
+// //loc_47FDC:              ; CODE XREF: movefun+72j
+// //                ; movefun+1F1j
+//         if (shouldSkipFirstPartOfLoop == 0) // used to emulate "jmp loc_48035"
+//         {
+//             // Checks if it can fall to the right side
+//             if ((belowRightTile->state != 0 || belowRightTile->tile != LevelTileTypeSpace)
+//                 && (belowRightTile->state != 0x88 || belowRightTile->tile != 0x88)
+//                 && (belowRightTile->state != 0xAA || belowRightTile->tile != 0xAA))
+//             {
+//                 return;
+//             }
+//             else
+//             {
+// //loc_48011:              ; CODE XREF: movefun+51j
+// //                ; movefun+59j ...
+//                 // Only if the right tile is empty or... other circumstances?
+//                 if ((rightTile->state != 0 || rightTile->tile != LevelTileTypeSpace)
+//                     && ((rightTile->state != 0x99 || rightTile->tile != 0x99)
+//                         || (aboveRightTile->state != 0 || aboveRightTile->tile != LevelTileTypeZonk)))
+//                 {
+//                     return;
+//                 }
 
-//loc_48028:              ; CODE XREF: movefun+86j
-//                ; movefun+95j
-                currentTile->state = 0x60;
-                rightTile->state = 0x88;
-                rightTile->tile = 0x88;
-            }
-        }
+// //loc_48028:              ; CODE XREF: movefun+86j
+// //                ; movefun+95j
+//                 currentTile->state = 0x60;
+//                 rightTile->state = 0x88;
+//                 rightTile->tile = 0x88;
+//             }
+//         }
 
-        shouldSkipFirstPartOfLoop = 0; // don't skip the first part in the next iteration
+//         shouldSkipFirstPartOfLoop = 0; // don't skip the first part in the next iteration
 
-//loc_48035:              ; CODE XREF: movefun+11j
-//                ; movefun+69j ...
-        uint8_t state = currentTile->state;
-        uint8_t stateType = state & 0xF0;
+// //loc_48035:              ; CODE XREF: movefun+11j
+// //                ; movefun+69j ...
+//         uint8_t state = currentTile->state;
+//         uint8_t stateType = state & 0xF0;
 
-        if (stateType != 0x10) // 16
-        {
-//loc_48045:              ; CODE XREF: movefun+B1j
-            if (stateType == 0x20) // 32
-            {
-//loc_48212:              ; CODE XREF: movefun+B9j
-                // 01ED:15AF
-                uint8_t stateFrame = state & 0x7; // module 8?
+//         if (stateType != 0x10) // 16
+//         {
+// //loc_48045:              ; CODE XREF: movefun+B1j
+//             if (stateType == 0x20) // 32
+//             {
+// //loc_48212:              ; CODE XREF: movefun+B9j
+//                 // 01ED:15AF
+//                 uint8_t stateFrame = state & 0x7; // module 8?
 
-                uint8_t tileX = (position % kLevelWidth);
-                uint8_t tileY = (position / kLevelWidth);
+//                 uint8_t tileX = (position % kLevelWidth);
+//                 uint8_t tileY = (position / kLevelWidth);
 
-                uint16_t dstX = tileX * kTileSize;
-                uint16_t dstY = tileY * kTileSize;
+//                 uint16_t dstX = tileX * kTileSize;
+//                 uint16_t dstY = tileY * kTileSize;
 
-                // mov si, 1294h
-                // mov si, [bx+si]
-                Point frameCoordinates = kZonkSlideLeftAnimationFrameCoordinates[stateFrame];
+//                 // mov si, 1294h
+//                 // mov si, [bx+si]
+//                 //Point frameCoordinates = kZonkSlideLeftAnimationFrameCoordinates[stateFrame];
 
-                drawMovingSpriteFrameInLevel(frameCoordinates.x,
-                                             frameCoordinates.y,
-                                             kTileSize * 2,
-                                             kTileSize,
-                                             dstX, dstY);
+//                 drawMovingSpriteFrameInLevel(frameCoordinates.x,
+//                                              frameCoordinates.y,
+//                                              kTileSize * 2,
+//                                              kTileSize,
+//                                              dstX, dstY);
 
-                // 01ED:15D6
-                state = currentTile->state; // mov bl, [si+1835h]
-                state++;
+//                 // 01ED:15D6
+//                 state = currentTile->state; // mov bl, [si+1835h]
+//                 state++;
 
-                if (state == 0x24) // 36
-                {
-                    rightTile->state = 0xAA;
-                    rightTile->tile = 0xAA;
-                }
-//loc_4824A:              ; CODE XREF: movefun+2B2j
-                if (state == 0x26) // 38
-                {
-                    currentTile->state = state;
-                    handleZonkStateAfterFallingOneTile(position + 1);
-                    return;
-                }
-//loc_4825D:              ; CODE XREF: movefun+2BDj
-                else if (state < 0x28) // 40
-                {
-                    currentTile->state = state;
-                    return;
-                }
-//loc_48267:              ; CODE XREF: movefun+2D0j
-                else
-                {
-                    currentTile->state = 0xFF;
-                    currentTile->tile = 0xFF;
-                    belowTile->state = 0x10;
-                    belowTile->tile = LevelTileTypeZonk;
-                    return;
-                }
-            }
-//loc_4804C:              ; CODE XREF: movefun+B7j
-            else if (stateType == 0x30) // 48
-            {
-//loc_48277:              ; CODE XREF: movefun+C0j
-                uint8_t stateFrame = state & 0x7; // module 8?
+//                 if (state == 0x24) // 36
+//                 {
+//                     rightTile->state = 0xAA;
+//                     rightTile->tile = 0xAA;
+//                 }
+// //loc_4824A:              ; CODE XREF: movefun+2B2j
+//                 if (state == 0x26) // 38
+//                 {
+//                     currentTile->state = state;
+//                     handleZonkStateAfterFallingOneTile(position + 1);
+//                     return;
+//                 }
+// //loc_4825D:              ; CODE XREF: movefun+2BDj
+//                 else if (state < 0x28) // 40
+//                 {
+//                     currentTile->state = state;
+//                     return;
+//                 }
+// //loc_48267:              ; CODE XREF: movefun+2D0j
+//                 else
+//                 {
+//                     currentTile->state = 0xFF;
+//                     currentTile->tile = 0xFF;
+//                     belowTile->state = 0x10;
+//                     belowTile->tile = LevelTileTypeZonk;
+//                     return;
+//                 }
+//             }
+// //loc_4804C:              ; CODE XREF: movefun+B7j
+//             else if (stateType == 0x30) // 48
+//             {
+// //loc_48277:              ; CODE XREF: movefun+C0j
+//                 uint8_t stateFrame = state & 0x7; // module 8?
 
-                uint8_t tileX = ((position - 1) % kLevelWidth);
-                uint8_t tileY = ((position - 1) / kLevelWidth);
+//                 uint8_t tileX = ((position - 1) % kLevelWidth);
+//                 uint8_t tileY = ((position - 1) / kLevelWidth);
 
-                uint16_t dstX = tileX * kTileSize;
-                uint16_t dstY = tileY * kTileSize;
+//                 uint16_t dstX = tileX * kTileSize;
+//                 uint16_t dstY = tileY * kTileSize;
 
-                // mov si, 12A4h
-                // mov si, [bx+si]
-                Point frameCoordinates = kZonkSlideRightAnimationFrameCoordinates[stateFrame];
+//                 // mov si, 12A4h
+//                 // mov si, [bx+si]
+//                 //Point frameCoordinates = kZonkSlideRightAnimationFrameCoordinates[stateFrame];
 
-                drawMovingSpriteFrameInLevel(frameCoordinates.x,
-                                             frameCoordinates.y,
-                                             kTileSize * 2,
-                                             kTileSize,
-                                             dstX, dstY);
+//                 drawMovingSpriteFrameInLevel(frameCoordinates.x,
+//                                              frameCoordinates.y,
+//                                              kTileSize * 2,
+//                                              kTileSize,
+//                                              dstX, dstY);
 
-                state = currentTile->state;
-                state++;
-                if (state == 0x34) // 52
-                {
-                    leftTile->state = 0xAA;
-                    leftTile->tile = 0xAA;
-                }
-//loc_482AF:              ; CODE XREF: movefun+317j
-                if (state == 0x36) // 54
-                {
-                    currentTile->state = state;
-                    handleZonkStateAfterFallingOneTile(position - 1); // left tile
-                    return;
-                }
-//loc_482C2:              ; CODE XREF: movefun+322j
-                else if (state < 0x38) // 54
-                {
-                    currentTile->state = state;
-                    return;
-                }
-//loc_482CC:              ; CODE XREF: movefun+335j
-                else
-                {
-                    currentTile->state = 0xFF;
-                    currentTile->tile = 0xFF;
-                    belowTile->state = 0x10;
-                    belowTile->tile = LevelTileTypeZonk;
-                    return;
-                }
-            }
-//loc_48053:              ; CODE XREF: movefun+BEj
-            else if (gAreZonksFrozen == 2)
-            {
-                return;
-            }
-//loc_4805B:              ; CODE XREF: movefun+C8j
-            else if (stateType == 0x40) // 64
-            {
-//loc_482DC:              ; CODE XREF: movefun+CFj
-                state++;
-                if (state < 0x42) // 66
-                {
-                    currentTile->state = state;
-                    return;
-                }
-//loc_482E8:              ; CODE XREF: movefun+351j
-                else if (belowTile->tile != LevelTileTypeSpace || belowTile->state != 0) // cmp word ptr [si+18ACh], 0
-                {
-                    state--;
-                    currentTile->state = state;
-                    return;
-                }
-//loc_482F6:              ; CODE XREF: movefun+35Dj
-                else
-                {
-                    currentTile->state = 0xFF;
-                    currentTile->tile = 0xFF;
-                    belowTile->state = 0x10;
-                    belowTile->tile = LevelTileTypeZonk;
+//                 state = currentTile->state;
+//                 state++;
+//                 if (state == 0x34) // 52
+//                 {
+//                     leftTile->state = 0xAA;
+//                     leftTile->tile = 0xAA;
+//                 }
+// //loc_482AF:              ; CODE XREF: movefun+317j
+//                 if (state == 0x36) // 54
+//                 {
+//                     currentTile->state = state;
+//                     handleZonkStateAfterFallingOneTile(position - 1); // left tile
+//                     return;
+//                 }
+// //loc_482C2:              ; CODE XREF: movefun+322j
+//                 else if (state < 0x38) // 54
+//                 {
+//                     currentTile->state = state;
+//                     return;
+//                 }
+// //loc_482CC:              ; CODE XREF: movefun+335j
+//                 else
+//                 {
+//                     currentTile->state = 0xFF;
+//                     currentTile->tile = 0xFF;
+//                     belowTile->state = 0x10;
+//                     belowTile->tile = LevelTileTypeZonk;
+//                     return;
+//                 }
+//             }
+// //loc_48053:              ; CODE XREF: movefun+BEj
+//             else if (gAreZonksFrozen == 2)
+//             {
+//                 return;
+//             }
+// //loc_4805B:              ; CODE XREF: movefun+C8j
+//             else if (stateType == 0x40) // 64
+//             {
+// //loc_482DC:              ; CODE XREF: movefun+CFj
+//                 state++;
+//                 if (state < 0x42) // 66
+//                 {
+//                     currentTile->state = state;
+//                     return;
+//                 }
+// //loc_482E8:              ; CODE XREF: movefun+351j
+//                 else if (belowTile->tile != LevelTileTypeSpace || belowTile->state != 0) // cmp word ptr [si+18ACh], 0
+//                 {
+//                     state--;
+//                     currentTile->state = state;
+//                     return;
+//                 }
+// //loc_482F6:              ; CODE XREF: movefun+35Dj
+//                 else
+//                 {
+//                     currentTile->state = 0xFF;
+//                     currentTile->tile = 0xFF;
+//                     belowTile->state = 0x10;
+//                     belowTile->tile = LevelTileTypeZonk;
 
-                    return;
-                }
-            }
-//loc_48062:              ; CODE XREF: movefun+CDj
-            else if (stateType == 0x50) // Zonk sliding left
-            {
-//loc_4830A:              ; CODE XREF: movefun+D6j
-                uint8_t stateFrame = state & 0x7; // module 8?
+//                     return;
+//                 }
+//             }
+// //loc_48062:              ; CODE XREF: movefun+CDj
+//             else if (stateType == 0x50) // Zonk sliding left
+//             {
+// //loc_4830A:              ; CODE XREF: movefun+D6j
+//                 uint8_t stateFrame = state & 0x7; // module 8?
 
-                uint8_t tileX = ((position - 1) % kLevelWidth);
-                uint8_t tileY = ((position - 1) / kLevelWidth);
+//                 uint8_t tileX = ((position - 1) % kLevelWidth);
+//                 uint8_t tileY = ((position - 1) / kLevelWidth);
 
-                uint16_t dstX = tileX * kTileSize;
-                uint16_t dstY = tileY * kTileSize;
+//                 uint16_t dstX = tileX * kTileSize;
+//                 uint16_t dstY = tileY * kTileSize;
 
-                // mov si, 1294h
-                // mov si, [bx+si]
-                Point frameCoordinates = kZonkSlideLeftAnimationFrameCoordinates[stateFrame];
+//                 // mov si, 1294h
+//                 // mov si, [bx+si]
+//                 //Point frameCoordinates = kZonkSlideLeftAnimationFrameCoordinates[stateFrame];
 
-                drawMovingSpriteFrameInLevel(frameCoordinates.x,
-                                             frameCoordinates.y,
-                                             kTileSize * 2,
-                                             kTileSize,
-                                             dstX, dstY);
+//                 drawMovingSpriteFrameInLevel(frameCoordinates.x,
+//                                              frameCoordinates.y,
+//                                              kTileSize * 2,
+//                                              kTileSize,
+//                                              dstX, dstY);
 
-                state = currentTile->state;
-                state++;
+//                 state = currentTile->state;
+//                 state++;
 
-                if (state < 0x52) // 82
-                {
-                    currentTile->state = state;
-                    return;
-                }
-//loc_48341:              ; CODE XREF: movefun+3AAj
-                else if (belowLeftTile->state != 0 || belowLeftTile->tile != LevelTileTypeSpace) // cmp word ptr [si+18AAh], 0
-                {
-//loc_48371:              ; CODE XREF: movefun+3B6j
-    //                ; movefun+3C5j
-                    state--;
-                    currentTile->state = state;
-                    return;
-                }
-                else if ((leftTile->state != 0 || leftTile->tile != LevelTileTypeSpace) // cmp word ptr [si+1832h], 0
-                         && (leftTile->state != 0x88 || leftTile->tile != 0x88)) // cmp word ptr [si+1832h], 8888h
-                {
-//loc_48371:              ; CODE XREF: movefun+3B6j
-    //                ; movefun+3C5j
-                    state--;
-                    currentTile->state = state;
-                    return;
-                }
-                else
-                {
-//loc_48357:              ; CODE XREF: movefun+3BDj
-                    currentTile->state = 0xFF;
-                    currentTile->tile = 0xFF;
-                    leftTile->state = 0x22;
-                    leftTile->tile = LevelTileTypeZonk;
-                    belowLeftTile->state = 0xFF;
-                    belowLeftTile->tile = 0xFF;
-                    return;
-                }
-            }
-//loc_48069:              ; CODE XREF: movefun+D4j
-            else if (stateType == 0x60) // 96
-            {
-//loc_48378:              ; CODE XREF: movefun+DDj
-                uint8_t stateFrame = state & 0x7; // module 8?
+//                 if (state < 0x52) // 82
+//                 {
+//                     currentTile->state = state;
+//                     return;
+//                 }
+// //loc_48341:              ; CODE XREF: movefun+3AAj
+//                 else if (belowLeftTile->state != 0 || belowLeftTile->tile != LevelTileTypeSpace) // cmp word ptr [si+18AAh], 0
+//                 {
+// //loc_48371:              ; CODE XREF: movefun+3B6j
+//     //                ; movefun+3C5j
+//                     state--;
+//                     currentTile->state = state;
+//                     return;
+//                 }
+//                 else if ((leftTile->state != 0 || leftTile->tile != LevelTileTypeSpace) // cmp word ptr [si+1832h], 0
+//                          && (leftTile->state != 0x88 || leftTile->tile != 0x88)) // cmp word ptr [si+1832h], 8888h
+//                 {
+// //loc_48371:              ; CODE XREF: movefun+3B6j
+//     //                ; movefun+3C5j
+//                     state--;
+//                     currentTile->state = state;
+//                     return;
+//                 }
+//                 else
+//                 {
+// //loc_48357:              ; CODE XREF: movefun+3BDj
+//                     currentTile->state = 0xFF;
+//                     currentTile->tile = 0xFF;
+//                     leftTile->state = 0x22;
+//                     leftTile->tile = LevelTileTypeZonk;
+//                     belowLeftTile->state = 0xFF;
+//                     belowLeftTile->tile = 0xFF;
+//                     return;
+//                 }
+//             }
+// //loc_48069:              ; CODE XREF: movefun+D4j
+//             else if (stateType == 0x60) // 96
+//             {
+// //loc_48378:              ; CODE XREF: movefun+DDj
+//                 uint8_t stateFrame = state & 0x7; // module 8?
 
-                uint8_t tileX = (position % kLevelWidth);
-                uint8_t tileY = (position / kLevelWidth);
+//                 uint8_t tileX = (position % kLevelWidth);
+//                 uint8_t tileY = (position / kLevelWidth);
 
-                uint16_t dstX = tileX * kTileSize;
-                uint16_t dstY = tileY * kTileSize;
+//                 uint16_t dstX = tileX * kTileSize;
+//                 uint16_t dstY = tileY * kTileSize;
 
-                // mov si, 12A4h
-                Point frameCoordinates = kZonkSlideRightAnimationFrameCoordinates[stateFrame];
+//                 // mov si, 12A4h
+//                 //Point frameCoordinates = kZonkSlideRightAnimationFrameCoordinates[stateFrame];
 
-                drawMovingSpriteFrameInLevel(frameCoordinates.x,
-                                             frameCoordinates.y,
-                                             kTileSize * 2,
-                                             kTileSize,
-                                             dstX, dstY);
+//                 drawMovingSpriteFrameInLevel(frameCoordinates.x,
+//                                              frameCoordinates.y,
+//                                              kTileSize * 2,
+//                                              kTileSize,
+//                                              dstX, dstY);
 
-                state = currentTile->state;
-                state++;
+//                 state = currentTile->state;
+//                 state++;
 
-                if (state < 0x62) // 98
-                {
-                    currentTile->state = state;
-                    return;
-                }
-//loc_483AF:              ; CODE XREF: movefun+418j
-                else if (belowRightTile->state != 0 || belowRightTile->tile != LevelTileTypeSpace) // cmp word ptr [si+18AEh], 0
-                {
-//loc_483DF:              ; CODE XREF: movefun+424j
-    //                ; movefun+433j
-                    state--;
-                    currentTile->state = state;
-                    return;
-                }
-                else if ((rightTile->state != 0 || rightTile->tile != LevelTileTypeSpace) // cmp word ptr [si+1836h], 0
-                         && (rightTile->state != 0x88 || rightTile->tile != 0x88)) // cmp word ptr [si+1836h], 8888h
-                {
-//loc_483DF:              ; CODE XREF: movefun+424j
-    //                ; movefun+433j
-                    state--;
-                    currentTile->state = state;
-                    return;
-                }
-                else
-                {
-//loc_483C5:              ; CODE XREF: movefun+42Bj
-                    currentTile->state = 0xFF;
-                    currentTile->tile = 0xFF;
-                    rightTile->state = 0x32;
-                    rightTile->tile = LevelTileTypeZonk;
-                    belowRightTile->state = 0xFF;
-                    belowRightTile->tile = 0xFF;
-                    return;
-                }
-            }
-//loc_48070:              ; CODE XREF: movefun+DBj
-            else if (stateType == 0x70) // 112
-            {
-//loc_483E6:              ; CODE XREF: movefun+E4j
-                if ((belowTile->state != 0 || belowTile->tile != LevelTileTypeSpace) // cmp word ptr [si+18ACh], 0
-                    && (belowTile->state != 0x99 && belowTile->tile != 0x99)) // cmp word ptr [si+18ACh], 9999h
-                {
-                    return;
-                }
+//                 if (state < 0x62) // 98
+//                 {
+//                     currentTile->state = state;
+//                     return;
+//                 }
+// //loc_483AF:              ; CODE XREF: movefun+418j
+//                 else if (belowRightTile->state != 0 || belowRightTile->tile != LevelTileTypeSpace) // cmp word ptr [si+18AEh], 0
+//                 {
+// //loc_483DF:              ; CODE XREF: movefun+424j
+//     //                ; movefun+433j
+//                     state--;
+//                     currentTile->state = state;
+//                     return;
+//                 }
+//                 else if ((rightTile->state != 0 || rightTile->tile != LevelTileTypeSpace) // cmp word ptr [si+1836h], 0
+//                          && (rightTile->state != 0x88 || rightTile->tile != 0x88)) // cmp word ptr [si+1836h], 8888h
+//                 {
+// //loc_483DF:              ; CODE XREF: movefun+424j
+//     //                ; movefun+433j
+//                     state--;
+//                     currentTile->state = state;
+//                     return;
+//                 }
+//                 else
+//                 {
+// //loc_483C5:              ; CODE XREF: movefun+42Bj
+//                     currentTile->state = 0xFF;
+//                     currentTile->tile = 0xFF;
+//                     rightTile->state = 0x32;
+//                     rightTile->tile = LevelTileTypeZonk;
+//                     belowRightTile->state = 0xFF;
+//                     belowRightTile->tile = 0xFF;
+//                     return;
+//                 }
+//             }
+// //loc_48070:              ; CODE XREF: movefun+DBj
+//             else if (stateType == 0x70) // 112
+//             {
+// //loc_483E6:              ; CODE XREF: movefun+E4j
+//                 if ((belowTile->state != 0 || belowTile->tile != LevelTileTypeSpace) // cmp word ptr [si+18ACh], 0
+//                     && (belowTile->state != 0x99 && belowTile->tile != 0x99)) // cmp word ptr [si+18ACh], 9999h
+//                 {
+//                     return;
+//                 }
 
-//loc_483F6:              ; CODE XREF: movefun+45Bj
-//                ; movefun+463j
-                currentTile->state = 0xFF;
-                currentTile->tile = 0xFF;
+// //loc_483F6:              ; CODE XREF: movefun+45Bj
+// //                ; movefun+463j
+//                 currentTile->state = 0xFF;
+//                 currentTile->tile = 0xFF;
 
-                // Move down and update tiles
-                position += kLevelWidth;
+//                 // Move down and update tiles
+//                 position += kLevelWidth;
 
-                currentTile = &gCurrentLevelState[position];
-                belowTile = &gCurrentLevelState[position + kLevelWidth];
-                belowLeftTile = &gCurrentLevelState[position + kLevelWidth - 1];
-                leftTile = &gCurrentLevelState[position - 1];
-                belowRightTile = &gCurrentLevelState[position + kLevelWidth + 1];
-                rightTile = &gCurrentLevelState[position + 1];
-                aboveRightTile = &gCurrentLevelState[position - kLevelWidth + 1];
+//                 currentTile = &gCurrentLevelState[position];
+//                 belowTile = &gCurrentLevelState[position + kLevelWidth];
+//                 belowLeftTile = &gCurrentLevelState[position + kLevelWidth - 1];
+//                 leftTile = &gCurrentLevelState[position - 1];
+//                 belowRightTile = &gCurrentLevelState[position + kLevelWidth + 1];
+//                 rightTile = &gCurrentLevelState[position + 1];
+//                 aboveRightTile = &gCurrentLevelState[position - kLevelWidth + 1];
 
-                currentTile->state = 0x10;
-                currentTile->tile = LevelTileTypeZonk;
-            }
-//locret_48077:               ; CODE XREF: movefun+E2j
-            else
-            {
-                return;
-            }
-        }
+//                 currentTile->state = 0x10;
+//                 currentTile->tile = LevelTileTypeZonk;
+//             }
+// //locret_48077:               ; CODE XREF: movefun+E2j
+//             else
+//             {
+//                 return;
+//             }
+//         }
 
-//loc_48078:              ; CODE XREF: movefun+B3j
-//                ; movefun+475j
-        // This animates the Zonk falling
-        // 01ED:1415
-        uint8_t somePositionThing = state;
-        somePositionThing *= 2;
-        somePositionThing &= 0x1F;
+// //loc_48078:              ; CODE XREF: movefun+B3j
+// //                ; movefun+475j
+//         // This animates the Zonk falling
+//         // 01ED:1415
+//         uint8_t somePositionThing = state;
+//         somePositionThing *= 2;
+//         somePositionThing &= 0x1F;
 
-        uint16_t offset = kFallAnimationGravityOffsets[somePositionThing];
+//         uint16_t offset = kFallAnimationGravityOffsets[somePositionThing];
 
-        uint16_t finalPosition = position - kLevelWidth;
-        uint8_t tileX = (finalPosition % kLevelWidth);
-        uint8_t tileY = (finalPosition / kLevelWidth);
+//         uint16_t finalPosition = position - kLevelWidth;
+//         uint8_t tileX = (finalPosition % kLevelWidth);
+//         uint8_t tileY = (finalPosition / kLevelWidth);
 
-        uint16_t dstX = tileX * kTileSize + (offset % 122);
-        uint16_t dstY = tileY * kTileSize + (offset / 122);
+//         uint16_t dstX = tileX * kTileSize + (offset % 122);
+//         uint16_t dstY = tileY * kTileSize + (offset / 122);
 
-        drawMovingSpriteFrameInLevel(224, 82,
-                                     kTileSize,
-                                     kTileSize + 2,
-                                     dstX, dstY);
+//         drawMovingSpriteFrameInLevel(224, 82,
+//                                      kTileSize,
+//                                      kTileSize + 2,
+//                                      dstX, dstY);
 
-        uint8_t newState = currentTile->state;
-        newState++;
-        if (newState == 0x16) // 22
-        {
-            currentTile->state = newState;
-            handleZonkStateAfterFallingOneTile(position - kLevelWidth); // Tile above
-            return;
-        }
-//loc_480BB:              ; CODE XREF: movefun+11Bj
-        else if (newState < 0x18) // 24
-        {
-            currentTile->state = newState;
-            return;
-        }
+//         uint8_t newState = currentTile->state;
+//         newState++;
+//         if (newState == 0x16) // 22
+//         {
+//             currentTile->state = newState;
+//             handleZonkStateAfterFallingOneTile(position - kLevelWidth); // Tile above
+//             return;
+//         }
+// //loc_480BB:              ; CODE XREF: movefun+11Bj
+//         else if (newState < 0x18) // 24
+//         {
+//             currentTile->state = newState;
+//             return;
+//         }
 
-//loc_480C5:              ; CODE XREF: movefun+12Ej
-        // This part handles what to do when the zonk finished falling 1 tile
-        // 01ED:1462
-        currentTile->state = 0;
-        if (gAreZonksFrozen == 2)
-        {
-            return;
-        }
+// //loc_480C5:              ; CODE XREF: movefun+12Ej
+//         // This part handles what to do when the zonk finished falling 1 tile
+//         // 01ED:1462
+//         currentTile->state = 0;
+//         if (gAreZonksFrozen == 2)
+//         {
+//             return;
+//         }
 
-//loc_480D2:              ; CODE XREF: movefun+13Fj
-        if ((belowTile->tile == LevelTileTypeSpace && belowTile->state == 0) // cmp word ptr [si+18ACh], 0
-            || (belowTile->tile == 0x99 && belowTile->state == 0x99)) // cmp word ptr [si+18ACh], 9999h
-        {
-//loc_4816D:              ; CODE XREF: movefun+149j
-//                ; movefun+154j
-            currentTile->state = 0x70;
-            currentTile->tile = LevelTileTypeZonk;
-            belowTile->state = 0x99;
-            belowTile->tile = 0x99;
-            return;
-        }
+// //loc_480D2:              ; CODE XREF: movefun+13Fj
+//         if ((belowTile->tile == LevelTileTypeSpace && belowTile->state == 0) // cmp word ptr [si+18ACh], 0
+//             || (belowTile->tile == 0x99 && belowTile->state == 0x99)) // cmp word ptr [si+18ACh], 9999h
+//         {
+// //loc_4816D:              ; CODE XREF: movefun+149j
+// //                ; movefun+154j
+//             currentTile->state = 0x70;
+//             currentTile->tile = LevelTileTypeZonk;
+//             belowTile->state = 0x99;
+//             belowTile->tile = 0x99;
+//             return;
+//         }
 
-//loc_480E7:              ; CODE XREF: movefun+152j
-        if (belowTile->tile == LevelTileTypeMurphy) // cmp byte ptr [si+18ACh], 3
-        {
-            break;
-        }
+// //loc_480E7:              ; CODE XREF: movefun+152j
+//         if (belowTile->tile == LevelTileTypeMurphy) // cmp byte ptr [si+18ACh], 3
+//         {
+//             break;
+//         }
 
-//loc_480F1:              ; CODE XREF: movefun+15Cj
-        if (belowTile->tile == LevelTileTypeSnikSnak) // cmp byte ptr [si+18ACh], 11h
-        {
-//loc_481FE:              ; CODE XREF: movefun+168j
-//                ; movefun+188j ...
-            detonateBigExplosion(position + kLevelWidth); // Tile below
-            return;
-        }
+// //loc_480F1:              ; CODE XREF: movefun+15Cj
+//         if (belowTile->tile == LevelTileTypeSnikSnak) // cmp byte ptr [si+18ACh], 11h
+//         {
+// //loc_481FE:              ; CODE XREF: movefun+168j
+// //                ; movefun+188j ...
+//             detonateBigExplosion(position + kLevelWidth); // Tile below
+//             return;
+//         }
 
-//loc_480FB:              ; CODE XREF: movefun+166j
-        if (belowTile->tile == 0xBB && belowTile->state == 0x2) // cmp word ptr [si+18ACh], 2BBh
-        {
-            shouldSkipTo_loc_481C6 = 1;
-            break;
-        }
+// //loc_480FB:              ; CODE XREF: movefun+166j
+//         if (belowTile->tile == 0xBB && belowTile->state == 0x2) // cmp word ptr [si+18ACh], 2BBh
+//         {
+//             shouldSkipTo_loc_481C6 = 1;
+//             break;
+//         }
 
-//loc_48106:              ; CODE XREF: movefun+171j
-        if (belowTile->tile == 0xBB && belowTile->state == 0x4) // cmp word ptr [si+18ACh], 4BBh
-        {
-//loc_481E2:              ; CODE XREF: movefun+17Ej
-            if (belowRightTile->tile == LevelTileTypeElectron) // cmp byte ptr [si+18AEh], 18h
-            {
-                belowTile->tile = LevelTileTypeElectron;
-                belowTile->state = 0;
-            }
-//loc_481EF:              ; CODE XREF: movefun+257j
-            if (belowRightTile->tile != LevelTileTypeExplosion) // cmp byte ptr [si+18AEh], 1Fh
-            {
-                belowRightTile->tile = LevelTileTypeSpace;
-                belowRightTile->state = 0;
-            }
-//loc_481FE:              ; CODE XREF: movefun+168j
-//                ; movefun+188j ...
-            detonateBigExplosion(position + kLevelWidth); // Tile below
-            return;
-        }
+// //loc_48106:              ; CODE XREF: movefun+171j
+//         if (belowTile->tile == 0xBB && belowTile->state == 0x4) // cmp word ptr [si+18ACh], 4BBh
+//         {
+// //loc_481E2:              ; CODE XREF: movefun+17Ej
+//             if (belowRightTile->tile == LevelTileTypeElectron) // cmp byte ptr [si+18AEh], 18h
+//             {
+//                 belowTile->tile = LevelTileTypeElectron;
+//                 belowTile->state = 0;
+//             }
+// //loc_481EF:              ; CODE XREF: movefun+257j
+//             if (belowRightTile->tile != LevelTileTypeExplosion) // cmp byte ptr [si+18AEh], 1Fh
+//             {
+//                 belowRightTile->tile = LevelTileTypeSpace;
+//                 belowRightTile->state = 0;
+//             }
+// //loc_481FE:              ; CODE XREF: movefun+168j
+// //                ; movefun+188j ...
+//             detonateBigExplosion(position + kLevelWidth); // Tile below
+//             return;
+//         }
 
-//loc_48111:              ; CODE XREF: movefun+17Cj
-        if (belowTile->tile == LevelTileTypeElectron) // cmp byte ptr [si+18ACh], 18h
-        {
-//loc_481FE:              ; CODE XREF: movefun+168j
-//                ; movefun+188j ...
-            detonateBigExplosion(position + kLevelWidth); // Tile below
-            return;
-        }
+// //loc_48111:              ; CODE XREF: movefun+17Cj
+//         if (belowTile->tile == LevelTileTypeElectron) // cmp byte ptr [si+18ACh], 18h
+//         {
+// //loc_481FE:              ; CODE XREF: movefun+168j
+// //                ; movefun+188j ...
+//             detonateBigExplosion(position + kLevelWidth); // Tile below
+//             return;
+//         }
 
-//loc_4811B:              ; CODE XREF: movefun+186j
-        if (belowTile->tile == LevelTileTypeOrangeDisk && belowTile->state == 0) // cmp word ptr [si+18ACh], 8
-        {
-//loc_48205:              ; CODE XREF: movefun+192j
-            gExplosionTimers[position + kLevelWidth] = 6;
-            return;
-        }
+// //loc_4811B:              ; CODE XREF: movefun+186j
+//         if (belowTile->tile == LevelTileTypeOrangeDisk && belowTile->state == 0) // cmp word ptr [si+18ACh], 8
+//         {
+// //loc_48205:              ; CODE XREF: movefun+192j
+//             gExplosionTimers[position + kLevelWidth] = 6;
+//             return;
+//         }
 
-//loc_48125:              ; CODE XREF: movefun+190j
-        playFallSound();
-        if ((belowTile->tile != LevelTileTypeZonk || belowTile->state != 0) // cmp word ptr [si+18ACh], 1
-            && (belowTile->tile != LevelTileTypeInfotron || belowTile->state != 0) // cmp word ptr [si+18ACh], 4
-            && (belowTile->tile != LevelTileTypeChip || belowTile->state != 0)) // cmp word ptr [si+18ACh], 5
-        {
-            return;
-        }
+// //loc_48125:              ; CODE XREF: movefun+190j
+//         playFallSound();
+//         if ((belowTile->tile != LevelTileTypeZonk || belowTile->state != 0) // cmp word ptr [si+18ACh], 1
+//             && (belowTile->tile != LevelTileTypeInfotron || belowTile->state != 0) // cmp word ptr [si+18ACh], 4
+//             && (belowTile->tile != LevelTileTypeChip || belowTile->state != 0)) // cmp word ptr [si+18ACh], 5
+//         {
+//             return;
+//         }
 
-//loc_4813E:              ; CODE XREF: movefun+19Dj
-//                ; movefun+1A4j ...
-        if ((belowLeftTile->state == 0 && belowLeftTile->tile == LevelTileTypeSpace) // cmp word ptr [si+18AAh], 0
-            || (belowLeftTile->state == 0x88 && belowLeftTile->tile == 0x88) // cmp word ptr [si+18AAh], 8888h
-            || (belowLeftTile->state == 0xAA && belowLeftTile->tile == 0xAA)) // cmp word ptr [si+18AAh], 0AAAAh
-        {
-//loc_4817A:              ; CODE XREF: movefun+1B3j
-//                ; movefun+1BBj ...
-            if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace) //cmp word ptr [si+1832h], 0
-            {
-//loc_48184:              ; CODE XREF: movefun+1EFj
-                currentTile->state = 0x50;
-                leftTile->state = 0x88;
-                leftTile->tile = 0x88;
-                return;
-            }
-            else
-            {
-                continue;
-            }
-        }
-        if ((belowRightTile->state == 0 && belowRightTile->tile == LevelTileTypeSpace) // cmp word ptr [si+18AEh], 0
-            || (belowRightTile->state == 0x88 && belowRightTile->tile == 0x88) // cmp word ptr [si+18AEh], 8888h
-            || (belowRightTile->state == 0xAA && belowRightTile->tile == 0xAA)) // cmp word ptr [si+18AEh], 0AAAAh
-        {
-//loc_48190:              ; CODE XREF: movefun+1CAj
-//                ; movefun+1D2j ...
-            if (rightTile->tile == LevelTileTypeSpace && rightTile->state == 0) //cmp word ptr [si+1836h], 0
-            {
-//loc_48198:              ; CODE XREF: movefun+205j
-                currentTile->state = 0x60;
-                rightTile->state = 0x88;
-                rightTile->tile = 0x88;
-                return;
-            }
-            else
-            {
-                return;
-            }
-        }
+// //loc_4813E:              ; CODE XREF: movefun+19Dj
+// //                ; movefun+1A4j ...
+//         if ((belowLeftTile->state == 0 && belowLeftTile->tile == LevelTileTypeSpace) // cmp word ptr [si+18AAh], 0
+//             || (belowLeftTile->state == 0x88 && belowLeftTile->tile == 0x88) // cmp word ptr [si+18AAh], 8888h
+//             || (belowLeftTile->state == 0xAA && belowLeftTile->tile == 0xAA)) // cmp word ptr [si+18AAh], 0AAAAh
+//         {
+// //loc_4817A:              ; CODE XREF: movefun+1B3j
+// //                ; movefun+1BBj ...
+//             if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace) //cmp word ptr [si+1832h], 0
+//             {
+// //loc_48184:              ; CODE XREF: movefun+1EFj
+//                 currentTile->state = 0x50;
+//                 leftTile->state = 0x88;
+//                 leftTile->tile = 0x88;
+//                 return;
+//             }
+//             else
+//             {
+//                 continue;
+//             }
+//         }
+//         if ((belowRightTile->state == 0 && belowRightTile->tile == LevelTileTypeSpace) // cmp word ptr [si+18AEh], 0
+//             || (belowRightTile->state == 0x88 && belowRightTile->tile == 0x88) // cmp word ptr [si+18AEh], 8888h
+//             || (belowRightTile->state == 0xAA && belowRightTile->tile == 0xAA)) // cmp word ptr [si+18AEh], 0AAAAh
+//         {
+// //loc_48190:              ; CODE XREF: movefun+1CAj
+// //                ; movefun+1D2j ...
+//             if (rightTile->tile == LevelTileTypeSpace && rightTile->state == 0) //cmp word ptr [si+1836h], 0
+//             {
+// //loc_48198:              ; CODE XREF: movefun+205j
+//                 currentTile->state = 0x60;
+//                 rightTile->state = 0x88;
+//                 rightTile->tile = 0x88;
+//                 return;
+//             }
+//             else
+//             {
+//                 return;
+//             }
+//         }
 
-        return;
+//         return;
 
-    }
-    while (1);
+//     }
+//     while (1);
 
-    if (shouldSkipTo_loc_481C6 == 0)
-    {
-//loc_481A4:              ; CODE XREF: movefun+15Ej
-        if (belowTile->state == 0xE
-            || belowTile->state == 0xF
-            || belowTile->state == 0x28
-            || belowTile->state == 0x29
-            || belowTile->state == 0x25
-            || belowTile->state == 0x26)
-        {
-            return;
-        }
-    }
+//     if (shouldSkipTo_loc_481C6 == 0)
+//     {
+// //loc_481A4:              ; CODE XREF: movefun+15Ej
+//         if (belowTile->state == 0xE
+//             || belowTile->state == 0xF
+//             || belowTile->state == 0x28
+//             || belowTile->state == 0x29
+//             || belowTile->state == 0x25
+//             || belowTile->state == 0x26)
+//         {
+//             return;
+//         }
+//     }
 
-//loc_481C6:              ; CODE XREF: movefun+173j
-    if (belowLeftTile->tile == LevelTileTypeElectron) // cmp byte ptr [si+18AAh], 18h
-    {
-        belowTile->tile = LevelTileTypeElectron;
-        belowTile->state = 0;
-    }
-//loc_481D3:              ; CODE XREF: movefun+23Bj
-    if (belowLeftTile->tile != LevelTileTypeExplosion) // cmp byte ptr [si+18AAh], 1Fh
-    {
-        belowLeftTile->tile = LevelTileTypeSpace;
-        belowLeftTile->state = 0;
-    }
+// //loc_481C6:              ; CODE XREF: movefun+173j
+//     if (belowLeftTile->tile == LevelTileTypeElectron) // cmp byte ptr [si+18AAh], 18h
+//     {
+//         belowTile->tile = LevelTileTypeElectron;
+//         belowTile->state = 0;
+//     }
+// //loc_481D3:              ; CODE XREF: movefun+23Bj
+//     if (belowLeftTile->tile != LevelTileTypeExplosion) // cmp byte ptr [si+18AAh], 1Fh
+//     {
+//         belowLeftTile->tile = LevelTileTypeSpace;
+//         belowLeftTile->state = 0;
+//     }
 
-//loc_481FE:              ; CODE XREF: movefun+168j
-//                ; movefun+188j ...
-    detonateBigExplosion(position + kLevelWidth); // Tile below
+// //loc_481FE:              ; CODE XREF: movefun+168j
+// //                ; movefun+188j ...
+//     detonateBigExplosion(position + kLevelWidth); // Tile below
 }
 
 void updateInfotronTiles(int16_t position) // movefun2  proc near       ; DATA XREF: data:1612o
 {
-    // 01ED:17A5
+//     // 01ED:17A5
 
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *belowLeftTile = &gCurrentLevelState[position + kLevelWidth - 1];
-    StatefulLevelTile *belowRightTile = &gCurrentLevelState[position + kLevelWidth + 1];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *belowLeftTile = &gCurrentLevelState[position + kLevelWidth - 1];
+//     StatefulLevelTile *belowRightTile = &gCurrentLevelState[position + kLevelWidth + 1];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
 
-    if (currentTile->tile != LevelTileTypeInfotron)
-    {
-        return;
-    }
+//     if (currentTile->tile != LevelTileTypeInfotron)
+//     {
+//         return;
+//     }
 
-//loc_48410:              ; CODE XREF: movefun2+5j
-    uint8_t shouldSkipFirstPartOfLoop = 0;
+// //loc_48410:              ; CODE XREF: movefun2+5j
+//     uint8_t shouldSkipFirstPartOfLoop = 0;
 
-    if (currentTile->state != 0 || currentTile->tile != LevelTileTypeInfotron)
-    {
-        shouldSkipFirstPartOfLoop = 1; // used to emulate "jmp loc_48495"
-    }
-    else
-    {
-//loc_4841B:              ; CODE XREF: movefun2+Fj
-        if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
-        {
-//loc_48463:              ; CODE XREF: movefun2+1Aj
-            currentTile->state = 0x40;
-            shouldSkipFirstPartOfLoop = 1; // used to emulate "jmp loc_48495"
-        }
-        else
-        {
-            if ((belowTile->state != 0 || belowTile->tile != LevelTileTypeZonk)
-                && (belowTile->state != 0 || belowTile->tile != LevelTileTypeInfotron)
-                && (belowTile->state != 0 || belowTile->tile != LevelTileTypeChip))
-            {
-                return;
-            }
+//     if (currentTile->state != 0 || currentTile->tile != LevelTileTypeInfotron)
+//     {
+//         shouldSkipFirstPartOfLoop = 1; // used to emulate "jmp loc_48495"
+//     }
+//     else
+//     {
+// //loc_4841B:              ; CODE XREF: movefun2+Fj
+//         if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_48463:              ; CODE XREF: movefun2+1Aj
+//             currentTile->state = 0x40;
+//             shouldSkipFirstPartOfLoop = 1; // used to emulate "jmp loc_48495"
+//         }
+//         else
+//         {
+//             if ((belowTile->state != 0 || belowTile->tile != LevelTileTypeZonk)
+//                 && (belowTile->state != 0 || belowTile->tile != LevelTileTypeInfotron)
+//                 && (belowTile->state != 0 || belowTile->tile != LevelTileTypeChip))
+//             {
+//                 return;
+//             }
 
-//loc_48434:              ; CODE XREF: movefun2+1Fj
-//                ; movefun2+24j ...
-            if ((belowLeftTile->state == 0 && belowLeftTile->tile == LevelTileTypeSpace)
-                || (belowLeftTile->state == 0x88 && belowLeftTile->tile == 0x88)
-                || (belowLeftTile->state == 0xAA && belowLeftTile->tile == 0xAA))
-            {
-//loc_4846A:              ; CODE XREF: movefun2+31j
-//                ; movefun2+39j ...
-                if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-                {
-//loc_48473:              ; CODE XREF: movefun2+67j
-                    currentTile->state = 0x50;
-                    leftTile->state = 0x88;
-                    leftTile->tile = 0x88;
-                    shouldSkipFirstPartOfLoop = 1; // used to emulate "jmp loc_48495"
-                }
-            }
-        }
-    }
+// //loc_48434:              ; CODE XREF: movefun2+1Fj
+// //                ; movefun2+24j ...
+//             if ((belowLeftTile->state == 0 && belowLeftTile->tile == LevelTileTypeSpace)
+//                 || (belowLeftTile->state == 0x88 && belowLeftTile->tile == 0x88)
+//                 || (belowLeftTile->state == 0xAA && belowLeftTile->tile == 0xAA))
+//             {
+// //loc_4846A:              ; CODE XREF: movefun2+31j
+// //                ; movefun2+39j ...
+//                 if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//                 {
+// //loc_48473:              ; CODE XREF: movefun2+67j
+//                     currentTile->state = 0x50;
+//                     leftTile->state = 0x88;
+//                     leftTile->tile = 0x88;
+//                     shouldSkipFirstPartOfLoop = 1; // used to emulate "jmp loc_48495"
+//                 }
+//             }
+//         }
+//     }
 
-    do
-    {
-        if (shouldSkipFirstPartOfLoop == 0)
-        {
-//loc_4844B:              ; CODE XREF: movefun2+69j
-//                ; movefun2+1C7j
-            if ((belowRightTile->state != 0 || belowRightTile->tile != LevelTileTypeSpace)
-                && (belowRightTile->state != 0x88 || belowRightTile->tile != 0x88)
-                && (belowRightTile->state != 0xAA || belowRightTile->tile != 0xAA))
-            {
-                return;
-            }
+//     do
+//     {
+//         if (shouldSkipFirstPartOfLoop == 0)
+//         {
+// //loc_4844B:              ; CODE XREF: movefun2+69j
+// //                ; movefun2+1C7j
+//             if ((belowRightTile->state != 0 || belowRightTile->tile != LevelTileTypeSpace)
+//                 && (belowRightTile->state != 0x88 || belowRightTile->tile != 0x88)
+//                 && (belowRightTile->state != 0xAA || belowRightTile->tile != 0xAA))
+//             {
+//                 return;
+//             }
 
-//loc_48480:              ; CODE XREF: movefun2+48j
-//                ; movefun2+50j ...
-            if (rightTile->state != 0 || rightTile->tile != LevelTileTypeSpace)
-            {
-                return;
-            }
+// //loc_48480:              ; CODE XREF: movefun2+48j
+// //                ; movefun2+50j ...
+//             if (rightTile->state != 0 || rightTile->tile != LevelTileTypeSpace)
+//             {
+//                 return;
+//             }
 
-//loc_48488:              ; CODE XREF: movefun2+7Dj
-            currentTile->state = 0x60;
-            rightTile->state = 0x88;
-            rightTile->tile = 0x88;
-        }
+// //loc_48488:              ; CODE XREF: movefun2+7Dj
+//             currentTile->state = 0x60;
+//             rightTile->state = 0x88;
+//             rightTile->tile = 0x88;
+//         }
 
-        shouldSkipFirstPartOfLoop = 0;
+//         shouldSkipFirstPartOfLoop = 0;
 
-//loc_48495:              ; CODE XREF: movefun2+11j
-//                ; movefun2+60j ...
-        uint8_t state = currentTile->state;
-        uint8_t stateType = state & 0xF0;
+// //loc_48495:              ; CODE XREF: movefun2+11j
+// //                ; movefun2+60j ...
+//         uint8_t state = currentTile->state;
+//         uint8_t stateType = state & 0xF0;
 
-        if (stateType != 0x10)
-        {
-//loc_484A5:              ; CODE XREF: movefun2+99j
-            if (stateType == 0x20)
-            {
-//loc_4861B:              ; CODE XREF: movefun2+A1j
-                uint8_t stateFrame = state & 0x7; // module 8?
+//         if (stateType != 0x10)
+//         {
+// //loc_484A5:              ; CODE XREF: movefun2+99j
+//             if (stateType == 0x20)
+//             {
+// //loc_4861B:              ; CODE XREF: movefun2+A1j
+//                 uint8_t stateFrame = state & 0x7; // module 8?
 
-                // mov si, 12B6h
-                Point frameCoordinates = kInfotronSlideLeftAnimationFrameCoordinates[stateFrame];
+//                 // mov si, 12B6h
+//                 //Point frameCoordinates = kInfotronSlideLeftAnimationFrameCoordinates[stateFrame];
 
-                uint8_t tileX = (position % kLevelWidth);
-                uint8_t tileY = (position / kLevelWidth);
+//                 uint8_t tileX = (position % kLevelWidth);
+//                 uint8_t tileY = (position / kLevelWidth);
 
-                uint16_t dstX = tileX * kTileSize;
-                uint16_t dstY = tileY * kTileSize;
+//                 uint16_t dstX = tileX * kTileSize;
+//                 uint16_t dstY = tileY * kTileSize;
 
-                drawMovingSpriteFrameInLevel(frameCoordinates.x,
-                                             frameCoordinates.y,
-                                             kTileSize * 2,
-                                             kTileSize,
-                                             dstX,
-                                             dstY);
+//                 drawMovingSpriteFrameInLevel(frameCoordinates.x,
+//                                              frameCoordinates.y,
+//                                              kTileSize * 2,
+//                                              kTileSize,
+//                                              dstX,
+//                                              dstY);
 
-                state = currentTile->state;
-                state++;
-                if (state == 0x24) // 36
-                {
-                    rightTile->state = 0xAA;
-                    rightTile->tile = 0xAA;
-                }
-//loc_48653:              ; CODE XREF: movefun2+243j
-                if (state == 0x26) // 38
-                {
-                    currentTile->state = state;
-                    handleInfotronStateAfterFallingOneTile(position + 1);
-                    return;
-                }
-//loc_48666:              ; CODE XREF: movefun2+24Ej
-                else if (state < 0x28) // 40
-                {
-                    currentTile->state = state;
-                    return;
-                }
-//loc_48670:              ; CODE XREF: movefun2+261j
-                else
-                {
-                    currentTile->state = 0x70;
-                    currentTile->tile = LevelTileTypeInfotron;
-                    return;
-                }
-            }
-//loc_484AC:              ; CODE XREF: movefun2+9Fj
-            else if (stateType == 0x30)
-            {
-//loc_48677:              ; CODE XREF: movefun2+A8j
-                uint8_t stateFrame = state & 0x7;
+//                 state = currentTile->state;
+//                 state++;
+//                 if (state == 0x24) // 36
+//                 {
+//                     rightTile->state = 0xAA;
+//                     rightTile->tile = 0xAA;
+//                 }
+// //loc_48653:              ; CODE XREF: movefun2+243j
+//                 if (state == 0x26) // 38
+//                 {
+//                     currentTile->state = state;
+//                     handleInfotronStateAfterFallingOneTile(position + 1);
+//                     return;
+//                 }
+// //loc_48666:              ; CODE XREF: movefun2+24Ej
+//                 else if (state < 0x28) // 40
+//                 {
+//                     currentTile->state = state;
+//                     return;
+//                 }
+// //loc_48670:              ; CODE XREF: movefun2+261j
+//                 else
+//                 {
+//                     currentTile->state = 0x70;
+//                     currentTile->tile = LevelTileTypeInfotron;
+//                     return;
+//                 }
+//             }
+// //loc_484AC:              ; CODE XREF: movefun2+9Fj
+//             else if (stateType == 0x30)
+//             {
+// //loc_48677:              ; CODE XREF: movefun2+A8j
+//                 uint8_t stateFrame = state & 0x7;
 
-                uint8_t tileX = ((position - 1) % kLevelWidth);
-                uint8_t tileY = ((position - 1) / kLevelWidth);
+//                 uint8_t tileX = ((position - 1) % kLevelWidth);
+//                 uint8_t tileY = ((position - 1) / kLevelWidth);
 
-                uint16_t dstX = tileX * kTileSize;
-                uint16_t dstY = tileY * kTileSize;
+//                 uint16_t dstX = tileX * kTileSize;
+//                 uint16_t dstY = tileY * kTileSize;
 
-                // mov si, 12C6h
-                Point frameCoordinates = kInfotronSlideRightAnimationFrameCoordinates[stateFrame];
+//                 // mov si, 12C6h
+//                 //Point frameCoordinates = kInfotronSlideRightAnimationFrameCoordinates[stateFrame];
 
-                drawMovingSpriteFrameInLevel(frameCoordinates.x,
-                                             frameCoordinates.y,
-                                             kTileSize * 2,
-                                             kTileSize,
-                                             dstX, dstY);
+//                 drawMovingSpriteFrameInLevel(frameCoordinates.x,
+//                                              frameCoordinates.y,
+//                                              kTileSize * 2,
+//                                              kTileSize,
+//                                              dstX, dstY);
 
-                state = currentTile->state;
-                state++;
-                if (state == 0x34) // 52
-                {
-                    leftTile->state = 0xAA;
-                    leftTile->tile = 0xAA;
-                }
-//loc_486AF:              ; CODE XREF: movefun2+29Fj
-                if (state == 0x36) // 54
-                {
-                    currentTile->state = state;
-                    handleInfotronStateAfterFallingOneTile(position - 1); // left tile
-                }
-//loc_486C1:              ; CODE XREF: movefun2+2AAj
-                if (state < 0x38) // 54
-                {
-                    currentTile->state = state;
-                    return;
-                }
-                else
-                {
-                    currentTile->state = 0x70;
-                    currentTile->tile = LevelTileTypeInfotron;
-                    return;
-                }
-            }
-//loc_484B3:              ; CODE XREF: movefun2+A6j
-            else if (stateType == 0x40)
-            {
-//loc_486D2:              ; CODE XREF: movefun2+AFj
-                state++;
-                if (state < 0x42)
-                {
-                    currentTile->state = state;
-                    return;
-                }
+//                 state = currentTile->state;
+//                 state++;
+//                 if (state == 0x34) // 52
+//                 {
+//                     leftTile->state = 0xAA;
+//                     leftTile->tile = 0xAA;
+//                 }
+// //loc_486AF:              ; CODE XREF: movefun2+29Fj
+//                 if (state == 0x36) // 54
+//                 {
+//                     currentTile->state = state;
+//                     handleInfotronStateAfterFallingOneTile(position - 1); // left tile
+//                 }
+// //loc_486C1:              ; CODE XREF: movefun2+2AAj
+//                 if (state < 0x38) // 54
+//                 {
+//                     currentTile->state = state;
+//                     return;
+//                 }
+//                 else
+//                 {
+//                     currentTile->state = 0x70;
+//                     currentTile->tile = LevelTileTypeInfotron;
+//                     return;
+//                 }
+//             }
+// //loc_484B3:              ; CODE XREF: movefun2+A6j
+//             else if (stateType == 0x40)
+//             {
+// //loc_486D2:              ; CODE XREF: movefun2+AFj
+//                 state++;
+//                 if (state < 0x42)
+//                 {
+//                     currentTile->state = state;
+//                     return;
+//                 }
 
-//loc_486DE:              ; CODE XREF: movefun2+2CFj
-                if (belowTile->state != 0 || belowTile->tile != LevelTileTypeSpace)
-                {
-                    state--;
-                    currentTile->state = state;
-                    return;
-                }
+// //loc_486DE:              ; CODE XREF: movefun2+2CFj
+//                 if (belowTile->state != 0 || belowTile->tile != LevelTileTypeSpace)
+//                 {
+//                     state--;
+//                     currentTile->state = state;
+//                     return;
+//                 }
 
-//loc_486EC:              ; CODE XREF: movefun2+2DBj
-                currentTile->state = 0xFF;
-                currentTile->tile = 0xFF;
-                belowTile->state = 0x10;
-                belowTile->tile = LevelTileTypeInfotron;
-                return;
-            }
-//loc_484BA:              ; CODE XREF: movefun2+ADj
-            else if (stateType == 0x50)
-            {
-//loc_48700:              ; CODE XREF: movefun2+B6j
-                uint8_t stateFrame = state & 0x7; // module 8?
+// //loc_486EC:              ; CODE XREF: movefun2+2DBj
+//                 currentTile->state = 0xFF;
+//                 currentTile->tile = 0xFF;
+//                 belowTile->state = 0x10;
+//                 belowTile->tile = LevelTileTypeInfotron;
+//                 return;
+//             }
+// //loc_484BA:              ; CODE XREF: movefun2+ADj
+//             else if (stateType == 0x50)
+//             {
+// //loc_48700:              ; CODE XREF: movefun2+B6j
+//                 uint8_t stateFrame = state & 0x7; // module 8?
 
-                uint8_t tileX = ((position - 1) % kLevelWidth);
-                uint8_t tileY = ((position - 1) / kLevelWidth);
+//                 uint8_t tileX = ((position - 1) % kLevelWidth);
+//                 uint8_t tileY = ((position - 1) / kLevelWidth);
 
-                uint16_t dstX = tileX * kTileSize;
-                uint16_t dstY = tileY * kTileSize;
+//                 uint16_t dstX = tileX * kTileSize;
+//                 uint16_t dstY = tileY * kTileSize;
 
-                // mov si, 12B6h
-                Point frameCoordinates = kInfotronSlideLeftAnimationFrameCoordinates[stateFrame];
-                drawMovingSpriteFrameInLevel(frameCoordinates.x,
-                                             frameCoordinates.y,
-                                             kTileSize * 2,
-                                             kTileSize,
-                                             dstX, dstY);
-                state = currentTile->state;
-                state++;
+//                 // mov si, 12B6h
+//                 //Point frameCoordinates = kInfotronSlideLeftAnimationFrameCoordinates[stateFrame];
+//                 drawMovingSpriteFrameInLevel(frameCoordinates.x,
+//                                              frameCoordinates.y,
+//                                              kTileSize * 2,
+//                                              kTileSize,
+//                                              dstX, dstY);
+//                 state = currentTile->state;
+//                 state++;
 
-                if (state < 0x52) // 82
-                {
-                    currentTile->state = state;
-                    return;
-                }
-//loc_48737:              ; CODE XREF: movefun2+328j
-                else if (belowLeftTile->state != 0 || belowLeftTile->tile != LevelTileTypeSpace) // cmp word ptr [si+18AAh], 0
-                {
-//loc_48767:              ; CODE XREF: movefun2+334j
-//                ; movefun2+343j
-                    state--;
-                    currentTile->state = state;
-                    return;
-                }
-                else if ((leftTile->state != 0 || leftTile->tile != LevelTileTypeSpace) // cmp word ptr [si+1832h], 0
-                         && (leftTile->state != 0x88 || leftTile->tile != 0x88)) // cmp word ptr [si+1832h], 8888h
-                {
-//loc_48767:              ; CODE XREF: movefun2+334j
-//                ; movefun2+343j
-                    state--;
-                    currentTile->state = state;
-                    return;
-                }
-                else
-                {
-//loc_4874D:              ; CODE XREF: movefun2+33Bj
-                    currentTile->state = 0xFF;
-                    currentTile->tile = 0xFF;
-                    leftTile->state = 0x22;
-                    leftTile->tile = LevelTileTypeInfotron;
-                    belowLeftTile->state = 0x99;
-                    belowLeftTile->tile = 0x99;
-                    return;
-                }
-            }
-//loc_484C1:              ; CODE XREF: movefun2+B4j
-            else if (stateType == 0x60)
-            {
-//loc_4876E:              ; CODE XREF: movefun2+BDj
-                uint8_t stateFrame = state & 0x7; // module 8?
+//                 if (state < 0x52) // 82
+//                 {
+//                     currentTile->state = state;
+//                     return;
+//                 }
+// //loc_48737:              ; CODE XREF: movefun2+328j
+//                 else if (belowLeftTile->state != 0 || belowLeftTile->tile != LevelTileTypeSpace) // cmp word ptr [si+18AAh], 0
+//                 {
+// //loc_48767:              ; CODE XREF: movefun2+334j
+// //                ; movefun2+343j
+//                     state--;
+//                     currentTile->state = state;
+//                     return;
+//                 }
+//                 else if ((leftTile->state != 0 || leftTile->tile != LevelTileTypeSpace) // cmp word ptr [si+1832h], 0
+//                          && (leftTile->state != 0x88 || leftTile->tile != 0x88)) // cmp word ptr [si+1832h], 8888h
+//                 {
+// //loc_48767:              ; CODE XREF: movefun2+334j
+// //                ; movefun2+343j
+//                     state--;
+//                     currentTile->state = state;
+//                     return;
+//                 }
+//                 else
+//                 {
+// //loc_4874D:              ; CODE XREF: movefun2+33Bj
+//                     currentTile->state = 0xFF;
+//                     currentTile->tile = 0xFF;
+//                     leftTile->state = 0x22;
+//                     leftTile->tile = LevelTileTypeInfotron;
+//                     belowLeftTile->state = 0x99;
+//                     belowLeftTile->tile = 0x99;
+//                     return;
+//                 }
+//             }
+// //loc_484C1:              ; CODE XREF: movefun2+B4j
+//             else if (stateType == 0x60)
+//             {
+// //loc_4876E:              ; CODE XREF: movefun2+BDj
+//                 uint8_t stateFrame = state & 0x7; // module 8?
 
-                uint8_t tileX = (position % kLevelWidth);
-                uint8_t tileY = (position / kLevelWidth);
+//                 uint8_t tileX = (position % kLevelWidth);
+//                 uint8_t tileY = (position / kLevelWidth);
 
-                uint16_t dstX = tileX * kTileSize;
-                uint16_t dstY = tileY * kTileSize;
+//                 uint16_t dstX = tileX * kTileSize;
+//                 uint16_t dstY = tileY * kTileSize;
 
-                // mov si, 12C6h
-                Point frameCoordinates = kInfotronSlideRightAnimationFrameCoordinates[stateFrame];
+//                 // mov si, 12C6h
+//                 //Point frameCoordinates = kInfotronSlideRightAnimationFrameCoordinates[stateFrame];
 
-                drawMovingSpriteFrameInLevel(frameCoordinates.x,
-                                             frameCoordinates.y,
-                                             kTileSize * 2,
-                                             kTileSize,
-                                             dstX, dstY);
+//                 drawMovingSpriteFrameInLevel(frameCoordinates.x,
+//                                              frameCoordinates.y,
+//                                              kTileSize * 2,
+//                                              kTileSize,
+//                                              dstX, dstY);
 
-                state = currentTile->state;
-                state++;
+//                 state = currentTile->state;
+//                 state++;
 
-                if (state < 0x62) // 98
-                {
-                    currentTile->state = state;
-                    return;
-                }
-//loc_487A5:              ; CODE XREF: movefun2+396j
-                else if (belowRightTile->state != 0 || belowRightTile->tile != LevelTileTypeSpace) // cmp word ptr [si+18AEh], 0
-                {
-//loc_487D5:              ; CODE XREF: movefun2+3A2j
-//                ; movefun2+3B1j
-                    state--;
-                    currentTile->state = state;
-                    return;
-                }
-                else if ((rightTile->state != 0 || rightTile->tile != LevelTileTypeSpace) // cmp word ptr [si+1836h], 0
-                         && (rightTile->state != 0x88 || rightTile->tile != 0x88)) // cmp word ptr [si+1836h], 8888h
-                {
-//loc_487D5:              ; CODE XREF: movefun2+3A2j
-//                ; movefun2+3B1j
-                    state--;
-                    currentTile->state = state;
-                    return;
-                }
-                else
-                {
-//loc_487BB:              ; CODE XREF: movefun2+3A9j
-                    currentTile->state = 0xFF;
-                    currentTile->tile = 0xFF;
-                    rightTile->state = 0x32;
-                    rightTile->tile = LevelTileTypeInfotron;
-                    belowRightTile->state = 0x99;
-                    belowRightTile->tile = 0x99;
-                    return;
-                }
-            }
-//loc_484C8:              ; CODE XREF: movefun2+BBj
-            else if (stateType == 0x70)
-            {
-//loc_487DC:              ; CODE XREF: movefun2:loc_484CCj
-                if ((belowTile->state != 0 || belowTile->tile != LevelTileTypeSpace)
-                    && (belowTile->state != 0x99 || belowTile->tile != 0x99))
-                {
-                    return;
-                }
+//                 if (state < 0x62) // 98
+//                 {
+//                     currentTile->state = state;
+//                     return;
+//                 }
+// //loc_487A5:              ; CODE XREF: movefun2+396j
+//                 else if (belowRightTile->state != 0 || belowRightTile->tile != LevelTileTypeSpace) // cmp word ptr [si+18AEh], 0
+//                 {
+// //loc_487D5:              ; CODE XREF: movefun2+3A2j
+// //                ; movefun2+3B1j
+//                     state--;
+//                     currentTile->state = state;
+//                     return;
+//                 }
+//                 else if ((rightTile->state != 0 || rightTile->tile != LevelTileTypeSpace) // cmp word ptr [si+1836h], 0
+//                          && (rightTile->state != 0x88 || rightTile->tile != 0x88)) // cmp word ptr [si+1836h], 8888h
+//                 {
+// //loc_487D5:              ; CODE XREF: movefun2+3A2j
+// //                ; movefun2+3B1j
+//                     state--;
+//                     currentTile->state = state;
+//                     return;
+//                 }
+//                 else
+//                 {
+// //loc_487BB:              ; CODE XREF: movefun2+3A9j
+//                     currentTile->state = 0xFF;
+//                     currentTile->tile = 0xFF;
+//                     rightTile->state = 0x32;
+//                     rightTile->tile = LevelTileTypeInfotron;
+//                     belowRightTile->state = 0x99;
+//                     belowRightTile->tile = 0x99;
+//                     return;
+//                 }
+//             }
+// //loc_484C8:              ; CODE XREF: movefun2+BBj
+//             else if (stateType == 0x70)
+//             {
+// //loc_487DC:              ; CODE XREF: movefun2:loc_484CCj
+//                 if ((belowTile->state != 0 || belowTile->tile != LevelTileTypeSpace)
+//                     && (belowTile->state != 0x99 || belowTile->tile != 0x99))
+//                 {
+//                     return;
+//                 }
 
-//loc_487EC:              ; CODE XREF: movefun2+3D9j
-//                    ; movefun2+3E1j
-                currentTile->state = 0xFF;
-                currentTile->tile = 0xFF;
+// //loc_487EC:              ; CODE XREF: movefun2+3D9j
+// //                    ; movefun2+3E1j
+//                 currentTile->state = 0xFF;
+//                 currentTile->tile = 0xFF;
 
-                // add si, 78h ; 'x'
-                position += kLevelWidth;
+//                 // add si, 78h ; 'x'
+//                 position += kLevelWidth;
 
-                currentTile = &gCurrentLevelState[position];
-                belowTile = &gCurrentLevelState[position + kLevelWidth];
-                belowLeftTile = &gCurrentLevelState[position + kLevelWidth - 1];
-                leftTile = &gCurrentLevelState[position - 1];
-                belowRightTile = &gCurrentLevelState[position + kLevelWidth + 1];
-                rightTile = &gCurrentLevelState[position + 1];
+//                 currentTile = &gCurrentLevelState[position];
+//                 belowTile = &gCurrentLevelState[position + kLevelWidth];
+//                 belowLeftTile = &gCurrentLevelState[position + kLevelWidth - 1];
+//                 leftTile = &gCurrentLevelState[position - 1];
+//                 belowRightTile = &gCurrentLevelState[position + kLevelWidth + 1];
+//                 rightTile = &gCurrentLevelState[position + 1];
 
-                currentTile->state = 0x10;
-                currentTile->tile = LevelTileTypeInfotron;
-            }
-            else
-            {
-                return;
-            }
-        }
+//                 currentTile->state = 0x10;
+//                 currentTile->tile = LevelTileTypeInfotron;
+//             }
+//             else
+//             {
+//                 return;
+//             }
+//         }
 
-//loc_484D0:              ; CODE XREF: movefun2+9Bj
-//                ; movefun2+3F3j
-        // This animates the Infotron falling
-        uint8_t somePositionThing = state;
-        somePositionThing *= 2;
-        somePositionThing &= 0x1F;
+// //loc_484D0:              ; CODE XREF: movefun2+9Bj
+// //                ; movefun2+3F3j
+//         // This animates the Infotron falling
+//         uint8_t somePositionThing = state;
+//         somePositionThing *= 2;
+//         somePositionThing &= 0x1F;
 
-        uint16_t offset = kFallAnimationGravityOffsets[somePositionThing];
+//         uint16_t offset = kFallAnimationGravityOffsets[somePositionThing];
 
-        uint16_t finalPosition = position - kLevelWidth;
-        uint8_t tileX = (finalPosition % kLevelWidth);
-        uint8_t tileY = (finalPosition / kLevelWidth);
+//         uint16_t finalPosition = position - kLevelWidth;
+//         uint8_t tileX = (finalPosition % kLevelWidth);
+//         uint8_t tileY = (finalPosition / kLevelWidth);
 
-        uint16_t dstX = tileX * kTileSize + (offset % 122);
-        uint16_t dstY = tileY * kTileSize + (offset / 122);
+//         uint16_t dstX = tileX * kTileSize + (offset % 122);
+//         uint16_t dstY = tileY * kTileSize + (offset / 122);
 
-        // mov si, word_515C4
-        drawMovingSpriteFrameInLevel(240, 178,
-                                     kTileSize,
-                                     kTileSize + 2,
-                                     dstX, dstY);
+//         // mov si, word_515C4
+//         drawMovingSpriteFrameInLevel(240, 178,
+//                                      kTileSize,
+//                                      kTileSize + 2,
+//                                      dstX, dstY);
 
-        uint8_t newState = currentTile->state;
-        newState++;
-        if (newState == 0x16) // 22
-        {
-            currentTile->state = newState;
-            handleInfotronStateAfterFallingOneTile(position - kLevelWidth); // Tile above
-            return;
-        }
-//loc_48513:              ; CODE XREF: movefun2+FBj
-        else if (newState < 0x18) // 24
-        {
-            currentTile->state = newState;
-            return;
-        }
+//         uint8_t newState = currentTile->state;
+//         newState++;
+//         if (newState == 0x16) // 22
+//         {
+//             currentTile->state = newState;
+//             handleInfotronStateAfterFallingOneTile(position - kLevelWidth); // Tile above
+//             return;
+//         }
+// //loc_48513:              ; CODE XREF: movefun2+FBj
+//         else if (newState < 0x18) // 24
+//         {
+//             currentTile->state = newState;
+//             return;
+//         }
 
-//loc_4851D:              ; CODE XREF: movefun2+10Ej
-        // This part handles what to do when the Infotron finished falling 1 tile
-        currentTile->state = 0;
+// //loc_4851D:              ; CODE XREF: movefun2+10Ej
+//         // This part handles what to do when the Infotron finished falling 1 tile
+//         currentTile->state = 0;
 
-        if ((belowTile->tile == LevelTileTypeSpace && belowTile->state == 0) // cmp word ptr [si+18ACh], 0
-            || (belowTile->tile == 0x99 && belowTile->state == 0x99)) // cmp word ptr [si+18ACh], 9999h
-        {
-//loc_485BB:              ; CODE XREF: movefun2+121j
-//                ; movefun2+12Cj
-            currentTile->state = 0x70;
-            currentTile->tile = LevelTileTypeInfotron;
-            belowTile->state = 0x99;
-            belowTile->tile = 0x99;
-            return;
-        }
+//         if ((belowTile->tile == LevelTileTypeSpace && belowTile->state == 0) // cmp word ptr [si+18ACh], 0
+//             || (belowTile->tile == 0x99 && belowTile->state == 0x99)) // cmp word ptr [si+18ACh], 9999h
+//         {
+// //loc_485BB:              ; CODE XREF: movefun2+121j
+// //                ; movefun2+12Cj
+//             currentTile->state = 0x70;
+//             currentTile->tile = LevelTileTypeInfotron;
+//             belowTile->state = 0x99;
+//             belowTile->tile = 0x99;
+//             return;
+//         }
 
-//loc_48537:              ; CODE XREF: movefun2+12Aj
-        if (belowTile->tile == LevelTileTypeMurphy) // cmp byte ptr [si+18ACh], 3
-        {
-//loc_485F2:              ; CODE XREF: movefun2+136j
-            if (belowTile->state == 0xE
-                || belowTile->state == 0xF
-                || belowTile->state == 0x28
-                || belowTile->state == 0x29
-                || belowTile->state == 0x25
-                || belowTile->state == 0x26)
-            {
-                return;
-            }
+// //loc_48537:              ; CODE XREF: movefun2+12Aj
+//         if (belowTile->tile == LevelTileTypeMurphy) // cmp byte ptr [si+18ACh], 3
+//         {
+// //loc_485F2:              ; CODE XREF: movefun2+136j
+//             if (belowTile->state == 0xE
+//                 || belowTile->state == 0xF
+//                 || belowTile->state == 0x28
+//                 || belowTile->state == 0x29
+//                 || belowTile->state == 0x25
+//                 || belowTile->state == 0x26)
+//             {
+//                 return;
+//             }
 
-//loc_48614:              ; CODE XREF: movefun2+140j
-//                ; movefun2+14Aj ...
-            detonateBigExplosion(position + kLevelWidth);
-            return;
-        }
+// //loc_48614:              ; CODE XREF: movefun2+140j
+// //                ; movefun2+14Aj ...
+//             detonateBigExplosion(position + kLevelWidth);
+//             return;
+//         }
 
-//loc_48541:              ; CODE XREF: movefun2+134j
-        if ((belowTile->tile == LevelTileTypeRedDisk && belowTile->state == 0) // cmp word ptr [si+18ACh], 14h
-            || belowTile->tile == LevelTileTypeSnikSnak // cmp byte ptr [si+18ACh], 11h
-            || belowTile->tile == LevelTileTypeElectron // cmp byte ptr [si+18ACh], 18h
-            || (belowTile->tile == LevelTileTypeYellowDisk && belowTile->state == 0) // cmp word ptr [si+18ACh], 12h
-            || (belowTile->tile == LevelTileTypeOrangeDisk && belowTile->state == 0)) // cmp word ptr [si+18ACh], 8
-        {
-//loc_48614:              ; CODE XREF: movefun2+140j
-//                ; movefun2+14Aj ...
-            detonateBigExplosion(position + kLevelWidth);
-            return;
-        }
+// //loc_48541:              ; CODE XREF: movefun2+134j
+//         if ((belowTile->tile == LevelTileTypeRedDisk && belowTile->state == 0) // cmp word ptr [si+18ACh], 14h
+//             || belowTile->tile == LevelTileTypeSnikSnak // cmp byte ptr [si+18ACh], 11h
+//             || belowTile->tile == LevelTileTypeElectron // cmp byte ptr [si+18ACh], 18h
+//             || (belowTile->tile == LevelTileTypeYellowDisk && belowTile->state == 0) // cmp word ptr [si+18ACh], 12h
+//             || (belowTile->tile == LevelTileTypeOrangeDisk && belowTile->state == 0)) // cmp word ptr [si+18ACh], 8
+//         {
+// //loc_48614:              ; CODE XREF: movefun2+140j
+// //                ; movefun2+14Aj ...
+//             detonateBigExplosion(position + kLevelWidth);
+//             return;
+//         }
 
-//loc_48573:              ; CODE XREF: movefun2+166j
-        playFallSound();
-        if ((belowTile->tile != LevelTileTypeZonk || belowTile->state != 0) // cmp word ptr [si+18ACh], 1
-            && (belowTile->tile != LevelTileTypeInfotron || belowTile->state != 0) // cmp word ptr [si+18ACh], 4
-            && (belowTile->tile != LevelTileTypeChip || belowTile->state != 0)) // cmp word ptr [si+18ACh], 5
-        {
-            return;
-        }
+// //loc_48573:              ; CODE XREF: movefun2+166j
+//         playFallSound();
+//         if ((belowTile->tile != LevelTileTypeZonk || belowTile->state != 0) // cmp word ptr [si+18ACh], 1
+//             && (belowTile->tile != LevelTileTypeInfotron || belowTile->state != 0) // cmp word ptr [si+18ACh], 4
+//             && (belowTile->tile != LevelTileTypeChip || belowTile->state != 0)) // cmp word ptr [si+18ACh], 5
+//         {
+//             return;
+//         }
 
-//loc_4858C:              ; CODE XREF: movefun2+173j
-//                ; movefun2+17Aj ...
-        if ((belowLeftTile->tile == LevelTileTypeSpace && belowLeftTile->state == 0) // cmp word ptr [si+18AAh], 0
-            || (belowLeftTile->tile == 0x88 && belowLeftTile->state == 0x88) // cmp word ptr [si+18AAh], 8888h
-            || (belowLeftTile->tile == 0xAA && belowLeftTile->state == 0xAA)) // cmp word ptr [si+18AAh], 0AAAAh
-        {
-//loc_485C8:              ; CODE XREF: movefun2+189j
-//                ; movefun2+191j ...
-            if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-            {
-//loc_485D2:              ; CODE XREF: movefun2+1C5j
-                currentTile->state = 0x50;
-                leftTile->state = 0x88;
-                leftTile->tile = 0x88;
-                return;
-            }
-            else
-            {
-                continue; // jmp loc_4844B
-            }
-        }
-        if ((belowRightTile->tile == LevelTileTypeSpace && belowRightTile->state == 0) // cmp word ptr [si+18AEh], 0
-            || (belowRightTile->tile == 0x88 && belowRightTile->state == 0x88) // cmp word ptr [si+18AEh], 8888h
-            || (belowRightTile->tile == 0xAA && belowRightTile->state == 0xAA)) // cmp word ptr [si+18AEh], 0AAAAh
-        {
-//loc_485DE:              ; CODE XREF: movefun2+1A0j
-//                ; movefun2+1A8j ...
-            if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
-            {
-//loc_485E6:              ; CODE XREF: movefun2+1DBj
-                currentTile->state = 0x60;
-                rightTile->state = 0x88;
-                rightTile->tile = 0x88;
-                return;
-            }
-            return;
-        }
-        return;
-    }
-    while (1);
+// //loc_4858C:              ; CODE XREF: movefun2+173j
+// //                ; movefun2+17Aj ...
+//         if ((belowLeftTile->tile == LevelTileTypeSpace && belowLeftTile->state == 0) // cmp word ptr [si+18AAh], 0
+//             || (belowLeftTile->tile == 0x88 && belowLeftTile->state == 0x88) // cmp word ptr [si+18AAh], 8888h
+//             || (belowLeftTile->tile == 0xAA && belowLeftTile->state == 0xAA)) // cmp word ptr [si+18AAh], 0AAAAh
+//         {
+// //loc_485C8:              ; CODE XREF: movefun2+189j
+// //                ; movefun2+191j ...
+//             if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//             {
+// //loc_485D2:              ; CODE XREF: movefun2+1C5j
+//                 currentTile->state = 0x50;
+//                 leftTile->state = 0x88;
+//                 leftTile->tile = 0x88;
+//                 return;
+//             }
+//             else
+//             {
+//                 continue; // jmp loc_4844B
+//             }
+//         }
+//         if ((belowRightTile->tile == LevelTileTypeSpace && belowRightTile->state == 0) // cmp word ptr [si+18AEh], 0
+//             || (belowRightTile->tile == 0x88 && belowRightTile->state == 0x88) // cmp word ptr [si+18AEh], 8888h
+//             || (belowRightTile->tile == 0xAA && belowRightTile->state == 0xAA)) // cmp word ptr [si+18AEh], 0AAAAh
+//         {
+// //loc_485DE:              ; CODE XREF: movefun2+1A0j
+// //                ; movefun2+1A8j ...
+//             if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
+//             {
+// //loc_485E6:              ; CODE XREF: movefun2+1DBj
+//                 currentTile->state = 0x60;
+//                 rightTile->state = 0x88;
+//                 rightTile->tile = 0x88;
+//                 return;
+//             }
+//             return;
+//         }
+//         return;
+//     }
+//     while (1);
 }
 
 void handleMurphyCollisionAfterMovement(int16_t position) // sub_487FE   proc near       ; CODE XREF: update?+E0Cp update?+E2Ap ...
@@ -4582,434 +4583,434 @@ size_t writeCurrentLevelToFile(FILE *file)
 void recordDemo(uint16_t demoIndex) // sub_4945D   proc near       ; CODE XREF: handleGameUserInput+294p
                    // ; handleGameUserInput+2A4p ...
 {
-    // 01ED:27FA
-    gIsMoveScrollModeEnabled = 0;
-    gAdditionalScrollOffsetX = 0;
-    gAdditionalScrollOffsetY = 0;
-    gIsFlashingBackgroundModeEnabled = 0;
-    gDebugExtraRenderDelay = 1;
+//     // 01ED:27FA
+//     gIsMoveScrollModeEnabled = 0;
+//     gAdditionalScrollOffsetX = 0;
+//     gAdditionalScrollOffsetY = 0;
+//     gIsFlashingBackgroundModeEnabled = 0;
+//     gDebugExtraRenderDelay = 1;
 
-    replaceCurrentPaletteColor(0, (Color) { 0, 0, 0, 0xff });
+//     replaceCurrentPaletteColor(0, (Color) { 0, 0, 0, 0xff });
 
-    if (gIsRecordingDemo != 0)
-    {
-        stopRecordingDemo();
-    }
+//     if (gIsRecordingDemo != 0)
+//     {
+//         stopRecordingDemo();
+//     }
 
-//loc_49490:              ; CODE XREF: recordDemo+2Ej
-    char demoIndexCharacter = '0' + demoIndex;
-    gDemo0BinFilename[4] = demoIndexCharacter;
+// //loc_49490:              ; CODE XREF: recordDemo+2Ej
+//     char demoIndexCharacter = '0' + demoIndex;
+//     gDemo0BinFilename[4] = demoIndexCharacter;
 
-    char *filename = gDemo0BinFilename;
+//     char *filename = gDemo0BinFilename;
 
-    if (supportsSPFileDemoPlayback()
-        && (gShouldRecordWithOriginalDemoFilenames & 0xFF) == 0) // cmp byte ptr gShouldRecordWithOriginalDemoFilenames, 0
-    {
-        gSPDemoFileName[7] = demoIndexCharacter;
-        filename = gSPDemoFileName;
-    }
+//     if (supportsSPFileDemoPlayback()
+//         && (gShouldRecordWithOriginalDemoFilenames & 0xFF) == 0) // cmp byte ptr gShouldRecordWithOriginalDemoFilenames, 0
+//     {
+//         gSPDemoFileName[7] = demoIndexCharacter;
+//         filename = gSPDemoFileName;
+//     }
 
-//loc_494A6:              ; CODE XREF: recordDemo+41j
-    gRecordingDemoMessage[18] = demoIndexCharacter;
+// //loc_494A6:              ; CODE XREF: recordDemo+41j
+//     gRecordingDemoMessage[18] = demoIndexCharacter;
 
-    FILE *file = openWritableFile(filename, "wb");
-    if (file == NULL)
-    {
-        return;
-    }
+//     FILE *file = openWritableFile(filename, "wb");
+//     if (file == NULL)
+//     {
+//         return;
+//     }
 
-//loc_494B8:              ; CODE XREF: recordDemo+56j
-    gCurrentRecordingDemoFile = file; // file handle
-    gCurrentLevel.speedFixMagicNumber = 0x20 + kGameVersion;
-    // TODO: don't know for sure but this probably is related to adjusting the demo time with the speed or something?
-    // bl = speed3;
-    // cl = 4;
-    // bl = bl << cl;
-    // bl |= gGameSpeed;
-    // speed2 = bl;
-    gDemoRecordingLowestSpeed = gGameSpeed;
+// //loc_494B8:              ; CODE XREF: recordDemo+56j
+//     gCurrentRecordingDemoFile = file; // file handle
+//     gCurrentLevel.speedFixMagicNumber = 0x20 + kGameVersion;
+//     // TODO: don't know for sure but this probably is related to adjusting the demo time with the speed or something?
+//     // bl = speed3;
+//     // cl = 4;
+//     // bl = bl << cl;
+//     // bl |= gGameSpeed;
+//     // speed2 = bl;
+//     gDemoRecordingLowestSpeed = gGameSpeed;
 
-    size_t bytes = writeCurrentLevelToFile(file);
-    if (bytes != kLevelDataLength)
-    {
-        return;
-    }
+//     size_t bytes = writeCurrentLevelToFile(file);
+//     if (bytes != kLevelDataLength)
+//     {
+//         return;
+//     }
 
-    // The original code sets index | 0x80 in demoCurrentInputRepeatCounter and then writes it to the file
-    // but seems to be useless because that value is overriden later.
-    //
-    uint8_t levelNumber = gCurrentSelectedLevelIndex | 0x80;
-    bytes = fileWriteUInt8(levelNumber, file);
-    if (bytes < 1)
-    {
-        return;
-    }
-    gDemoCurrentInput = UserInputNone;
-    gDemoRecordingJustStarted = 1;
-    gIsPlayingDemo = 0;
-    gDemoCurrentInputRepeatCounter = 0xFE; // 254
-    gDebugExtraRenderDelay = 1;
-    if (gIsSPDemoAvailableToRun == 0)
-    {
-        memcpy(gCurrentDemoLevelName, gCurrentLevelName, 3);
-    }
+//     // The original code sets index | 0x80 in demoCurrentInputRepeatCounter and then writes it to the file
+//     // but seems to be useless because that value is overriden later.
+//     //
+//     uint8_t levelNumber = gCurrentSelectedLevelIndex | 0x80;
+//     bytes = fileWriteUInt8(levelNumber, file);
+//     if (bytes < 1)
+//     {
+//         return;
+//     }
+//     gDemoCurrentInput = UserInputNone;
+//     gDemoRecordingJustStarted = 1;
+//     gIsPlayingDemo = 0;
+//     gDemoCurrentInputRepeatCounter = 0xFE; // 254
+//     gDebugExtraRenderDelay = 1;
+//     if (gIsSPDemoAvailableToRun == 0)
+//     {
+//         memcpy(gCurrentDemoLevelName, gCurrentLevelName, 3);
+//     }
 
-//loc_4952A:              ; CODE XREF: recordDemo+BCj
-    gIsRecordingDemo = 1;
-    if (gHasUserInterruptedDemo != 0)
-    {
-        gIsPlayingDemo = 1;
-    }
+// //loc_4952A:              ; CODE XREF: recordDemo+BCj
+//     gIsRecordingDemo = 1;
+//     if (gHasUserInterruptedDemo != 0)
+//     {
+//         gIsPlayingDemo = 1;
+//     }
 
-//loc_4953B:              ; CODE XREF: recordDemo+D7j
-    fetchAndInitializeLevel();
-    gIsPlayingDemo = 0;
+// //loc_4953B:              ; CODE XREF: recordDemo+D7j
+//     fetchAndInitializeLevel();
+//     gIsPlayingDemo = 0;
 }
 
 void prepareDemoRecordingFilename() // sub_49544  proc near       ; CODE XREF: start+3A1p
                    // ; handleOkButtonClick:loc_4B40Fp ...
 {
-    // 01ED:28E1
+//     // 01ED:28E1
 
-    char currentSuffix[3] = "AT";
-    strcpy(currentSuffix, &gLevelsDatFilename[8]);
+//     char currentSuffix[3] = "AT";
+//     strcpy(currentSuffix, &gLevelsDatFilename[8]);
 
-    // Checks if the last two chars are "00" like LEVELS.D00?
-    if (strcmp(currentSuffix, "00") == 0)
-    {
-        // replaces the content with "--"
-        strcpy(currentSuffix, "--");
-    }
+//     // Checks if the last two chars are "00" like LEVELS.D00?
+//     if (strcmp(currentSuffix, "00") == 0)
+//     {
+//         // replaces the content with "--"
+//         strcpy(currentSuffix, "--");
+//     }
 
-//loc_4954F:             // ; CODE XREF: prepareDemoRecordingFilename+6j
-    // Now checks if the last two chars are "AT" like LEVELS.DAT?
-    if (strcmp(currentSuffix, "AT") == 0)
-    {
-        // replaces the content with "00"
-        strcpy(currentSuffix, "00");
-    }
+// //loc_4954F:             // ; CODE XREF: prepareDemoRecordingFilename+6j
+//     // Now checks if the last two chars are "AT" like LEVELS.DAT?
+//     if (strcmp(currentSuffix, "AT") == 0)
+//     {
+//         // replaces the content with "00"
+//         strcpy(currentSuffix, "00");
+//     }
 
-//loc_49557:             // ; CODE XREF: prepareDemoRecordingFilename+Ej
-    memcpy(gSPDemoFileName, currentSuffix, 2);
+// //loc_49557:             // ; CODE XREF: prepareDemoRecordingFilename+Ej
+//     memcpy(gSPDemoFileName, currentSuffix, 2);
 }
 
 void handleGameUserInput() // sub_4955B   proc near       ; CODE XREF: runLevel:loc_48B6Bp
                    // ; runLevel+30Cp
 {
-    // 01ED:28F8
+//     // 01ED:28F8
 
-    if (gIsMoveScrollModeEnabled != 0)
-    {
-        updateUserInputInScrollMovementMode(); // 01ED:28FF
-    }
-//loc_49567:              ; CODE XREF: handleGameUserInput+5j
-    else if (gIsPlayingDemo == 0)
-    {
-        updateUserInput(); // 01ED:290B
-        if (gIsRecordingDemo != 0)
-        {
-            saveInputForDemo(); // 01ED:2915
-        }
-    }
+//     if (gIsMoveScrollModeEnabled != 0)
+//     {
+//         updateUserInputInScrollMovementMode(); // 01ED:28FF
+//     }
+// //loc_49567:              ; CODE XREF: handleGameUserInput+5j
+//     else if (gIsPlayingDemo == 0)
+//     {
+//         updateUserInput(); // 01ED:290B
+//         if (gIsRecordingDemo != 0)
+//         {
+//             saveInputForDemo(); // 01ED:2915
+//         }
+//     }
 
-//loc_4957B:              ; CODE XREF: handleGameUserInput+Aj
-//                ; handleGameUserInput+11j ...
-    if (gIsPlayingDemo != 0)
-    {
-        simulateDemoInput(); // 01ED:2929
-    }
+// //loc_4957B:              ; CODE XREF: handleGameUserInput+Aj
+// //                ; handleGameUserInput+11j ...
+//     if (gIsPlayingDemo != 0)
+//     {
+//         simulateDemoInput(); // 01ED:2929
+//     }
 
-//loc_4958F:              ; CODE XREF: handleGameUserInput+2Fj
-    if (gToggleGamePanelKeyAutoRepeatCounter != 0) // cmp byte ptr word_510C1+1, 0
-    {
-        // 01ED:293E
-        gToggleGamePanelKeyAutoRepeatCounter--;
-    }
+// //loc_4958F:              ; CODE XREF: handleGameUserInput+2Fj
+//     if (gToggleGamePanelKeyAutoRepeatCounter != 0) // cmp byte ptr word_510C1+1, 0
+//     {
+//         // 01ED:293E
+//         gToggleGamePanelKeyAutoRepeatCounter--;
+//     }
 
-//loc_4959A:              ; CODE XREF: handleGameUserInput+39j
-    if (isToggleGamePanelButtonPressed() == 0)
-    {
-        gToggleGamePanelKeyAutoRepeatCounter = 0; // mov byte ptr word_510C1+1, 0
-    }
-//loc_495A9:              ; CODE XREF: handleGameUserInput+44j
-    else if (gToggleGamePanelKeyAutoRepeatCounter == 0) // 01ED:2946
-    {
-//loc_495B3:              ; CODE XREF: handleGameUserInput+53j
-        gToggleGamePanelKeyAutoRepeatCounter = 0x20; // mov byte ptr word_510C1+1, 20h ; ' '
-        if (gShouldShowGamePanel != 0)
-        {
-            gShouldShowGamePanel = 0; // mov byte ptr word_510C1, 0
-            gCurrentPanelHeight = 0;
-        }
-        else
-        {
-//loc_495FB:              ; CODE XREF: handleGameUserInput+62j
-            gShouldShowGamePanel = 1; // mov byte ptr word_510C1, 1
-            gCurrentPanelHeight = kPanelBitmapHeight;
-        }
-    }
+// //loc_4959A:              ; CODE XREF: handleGameUserInput+39j
+//     if (isToggleGamePanelButtonPressed() == 0)
+//     {
+//         gToggleGamePanelKeyAutoRepeatCounter = 0; // mov byte ptr word_510C1+1, 0
+//     }
+// //loc_495A9:              ; CODE XREF: handleGameUserInput+44j
+//     else if (gToggleGamePanelKeyAutoRepeatCounter == 0) // 01ED:2946
+//     {
+// //loc_495B3:              ; CODE XREF: handleGameUserInput+53j
+//         gToggleGamePanelKeyAutoRepeatCounter = 0x20; // mov byte ptr word_510C1+1, 20h ; ' '
+//         if (gShouldShowGamePanel != 0)
+//         {
+//             gShouldShowGamePanel = 0; // mov byte ptr word_510C1, 0
+//             gCurrentPanelHeight = 0;
+//         }
+//         else
+//         {
+// //loc_495FB:              ; CODE XREF: handleGameUserInput+62j
+//             gShouldShowGamePanel = 1; // mov byte ptr word_510C1, 1
+//             gCurrentPanelHeight = kPanelBitmapHeight;
+//         }
+//     }
 
-//loc_49635:              ; CODE XREF: handleGameUserInput+4Bj
-//                ; handleGameUserInput+55j ...
-    if (gIsDebugModeEnabled != 1)
-    {
-        checkDebugKeys();
-        return;
-    }
+// //loc_49635:              ; CODE XREF: handleGameUserInput+4Bj
+// //                ; handleGameUserInput+55j ...
+//     if (gIsDebugModeEnabled != 1)
+//     {
+//         checkDebugKeys();
+//         return;
+//     }
 
-//loc_4963F:              ; CODE XREF: handleGameUserInput+DFj
-    if (gIsRecordingDemo == 0) // 01ED:29DC
-    {
-//loc_49649:              ; CODE XREF: handleGameUserInput+E9j
-        if (gIsMKeyPressed != 0) // cmp byte ptr gIsMKeyPressed, 0
-        {
-            gIsMoveScrollModeEnabled = 1;
-        }
+// //loc_4963F:              ; CODE XREF: handleGameUserInput+DFj
+//     if (gIsRecordingDemo == 0) // 01ED:29DC
+//     {
+// //loc_49649:              ; CODE XREF: handleGameUserInput+E9j
+//         if (gIsMKeyPressed != 0) // cmp byte ptr gIsMKeyPressed, 0
+//         {
+//             gIsMoveScrollModeEnabled = 1;
+//         }
 
-//loc_49656:              ; CODE XREF: handleGameUserInput+F3j
-        if (gIsDKeyPressed != 0)
-        {
-            gIsFlashingBackgroundModeEnabled = 1;
-        }
+// //loc_49656:              ; CODE XREF: handleGameUserInput+F3j
+//         if (gIsDKeyPressed != 0)
+//         {
+//             gIsFlashingBackgroundModeEnabled = 1;
+//         }
 
-//loc_49663:              ; CODE XREF: handleGameUserInput+100j
-        if (gIsZKeyPressed != 0) // cmp byte ptr gIsZKeyPressed, 0
-        {
-            // 01ED:2A07
-            removeTiles(LevelTileTypeZonk);
-        }
+// //loc_49663:              ; CODE XREF: handleGameUserInput+100j
+//         if (gIsZKeyPressed != 0) // cmp byte ptr gIsZKeyPressed, 0
+//         {
+//             // 01ED:2A07
+//             removeTiles(LevelTileTypeZonk);
+//         }
 
-//loc_4966F:              ; CODE XREF: handleGameUserInput+10Dj
-        if (gIsBKeyPressed != 0) // cmp byte ptr gIsBKeyPressed, 0
-        {
-            removeTiles(LevelTileTypeBase);
-        }
+// //loc_4966F:              ; CODE XREF: handleGameUserInput+10Dj
+//         if (gIsBKeyPressed != 0) // cmp byte ptr gIsBKeyPressed, 0
+//         {
+//             removeTiles(LevelTileTypeBase);
+//         }
 
-//loc_4967B:              ; CODE XREF: handleGameUserInput+119j
-        if (gIsHKeyPressed != 0)
-        {
-            removeTiles(LevelTileTypeHardware);
-        }
+// //loc_4967B:              ; CODE XREF: handleGameUserInput+119j
+//         if (gIsHKeyPressed != 0)
+//         {
+//             removeTiles(LevelTileTypeHardware);
+//         }
 
-//loc_49687:              ; CODE XREF: handleGameUserInput+125j
-        if (gIsCKeyPressed != 0) // cmp byte ptr gIsCKeyPressed, 0
-        {
-            removeTiles(LevelTileTypeChip);
-        }
+// //loc_49687:              ; CODE XREF: handleGameUserInput+125j
+//         if (gIsCKeyPressed != 0) // cmp byte ptr gIsCKeyPressed, 0
+//         {
+//             removeTiles(LevelTileTypeChip);
+//         }
 
-//loc_49693:              ; CODE XREF: handleGameUserInput+131j
-        if (gIsSKeyPressed != 0)
-        {
-            removeTiles(LevelTileTypeSnikSnak);
-        }
+// //loc_49693:              ; CODE XREF: handleGameUserInput+131j
+//         if (gIsSKeyPressed != 0)
+//         {
+//             removeTiles(LevelTileTypeSnikSnak);
+//         }
 
-//loc_4969F:              ; CODE XREF: handleGameUserInput+13Dj
-        if (gIsRKeyPressed != 0)
-        {
-            videoLoop();
-            restartLevel();
-        }
+// //loc_4969F:              ; CODE XREF: handleGameUserInput+13Dj
+//         if (gIsRKeyPressed != 0)
+//         {
+//             videoLoop();
+//             restartLevel();
+//         }
 
-//loc_496AC:              ; CODE XREF: handleGameUserInput+149j
-        if (gIsPlayingDemo == 0)
-        {
-//loc_496C0:              ; CODE XREF: handleGameUserInput+160j
-            if (gIs1KeyPressed != 0)
-            {
-                gDebugExtraRenderDelay = 1;
-            }
+// //loc_496AC:              ; CODE XREF: handleGameUserInput+149j
+//         if (gIsPlayingDemo == 0)
+//         {
+// //loc_496C0:              ; CODE XREF: handleGameUserInput+160j
+//             if (gIs1KeyPressed != 0)
+//             {
+//                 gDebugExtraRenderDelay = 1;
+//             }
 
-//loc_496CD:              ; CODE XREF: handleGameUserInput+16Aj
-            if (gIs2KeyPressed != 0)
-            {
-                gDebugExtraRenderDelay = 2;
-            }
+// //loc_496CD:              ; CODE XREF: handleGameUserInput+16Aj
+//             if (gIs2KeyPressed != 0)
+//             {
+//                 gDebugExtraRenderDelay = 2;
+//             }
 
-//loc_496DA:              ; CODE XREF: handleGameUserInput+177j
-            if (gIs3KeyPressed != 0)
-            {
-                gDebugExtraRenderDelay = 3;
-            }
+// //loc_496DA:              ; CODE XREF: handleGameUserInput+177j
+//             if (gIs3KeyPressed != 0)
+//             {
+//                 gDebugExtraRenderDelay = 3;
+//             }
 
-//loc_496E7:              ; CODE XREF: handleGameUserInput+184j
-            if (gIs4KeyPressed != 0)
-            {
-                gDebugExtraRenderDelay = 4;
-            }
+// //loc_496E7:              ; CODE XREF: handleGameUserInput+184j
+//             if (gIs4KeyPressed != 0)
+//             {
+//                 gDebugExtraRenderDelay = 4;
+//             }
 
-//loc_496F4:              ; CODE XREF: handleGameUserInput+191j
-            if (gIs5KeyPressed != 0)
-            {
-                gDebugExtraRenderDelay = 6;
-            }
+// //loc_496F4:              ; CODE XREF: handleGameUserInput+191j
+//             if (gIs5KeyPressed != 0)
+//             {
+//                 gDebugExtraRenderDelay = 6;
+//             }
 
-//loc_49701:              ; CODE XREF: handleGameUserInput+19Ej
-            if (gIs6KeyPressed != 0)
-            {
-                gDebugExtraRenderDelay = 8;
-            }
+// //loc_49701:              ; CODE XREF: handleGameUserInput+19Ej
+//             if (gIs6KeyPressed != 0)
+//             {
+//                 gDebugExtraRenderDelay = 8;
+//             }
 
-//loc_4970E:              ; CODE XREF: handleGameUserInput+1ABj
-            if (gIs7KeyPressed != 0)
-            {
-                gDebugExtraRenderDelay = 0xC;
-            }
+// //loc_4970E:              ; CODE XREF: handleGameUserInput+1ABj
+//             if (gIs7KeyPressed != 0)
+//             {
+//                 gDebugExtraRenderDelay = 0xC;
+//             }
 
-//loc_4971B:              ; CODE XREF: handleGameUserInput+1B8j
-            if (gIs8KeyPressed != 0)
-            {
-                gDebugExtraRenderDelay = 0x10;
-            }
+// //loc_4971B:              ; CODE XREF: handleGameUserInput+1B8j
+//             if (gIs8KeyPressed != 0)
+//             {
+//                 gDebugExtraRenderDelay = 0x10;
+//             }
 
-//loc_49728:              ; CODE XREF: handleGameUserInput+1C5j
-            if (gIs9KeyPressed != 0)
-            {
-                gDebugExtraRenderDelay = 0x18;
-            }
+// //loc_49728:              ; CODE XREF: handleGameUserInput+1C5j
+//             if (gIs9KeyPressed != 0)
+//             {
+//                 gDebugExtraRenderDelay = 0x18;
+//             }
 
-//loc_49735:              ; CODE XREF: handleGameUserInput+1D2j
-            if (gIs0KeyPressed != 0)
-            {
-                gDebugExtraRenderDelay = 0x20;
-            }
-        }
-    }
+// //loc_49735:              ; CODE XREF: handleGameUserInput+1D2j
+//             if (gIs0KeyPressed != 0)
+//             {
+//                 gDebugExtraRenderDelay = 0x20;
+//             }
+//         }
+//     }
 
-//loc_49742:              ; CODE XREF: handleGameUserInput+EBj
-//                ; handleGameUserInput+158j ...
-    // 01ED:2ADF
-    if (gIsLeftControlPressed == 1)
-    {
-//loc_497D1:              ; CODE XREF: handleGameUserInput+1EEj
-        if (gIsPlayingDemo != 0)
-        {
-            loc_4988E();
-            return;
-        }
-//loc_497DB:              ; CODE XREF: handleGameUserInput+27Bj
-        // TODO: this if is only relevant when the game is autoadjusting the speed (speed3 != 0), right?
-//        else if (speed3 < 0)
-//        {
-//            loc_4988E();
-//            return;
-//        }
-//loc_497E5:              ; CODE XREF: handleGameUserInput+285j
-        else if (gIsF1KeyPressed == 1)
-        {
-            // 01ED:2B89
-            recordDemo(0);
-        }
-//loc_497F5:              ; CODE XREF: handleGameUserInput+28Fj
-        else if (gIsF2KeyPressed == 1)
-        {
-            // 01ED:2B99
-            recordDemo(1);
-        }
-//loc_49805:              ; CODE XREF: handleGameUserInput+29Fj
-        else if (gIsF3KeyPressed == 1)
-        {
-            recordDemo(2);
-        }
-//loc_49814:              ; CODE XREF: handleGameUserInput+2AFj
-        else if (gIsF4KeyPressed == 1)
-        {
-            recordDemo(3);
-        }
-//loc_49823:              ; CODE XREF: handleGameUserInput+2BEj
-        else if (gIsF5KeyPressed == 1)
-        {
-            recordDemo(4);
-        }
-//loc_49832:              ; CODE XREF: handleGameUserInput+2CDj
-        else if (gIsF6KeyPressed == 1)
-        {
-            recordDemo(5);
-        }
-//loc_49841:              ; CODE XREF: handleGameUserInput+2DCj
-        else if (gIsF7KeyPressed == 1)
-        {
-            recordDemo(6);
-        }
-//loc_49850:              ; CODE XREF: handleGameUserInput+2EBj
-        else if (gIsF8KeyPressed == 1)
-        {
-            recordDemo(7);
-        }
-//loc_4985F:              ; CODE XREF: handleGameUserInput+2FAj
-        else if (gIsF9KeyPressed == 1)
-        {
-            recordDemo(8);
-        }
-//loc_4986E:              ; CODE XREF: handleGameUserInput+309j
-        else if (gIsF10KeyPressed == 1)
-        {
-            recordDemo(9);
-        }
-//loc_4987D:              ; CODE XREF: handleGameUserInput+318j
-        else if (gIsF12KeyPressed == 1
-            && gIsRecordingDemo != 0)
-        {
-            stopRecordingDemo();
-        }
-    }
-    else
-    {
-//loc_4974C:              ; CODE XREF: handleGameUserInput+1ECj
-        if ((gFrameCounter & 7) == 0
-            && gIsRecordingDemo == 0)
-        {
-//loc_49761:              ; CODE XREF: handleGameUserInput+201j
-            if (gIsF1KeyPressed == 0)
-            {
-                gToggleGravityAutorepeatFlag = 0;
-            }
-//loc_4976F:              ; CODE XREF: handleGameUserInput+20Bj
-            else if (gToggleGravityAutorepeatFlag == 0)
-            {
-                gToggleGravityAutorepeatFlag--;
-                gIsGravityEnabled &= 1;
-                gIsGravityEnabled = gIsGravityEnabled ^ 1;
-            }
+// //loc_49742:              ; CODE XREF: handleGameUserInput+EBj
+// //                ; handleGameUserInput+158j ...
+//     // 01ED:2ADF
+//     if (gIsLeftControlPressed == 1)
+//     {
+// //loc_497D1:              ; CODE XREF: handleGameUserInput+1EEj
+//         if (gIsPlayingDemo != 0)
+//         {
+//             loc_4988E();
+//             return;
+//         }
+// //loc_497DB:              ; CODE XREF: handleGameUserInput+27Bj
+//         // TODO: this if is only relevant when the game is autoadjusting the speed (speed3 != 0), right?
+// //        else if (speed3 < 0)
+// //        {
+// //            loc_4988E();
+// //            return;
+// //        }
+// //loc_497E5:              ; CODE XREF: handleGameUserInput+285j
+//         else if (gIsF1KeyPressed == 1)
+//         {
+//             // 01ED:2B89
+//             recordDemo(0);
+//         }
+// //loc_497F5:              ; CODE XREF: handleGameUserInput+28Fj
+//         else if (gIsF2KeyPressed == 1)
+//         {
+//             // 01ED:2B99
+//             recordDemo(1);
+//         }
+// //loc_49805:              ; CODE XREF: handleGameUserInput+29Fj
+//         else if (gIsF3KeyPressed == 1)
+//         {
+//             recordDemo(2);
+//         }
+// //loc_49814:              ; CODE XREF: handleGameUserInput+2AFj
+//         else if (gIsF4KeyPressed == 1)
+//         {
+//             recordDemo(3);
+//         }
+// //loc_49823:              ; CODE XREF: handleGameUserInput+2BEj
+//         else if (gIsF5KeyPressed == 1)
+//         {
+//             recordDemo(4);
+//         }
+// //loc_49832:              ; CODE XREF: handleGameUserInput+2CDj
+//         else if (gIsF6KeyPressed == 1)
+//         {
+//             recordDemo(5);
+//         }
+// //loc_49841:              ; CODE XREF: handleGameUserInput+2DCj
+//         else if (gIsF7KeyPressed == 1)
+//         {
+//             recordDemo(6);
+//         }
+// //loc_49850:              ; CODE XREF: handleGameUserInput+2EBj
+//         else if (gIsF8KeyPressed == 1)
+//         {
+//             recordDemo(7);
+//         }
+// //loc_4985F:              ; CODE XREF: handleGameUserInput+2FAj
+//         else if (gIsF9KeyPressed == 1)
+//         {
+//             recordDemo(8);
+//         }
+// //loc_4986E:              ; CODE XREF: handleGameUserInput+309j
+//         else if (gIsF10KeyPressed == 1)
+//         {
+//             recordDemo(9);
+//         }
+// //loc_4987D:              ; CODE XREF: handleGameUserInput+318j
+//         else if (gIsF12KeyPressed == 1
+//             && gIsRecordingDemo != 0)
+//         {
+//             stopRecordingDemo();
+//         }
+//     }
+//     else
+//     {
+// //loc_4974C:              ; CODE XREF: handleGameUserInput+1ECj
+//         if ((gFrameCounter & 7) == 0
+//             && gIsRecordingDemo == 0)
+//         {
+// //loc_49761:              ; CODE XREF: handleGameUserInput+201j
+//             if (gIsF1KeyPressed == 0)
+//             {
+//                 gToggleGravityAutorepeatFlag = 0;
+//             }
+// //loc_4976F:              ; CODE XREF: handleGameUserInput+20Bj
+//             else if (gToggleGravityAutorepeatFlag == 0)
+//             {
+//                 gToggleGravityAutorepeatFlag--;
+//                 gIsGravityEnabled &= 1;
+//                 gIsGravityEnabled = gIsGravityEnabled ^ 1;
+//             }
 
-            if (gIsF1KeyPressed == 0
-                || gToggleGravityAutorepeatFlag != 0)
-            {
-//loc_49786:              ; CODE XREF: handleGameUserInput+212j
-//                ; handleGameUserInput+219j
-                if (gIsF2KeyPressed == 0)
-                {
-                    gToggleZonksFrozenAutorepeatFlag = 0;
-                }
-//loc_49794:              ; CODE XREF: handleGameUserInput+230j
-                else if (gToggleZonksFrozenAutorepeatFlag == 0)
-                {
-                    gToggleZonksFrozenAutorepeatFlag--;
-                    gAreZonksFrozen &= 2;
-                    gAreZonksFrozen = gAreZonksFrozen ^ 2;
-                }
+//             if (gIsF1KeyPressed == 0
+//                 || gToggleGravityAutorepeatFlag != 0)
+//             {
+// //loc_49786:              ; CODE XREF: handleGameUserInput+212j
+// //                ; handleGameUserInput+219j
+//                 if (gIsF2KeyPressed == 0)
+//                 {
+//                     gToggleZonksFrozenAutorepeatFlag = 0;
+//                 }
+// //loc_49794:              ; CODE XREF: handleGameUserInput+230j
+//                 else if (gToggleZonksFrozenAutorepeatFlag == 0)
+//                 {
+//                     gToggleZonksFrozenAutorepeatFlag--;
+//                     gAreZonksFrozen &= 2;
+//                     gAreZonksFrozen = gAreZonksFrozen ^ 2;
+//                 }
 
-                if (gIsF2KeyPressed == 0
-                    || gToggleZonksFrozenAutorepeatFlag != 0)
-                {
-//loc_497AB:              ; CODE XREF: handleGameUserInput+237j
-//                ; handleGameUserInput+23Ej
-                    if (gIsF3KeyPressed == 0)
-                    {
-                        gToggleEnemiesFrozenAutorepeatFlag = 0;
-                    }
-//loc_497B9:              ; CODE XREF: handleGameUserInput+255j
-                    else if (gToggleEnemiesFrozenAutorepeatFlag == 0)
-                    {
-                        gToggleEnemiesFrozenAutorepeatFlag--;
-                        gAreEnemiesFrozen &= 1;
-                        gAreEnemiesFrozen = gAreEnemiesFrozen ^ 1;
-                    }
-                }
-            }
-        }
-    }
+//                 if (gIsF2KeyPressed == 0
+//                     || gToggleZonksFrozenAutorepeatFlag != 0)
+//                 {
+// //loc_497AB:              ; CODE XREF: handleGameUserInput+237j
+// //                ; handleGameUserInput+23Ej
+//                     if (gIsF3KeyPressed == 0)
+//                     {
+//                         gToggleEnemiesFrozenAutorepeatFlag = 0;
+//                     }
+// //loc_497B9:              ; CODE XREF: handleGameUserInput+255j
+//                     else if (gToggleEnemiesFrozenAutorepeatFlag == 0)
+//                     {
+//                         gToggleEnemiesFrozenAutorepeatFlag--;
+//                         gAreEnemiesFrozen &= 1;
+//                         gAreEnemiesFrozen = gAreEnemiesFrozen ^ 1;
+//                     }
+//                 }
+//             }
+//         }
+//     }
 
-    loc_4988E();
+//     loc_4988E();
 }
 
 void loc_4988E() // :              ; CODE XREF: handleGameUserInput+1F9j
@@ -5554,162 +5555,162 @@ void updateMovingObjects() // gameloop   proc near       ; CODE XREF: runLevel:n
 void updateScrollOffset() // sub_49EBE   proc near       ; CODE XREF: runLevel+109p
                    // ; scrollToMurphy+29p
 {
-    // 01ED:325B
-    uint16_t randomNumber = 0;
+//     // 01ED:325B
+//     uint16_t randomNumber = 0;
 
-    // This random number is used to generate the shaking effect on explosions.
-    // The original game generates this random number here for _every_ explosion, even if
-    // normally only Murphy's explosion will make the screen shake. However it's necessary
-    // to do this here to make sure the right sequence of random numbers is generated when
-    // there are explosions in the level.
-    //
-    if (gIsExplosionStarted == 1)
-    {
-        randomNumber = generateRandomNumber();
-    }
+//     // This random number is used to generate the shaking effect on explosions.
+//     // The original game generates this random number here for _every_ explosion, even if
+//     // normally only Murphy's explosion will make the screen shake. However it's necessary
+//     // to do this here to make sure the right sequence of random numbers is generated when
+//     // there are explosions in the level.
+//     //
+//     if (gIsExplosionStarted == 1)
+//     {
+//         randomNumber = generateRandomNumber();
+//     }
 
-//loc_49ECC:              ; CODE XREF: updateScrollOffset+7j
-    int16_t scrollX = gMurphyPositionX;
-    int16_t scrollY = gMurphyPositionY;
-    scrollX -= kScreenWidth / 2; // 152
-    if (scrollX < 0)
-    {
-        scrollX = 0;
-    }
+// //loc_49ECC:              ; CODE XREF: updateScrollOffset+7j
+//     int16_t scrollX = gMurphyPositionX;
+//     // int16_t scrollY = gMurphyPositionY;
+//     scrollX -= kScreenWidth / 2; // 152
+//     if (scrollX < 0)
+//     {
+//         scrollX = 0;
+//     }
 
-//loc_49EDF:              ; CODE XREF: updateScrollOffset+1Cj
-    uint16_t maxScrollX = kLevelBitmapWidth - kScreenWidth;
-    if (scrollX > maxScrollX) // 624
-    {
-        scrollX = maxScrollX; // 624
-    }
+// //loc_49EDF:              ; CODE XREF: updateScrollOffset+1Cj
+//     uint16_t maxScrollX = kLevelBitmapWidth - kScreenWidth;
+//     if (scrollX > maxScrollX) // 624
+//     {
+//         scrollX = maxScrollX; // 624
+//     }
 
-//loc_49EE8:              ; CODE XREF: updateScrollOffset+25j
-    if (gShouldShowGamePanel == 0)
-    {
-//loc_49EF4:              ; CODE XREF: updateScrollOffset+2Fj
-        scrollY -= kScreenHeight / 2;
-    }
-    else
-    {
-        scrollY -= (kScreenHeight - kPanelBitmapHeight) / 2;
-    }
+// //loc_49EE8:              ; CODE XREF: updateScrollOffset+25j
+//     if (gShouldShowGamePanel == 0)
+//     {
+// //loc_49EF4:              ; CODE XREF: updateScrollOffset+2Fj
+//         scrollY -= kScreenHeight / 2;
+//     }
+//     else
+//     {
+//         scrollY -= (kScreenHeight - kPanelBitmapHeight) / 2;
+//     }
 
-//loc_49EF7:              ; CODE XREF: updateScrollOffset+34j
-    if (scrollY < 0)
-    {
-        scrollY = 0;
-    }
+// //loc_49EF7:              ; CODE XREF: updateScrollOffset+34j
+//     if (scrollY < 0)
+//     {
+//         scrollY = 0;
+//     }
 
-//loc_49EFE:              ; CODE XREF: updateScrollOffset+3Cj
-    uint16_t maxScrollY = 0;
+// //loc_49EFE:              ; CODE XREF: updateScrollOffset+3Cj
+//     uint16_t maxScrollY = 0;
 
-    if (gShouldShowGamePanel == 0)
-    {
-//loc_49F0F:              ; CODE XREF: updateScrollOffset+45j
-        maxScrollY = kLevelBitmapHeight - kScreenHeight;
-        if (scrollY > maxScrollY)
-        {
-            scrollY = maxScrollY;
-        }
-    }
-    else
-    {
-        maxScrollY = kLevelBitmapHeight - kScreenHeight + kPanelBitmapHeight;
-        if (scrollY > maxScrollY)
-        {
-            scrollY = maxScrollY;
-        }
-    }
+//     if (gShouldShowGamePanel == 0)
+//     {
+// //loc_49F0F:              ; CODE XREF: updateScrollOffset+45j
+//         maxScrollY = kLevelBitmapHeight - kScreenHeight;
+//         if (scrollY > maxScrollY)
+//         {
+//             scrollY = maxScrollY;
+//         }
+//     }
+//     else
+//     {
+//         maxScrollY = kLevelBitmapHeight - kScreenHeight + kPanelBitmapHeight;
+//         if (scrollY > maxScrollY)
+//         {
+//             scrollY = maxScrollY;
+//         }
+//     }
 
-//loc_49F17:              ; CODE XREF: updateScrollOffset:loc_49F0Dj
-//                ; updateScrollOffset+54j
-    if (gIsMoveScrollModeEnabled == 0
-        || gIsNumpad5Pressed != 0)
-    {
-//loc_49F25:              ; CODE XREF: updateScrollOffset+5Ej
-        gMurphyScrollOffsetX = scrollX;
-        gMurphyScrollOffsetY = scrollY;
-    }
-    else
-    {
-//loc_49F2E:              ; CODE XREF: updateScrollOffset+65j
-        scrollX = gMurphyScrollOffsetX;
-        scrollY = gMurphyScrollOffsetY;
+// //loc_49F17:              ; CODE XREF: updateScrollOffset:loc_49F0Dj
+// //                ; updateScrollOffset+54j
+//     if (gIsMoveScrollModeEnabled == 0
+//         || gIsNumpad5Pressed != 0)
+//     {
+// //loc_49F25:              ; CODE XREF: updateScrollOffset+5Ej
+//         gMurphyScrollOffsetX = scrollX;
+//         gMurphyScrollOffsetY = scrollY;
+//     }
+//     else
+//     {
+// //loc_49F2E:              ; CODE XREF: updateScrollOffset+65j
+//         scrollX = gMurphyScrollOffsetX;
+//         scrollY = gMurphyScrollOffsetY;
 
-        int16_t additionalScrollX = scrollX;
-        scrollX += gAdditionalScrollOffsetX;
-        if (scrollX < 0)
-        {
-            // 01ED:32DD
-            scrollX = 0;
-        }
-        else
-        {
-//loc_49F56:              ; CODE XREF: updateScrollOffset+80j
-            if (scrollX > maxScrollX)
-            {
-                scrollX = maxScrollX;
-            }
-        }
+//         int16_t additionalScrollX = scrollX;
+//         scrollX += gAdditionalScrollOffsetX;
+//         if (scrollX < 0)
+//         {
+//             // 01ED:32DD
+//             scrollX = 0;
+//         }
+//         else
+//         {
+// //loc_49F56:              ; CODE XREF: updateScrollOffset+80j
+//             if (scrollX > maxScrollX)
+//             {
+//                 scrollX = maxScrollX;
+//             }
+//         }
 
-//loc_49F66:              ; CODE XREF: updateScrollOffset+8Cj
-//                ; updateScrollOffset+96j
-        additionalScrollX -= scrollX;
-        additionalScrollX = -additionalScrollX;
-        gAdditionalScrollOffsetX = additionalScrollX;
+// //loc_49F66:              ; CODE XREF: updateScrollOffset+8Cj
+// //                ; updateScrollOffset+96j
+//         additionalScrollX -= scrollX;
+//         additionalScrollX = -additionalScrollX;
+//         gAdditionalScrollOffsetX = additionalScrollX;
 
-//loc_49F6E:              ; CODE XREF: updateScrollOffset+9Dj
-//                ; updateScrollOffset+A3j
-        int16_t additionalScrollY = scrollY;
-        scrollY += gAdditionalScrollOffsetY;
-        if (scrollY < 0) // in asm there wasn't a explicit "cmp", just the "add" above
-        {
-            scrollY = 0;
-        }
-        else
-        {
-//loc_49F99:              ; CODE XREF: updateScrollOffset+CFj
-            if (scrollY > maxScrollY) // 168
-            {
-                scrollY = maxScrollY; // 168
-            }
-        }
+// //loc_49F6E:              ; CODE XREF: updateScrollOffset+9Dj
+// //                ; updateScrollOffset+A3j
+//         int16_t additionalScrollY = scrollY;
+//         scrollY += gAdditionalScrollOffsetY;
+//         if (scrollY < 0) // in asm there wasn't a explicit "cmp", just the "add" above
+//         {
+//             scrollY = 0;
+//         }
+//         else
+//         {
+// //loc_49F99:              ; CODE XREF: updateScrollOffset+CFj
+//             if (scrollY > maxScrollY) // 168
+//             {
+//                 scrollY = maxScrollY; // 168
+//             }
+//         }
 
-//loc_49FA1:              ; CODE XREF: updateScrollOffset+C1j
-//                ; updateScrollOffset+D9j
-        additionalScrollY -= scrollY;
-        additionalScrollY = -additionalScrollY;
-        gAdditionalScrollOffsetY = additionalScrollY;
-    }
+// //loc_49FA1:              ; CODE XREF: updateScrollOffset+C1j
+// //                ; updateScrollOffset+D9j
+//         additionalScrollY -= scrollY;
+//         additionalScrollY = -additionalScrollY;
+//         gAdditionalScrollOffsetY = additionalScrollY;
+//     }
 
-//loc_49FA9:              ; CODE XREF: updateScrollOffset+6Ej
-//                ; updateScrollOffset+BDj ...
-    // This makes the screen shake on an explosion
-    if (gShouldShakeWithAllExplosions != 0
-        || (gShakeWithExplosionsDisabled == 0
-            && (gQuitLevelCountdown & 0xFF) != 0))
-    {
-//loc_49FBE:              ; CODE XREF: updateScrollOffset+F0j
-        randomNumber = randomNumber & 0x101;
+// //loc_49FA9:              ; CODE XREF: updateScrollOffset+6Ej
+// //                ; updateScrollOffset+BDj ...
+//     // This makes the screen shake on an explosion
+//     if (gShouldShakeWithAllExplosions != 0
+//         || (gShakeWithExplosionsDisabled == 0
+//             && (gQuitLevelCountdown & 0xFF) != 0))
+//     {
+// //loc_49FBE:              ; CODE XREF: updateScrollOffset+F0j
+//         randomNumber = randomNumber & 0x101;
 
-        uint16_t scrollShakeYOffset = randomNumber >> 8;
-        uint16_t scrollShakeXOffset = (randomNumber & 0xFF);
+//         uint16_t scrollShakeYOffset = randomNumber >> 8;
+//         uint16_t scrollShakeXOffset = (randomNumber & 0xFF);
 
-        scrollY += scrollShakeYOffset;
-        if (scrollX > 0x13C) // 316
-        {
-            scrollShakeXOffset = -scrollShakeXOffset;
-        }
+//         scrollY += scrollShakeYOffset;
+//         if (scrollX > 0x13C) // 316
+//         {
+//             scrollShakeXOffset = -scrollShakeXOffset;
+//         }
 
-//loc_49FD0:              ; CODE XREF: updateScrollOffset+10Ej
-        scrollX += scrollShakeXOffset;
-    }
+// //loc_49FD0:              ; CODE XREF: updateScrollOffset+10Ej
+//         scrollX += scrollShakeXOffset;
+//     }
 
-//loc_49FD2:              ; CODE XREF: updateScrollOffset+F7j
-//                ; updateScrollOffset+FEj
-    gScrollOffsetX = scrollX;
-    gScrollOffsetY = scrollY;
+// //loc_49FD2:              ; CODE XREF: updateScrollOffset+F7j
+// //                ; updateScrollOffset+FEj
+//     gScrollOffsetX = scrollX;
+//     gScrollOffsetY = scrollY;
 }
 
 void updateBugTiles(int16_t position) // movefun7  proc near       ; DATA XREF: data:163Co
@@ -5772,8 +5773,8 @@ void updateBugTiles(int16_t position) // movefun7  proc near       ; DATA XREF: 
     }
 
 //loc_4A0AE:              ; CODE XREF: movefun7+6Cj
-    Point frameCoordinates = kBugFrameCoordinates[frameNumber & 0xf];
-    drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
+    //Point frameCoordinates = kBugFrameCoordinates[frameNumber & 0xf];
+    // drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
 }
 
 void updateTerminalTiles(int16_t position) // movefun5  proc near       ; DATA XREF: data:1630o
@@ -5934,22 +5935,22 @@ void findMurphy() //   proc near       ; CODE XREF: start+344p fetchAndInitiali
 
 void scrollToMurphy() // sub_4A291   proc near       ; CODE XREF: handleGameUserInput+686p
 {
-    // 01ED:362E
-    // Parameters:
-    // - si: murphy location * 2
-    // - al: murphy location
+//     // 01ED:362E
+//     // Parameters:
+//     // - si: murphy location * 2
+//     // - al: murphy location
 
-    gMurphyTileX = gMurphyLocation % kLevelWidth; // stores X coord
-    gMurphyTileY = gMurphyLocation / kLevelWidth; // stores Y coord
+//     gMurphyTileX = gMurphyLocation % kLevelWidth; // stores X coord
+//     gMurphyTileY = gMurphyLocation / kLevelWidth; // stores Y coord
 
-    gMurphyPositionX = gMurphyTileX * kTileSize;
-    gMurphyPositionY = gMurphyTileY * kTileSize;
-//    di = si[0x6155];
-//    si = kMurphyStillSpriteCoordinates;
-    drawMovingFrame(304, 132, gMurphyLocation);
-    updateScrollOffset();
+//     gMurphyPositionX = gMurphyTileX * kTileSize;
+//     gMurphyPositionY = gMurphyTileY * kTileSize;
+// //    di = si[0x6155];
+// //    si = kMurphyStillSpriteCoordinates;
+//     drawMovingFrame(304, 132, gMurphyLocation);
+//     updateScrollOffset();
 
-    videoLoop();
+//     videoLoop();
 }
 
 uint16_t convertToEasyTiles() // sub_4A2E6   proc near       ; CODE XREF: start+33Bp runLevel+ADp ...
@@ -6143,42 +6144,42 @@ void restartLevel() // sub_4A3E9   proc near       ; CODE XREF: handleGameUserIn
 void restartLevelWithoutAddingCurrentGameTimeToPlayer() //loc_4A3F3:              ; CODE XREF: debugSkipLevel+15j
 //                ; restartLevel+5j
 {
-    gIsMoveScrollModeEnabled = 0;
-    gAdditionalScrollOffsetX = 0;
-    gAdditionalScrollOffsetY = 0;
-    gIsFlashingBackgroundModeEnabled = 0;
-    gDebugExtraRenderDelay = 1;
-    replaceCurrentPaletteColor(0, (Color) { 0, 0, 0, 0xff });
+//     gIsMoveScrollModeEnabled = 0;
+//     gAdditionalScrollOffsetX = 0;
+//     gAdditionalScrollOffsetY = 0;
+//     gIsFlashingBackgroundModeEnabled = 0;
+//     gDebugExtraRenderDelay = 1;
+//     replaceCurrentPaletteColor(0, (Color) { 0, 0, 0, 0xff });
 
-    if (gHasUserInterruptedDemo != 0)
-    {
-        gIsPlayingDemo = 1;
-    }
+//     if (gHasUserInterruptedDemo != 0)
+//     {
+//         gIsPlayingDemo = 1;
+//     }
 
-//loc_4A427:              ; CODE XREF: restartLevel+37j
-    gIsGameBusy = 0;
-    fetchAndInitializeLevel();
-    gIsGameBusy = 1;
-    if (gHasUserInterruptedDemo >= 1)
-    {
-        gIsPlayingDemo = 0;
-        if (gHasUserInterruptedDemo == 0) // WTF? this makes no sense...
-        {
-            gHasUserInterruptedDemo++;
-        }
-    }
+// //loc_4A427:              ; CODE XREF: restartLevel+37j
+//     gIsGameBusy = 0;
+//     fetchAndInitializeLevel();
+//     gIsGameBusy = 1;
+//     if (gHasUserInterruptedDemo >= 1)
+//     {
+//         gIsPlayingDemo = 0;
+//         if (gHasUserInterruptedDemo == 0) // WTF? this makes no sense...
+//         {
+//             gHasUserInterruptedDemo++;
+//         }
+//     }
 
-//loc_4A446:              ; CODE XREF: restartLevel+50j
-//                ; restartLevel+57j
-    gCurrentUserInput = UserInputNone;
-    if (gIsPlayingDemo == 0)
-    {
-        return;
-    }
+// //loc_4A446:              ; CODE XREF: restartLevel+50j
+// //                ; restartLevel+57j
+//     gCurrentUserInput = UserInputNone;
+//     if (gIsPlayingDemo == 0)
+//     {
+//         return;
+//     }
 
-    gDemoCurrentInputIndex = word_5A33C;
-    gDemoCurrentInputRepeatCounter = 1;
-    simulateDemoInput();
+//     gDemoCurrentInputIndex = word_5A33C;
+//     gDemoCurrentInputRepeatCounter = 1;
+//     simulateDemoInput();
 }
 
 void fetchAndInitializeLevel() // sub_4A463   proc near       ; CODE XREF: recordDemo:loc_4953Bp
@@ -6311,174 +6312,174 @@ void updateOrangeDiskTiles(int16_t position) // movefun3  proc near       ; DATA
 
 void updateExplosionTiles(int16_t position) //loc_4A543:              ; DATA XREF: data:1648o
 {
-    // 01ED:38E0
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     // 01ED:38E0
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
 
-    if (currentTile->tile != LevelTileTypeExplosion)
-    {
-        return;
-    }
+//     if (currentTile->tile != LevelTileTypeExplosion)
+//     {
+//         return;
+//     }
 
-//loc_4A54B:              ; CODE XREF: code:3928j
-    if ((gFrameCounter & 3) != 0)
-    {
-        return;
-    }
+// //loc_4A54B:              ; CODE XREF: code:3928j
+//     if ((gFrameCounter & 3) != 0)
+//     {
+//         return;
+//     }
 
-//loc_4A557:              ; CODE XREF: code:3934j
-    uint8_t state = currentTile->state;
-    if ((state & 0x80) != 0)
-    {
-//loc_4A5A0:              ; CODE XREF: code:393Ej
-        state++;
-        if (state != 0x89)
-        {
-//loc_4A5B3:              ; CODE XREF: code:3985j
-            currentTile->state = state;
-            state--;
-            state &= 0xF;
-            // 12e6
-            Point frameCoordinates = kInfotronExplosionAnimationFrameCoordinates[state];
+// //loc_4A557:              ; CODE XREF: code:3934j
+//     uint8_t state = currentTile->state;
+//     if ((state & 0x80) != 0)
+//     {
+// //loc_4A5A0:              ; CODE XREF: code:393Ej
+//         state++;
+//         if (state != 0x89)
+//         {
+// //loc_4A5B3:              ; CODE XREF: code:3985j
+//             currentTile->state = state;
+//             state--;
+//             state &= 0xF;
+//             // 12e6
+//             //Point frameCoordinates = kInfotronExplosionAnimationFrameCoordinates[state];
 
-            drawMovingFrame(frameCoordinates.x,
-                            frameCoordinates.y,
-                            position);
-        }
-        else
-        {
-            currentTile->state = 0;
-            currentTile->tile = LevelTileTypeInfotron;
-            gIsExplosionStarted = 0;
-        }
-    }
-    else
-    {
-        state++;
-        currentTile->state = state;
-        state--;
+//             drawMovingFrame(frameCoordinates.x,
+//                             frameCoordinates.y,
+//                             position);
+//         }
+//         else
+//         {
+//             currentTile->state = 0;
+//             currentTile->tile = LevelTileTypeInfotron;
+//             gIsExplosionStarted = 0;
+//         }
+//     }
+//     else
+//     {
+//         state++;
+//         currentTile->state = state;
+//         state--;
 
-        // 12d6
-        Point frameCoordinates = kRegularExplosionAnimationFrameCoordinates[state];
+//         // 12d6
+//         //Point frameCoordinates = kRegularExplosionAnimationFrameCoordinates[state];
 
-        drawMovingFrame(frameCoordinates.x,
-                        frameCoordinates.y,
-                        position);
+//         drawMovingFrame(frameCoordinates.x,
+//                         frameCoordinates.y,
+//                         position);
 
-//loc_4A582:              ; CODE XREF: code:396Aj
-        if (currentTile->state == 8)
-        {
-            currentTile->state = 0;
-            currentTile->tile = LevelTileTypeSpace;
-            gIsExplosionStarted = 0;
-        }
-    }
+// //loc_4A582:              ; CODE XREF: code:396Aj
+//         if (currentTile->state == 8)
+//         {
+//             currentTile->state = 0;
+//             currentTile->tile = LevelTileTypeSpace;
+//             gIsExplosionStarted = 0;
+//         }
+//     }
 }
 
 void updateExplosionTimers() // sub_4A5E0   proc near       ; CODE XREF: runLevel+106p
 {
-    // 01ED:397D
-    for (int i = 0; i < kLevelSize; ++i)
-    {
-//loc_4A5E9:              ; CODE XREF: updateExplosionTimers+25j
-        int8_t timer = gExplosionTimers[i];
+//     // 01ED:397D
+//     for (int i = 0; i < kLevelSize; ++i)
+//     {
+// //loc_4A5E9:              ; CODE XREF: updateExplosionTimers+25j
+//         int8_t timer = gExplosionTimers[i];
 
-        if (timer == 0)
-        {
-            continue;
-        }
+//         if (timer == 0)
+//         {
+//             continue;
+//         }
 
-        if (timer < 0)
-        {
-//loc_4A608:              ; CODE XREF: updateExplosionTimers+10j
-            gExplosionTimers[i] = timer + 1;
+//         if (timer < 0)
+//         {
+// //loc_4A608:              ; CODE XREF: updateExplosionTimers+10j
+//             gExplosionTimers[i] = timer + 1;
 
-            if (gExplosionTimers[i] == 0)
-            {
-                StatefulLevelTile *tile = &gCurrentLevelState[i];
-                tile->state = 0xFF;
-                tile->tile = LevelTileTypeElectron;
-                detonateBigExplosion(i);
-            }
-        }
-        else
-        {
-            gExplosionTimers[i] = timer - 1;
+//             if (gExplosionTimers[i] == 0)
+//             {
+//                 StatefulLevelTile *tile = &gCurrentLevelState[i];
+//                 tile->state = 0xFF;
+//                 tile->tile = LevelTileTypeElectron;
+//                 detonateBigExplosion(i);
+//             }
+//         }
+//         else
+//         {
+//             gExplosionTimers[i] = timer - 1;
 
-            if (gExplosionTimers[i] == 0)
-            {
-                detonateBigExplosion(i);
-            }
-        }
-    }
+//             if (gExplosionTimers[i] == 0)
+//             {
+//                 detonateBigExplosion(i);
+//             }
+//         }
+//     }
 }
 
 void detonateBigExplosionTile(int16_t position, uint8_t newTile, uint8_t newState, uint8_t newExplosionTimer)
 {
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
 
-//loc_4A64C:              ; CODE XREF: detonateBigExplosion+26j
-    uint8_t hasChangedCurrentTile = 0;
+// //loc_4A64C:              ; CODE XREF: detonateBigExplosion+26j
+//     uint8_t hasChangedCurrentTile = 0;
 
-    if (currentTile->tile == LevelTileTypeOrangeDisk
-        || currentTile->tile == LevelTileTypeYellowDisk
-        || currentTile->tile == LevelTileTypeSnikSnak)
-    {
-//loc_4A680:              ; CODE XREF: detonateBigExplosion+3Aj
-//                ; detonateBigExplosion+3Ej ...
-        if (currentTile->tile != LevelTileTypeHardware)
-        {
-            gExplosionTimers[position] = newExplosionTimer; // mov [bx+23F7h], dh
-        }
-    }
-    else if (currentTile->tile == LevelTileTypeZonk)
-    {
-//loc_4A69C:              ; CODE XREF: detonateBigExplosion+46j
-        // 01ED:3A39
-        detonateZonk(position, newState, newTile);
-        hasChangedCurrentTile = 1; // to emulate jmp loc_4A6A6
-    }
-    else if (currentTile->tile == LevelTileTypeInfotron)
-    {
-//loc_4A692:              ; CODE XREF: detonateBigExplosion+4Aj 01ED:3A2F
-        sub_4AA34(position, newState, newTile);
-        hasChangedCurrentTile = 1; // to emulate jmp loc_4A6A6
-    }
-    else if (currentTile->tile == LevelTileTypeElectron)
-    {
-        newExplosionTimer = -newExplosionTimer; // dh = -dh;
-        newState = 0x80;
-        newTile = LevelTileTypeExplosion;
-//loc_4A680:              ; CODE XREF: detonateBigExplosion+3Aj
-//                ; detonateBigExplosion+3Ej ...
-        if (currentTile->tile != LevelTileTypeHardware)
-        {
-            gExplosionTimers[position] = newExplosionTimer; // mov [bx+23F7h], dh
-        }
-    }
-//loc_4A676:              ; CODE XREF: detonateBigExplosion+4Ej
-    else if (currentTile->tile == LevelTileTypeMurphy)
-    {
-        gShouldKillMurphy = 1;
+//     if (currentTile->tile == LevelTileTypeOrangeDisk
+//         || currentTile->tile == LevelTileTypeYellowDisk
+//         || currentTile->tile == LevelTileTypeSnikSnak)
+//     {
+// //loc_4A680:              ; CODE XREF: detonateBigExplosion+3Aj
+// //                ; detonateBigExplosion+3Ej ...
+//         if (currentTile->tile != LevelTileTypeHardware)
+//         {
+//             gExplosionTimers[position] = newExplosionTimer; // mov [bx+23F7h], dh
+//         }
+//     }
+//     else if (currentTile->tile == LevelTileTypeZonk)
+//     {
+// //loc_4A69C:              ; CODE XREF: detonateBigExplosion+46j
+//         // 01ED:3A39
+//         detonateZonk(position, newState, newTile);
+//         hasChangedCurrentTile = 1; // to emulate jmp loc_4A6A6
+//     }
+//     else if (currentTile->tile == LevelTileTypeInfotron)
+//     {
+// //loc_4A692:              ; CODE XREF: detonateBigExplosion+4Aj 01ED:3A2F
+//         sub_4AA34(position, newState, newTile);
+//         hasChangedCurrentTile = 1; // to emulate jmp loc_4A6A6
+//     }
+//     else if (currentTile->tile == LevelTileTypeElectron)
+//     {
+//         newExplosionTimer = -newExplosionTimer; // dh = -dh;
+//         newState = 0x80;
+//         newTile = LevelTileTypeExplosion;
+// //loc_4A680:              ; CODE XREF: detonateBigExplosion+3Aj
+// //                ; detonateBigExplosion+3Ej ...
+//         if (currentTile->tile != LevelTileTypeHardware)
+//         {
+//             gExplosionTimers[position] = newExplosionTimer; // mov [bx+23F7h], dh
+//         }
+//     }
+// //loc_4A676:              ; CODE XREF: detonateBigExplosion+4Ej
+//     else if (currentTile->tile == LevelTileTypeMurphy)
+//     {
+//         gShouldKillMurphy = 1;
 
-//loc_4A680:              ; CODE XREF: detonateBigExplosion+3Aj
-//                ; detonateBigExplosion+3Ej ...
-        if (currentTile->tile != LevelTileTypeHardware)
-        {
-            gExplosionTimers[position] = newExplosionTimer; // mov [bx+23F7h], dh
-        }
-    }
+// //loc_4A680:              ; CODE XREF: detonateBigExplosion+3Aj
+// //                ; detonateBigExplosion+3Ej ...
+//         if (currentTile->tile != LevelTileTypeHardware)
+//         {
+//             gExplosionTimers[position] = newExplosionTimer; // mov [bx+23F7h], dh
+//         }
+//     }
 
-    if (hasChangedCurrentTile == 0)
-    {
-//loc_4A688:              ; CODE XREF: detonateBigExplosion+59j
-//                ; detonateBigExplosion+63j
-        if (currentTile->tile != LevelTileTypeHardware)
-        {
-            // mov [si+17BAh], cx
-            currentTile->state = newState;
-            currentTile->tile = newTile;
-        }
-    }
+//     if (hasChangedCurrentTile == 0)
+//     {
+// //loc_4A688:              ; CODE XREF: detonateBigExplosion+59j
+// //                ; detonateBigExplosion+63j
+//         if (currentTile->tile != LevelTileTypeHardware)
+//         {
+//             // mov [si+17BAh], cx
+//             currentTile->state = newState;
+//             currentTile->tile = newTile;
+//         }
+//     }
 }
 
 // Creates an explossion of 3x3 tiles around a position
@@ -7312,110 +7313,110 @@ void handleGfxTutorOptionClick() // sub_4B149   proc near
 
 void handleDemoOptionClick() // sub_4B159   proc near       ; CODE XREF: runMainMenu+6Fp
 {
-    // 01ED:44F6
-    if (readDemoFiles() == 0)
-    {
-        return;
-    }
+//     // 01ED:44F6
+//     if (readDemoFiles() == 0)
+//     {
+//         return;
+//     }
 
-//loc_4B163:              ; CODE XREF: handleDemoOptionClick+5j
-    gShouldLeaveMainMenu = 1;
-    gIsPlayingDemo = 1;
+// //loc_4B163:              ; CODE XREF: handleDemoOptionClick+5j
+//     gShouldLeaveMainMenu = 1;
+//     gIsPlayingDemo = 1;
 
-    uint8_t numberOfDemos = 0;
+//     uint8_t numberOfDemos = 0;
 
-    uint8_t idx = 0;
-    do
-    {
-//loc_4B17A:              ; CODE XREF: handleDemoOptionClick+2Dj
-        if (gDemos.demoFirstIndices[idx] == 0xFFFF)
-        {
-            break;
-        }
-        idx++;
-        numberOfDemos++;
-    }
-    while (1);
-    // 01ED:4525
+//     uint8_t idx = 0;
+//     do
+//     {
+// //loc_4B17A:              ; CODE XREF: handleDemoOptionClick+2Dj
+//         if (gDemos.demoFirstIndices[idx] == 0xFFFF)
+//         {
+//             break;
+//         }
+//         idx++;
+//         numberOfDemos++;
+//     }
+//     while (1);
+//     // 01ED:4525
 
-//loc_4B188:              ; CODE XREF: handleDemoOptionClick+2Aj
-    // This picks a random demo
-    generateRandomSeedFromClock();
-    uint16_t demoIndex = generateRandomNumber() % numberOfDemos;
-    uint16_t demoFirstIndex = gDemos.demoFirstIndices[demoIndex];
+// //loc_4B188:              ; CODE XREF: handleDemoOptionClick+2Aj
+//     // This picks a random demo
+//     generateRandomSeedFromClock();
+//     uint16_t demoIndex = generateRandomNumber() % numberOfDemos;
+//     uint16_t demoFirstIndex = gDemos.demoFirstIndices[demoIndex];
 
-    // This only happens if there are no demos...
-    if (demoFirstIndex == 0xFFFF)
-    {
-        gShouldLeaveMainMenu = 0;
-        gIsPlayingDemo = 0;
-    }
+//     // This only happens if there are no demos...
+//     if (demoFirstIndex == 0xFFFF)
+//     {
+//         gShouldLeaveMainMenu = 0;
+//         gIsPlayingDemo = 0;
+//     }
 
-//loc_4B1AE:              ; CODE XREF: handleDemoOptionClick+48j
-    uint8_t demoLevelNumber = gDemos.demoData[demoFirstIndex];
-    uint8_t finalLevelNumber = demoIndex;
+// //loc_4B1AE:              ; CODE XREF: handleDemoOptionClick+48j
+//     uint8_t demoLevelNumber = gDemos.demoData[demoFirstIndex];
+//     uint8_t finalLevelNumber = demoIndex;
 
-    gSelectedOriginalDemoIndex = demoIndex;
-    gSelectedOriginalDemoLevelNumber = 0;
+//     gSelectedOriginalDemoIndex = demoIndex;
+//     gSelectedOriginalDemoLevelNumber = 0;
 
-    // This checks if the level number has its MSB to 0 and is a valid level number (1-111) for the original DEMO format
-    if (demoLevelNumber <= 0x6F // 111
-        && demoLevelNumber != 0)
-    {
-        gSelectedOriginalDemoLevelNumber = (gSelectedOriginalDemoLevelNumber & 0xFF00) | demoLevelNumber; // mov byte ptr gSelectedOriginalDemoLevelNumber, al
-        finalLevelNumber = demoLevelNumber;
-    }
+//     // This checks if the level number has its MSB to 0 and is a valid level number (1-111) for the original DEMO format
+//     if (demoLevelNumber <= 0x6F // 111
+//         && demoLevelNumber != 0)
+//     {
+//         gSelectedOriginalDemoLevelNumber = (gSelectedOriginalDemoLevelNumber & 0xFF00) | demoLevelNumber; // mov byte ptr gSelectedOriginalDemoLevelNumber, al
+//         finalLevelNumber = demoLevelNumber;
+//     }
 
-//loc_4B1CF:              ; CODE XREF: handleDemoOptionClick+6Bj
-//                ; handleDemoOptionClick+6Fj
-    gRandomGeneratorSeed = gDemoRandomSeeds[demoIndex];
-    gDemoIndexOrDemoLevelNumber = finalLevelNumber;
+// //loc_4B1CF:              ; CODE XREF: handleDemoOptionClick+6Bj
+// //                ; handleDemoOptionClick+6Fj
+//     gRandomGeneratorSeed = gDemoRandomSeeds[demoIndex];
+//     gDemoIndexOrDemoLevelNumber = finalLevelNumber;
 
-    demoFirstIndex++; // To skip the level number
-    gDemoCurrentInputIndex = demoFirstIndex;
-    word_5A33C = demoFirstIndex;
-    gDemoCurrentInput = UserInputNone;
-    gDemoCurrentInputRepeatCounter = 1;
+//     demoFirstIndex++; // To skip the level number
+//     gDemoCurrentInputIndex = demoFirstIndex;
+//     word_5A33C = demoFirstIndex;
+//     gDemoCurrentInput = UserInputNone;
+//     gDemoCurrentInputRepeatCounter = 1;
 }
 
 void playDemo(uint16_t demoIndex) // demoSomething  proc near       ; CODE XREF: start+3BAp
                     // ; runMainMenu+12Ep ...
 {
-    readDemoFiles();
+//     readDemoFiles();
 
-    gRandomGeneratorSeed = gDemoRandomSeeds[demoIndex];
-    gShouldLeaveMainMenu = 1;
-    gIsPlayingDemo = 1;
+//     gRandomGeneratorSeed = gDemoRandomSeeds[demoIndex];
+//     gShouldLeaveMainMenu = 1;
+//     gIsPlayingDemo = 1;
 
-    uint16_t demoFirstIndex = gDemos.demoFirstIndices[demoIndex];
-    if (demoFirstIndex == 0xFFFF)
-    {
-        gShouldLeaveMainMenu = 0;
-        gIsPlayingDemo = 0;
-    }
+//     uint16_t demoFirstIndex = gDemos.demoFirstIndices[demoIndex];
+//     if (demoFirstIndex == 0xFFFF)
+//     {
+//         gShouldLeaveMainMenu = 0;
+//         gIsPlayingDemo = 0;
+//     }
 
-//loc_4B22F:              ; CODE XREF: playDemo+30j
-    gSelectedOriginalDemoLevelNumber = 0;
+// //loc_4B22F:              ; CODE XREF: playDemo+30j
+//     gSelectedOriginalDemoLevelNumber = 0;
 
-    uint8_t demoLevelNumber = gDemos.demoData[demoFirstIndex];
-    uint8_t finalLevelNumber = demoIndex;
+//     uint8_t demoLevelNumber = gDemos.demoData[demoFirstIndex];
+//     uint8_t finalLevelNumber = demoIndex;
 
-    if (demoLevelNumber <= kNumberOfLevels // 111
-        && demoLevelNumber != 0)
-    {
-        finalLevelNumber = demoLevelNumber;
-        gSelectedOriginalDemoLevelNumber = (gSelectedOriginalDemoLevelNumber & 0xFF00) | finalLevelNumber; // mov byte ptr gSelectedOriginalDemoLevelNumber, al
-    }
+//     if (demoLevelNumber <= kNumberOfLevels // 111
+//         && demoLevelNumber != 0)
+//     {
+//         finalLevelNumber = demoLevelNumber;
+//         gSelectedOriginalDemoLevelNumber = (gSelectedOriginalDemoLevelNumber & 0xFF00) | finalLevelNumber; // mov byte ptr gSelectedOriginalDemoLevelNumber, al
+//     }
 
-//loc_4B248:              ; CODE XREF: playDemo+4Bj
-//                ; playDemo+4Fj
-    gDemoIndexOrDemoLevelNumber = finalLevelNumber;
+// //loc_4B248:              ; CODE XREF: playDemo+4Bj
+// //                ; playDemo+4Fj
+//     gDemoIndexOrDemoLevelNumber = finalLevelNumber;
 
-    demoFirstIndex++; // To skip the level number
-    gDemoCurrentInputIndex = demoFirstIndex;
-    word_5A33C = demoFirstIndex;
-    gDemoCurrentInput = UserInputNone;
-    gDemoCurrentInputRepeatCounter = 1;
+//     demoFirstIndex++; // To skip the level number
+//     gDemoCurrentInputIndex = demoFirstIndex;
+//     word_5A33C = demoFirstIndex;
+//     gDemoCurrentInput = UserInputNone;
+//     gDemoCurrentInputRepeatCounter = 1;
 }
 
 void handleRankingListScrollUp() // loc_4B262
@@ -9025,6 +9026,7 @@ void handleControlsOptionClick() //showControls:                              ; 
 
 void drawSoundTypeOptionsSelection(uint8_t *destBuffer) // sub_4CAFC   proc near       ; CODE XREF: code:5AE1p handleOptionsStandardClick+6p ...
 {
+    /*
     dimOptionsButtonText(40, 21, 40, 8, destBuffer);
     drawOptionsMenuLine(kOptionsMenuBorders[0], 4, destBuffer);
     drawOptionsMenuLine(kOptionsMenuBorders[1], 4, destBuffer);
@@ -9098,11 +9100,13 @@ void drawSoundTypeOptionsSelection(uint8_t *destBuffer) // sub_4CAFC   proc near
 //loc_4CC67:              ; CODE XREF: drawSoundTypeOptionsSelection+153j
     highlightOptionsButtonText(176, 46, 40, 5, destBuffer);
     drawOptionsMenuLine(kOptionsMenuBorders[9], 6, destBuffer);
+    */
 }
 
 void drawAudioOptionsSelection(uint8_t *destBuffer) // sub_4CC7C   proc near       ; CODE XREF: handleOptionsAdlibClick:loc_4C75Ap
                    // ; code:loc_4C774p
 {
+    /*
     if (isMusicEnabled == 1)
     {
         highlightOptionsButtonText(134, 99, 40, 8, destBuffer);
@@ -9126,10 +9130,12 @@ void drawAudioOptionsSelection(uint8_t *destBuffer) // sub_4CC7C   proc near    
 //loc_4CCCA:              ; CODE XREF: drawAudioOptionsSelection+36j
     dimOptionsButtonText(136, 138, 24, 8, destBuffer);
     drawOptionsMenuLine(kOptionsMenuBorders[11], 4, destBuffer);
+    */
 }
 
 void drawInputOptionsSelection(uint8_t *destBuffer) // sub_4CCDF   proc near       ; CODE XREF: code:5B5Dp code:5B69p
 {
+    /*
     if (isJoystickEnabled == 0)
     {
         highlightOptionsButtonText(208, 87, 8, 62, destBuffer);
@@ -9148,10 +9154,12 @@ void drawInputOptionsSelection(uint8_t *destBuffer) // sub_4CCDF   proc near    
 
 //loc_4CD38:              ; CODE XREF: drawInputOptionsSelection+2Fj
     updateOptionsMenuState(destBuffer);
+    */
 }
 
 void updateOptionsMenuState(uint8_t *destBuffer) // sub_4CD3C   proc near       ; CODE XREF: drawInputOptionsSelection:loc_4CD38p
 {
+    /*
     // 01ED:60D9
     updateUserInput();
     if (gCurrentUserInput == byte_50919)
@@ -9217,6 +9225,7 @@ void updateOptionsMenuState(uint8_t *destBuffer) // sub_4CD3C   proc near       
     {
         drawOptionsMenuLine(kOptionsMenuBorders[16], 6, destBuffer);
     }
+    */
 }
 
 void highlightOptionsButtonText(size_t startX, size_t startY, size_t width, size_t height, uint8_t *destBuffer) // sub_4CE11   proc near       ; CODE XREF: drawSoundTypeOptionsSelection+B4p
@@ -9282,6 +9291,7 @@ void dimOptionsButtonText(size_t startX, size_t startY, size_t width, size_t hei
     drawMouseCursor();
 }
 
+/*
 void drawOptionsMenuLine(ButtonBorderDescriptor border, uint8_t color, uint8_t *destBuffer) // sub_4CF13  proc near       ; CODE XREF: drawSoundTypeOptionsSelection+11p
                    // ; drawSoundTypeOptionsSelection+19p ...
 {
@@ -9327,6 +9337,7 @@ void drawOptionsMenuLine(ButtonBorderDescriptor border, uint8_t color, uint8_t *
     saveLastMouseAreaBitmap();
     drawMouseCursor();
 }
+*/
 
 void savePlayerListData() // sub_4CFB2   proc near       ; CODE XREF: handleNewPlayerOptionClick+1D5p
 //                    ; handleDeletePlayerOptionClick+CEp ...
@@ -9370,6 +9381,7 @@ void saveHallOfFameData() //   proc near       ; CODE XREF: handleNewPlayerOptio
     fclose(file);
 }
 
+/*
 void drawMainMenuButtonBorder(ButtonBorderDescriptor border, uint8_t color) // sub_4D004  proc near       ; CODE XREF: drawMainMenuButtonBorders+17p
 //                    ; drawMainMenuButtonBorders+2Ap ...
 {
@@ -9416,9 +9428,12 @@ void drawMainMenuButtonBorder(ButtonBorderDescriptor border, uint8_t color) // s
     saveLastMouseAreaBitmap();
     drawMouseCursor();
 }
+*/
 
 void drawMainMenuButtonBorders() // sub_4D0AD  proc near       ; CODE XREF: runMainMenu+B7p
 {
+    return;
+    /*
     // 01ED:644A
     uint8_t color = 0;
 
@@ -9684,6 +9699,7 @@ void updateHallOfFameEntries() // sub_4D1B6  proc near       ; CODE XREF: change
 
 //loc_4D24B:              ; CODE XREF: updateHallOfFameEntries+38j
 //                ; updateHallOfFameEntries+7Aj
+*/
 }
 
 void changePlayerCurrentLevelState() // sub_4D24D  proc near       ; CODE XREF: handleSkipLevelOptionClick+D9p
@@ -9704,7 +9720,7 @@ void changePlayerCurrentLevelState() // sub_4D24D  proc near       ; CODE XREF: 
     PlayerEntry *currentPlayerEntry = &gPlayerListData[gCurrentPlayerIndex];
     currentPlayerEntry->levelState[gCurrentSelectedLevelIndex - 1] = previousState;
     gCurrentSelectedLevelIndex++;
-    updateHallOfFameEntries(); // 01ED:6618
+    // updateHallOfFameEntries(); // 01ED:6618
 
     // Added by me to prevent losing progress when switching levelsets after finishing a level
     savePlayerListData();
@@ -9870,189 +9886,189 @@ void mapLevelFileData(char *levelFileData, Level *level)
 void readLevels() //  proc near       ; CODE XREF: start:loc_46F3Ep
                     // ; fetchAndInitializeLevelp
 {
-    // 01ED:68E5
-    char *filename = "";
-    FILE *file = NULL;
-    char levelFileData[kLevelDataLength];
+//     // 01ED:68E5
+//     char *filename = "";
+//     FILE *file = NULL;
+//     char levelFileData[kLevelDataLength];
 
-    if (gIsPlayingDemo != 0
-        && (gSelectedOriginalDemoLevelNumber & 0xFF) == 0
-        && gIsSPDemoAvailableToRun == 0)
-    {
-        // Demos with the new format
-        Level *level = &gDemos.level[gDemoIndexOrDemoLevelNumber];
+//     if (gIsPlayingDemo != 0
+//         && (gSelectedOriginalDemoLevelNumber & 0xFF) == 0
+//         && gIsSPDemoAvailableToRun == 0)
+//     {
+//         // Demos with the new format
+//         Level *level = &gDemos.level[gDemoIndexOrDemoLevelNumber];
 
-        memcpy(&levelFileData, level, kLevelDataLength);
+//         memcpy(&levelFileData, level, kLevelDataLength);
 
-        strcpy(gCurrentDemoLevelName, ".SP");
+//         strcpy(gCurrentDemoLevelName, ".SP");
 
-        memcpy(&gCurrentDemoLevelName[4], level->name, sizeof(level->name));
-    }
-    else
-    {
-        if (gIsPlayingDemo == 0
-            || gIsSPDemoAvailableToRun != 0)
-        {
-//loc_4D59F:              ; CODE XREF: readLevels+5j
-//                ; readLevels+13j
-            filename = gLevelsDatFilename; // lea dx, aLevels_dat_0 ; "LEVELS.DAT"
-        }
+//         memcpy(&gCurrentDemoLevelName[4], level->name, sizeof(level->name));
+//     }
+//     else
+//     {
+//         if (gIsPlayingDemo == 0
+//             || gIsSPDemoAvailableToRun != 0)
+//         {
+// //loc_4D59F:              ; CODE XREF: readLevels+5j
+// //                ; readLevels+13j
+//             filename = gLevelsDatFilename; // lea dx, aLevels_dat_0 ; "LEVELS.DAT"
+//         }
 
-        if (gIsPlayingDemo != 0
-            && (gSelectedOriginalDemoLevelNumber & 0xFF) != 0) //cmp byte ptr gSelectedOriginalDemoLevelNumber, 0
-        {
-//loc_4D599:              ; CODE XREF: readLevels+Cj
-            filename = gLevelsDatFilename; // lea dx, aLevels_dat ; "LEVELS.DAT"
-        }
-//loc_4D5A3:              ; CODE XREF: readLevels+55j
-        else if (gIsSPDemoAvailableToRun != 0)
-        {
-            filename = demoFileName;
-        }
-        else if (gSelectedOriginalDemoFromCommandLineLevelNumber != 0)
-        {
-            filename = gLevelsDatFilename; // lea dx, aLevels_dat ; "LEVELS.DAT"
-        }
+//         if (gIsPlayingDemo != 0
+//             && (gSelectedOriginalDemoLevelNumber & 0xFF) != 0) //cmp byte ptr gSelectedOriginalDemoLevelNumber, 0
+//         {
+// //loc_4D599:              ; CODE XREF: readLevels+Cj
+//             filename = gLevelsDatFilename; // lea dx, aLevels_dat ; "LEVELS.DAT"
+//         }
+// //loc_4D5A3:              ; CODE XREF: readLevels+55j
+//         else if (gIsSPDemoAvailableToRun != 0)
+//         {
+//             filename = demoFileName;
+//         }
+//         else if (gSelectedOriginalDemoFromCommandLineLevelNumber != 0)
+//         {
+//             filename = gLevelsDatFilename; // lea dx, aLevels_dat ; "LEVELS.DAT"
+//         }
 
-//loc_4D5BB:              ; CODE XREF: readLevels+63j
-        file = openWritableFileWithReadonlyFallback(filename, "rb");
-        if (file == NULL)
-        {
-            exitWithError("Error opening %s\n", filename);
-        }
+// //loc_4D5BB:              ; CODE XREF: readLevels+63j
+//         file = openWritableFileWithReadonlyFallback(filename, "rb");
+//         if (file == NULL)
+//         {
+//             exitWithError("Error opening %s\n", filename);
+//         }
 
-        uint8_t levelIndex = 0;
+//         uint8_t levelIndex = 0;
 
-//loc_4D5C2:              ; CODE XREF: readLevels+75j
-        if (gIsPlayingDemo != 0)
-        {
-            levelIndex = gDemoIndexOrDemoLevelNumber;
-        }
-        else
-        {
-//loc_4D5D1:              ; CODE XREF: readLevels+82j
-            levelIndex = gCurrentSelectedLevelIndex;
-        }
+// //loc_4D5C2:              ; CODE XREF: readLevels+75j
+//         if (gIsPlayingDemo != 0)
+//         {
+//             levelIndex = gDemoIndexOrDemoLevelNumber;
+//         }
+//         else
+//         {
+// //loc_4D5D1:              ; CODE XREF: readLevels+82j
+//             levelIndex = gCurrentSelectedLevelIndex;
+//         }
 
-//loc_4D5D4:              ; CODE XREF: readLevels+87j
-        if (gIsSPDemoAvailableToRun != 0)
-        {
-            levelIndex = gSelectedOriginalDemoFromCommandLineLevelNumber;
-            if (levelIndex == 0)
-            {
-                levelIndex++;
-            }
-        }
+// //loc_4D5D4:              ; CODE XREF: readLevels+87j
+//         if (gIsSPDemoAvailableToRun != 0)
+//         {
+//             levelIndex = gSelectedOriginalDemoFromCommandLineLevelNumber;
+//             if (levelIndex == 0)
+//             {
+//                 levelIndex++;
+//             }
+//         }
 
-//loc_4D5E3:              ; CODE XREF: readLevels+91j
-//                ; readLevels+98j
-        levelIndex--; // Levels anywhere else are 1-index, we need them to start from 0 here
-        size_t fileOffset = levelIndex * kLevelDataLength;
-        // 01ED:699A
-        int result = fseek(file, fileOffset, SEEK_SET);
-        if (result != 0)
-        {
-            exitWithError("Error seeking %s\n", filename);
-        }
+// //loc_4D5E3:              ; CODE XREF: readLevels+91j
+// //                ; readLevels+98j
+//         levelIndex--; // Levels anywhere else are 1-index, we need them to start from 0 here
+//         size_t fileOffset = levelIndex * kLevelDataLength;
+//         // 01ED:699A
+//         int result = fseek(file, fileOffset, SEEK_SET);
+//         if (result != 0)
+//         {
+//             exitWithError("Error seeking %s\n", filename);
+//         }
 
-//loc_4D604:              ; CODE XREF: readLevels+B7j
-        // 01ED:69AE
-        size_t bytes = fileReadBytes(levelFileData, kLevelDataLength, file);
-        if (bytes < kLevelDataLength)
-        {
-            exitWithError("Error reading %s\n", filename);
-        }
+// //loc_4D604:              ; CODE XREF: readLevels+B7j
+//         // 01ED:69AE
+//         size_t bytes = fileReadBytes(levelFileData, kLevelDataLength, file);
+//         if (bytes < kLevelDataLength)
+//         {
+//             exitWithError("Error reading %s\n", filename);
+//         }
 
-        Level tmpLevel;
-        mapLevelFileData(levelFileData, &tmpLevel);
-        gIsGravityEnabled = tmpLevel.initialGravitation;
-        gAreZonksFrozen = tmpLevel.freezeZonks;
-        gNumberOfInfoTrons = tmpLevel.numberOfInfotrons;
-        gNumberOfSpecialPorts = tmpLevel.numberOfSpecialPorts;
-        gRandomSeed = tmpLevel.randomSeed;
+//         Level tmpLevel;
+//         mapLevelFileData(levelFileData, &tmpLevel);
+//         gIsGravityEnabled = tmpLevel.initialGravitation;
+//         gAreZonksFrozen = tmpLevel.freezeZonks;
+//         gNumberOfInfoTrons = tmpLevel.numberOfInfotrons;
+//         gNumberOfSpecialPorts = tmpLevel.numberOfSpecialPorts;
+//         gRandomSeed = tmpLevel.randomSeed;
 
-//loc_4D618:              ; CODE XREF: readLevels+CBj
-        if ((gSelectedOriginalDemoLevelNumber & 0xFF) != 0) // cmp byte ptr gSelectedOriginalDemoLevelNumber, 0
-        {
-            gSelectedOriginalDemoLevelNumber |= 0xFF00; // mov byte ptr gSelectedOriginalDemoLevelNumber+1, 0FFh
+// //loc_4D618:              ; CODE XREF: readLevels+CBj
+//         if ((gSelectedOriginalDemoLevelNumber & 0xFF) != 0) // cmp byte ptr gSelectedOriginalDemoLevelNumber, 0
+//         {
+//             gSelectedOriginalDemoLevelNumber |= 0xFF00; // mov byte ptr gSelectedOriginalDemoLevelNumber+1, 0FFh
 
-            gDemoIndexOrDemoLevelNumber = gSelectedOriginalDemoIndex;
+//             gDemoIndexOrDemoLevelNumber = gSelectedOriginalDemoIndex;
 
-            Level *level = &gDemos.level[gDemoIndexOrDemoLevelNumber];
-            mapLevelFileData(levelFileData, level);
-        }
-    }
+//             Level *level = &gDemos.level[gDemoIndexOrDemoLevelNumber];
+//             mapLevelFileData(levelFileData, level);
+//         }
+//     }
 
-    char *levelName = NULL;
+//     char *levelName = NULL;
 
-//loc_4D64B:              ; CODE XREF: readLevels+4Ej
-//                ; readLevels+D5j
-    if (gIsPlayingDemo != 0)
-    {
-        gRandomGeneratorSeed = gRandomSeed;
-        levelName = gCurrentDemoLevelName;
-    }
-    else
-    {
-//loc_4D65D:              ; CODE XREF: readLevels+108j
-        levelName = gCurrentLevelName;
-    }
+// //loc_4D64B:              ; CODE XREF: readLevels+4Ej
+// //                ; readLevels+D5j
+//     if (gIsPlayingDemo != 0)
+//     {
+//         gRandomGeneratorSeed = gRandomSeed;
+//         levelName = gCurrentDemoLevelName;
+//     }
+//     else
+//     {
+// //loc_4D65D:              ; CODE XREF: readLevels+108j
+//         levelName = gCurrentLevelName;
+//     }
 
-//loc_4D660:              ; CODE XREF: readLevels+113j
-    if (gSelectedOriginalDemoLevelNumber != 0
-        || (gIsSPDemoAvailableToRun != 0
-            && gSelectedOriginalDemoFromCommandLineLevelNumber != 0))
-    {
-//loc_4D679:              ; CODE XREF: readLevels+121j
-        strcpy(gCurrentDemoLevelName, "BIN");
-        levelName += 4;
-    }
-    else if (gIsSPDemoAvailableToRun == 0)
-    {
-//loc_4D68C:              ; CODE XREF: readLevels+128j
-        levelName += 4; // Skips the number directly to the title (from pointing "005 ------- EASY DEAL -------" to pointing "------- EASY DEAL -------")
-    }
-    else if (gSelectedOriginalDemoFromCommandLineLevelNumber == 0)
-    {
-//loc_4D682:              ; CODE XREF: readLevels+12Fj
-        strcpy(gCurrentDemoLevelName, ".SP");
-        levelName += 4;
-    }
+// //loc_4D660:              ; CODE XREF: readLevels+113j
+//     if (gSelectedOriginalDemoLevelNumber != 0
+//         || (gIsSPDemoAvailableToRun != 0
+//             && gSelectedOriginalDemoFromCommandLineLevelNumber != 0))
+//     {
+// //loc_4D679:              ; CODE XREF: readLevels+121j
+//         strcpy(gCurrentDemoLevelName, "BIN");
+//         levelName += 4;
+//     }
+//     else if (gIsSPDemoAvailableToRun == 0)
+//     {
+// //loc_4D68C:              ; CODE XREF: readLevels+128j
+//         levelName += 4; // Skips the number directly to the title (from pointing "005 ------- EASY DEAL -------" to pointing "------- EASY DEAL -------")
+//     }
+//     else if (gSelectedOriginalDemoFromCommandLineLevelNumber == 0)
+//     {
+// //loc_4D682:              ; CODE XREF: readLevels+12Fj
+//         strcpy(gCurrentDemoLevelName, ".SP");
+//         levelName += 4;
+//     }
 
-//loc_4D68F:              ; CODE XREF: readLevels+142j
-    mapLevelFileData(levelFileData, &gCurrentLevel);
-    memcpy(levelName, gCurrentLevel.name, sizeof(gCurrentLevel.name));
+// //loc_4D68F:              ; CODE XREF: readLevels+142j
+//     mapLevelFileData(levelFileData, &gCurrentLevel);
+//     memcpy(levelName, gCurrentLevel.name, sizeof(gCurrentLevel.name));
 
-    // The reason this is 1536 (level file size) and not 1440 (actual gamefield size of 60 * 24 tiles) is because
-    // the game was written like this, and some levels rely on this behavior by removing the bottom border of the level
-    // and using some unused bytes from those 1536 to store tile data.
-    // An example of this is "HIDDEN TRACK" (07/07s062-1.sp)
-    //
-    for (int i = 0; i < kLevelDataLength; ++i)
-    {
-//loc_4D6B8:              ; CODE XREF: readLevels+172j
-        StatefulLevelTile *tile = &gCurrentLevelState[i];
-        tile->tile = levelFileData[i];
-        tile->state = 0;
-    }
+//     // The reason this is 1536 (level file size) and not 1440 (actual gamefield size of 60 * 24 tiles) is because
+//     // the game was written like this, and some levels rely on this behavior by removing the bottom border of the level
+//     // and using some unused bytes from those 1536 to store tile data.
+//     // An example of this is "HIDDEN TRACK" (07/07s062-1.sp)
+//     //
+//     for (int i = 0; i < kLevelDataLength; ++i)
+//     {
+// //loc_4D6B8:              ; CODE XREF: readLevels+172j
+//         StatefulLevelTile *tile = &gCurrentLevelState[i];
+//         tile->tile = levelFileData[i];
+//         tile->state = 0;
+//     }
 
-    memset(&gExplosionTimers, 0, sizeof(gExplosionTimers)); // rep stosb
+//     memset(&gExplosionTimers, 0, sizeof(gExplosionTimers)); // rep stosb
 
-    if (gIsPlayingDemo == 0
-        || (gSelectedOriginalDemoLevelNumber & 0xFF) != 0
-        || gIsSPDemoAvailableToRun != 0)
-    {
-//loc_4D6DC:              ; CODE XREF: readLevels+184j
-//                ; readLevels+18Bj
-        if (fclose(file) != 0)
-        {
-            exitWithError("Error closing %s\n", filename);
-        }
-    }
+//     if (gIsPlayingDemo == 0
+//         || (gSelectedOriginalDemoLevelNumber & 0xFF) != 0
+//         || gIsSPDemoAvailableToRun != 0)
+//     {
+// //loc_4D6DC:              ; CODE XREF: readLevels+184j
+// //                ; readLevels+18Bj
+//         if (fclose(file) != 0)
+//         {
+//             exitWithError("Error closing %s\n", filename);
+//         }
+//     }
 
-//loc_4D6EA:              ; CODE XREF: readLevels+192j
-//                ; readLevels+19Dj
-    gSelectedOriginalDemoLevelNumber &= 0xFF00; // mov byte ptr gSelectedOriginalDemoLevelNumber, 0
+// //loc_4D6EA:              ; CODE XREF: readLevels+192j
+// //                ; readLevels+19Dj
+//     gSelectedOriginalDemoLevelNumber &= 0xFF00; // mov byte ptr gSelectedOriginalDemoLevelNumber, 0
 }
 
 void soundShutdown() //  proc near       ; CODE XREF: start+48Ep
@@ -10274,4138 +10290,4143 @@ void playExitSound() // sound10   proc near       ; CODE XREF: update?+7EBp
 
 int16_t updateMurphy(int16_t position) // update?     proc near       ; CODE XREF: updateMovingObjects+Ep
 {
-    // 01ED:722D
+    return 0;
+//     // 01ED:722D
 
-    StatefulLevelTile *murphyTile = &gCurrentLevelState[position];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *murphyTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
 
-    if (murphyTile->tile != LevelTileTypeMurphy)
-    {
-        gIsMurphyUpdated = 0;
-        return position;
-    }
+//     if (murphyTile->tile != LevelTileTypeMurphy)
+//     {
+//         gIsMurphyUpdated = 0;
+//         return position;
+//     }
 
-//hasValidMurphy:              ; CODE XREF: update?+5j
-    gIsMurphyUpdated = 1;
-    gMurphyPreviousLocation = position;
-    if (murphyTile->state != 0 || murphyTile->tile != LevelTileTypeMurphy)
-    {
-        return updateMurphyAnimation(position);
-    }
+// //hasValidMurphy:              ; CODE XREF: update?+5j
+//     gIsMurphyUpdated = 1;
+//     gMurphyPreviousLocation = position;
+//     if (murphyTile->state != 0 || murphyTile->tile != LevelTileTypeMurphy)
+//     {
+//         return updateMurphyAnimation(position);
+//     }
 
-//loc_4DEB4:              ; CODE XREF: update?+1Fj
-    gScratchGravity = 0;
+// //loc_4DEB4:              ; CODE XREF: update?+1Fj
+//     gScratchGravity = 0;
 
-    if (gIsGravityEnabled != 0
-        && aboveTile->tile != LevelTileTypePortUp
-        && aboveTile->tile != LevelTileTypePortVertical
-        && aboveTile->tile != LevelTileTypePort4Way
-        && (belowTile->state == 0
-            && belowTile->tile == LevelTileTypeSpace))
-    {
-        gScratchGravity = 1;
-    }
+//     if (gIsGravityEnabled != 0
+//         && aboveTile->tile != LevelTileTypePortUp
+//         && aboveTile->tile != LevelTileTypePortVertical
+//         && aboveTile->tile != LevelTileTypePort4Way
+//         && (belowTile->state == 0
+//             && belowTile->tile == LevelTileTypeSpace))
+//     {
+//         gScratchGravity = 1;
+//     }
 
-//loc_4DEE1:              ; CODE XREF: update?+2Ej update?+35j ...
-    UserInput userInput = gCurrentUserInput;
+// //loc_4DEE1:              ; CODE XREF: update?+2Ej update?+35j ...
+//     UserInput userInput = gCurrentUserInput;
 
-    if (userInput == UserInputNone)
-    {
-//loc_4DEED:              ; CODE XREF: update?+58j
-        gPreviousUserInputWasNone =  1;
-        if (gScratchGravity != 0)
-        {
-            MurphyAnimationDescriptor unknownMurphyData;
-//loc_4E38A:              ; CODE XREF: update?+69j update?+2FFj
-            if (gIsMurphyLookingLeft != 0)
-            {
-                unknownMurphyData = kMurphyAnimationDescriptors[3]; // dx = 0x0E2E;
-            }
-            else
-            {
-//loc_4E396:              ; CODE XREF: update?+4FFj
-                unknownMurphyData = kMurphyAnimationDescriptors[4]; // dx = 0x0E3E;
-            }
+//     if (userInput == UserInputNone)
+//     {
+// //loc_4DEED:              ; CODE XREF: update?+58j
+//         gPreviousUserInputWasNone =  1;
+//         if (gScratchGravity != 0)
+//         {
+//             MurphyAnimationDescriptor unknownMurphyData;
+// //loc_4E38A:              ; CODE XREF: update?+69j update?+2FFj
+//             if (gIsMurphyLookingLeft != 0)
+//             {
+//                 unknownMurphyData = kMurphyAnimationDescriptors[3]; // dx = 0x0E2E;
+//             }
+//             else
+//             {
+// //loc_4E396:              ; CODE XREF: update?+4FFj
+//                 unknownMurphyData = kMurphyAnimationDescriptors[4]; // dx = 0x0E3E;
+//             }
 
-//loc_4E399:              ; CODE XREF: update?+504j
-            belowTile->state = 3;
-            belowTile->tile = LevelTileTypeMurphy;
-            murphyTile->state = 3;
-            murphyTile->tile = LevelTileTypeSpace;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position + kLevelWidth, unknownMurphyData);
-        }
+// //loc_4E399:              ; CODE XREF: update?+504j
+//             belowTile->state = 3;
+//             belowTile->tile = LevelTileTypeMurphy;
+//             murphyTile->state = 3;
+//             murphyTile->tile = LevelTileTypeSpace;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position + kLevelWidth, unknownMurphyData);
+//         }
 
-//loc_4DEFC:              ; CODE XREF: update?+67j
-        if ((gFrameCounter & 3) != 0)
-        {
-            return position;
-        }
+// //loc_4DEFC:              ; CODE XREF: update?+67j
+//         if ((gFrameCounter & 3) != 0)
+//         {
+//             return position;
+//         }
 
-//loc_4DF05:              ; CODE XREF: update?+72j
-        gMurphyYawnAndSleepCounter++;
-        if (gMurphyYawnAndSleepCounter == 4)
-        {
-            // si = kMurphyStillSpriteCoordinates;
-            drawMovingFrame(304, 132, position);
+// //loc_4DF05:              ; CODE XREF: update?+72j
+//         gMurphyYawnAndSleepCounter++;
+//         if (gMurphyYawnAndSleepCounter == 4)
+//         {
+//             // si = kMurphyStillSpriteCoordinates;
+//             drawMovingFrame(304, 132, position);
 
-            return position;
-        }
-//loc_4DF1E:              ; CODE XREF: update?+7Ej
-        else if (gMurphyYawnAndSleepCounter <= 0x01F4)
-        {
-            return position;
-        }
-//loc_4DF27:              ; CODE XREF: update?+94j
-        else if (gMurphyYawnAndSleepCounter <= 0x020A)
-        {
-            // Yawning animation
-            uint16_t currentFrame = gMurphyYawnAndSleepCounter - 0x1F4;
-            currentFrame = currentFrame >> 1;
+//             return position;
+//         }
+// //loc_4DF1E:              ; CODE XREF: update?+7Ej
+//         else if (gMurphyYawnAndSleepCounter <= 0x01F4)
+//         {
+//             return position;
+//         }
+// //loc_4DF27:              ; CODE XREF: update?+94j
+//         else if (gMurphyYawnAndSleepCounter <= 0x020A)
+//         {
+//             // Yawning animation
+//             uint16_t currentFrame = gMurphyYawnAndSleepCounter - 0x1F4;
+//             currentFrame = currentFrame >> 1;
 
-            AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[34];
-            Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
+//             AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[34];
+//             //Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
 
-            drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
+//             drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
 
-            return position;
-        }
-//loc_4DF4A:              ; CODE XREF: update?+9Dj
-        else if (gMurphyYawnAndSleepCounter <= 0x03E8)
-        {
-            return position;
-        }
-//loc_4DF53:              ; CODE XREF: update?+C0j
-        else if (gMurphyYawnAndSleepCounter <= 0x03FE)
-        {
-            // Yawning animation
-            uint16_t currentFrame = gMurphyYawnAndSleepCounter - 0x3E8;
-            currentFrame = currentFrame >> 1;
+//             return position;
+//         }
+// //loc_4DF4A:              ; CODE XREF: update?+9Dj
+//         else if (gMurphyYawnAndSleepCounter <= 0x03E8)
+//         {
+//             return position;
+//         }
+// //loc_4DF53:              ; CODE XREF: update?+C0j
+//         else if (gMurphyYawnAndSleepCounter <= 0x03FE)
+//         {
+//             // Yawning animation
+//             uint16_t currentFrame = gMurphyYawnAndSleepCounter - 0x3E8;
+//             currentFrame = currentFrame >> 1;
 
-            AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[34];
-            Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
+//             AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[34];
+//             //Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
 
-            drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
+//             drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
 
-            return position;
-        }
-//loc_4DF76:              ; CODE XREF: update?+C9j
-        else if (gMurphyYawnAndSleepCounter <= 0x0640)
-        {
-            return position;
-        }
-//loc_4DF7F:              ; CODE XREF: update?+ECj
-        else if (gMurphyYawnAndSleepCounter <= 0x0656)
-        {
-            // Yawning animation
-            uint16_t currentFrame = gMurphyYawnAndSleepCounter - 0x640;
-            currentFrame = currentFrame >> 1;
+//             return position;
+//         }
+// //loc_4DF76:              ; CODE XREF: update?+C9j
+//         else if (gMurphyYawnAndSleepCounter <= 0x0640)
+//         {
+//             return position;
+//         }
+// //loc_4DF7F:              ; CODE XREF: update?+ECj
+//         else if (gMurphyYawnAndSleepCounter <= 0x0656)
+//         {
+//             // Yawning animation
+//             uint16_t currentFrame = gMurphyYawnAndSleepCounter - 0x640;
+//             currentFrame = currentFrame >> 1;
 
-            AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[34];
-            Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
+//             AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[34];
+//             //Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
 
-            drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
+//             drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
 
-            return position;
-        }
-//loc_4DFA2:              ; CODE XREF: update?+F5j
-        else if (gMurphyYawnAndSleepCounter > 0x0676)
-        {
-            return position;
-        }
-        else if (leftTile->state != 0 || leftTile->tile != LevelTileTypeSpace)
-        {
-//loc_4DFBF:              ; CODE XREF: update?+11Fj
-            // Sleep to left animation
-            uint16_t currentFrame = gMurphyYawnAndSleepCounter - 0x656;
-            currentFrame = currentFrame >> 4;
+//             return position;
+//         }
+// //loc_4DFA2:              ; CODE XREF: update?+F5j
+//         else if (gMurphyYawnAndSleepCounter > 0x0676)
+//         {
+//             return position;
+//         }
+//         else if (leftTile->state != 0 || leftTile->tile != LevelTileTypeSpace)
+//         {
+// //loc_4DFBF:              ; CODE XREF: update?+11Fj
+//             // Sleep to left animation
+//             uint16_t currentFrame = gMurphyYawnAndSleepCounter - 0x656;
+//             currentFrame = currentFrame >> 4;
 
-            AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[35];
-            Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
+//             AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[35];
+//             //Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
 
-            drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
+//             drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
 
-            return position;
-        }
-        else if (rightTile->state != 0 || rightTile->tile != LevelTileTypeSpace)
-        {
-//loc_4DFE0:              ; CODE XREF: update?+126j
-            // Sleep to right animation
-            uint16_t currentFrame = gMurphyYawnAndSleepCounter - 0x656;
-            currentFrame = currentFrame >> 4;
+//             return position;
+//         }
+//         else if (rightTile->state != 0 || rightTile->tile != LevelTileTypeSpace)
+//         {
+// //loc_4DFE0:              ; CODE XREF: update?+126j
+//             // Sleep to right animation
+//             uint16_t currentFrame = gMurphyYawnAndSleepCounter - 0x656;
+//             currentFrame = currentFrame >> 4;
 
-            AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[36];
-            Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
+//             AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[36];
+//             //Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
 
-            drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
+//             drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
 
-            return position;
-        }
-        else
-        {
-            gMurphyYawnAndSleepCounter = 0x24; // 36
-            return position;
-        }
-    }
+//             return position;
+//         }
+//         else
+//         {
+//             gMurphyYawnAndSleepCounter = 0x24; // 36
+//             return position;
+//         }
+//     }
 
-//loc_4E001:              ; CODE XREF: update?+5Aj
-    // 01ED:739E
-    if (gScratchGravity != 0
-        && (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace))
-    {
-        if (userInput != UserInputUp
-            || (aboveTile->state != 0 || aboveTile->tile != LevelTileTypeBase))
-        {
-//loc_4E01B:              ; CODE XREF: update?+182j
-            if (userInput != UserInputLeft
-                || (leftTile->state != 0 || leftTile->tile != LevelTileTypeBase))
-            {
-//loc_4E027:              ; CODE XREF: update?+18Ej
-                if (userInput != UserInputRight
-                    || (rightTile->state != 0 || rightTile->tile != LevelTileTypeBase))
-                {
-//loc_4E033:              ; CODE XREF: update?+19Aj
-                    userInput = UserInputDown;
-                }
-            }
-        }
-    }
+// //loc_4E001:              ; CODE XREF: update?+5Aj
+//     // 01ED:739E
+//     if (gScratchGravity != 0
+//         && (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace))
+//     {
+//         if (userInput != UserInputUp
+//             || (aboveTile->state != 0 || aboveTile->tile != LevelTileTypeBase))
+//         {
+// //loc_4E01B:              ; CODE XREF: update?+182j
+//             if (userInput != UserInputLeft
+//                 || (leftTile->state != 0 || leftTile->tile != LevelTileTypeBase))
+//             {
+// //loc_4E027:              ; CODE XREF: update?+18Ej
+//                 if (userInput != UserInputRight
+//                     || (rightTile->state != 0 || rightTile->tile != LevelTileTypeBase))
+//                 {
+// //loc_4E033:              ; CODE XREF: update?+19Aj
+//                     userInput = UserInputDown;
+//                 }
+//             }
+//         }
+//     }
 
-//loc_4E035:              ; CODE XREF: update?+176j update?+17Dj ...
-    // 01ED:73D2
-    if (userInput == UserInputUp)
-    {
-        gPreviousUserInputWasNone = 0;
-        return handleMurphyDirectionUp(position);
-    }
-//loc_4E041:              ; CODE XREF: update?+1A8j
-    else if (userInput == UserInputLeft)
-    {
-        gPreviousUserInputWasNone = 0;
-        return handleMurphyDirectionLeft(position);
-    }
-//loc_4E04E:              ; CODE XREF: update?+1B4j
-    else if (userInput == UserInputDown)
-    {
-        gPreviousUserInputWasNone = 0;
-        return handleMurphyDirectionDown(position);
-    }
-//loc_4E05B:              ; CODE XREF: update?+1C1j
-    else if (userInput == UserInputRight)
-    {
-        gPreviousUserInputWasNone = 0;
-        return handleMurphyDirectionRight(position);
-    }
-//loc_4E068:              ; CODE XREF: update?+1CEj
-    else if (userInput == UserInputSpaceUp)
-    {
-        gPreviousUserInputWasNone = 0;
-//loc_4E260:              ; CODE XREF: update?+1E2j
-    //    mov ax, leveldata[si-78h]
-        if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeBase)
-        {
-//loc_4E4BD:              ; CODE XREF: update?+3D9j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51840;
-            drawMovingFrame(160, 64, position);
-        //    pop si
-            playBaseSound();
-//            dx = 0x0ECE;
-            murphyTile->state = 0x10;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[13]);
-        }
-//loc_4E26C:              ; CODE XREF: update?+3D7j
-        else if (aboveTile->tile == LevelTileTypeBug)
-        {
-//loc_4E4AC:              ; CODE XREF: update?+3E0j
-            if (aboveTile->state < 0x80)
-            {
-                detonateBigExplosion(position);
-                return position;
-            }
+// //loc_4E035:              ; CODE XREF: update?+176j update?+17Dj ...
+//     // 01ED:73D2
+//     if (userInput == UserInputUp)
+//     {
+//         gPreviousUserInputWasNone = 0;
+//         return handleMurphyDirectionUp(position);
+//     }
+// //loc_4E041:              ; CODE XREF: update?+1A8j
+//     else if (userInput == UserInputLeft)
+//     {
+//         gPreviousUserInputWasNone = 0;
+//         return handleMurphyDirectionLeft(position);
+//     }
+// //loc_4E04E:              ; CODE XREF: update?+1B4j
+//     else if (userInput == UserInputDown)
+//     {
+//         gPreviousUserInputWasNone = 0;
+//         return handleMurphyDirectionDown(position);
+//     }
+// //loc_4E05B:              ; CODE XREF: update?+1C1j
+//     else if (userInput == UserInputRight)
+//     {
+//         gPreviousUserInputWasNone = 0;
+//         return handleMurphyDirectionRight(position);
+//     }
+// //loc_4E068:              ; CODE XREF: update?+1CEj
+//     else if (userInput == UserInputSpaceUp)
+//     {
+//         gPreviousUserInputWasNone = 0;
+// //loc_4E260:              ; CODE XREF: update?+1E2j
+//     //    mov ax, leveldata[si-78h]
+//         if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeBase)
+//         {
+// //loc_4E4BD:              ; CODE XREF: update?+3D9j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51840;
+//             drawMovingFrame(160, 64, position);
+//         //    pop si
+//             playBaseSound();
+// //            dx = 0x0ECE;
+//             murphyTile->state = 0x10;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[13]);
+//         }
+// //loc_4E26C:              ; CODE XREF: update?+3D7j
+//         else if (aboveTile->tile == LevelTileTypeBug)
+//         {
+// //loc_4E4AC:              ; CODE XREF: update?+3E0j
+//             if (aboveTile->state < 0x80)
+//             {
+//                 detonateBigExplosion(position);
+//                 return position;
+//             }
 
-//loc_4E4B7:              ; CODE XREF: update?+621j
-            aboveTile->state = 0;
-            aboveTile->tile = LevelTileTypeBase;
+// //loc_4E4B7:              ; CODE XREF: update?+621j
+//             aboveTile->state = 0;
+//             aboveTile->tile = LevelTileTypeBase;
 
-//loc_4E4BD:              ; CODE XREF: update?+3D9j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51840;
-            drawMovingFrame(160, 64, position);
-        //    pop si
-            playBaseSound();
-//            dx = 0x0ECE;
-            murphyTile->state = 0x10;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[13]);
-        }
-//loc_4E273:              ; CODE XREF: update?+3DEj
-        else if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeInfotron)
-        {
-//loc_4E5F4:              ; CODE XREF: update?+3E8j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51840;
-            drawMovingFrame(160, 64, position);
-        //    pop si
-            playInfotronSound();
-//            dx = 0x0F6E;
-            murphyTile->state = 0x14;
-            aboveTile->state = 0xFF;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[23]);
-        }
-//loc_4E27B:              ; CODE XREF: update?+3E6j
-        else if (aboveTile->tile == LevelTileTypeTerminal)
-        {
-//loc_4E712:              ; CODE XREF: update?+249j update?+3EFj
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51840;
-            drawMovingFrame(160, 64, position);
-        //    pop si
-            if (gAreYellowDisksDetonated != 0)
-            {
-                gMurphyYawnAndSleepCounter = 0xA;
-                return position;
-            }
+// //loc_4E4BD:              ; CODE XREF: update?+3D9j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51840;
+//             drawMovingFrame(160, 64, position);
+//         //    pop si
+//             playBaseSound();
+// //            dx = 0x0ECE;
+//             murphyTile->state = 0x10;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[13]);
+//         }
+// //loc_4E273:              ; CODE XREF: update?+3DEj
+//         else if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeInfotron)
+//         {
+// //loc_4E5F4:              ; CODE XREF: update?+3E8j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51840;
+//             drawMovingFrame(160, 64, position);
+//         //    pop si
+//             playInfotronSound();
+// //            dx = 0x0F6E;
+//             murphyTile->state = 0x14;
+//             aboveTile->state = 0xFF;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[23]);
+//         }
+// //loc_4E27B:              ; CODE XREF: update?+3E6j
+//         else if (aboveTile->tile == LevelTileTypeTerminal)
+//         {
+// //loc_4E712:              ; CODE XREF: update?+249j update?+3EFj
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51840;
+//             drawMovingFrame(160, 64, position);
+//         //    pop si
+//             if (gAreYellowDisksDetonated != 0)
+//             {
+//                 gMurphyYawnAndSleepCounter = 0xA;
+//                 return position;
+//             }
 
-//loc_4E72D:              ; CODE XREF: update?+894j
-        //    push    si
-        //    mov di, [si+60DDh]
-//            si = kTerminalOnSpriteCoordinates;
-            drawMovingFrame(256, 388, position - kLevelWidth);
-        //    pop si
-            detonateYellowDisks();
-            return position;
-        }
-//loc_4E282:              ; CODE XREF: update?+3EDj
-        else if (aboveTile->tile == LevelTileTypeRedDisk)
-        {
-//loc_4E8B6:              ; CODE XREF: update?+3F6j
-//            dx = 0x106E;
-            murphyTile->state = 0x20;
-            aboveTile->state = 3;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[39]);
-        }
-        else
-        {
-            return position;
-        }
-    }
-//loc_4E075:              ; CODE XREF: update?+1DBj
-    else if (userInput == UserInputSpaceLeft)
-    {
-        gPreviousUserInputWasNone = 0;
-//loc_4E28A:              ; CODE XREF: update?+1EFj
-        gIsMurphyLookingLeft = 1;
-    //    mov ax, [si+1832h]
-        if (leftTile->state == 0 && leftTile->tile == LevelTileTypeBase)
-        {
-//loc_4E4E9:              ; CODE XREF: update?+409j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51842;
-            drawMovingFrame(208, 16, position);
-        //    pop si
-            playBaseSound();
-//            dx = 0x0EDE;
-            murphyTile->state = 0x11;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[14]);
-        }
-//loc_4E29C:              ; CODE XREF: update?+407j
-        else if (leftTile->tile == LevelTileTypeBug)
-        {
-//loc_4E4D8:              ; CODE XREF: update?+410j
-            if (leftTile->state < 0x80)
-            {
-                detonateBigExplosion(position);
-                return position;
-            }
+// //loc_4E72D:              ; CODE XREF: update?+894j
+//         //    push    si
+//         //    mov di, [si+60DDh]
+// //            si = kTerminalOnSpriteCoordinates;
+//             drawMovingFrame(256, 388, position - kLevelWidth);
+//         //    pop si
+//             detonateYellowDisks();
+//             return position;
+//         }
+// //loc_4E282:              ; CODE XREF: update?+3EDj
+//         else if (aboveTile->tile == LevelTileTypeRedDisk)
+//         {
+// //loc_4E8B6:              ; CODE XREF: update?+3F6j
+// //            dx = 0x106E;
+//             murphyTile->state = 0x20;
+//             aboveTile->state = 3;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[39]);
+//         }
+//         else
+//         {
+//             return position;
+//         }
+//     }
+// //loc_4E075:              ; CODE XREF: update?+1DBj
+//     else if (userInput == UserInputSpaceLeft)
+//     {
+//         gPreviousUserInputWasNone = 0;
+// //loc_4E28A:              ; CODE XREF: update?+1EFj
+//         gIsMurphyLookingLeft = 1;
+//     //    mov ax, [si+1832h]
+//         if (leftTile->state == 0 && leftTile->tile == LevelTileTypeBase)
+//         {
+// //loc_4E4E9:              ; CODE XREF: update?+409j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51842;
+//             drawMovingFrame(208, 16, position);
+//         //    pop si
+//             playBaseSound();
+// //            dx = 0x0EDE;
+//             murphyTile->state = 0x11;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[14]);
+//         }
+// //loc_4E29C:              ; CODE XREF: update?+407j
+//         else if (leftTile->tile == LevelTileTypeBug)
+//         {
+// //loc_4E4D8:              ; CODE XREF: update?+410j
+//             if (leftTile->state < 0x80)
+//             {
+//                 detonateBigExplosion(position);
+//                 return position;
+//             }
 
-//loc_4E4E3:              ; CODE XREF: update?+64Dj
-            leftTile->state = 0;
-            leftTile->tile = LevelTileTypeBase;
+// //loc_4E4E3:              ; CODE XREF: update?+64Dj
+//             leftTile->state = 0;
+//             leftTile->tile = LevelTileTypeBase;
 
-//loc_4E4E9:              ; CODE XREF: update?+409j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51842;
-            drawMovingFrame(208, 16, position);
-        //    pop si
-            playBaseSound();
-//            dx = 0x0EDE;
-            murphyTile->state = 0x11;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[14]);
-        }
-//loc_4E2A3:              ; CODE XREF: update?+40Ej
-        else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeInfotron)
-        {
-//loc_4E614:              ; CODE XREF: update?+418j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51842;
-            drawMovingFrame(208, 16, position);
-        //    pop si
-            playInfotronSound();
-//            dx = 0x0F7E;
-            murphyTile->state = 0x15;
-            leftTile->state = 0xFF;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[24]);
-        }
-//loc_4E2AB:              ; CODE XREF: update?+416j
-        else if (leftTile->tile == LevelTileTypeTerminal)
-        {
-//loc_4E73C:              ; CODE XREF: update?+2B9j update?+41Fj
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51842;
-            drawMovingFrame(208, 16, position);
-        //    pop si
-            if (gAreYellowDisksDetonated != 0)
-            {
-                gMurphyYawnAndSleepCounter = 0xA;
-                return position;
-            }
+// //loc_4E4E9:              ; CODE XREF: update?+409j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51842;
+//             drawMovingFrame(208, 16, position);
+//         //    pop si
+//             playBaseSound();
+// //            dx = 0x0EDE;
+//             murphyTile->state = 0x11;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[14]);
+//         }
+// //loc_4E2A3:              ; CODE XREF: update?+40Ej
+//         else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeInfotron)
+//         {
+// //loc_4E614:              ; CODE XREF: update?+418j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51842;
+//             drawMovingFrame(208, 16, position);
+//         //    pop si
+//             playInfotronSound();
+// //            dx = 0x0F7E;
+//             murphyTile->state = 0x15;
+//             leftTile->state = 0xFF;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[24]);
+//         }
+// //loc_4E2AB:              ; CODE XREF: update?+416j
+//         else if (leftTile->tile == LevelTileTypeTerminal)
+//         {
+// //loc_4E73C:              ; CODE XREF: update?+2B9j update?+41Fj
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51842;
+//             drawMovingFrame(208, 16, position);
+//         //    pop si
+//             if (gAreYellowDisksDetonated != 0)
+//             {
+//                 gMurphyYawnAndSleepCounter = 0xA;
+//                 return position;
+//             }
 
-//loc_4E757:              ; CODE XREF: update?+8BEj
-        //    push    si
-        //    mov di, [si+6153h]
-//            si = kTerminalOnSpriteCoordinates;
-            drawMovingFrame(256, 388, position - 1);
-        //    pop si
-            detonateYellowDisks();
-            return position;
-        }
-//loc_4E2B2:              ; CODE XREF: update?+41Dj
-        else if (leftTile->tile == LevelTileTypeRedDisk)
-        {
-//loc_4E8C5:              ; CODE XREF: update?+426j
-//            dx = 0x107E;
-            murphyTile->state = 0x21;
-            leftTile->state = 3;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[40]);
-        }
-        else
-        {
-            return position;
-        }
-    }
-//loc_4E082:              ; CODE XREF: update?+1E8j
-    else if (userInput == UserInputSpaceDown)
-    {
-        gPreviousUserInputWasNone = 0;
-//loc_4E2BA:              ; CODE XREF: update?+1FCj
-    //    mov ax, [si+18ACh]
-        if (belowTile->state == 0 && belowTile->tile == LevelTileTypeBase)
-        {
-//loc_4E515:              ; CODE XREF: update?+433j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51844;
-            drawMovingFrame(176, 64, position);
-        //    pop si
-            playBaseSound();
-//            dx = 0x0EEE;
-            murphyTile->state = 0x12;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[15]);
-        }
-//loc_4E2C6:              ; CODE XREF: update?+431j
-        else if (belowTile->tile == LevelTileTypeBug)
-        {
-//loc_4E504:              ; CODE XREF: update?+43Aj
-            if (belowTile->state < 0x80)
-            {
-                detonateBigExplosion(position);
-                return position;
-            }
+// //loc_4E757:              ; CODE XREF: update?+8BEj
+//         //    push    si
+//         //    mov di, [si+6153h]
+// //            si = kTerminalOnSpriteCoordinates;
+//             drawMovingFrame(256, 388, position - 1);
+//         //    pop si
+//             detonateYellowDisks();
+//             return position;
+//         }
+// //loc_4E2B2:              ; CODE XREF: update?+41Dj
+//         else if (leftTile->tile == LevelTileTypeRedDisk)
+//         {
+// //loc_4E8C5:              ; CODE XREF: update?+426j
+// //            dx = 0x107E;
+//             murphyTile->state = 0x21;
+//             leftTile->state = 3;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[40]);
+//         }
+//         else
+//         {
+//             return position;
+//         }
+//     }
+// //loc_4E082:              ; CODE XREF: update?+1E8j
+//     else if (userInput == UserInputSpaceDown)
+//     {
+//         gPreviousUserInputWasNone = 0;
+// //loc_4E2BA:              ; CODE XREF: update?+1FCj
+//     //    mov ax, [si+18ACh]
+//         if (belowTile->state == 0 && belowTile->tile == LevelTileTypeBase)
+//         {
+// //loc_4E515:              ; CODE XREF: update?+433j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51844;
+//             drawMovingFrame(176, 64, position);
+//         //    pop si
+//             playBaseSound();
+// //            dx = 0x0EEE;
+//             murphyTile->state = 0x12;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[15]);
+//         }
+// //loc_4E2C6:              ; CODE XREF: update?+431j
+//         else if (belowTile->tile == LevelTileTypeBug)
+//         {
+// //loc_4E504:              ; CODE XREF: update?+43Aj
+//             if (belowTile->state < 0x80)
+//             {
+//                 detonateBigExplosion(position);
+//                 return position;
+//             }
 
-//loc_4E50F:              ; CODE XREF: update?+679j
-            belowTile->state = 0;
-            belowTile->tile = LevelTileTypeBase;
+// //loc_4E50F:              ; CODE XREF: update?+679j
+//             belowTile->state = 0;
+//             belowTile->tile = LevelTileTypeBase;
 
-//loc_4E515:              ; CODE XREF: update?+433j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51844;
-            drawMovingFrame(176, 64, position);
-        //    pop si
-            playBaseSound();
-//            dx = 0x0EEE;
-            murphyTile->state = 0x12;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[15]);
-        }
-//loc_4E2CD:              ; CODE XREF: update?+438j
-        else if (belowTile->state == 0 && belowTile->tile == LevelTileTypeInfotron)
-        {
-//loc_4E634:              ; CODE XREF: update?+442j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51844;
-            drawMovingFrame(176, 64, position);
-        //    pop si
-            playInfotronSound();
-//            dx = 0x0F8E;
-            murphyTile->state = 0x16;
-            belowTile->state = 0xFF;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[25]);
-        }
-//loc_4E2D5:              ; CODE XREF: update?+440j
-        else if (belowTile->tile == LevelTileTypeTerminal)
-        {
-//loc_4E766:              ; CODE XREF: update?+325j update?+449j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51844;
-            drawMovingFrame(176, 64, position);
-        //    pop si
-            if (gAreYellowDisksDetonated != 0)
-            {
-                gMurphyYawnAndSleepCounter = 0xA;
-                return position;
-            }
+// //loc_4E515:              ; CODE XREF: update?+433j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51844;
+//             drawMovingFrame(176, 64, position);
+//         //    pop si
+//             playBaseSound();
+// //            dx = 0x0EEE;
+//             murphyTile->state = 0x12;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[15]);
+//         }
+// //loc_4E2CD:              ; CODE XREF: update?+438j
+//         else if (belowTile->state == 0 && belowTile->tile == LevelTileTypeInfotron)
+//         {
+// //loc_4E634:              ; CODE XREF: update?+442j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51844;
+//             drawMovingFrame(176, 64, position);
+//         //    pop si
+//             playInfotronSound();
+// //            dx = 0x0F8E;
+//             murphyTile->state = 0x16;
+//             belowTile->state = 0xFF;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[25]);
+//         }
+// //loc_4E2D5:              ; CODE XREF: update?+440j
+//         else if (belowTile->tile == LevelTileTypeTerminal)
+//         {
+// //loc_4E766:              ; CODE XREF: update?+325j update?+449j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51844;
+//             drawMovingFrame(176, 64, position);
+//         //    pop si
+//             if (gAreYellowDisksDetonated != 0)
+//             {
+//                 gMurphyYawnAndSleepCounter = 0xA;
+//                 return position;
+//             }
 
-//loc_4E781:              ; CODE XREF: update?+8E8j
-        //    push    si
-        //    mov di, [si+61CDh]
-//            si = kTerminalOnSpriteCoordinates;
-            drawMovingFrame(256, 388, position + kLevelWidth);
-        //    pop si
-            detonateYellowDisks();
-            return position;
-        }
-//loc_4E2DC:              ; CODE XREF: update?+447j
-        else if (belowTile->tile == LevelTileTypeRedDisk)
-        {
-//loc_4E8D4:              ; CODE XREF: update?+450j
-//            dx = 0x108E;
-            murphyTile->state = 0x22;
-            belowTile->state = 3;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[41]);
-        }
-        else
-        {
-            return position;
-        }
-    }
-//loc_4E08F:              ; CODE XREF: update?+1F5j
-    else if (userInput == UserInputSpaceRight)
-    {
-        gPreviousUserInputWasNone = 0;
-//loc_4E2E4:              ; CODE XREF: update?+209j
-        gIsMurphyLookingLeft = 0;
-    //    mov ax, [si+1836h]
-        if (rightTile->state == 0 && rightTile->tile == LevelTileTypeBase)
-        {
-//loc_4E541:              ; CODE XREF: update?+463j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51846;
-            drawMovingFrame(192, 16, position);
-        //    pop si
-            playBaseSound();
-//            dx = 0x0EFE;
-            murphyTile->state = 0x13;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[16]);
-        }
-//loc_4E2F6:              ; CODE XREF: update?+461j
-        else if (rightTile->tile == LevelTileTypeBug)
-        {
-//loc_4E530:              ; CODE XREF: update?+46Aj
-            if (rightTile->state < 0x80)
-            {
-                detonateBigExplosion(position);
-                return position;
-            }
+// //loc_4E781:              ; CODE XREF: update?+8E8j
+//         //    push    si
+//         //    mov di, [si+61CDh]
+// //            si = kTerminalOnSpriteCoordinates;
+//             drawMovingFrame(256, 388, position + kLevelWidth);
+//         //    pop si
+//             detonateYellowDisks();
+//             return position;
+//         }
+// //loc_4E2DC:              ; CODE XREF: update?+447j
+//         else if (belowTile->tile == LevelTileTypeRedDisk)
+//         {
+// //loc_4E8D4:              ; CODE XREF: update?+450j
+// //            dx = 0x108E;
+//             murphyTile->state = 0x22;
+//             belowTile->state = 3;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[41]);
+//         }
+//         else
+//         {
+//             return position;
+//         }
+//     }
+// //loc_4E08F:              ; CODE XREF: update?+1F5j
+//     else if (userInput == UserInputSpaceRight)
+//     {
+//         gPreviousUserInputWasNone = 0;
+// //loc_4E2E4:              ; CODE XREF: update?+209j
+//         gIsMurphyLookingLeft = 0;
+//     //    mov ax, [si+1836h]
+//         if (rightTile->state == 0 && rightTile->tile == LevelTileTypeBase)
+//         {
+// //loc_4E541:              ; CODE XREF: update?+463j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51846;
+//             drawMovingFrame(192, 16, position);
+//         //    pop si
+//             playBaseSound();
+// //            dx = 0x0EFE;
+//             murphyTile->state = 0x13;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[16]);
+//         }
+// //loc_4E2F6:              ; CODE XREF: update?+461j
+//         else if (rightTile->tile == LevelTileTypeBug)
+//         {
+// //loc_4E530:              ; CODE XREF: update?+46Aj
+//             if (rightTile->state < 0x80)
+//             {
+//                 detonateBigExplosion(position);
+//                 return position;
+//             }
 
-//loc_4E53B:              ; CODE XREF: update?+6A5j
-            rightTile->state = 0;
-            rightTile->tile = LevelTileTypeBase;
+// //loc_4E53B:              ; CODE XREF: update?+6A5j
+//             rightTile->state = 0;
+//             rightTile->tile = LevelTileTypeBase;
 
-//loc_4E541:              ; CODE XREF: update?+463j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51846;
-            drawMovingFrame(192, 16, position);
-        //    pop si
-            playBaseSound();
-//            dx = 0x0EFE;
-            murphyTile->state = 0x13;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[16]);
-        }
-//loc_4E2FD:              ; CODE XREF: update?+468j
-        else if (rightTile->state == 0 && rightTile->tile == LevelTileTypeInfotron)
-        {
-//loc_4E654:              ; CODE XREF: update?+472j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51846;
-            drawMovingFrame(192, 16, position);
-        //    pop si
-            playInfotronSound();
-//            dx = 0x0F9E;
-            murphyTile->state = 0x17;
-            rightTile->state = 0xFF;
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[26]);
-        }
-//loc_4E305:              ; CODE XREF: update?+470j
-        else if (rightTile->tile != LevelTileTypeTerminal)
-        {
-//loc_4E30C:              ; CODE XREF: update?+477j
-            if (rightTile->tile != LevelTileTypeRedDisk)
-            {
-                return position;
-            }
-//loc_4E8E3:              ; CODE XREF: update?+480j
-//            dx = 0x109E;
-            murphyTile->state = 0x23;
-            rightTile->state = 3;
+// //loc_4E541:              ; CODE XREF: update?+463j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51846;
+//             drawMovingFrame(192, 16, position);
+//         //    pop si
+//             playBaseSound();
+// //            dx = 0x0EFE;
+//             murphyTile->state = 0x13;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[16]);
+//         }
+// //loc_4E2FD:              ; CODE XREF: update?+468j
+//         else if (rightTile->state == 0 && rightTile->tile == LevelTileTypeInfotron)
+//         {
+// //loc_4E654:              ; CODE XREF: update?+472j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51846;
+//             drawMovingFrame(192, 16, position);
+//         //    pop si
+//             playInfotronSound();
+// //            dx = 0x0F9E;
+//             murphyTile->state = 0x17;
+//             rightTile->state = 0xFF;
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[26]);
+//         }
+// //loc_4E305:              ; CODE XREF: update?+470j
+//         else if (rightTile->tile != LevelTileTypeTerminal)
+//         {
+// //loc_4E30C:              ; CODE XREF: update?+477j
+//             if (rightTile->tile != LevelTileTypeRedDisk)
+//             {
+//                 return position;
+//             }
+// //loc_4E8E3:              ; CODE XREF: update?+480j
+// //            dx = 0x109E;
+//             murphyTile->state = 0x23;
+//             rightTile->state = 3;
 
-//loc_4E8F0:              ; CODE XREF: update?+4DAj update?+4F7j ...
-            gMurphyCounterToStartPushAnimation = 0;
-            gIsMurphyGoingThroughPortal = 0;
-            return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[42]);
-        }
-        else
-        {
-//loc_4E790:              ; CODE XREF: update?+395j update?+479j
-        //    push    si
-        //    mov di, [si+6155h]
-//            si = word_51846;
-            drawMovingFrame(192, 16, position);
-        //    pop si
-            if (gAreYellowDisksDetonated != 0)
-            {
-                gMurphyYawnAndSleepCounter = 0xA;
-                return position;
-            }
+// //loc_4E8F0:              ; CODE XREF: update?+4DAj update?+4F7j ...
+//             gMurphyCounterToStartPushAnimation = 0;
+//             gIsMurphyGoingThroughPortal = 0;
+//             return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[42]);
+//         }
+//         else
+//         {
+// //loc_4E790:              ; CODE XREF: update?+395j update?+479j
+//         //    push    si
+//         //    mov di, [si+6155h]
+// //            si = word_51846;
+//             drawMovingFrame(192, 16, position);
+//         //    pop si
+//             if (gAreYellowDisksDetonated != 0)
+//             {
+//                 gMurphyYawnAndSleepCounter = 0xA;
+//                 return position;
+//             }
 
-//loc_4E7AB:              ; CODE XREF: update?+912j
-        //    push    si
-        //    mov di, [si+6157h]
-//            si = kTerminalOnSpriteCoordinates;
-            drawMovingFrame(256, 388, position + 1);
-        //    pop si
+// //loc_4E7AB:              ; CODE XREF: update?+912j
+//         //    push    si
+//         //    mov di, [si+6157h]
+// //            si = kTerminalOnSpriteCoordinates;
+//             drawMovingFrame(256, 388, position + 1);
+//         //    pop si
 
-            detonateYellowDisks();
-            return position;
-        }
-    }
-//loc_4E09C:              ; CODE XREF: update?+202j
-    else if (userInput == UserInputSpaceOnly)
-    {
-//loc_4E314:              ; CODE XREF: update?+211j
-        if (gNumberOfRemainingRedDisks == 0
-            || gPlantedRedDiskCountdown != 0
-            || gPreviousUserInputWasNone != 1)
-        {
-            return position;
-        }
-        murphyTile->state = 0x2A;
-        gMurphyCounterToStartPushAnimation = 0x40; // 64
-//        dx = 0x110E;
-        gPlantedRedDiskCountdown = 1;
-        gPlantedRedDiskPosition = position;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[49]);
-    }
-    else
-    {
-//loc_4E0A4:              ; CODE XREF: update?+20Fj
-        gPreviousUserInputWasNone = 0;
-        return position;
-    }
+//             detonateYellowDisks();
+//             return position;
+//         }
+//     }
+// //loc_4E09C:              ; CODE XREF: update?+202j
+//     else if (userInput == UserInputSpaceOnly)
+//     {
+// //loc_4E314:              ; CODE XREF: update?+211j
+//         if (gNumberOfRemainingRedDisks == 0
+//             || gPlantedRedDiskCountdown != 0
+//             || gPreviousUserInputWasNone != 1)
+//         {
+//             return position;
+//         }
+//         murphyTile->state = 0x2A;
+//         gMurphyCounterToStartPushAnimation = 0x40; // 64
+// //        dx = 0x110E;
+//         gPlantedRedDiskCountdown = 1;
+//         gPlantedRedDiskPosition = position;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[49]);
+//     }
+//     else
+//     {
+// //loc_4E0A4:              ; CODE XREF: update?+20Fj
+//         gPreviousUserInputWasNone = 0;
+//         return position;
+//     }
 }
 
 int16_t handleMurphyDirectionUp(int16_t position)
 {
-    // 01ED:7447
-    StatefulLevelTile *murphyTile = &gCurrentLevelState[position];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *aboveAboveTile = &gCurrentLevelState[position - kLevelWidth * 2];
+    return 0;
+//     // 01ED:7447
+//     StatefulLevelTile *murphyTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *aboveAboveTile = &gCurrentLevelState[position - kLevelWidth * 2];
 
-//loc_4E0AA:              ; CODE XREF: update?+1AFj update?+279j
-    if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
-    {
-        MurphyAnimationDescriptor animationDescriptor;
+// //loc_4E0AA:              ; CODE XREF: update?+1AFj update?+279j
+//     if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
+//     {
+//         MurphyAnimationDescriptor animationDescriptor;
 
-//loc_4E344:              ; CODE XREF: update?+223j
-        if (gIsMurphyLookingLeft != 0)
-        {
-            animationDescriptor = kMurphyAnimationDescriptors[0]; // dx = 0x0DFE;
-        }
-        else
-        {
-//loc_4E350:              ; CODE XREF: update?+4B9j
-            animationDescriptor = kMurphyAnimationDescriptors[1]; // dx = 0x0E0E;
-        }
+// //loc_4E344:              ; CODE XREF: update?+223j
+//         if (gIsMurphyLookingLeft != 0)
+//         {
+//             animationDescriptor = kMurphyAnimationDescriptors[0]; // dx = 0x0DFE;
+//         }
+//         else
+//         {
+// //loc_4E350:              ; CODE XREF: update?+4B9j
+//             animationDescriptor = kMurphyAnimationDescriptors[1]; // dx = 0x0E0E;
+//         }
 
-//loc_4E353:              ; CODE XREF: update?+4BEj
-        aboveTile->state = 1;
-        aboveTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
+// //loc_4E353:              ; CODE XREF: update?+4BEj
+//         aboveTile->state = 1;
+//         aboveTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
 
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position - kLevelWidth, animationDescriptor);
-    }
-//loc_4E0B6:              ; CODE XREF: update?+221j
-    else if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeBase)
-    {
-        MurphyAnimationDescriptor unknownMurphyData;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position - kLevelWidth, animationDescriptor);
+//     }
+// //loc_4E0B6:              ; CODE XREF: update?+221j
+//     else if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeBase)
+//     {
+//         MurphyAnimationDescriptor unknownMurphyData;
 
-//loc_4E3E1:              ; CODE XREF: update?+22Bj
-        playBaseSound();
-        if (gIsMurphyLookingLeft != 0)
-        {
-            unknownMurphyData = kMurphyAnimationDescriptors[7]; // dx = 0x0E6E;
-        }
-        else
-        {
-//loc_4E3F0:              ; CODE XREF: update?+559j
-            unknownMurphyData = kMurphyAnimationDescriptors[8]; // dx = 0x0E7E;
-        }
+// //loc_4E3E1:              ; CODE XREF: update?+22Bj
+//         playBaseSound();
+//         if (gIsMurphyLookingLeft != 0)
+//         {
+//             unknownMurphyData = kMurphyAnimationDescriptors[7]; // dx = 0x0E6E;
+//         }
+//         else
+//         {
+// //loc_4E3F0:              ; CODE XREF: update?+559j
+//             unknownMurphyData = kMurphyAnimationDescriptors[8]; // dx = 0x0E7E;
+//         }
 
-//loc_4E3F3:              ; CODE XREF: update?+55Ej
+// //loc_4E3F3:              ; CODE XREF: update?+55Ej
 
-        aboveTile->state = 5;
-        aboveTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position - kLevelWidth, unknownMurphyData);
-    }
-//loc_4E0BE:              ; CODE XREF: update?+229j
-    else if (aboveTile->tile == LevelTileTypeBug)
-    {
-//loc_4E3D0:              ; CODE XREF: update?+232j
-        //    cmp byte ptr [si+17BDh], 0
-        //    jl  short loc_4E3DB
-        if (aboveTile->state < 0x80)
-        {
-            detonateBigExplosion(position);
-            return position;
-        }
+//         aboveTile->state = 5;
+//         aboveTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position - kLevelWidth, unknownMurphyData);
+//     }
+// //loc_4E0BE:              ; CODE XREF: update?+229j
+//     else if (aboveTile->tile == LevelTileTypeBug)
+//     {
+// //loc_4E3D0:              ; CODE XREF: update?+232j
+//         //    cmp byte ptr [si+17BDh], 0
+//         //    jl  short loc_4E3DB
+//         if (aboveTile->state < 0x80)
+//         {
+//             detonateBigExplosion(position);
+//             return position;
+//         }
 
-//loc_4E3DB:              ; CODE XREF: update?+545j
-        aboveTile->state = 0;
-        aboveTile->tile = LevelTileTypeBase;
+// //loc_4E3DB:              ; CODE XREF: update?+545j
+//         aboveTile->state = 0;
+//         aboveTile->tile = LevelTileTypeBase;
 
-//loc_4E3E1:              ; CODE XREF: update?+22Bj
-        MurphyAnimationDescriptor animationDescriptor;
-        playBaseSound();
-        if (gIsMurphyLookingLeft != 0)
-        {
-            animationDescriptor = kMurphyAnimationDescriptors[7]; // dx = 0x0E6E;
-        }
-        else
-        {
-//loc_4E3F0:              ; CODE XREF: update?+559j
-            animationDescriptor = kMurphyAnimationDescriptors[8]; // dx = 0x0E7E;
-        }
+// //loc_4E3E1:              ; CODE XREF: update?+22Bj
+//         MurphyAnimationDescriptor animationDescriptor;
+//         playBaseSound();
+//         if (gIsMurphyLookingLeft != 0)
+//         {
+//             animationDescriptor = kMurphyAnimationDescriptors[7]; // dx = 0x0E6E;
+//         }
+//         else
+//         {
+// //loc_4E3F0:              ; CODE XREF: update?+559j
+//             animationDescriptor = kMurphyAnimationDescriptors[8]; // dx = 0x0E7E;
+//         }
 
-//loc_4E3F3:              ; CODE XREF: update?+55Ej
+// //loc_4E3F3:              ; CODE XREF: update?+55Ej
 
-        aboveTile->state = 5;
-        aboveTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position - kLevelWidth, animationDescriptor);
-    }
-//loc_4E0C5:              ; CODE XREF: update?+230j
-    else if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeInfotron)
-    {
-        MurphyAnimationDescriptor unknownMurphyData;
+//         aboveTile->state = 5;
+//         aboveTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position - kLevelWidth, animationDescriptor);
+//     }
+// //loc_4E0C5:              ; CODE XREF: update?+230j
+//     else if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeInfotron)
+//     {
+//         MurphyAnimationDescriptor unknownMurphyData;
 
-//loc_4E55C:              ; CODE XREF: update?+23Aj
-        playInfotronSound();
-        if (gIsMurphyLookingLeft != 0)
-        {
-            unknownMurphyData = kMurphyAnimationDescriptors[17]; // dx = 0x0F0E;
-        }
-        else
-        {
-//loc_4E56B:              ; CODE XREF: update?+6D4j
-            unknownMurphyData = kMurphyAnimationDescriptors[18]; // dx = 0x0F1E;
-        }
+// //loc_4E55C:              ; CODE XREF: update?+23Aj
+//         playInfotronSound();
+//         if (gIsMurphyLookingLeft != 0)
+//         {
+//             unknownMurphyData = kMurphyAnimationDescriptors[17]; // dx = 0x0F0E;
+//         }
+//         else
+//         {
+// //loc_4E56B:              ; CODE XREF: update?+6D4j
+//             unknownMurphyData = kMurphyAnimationDescriptors[18]; // dx = 0x0F1E;
+//         }
 
-//loc_4E56E:              ; CODE XREF: update?+6D9j
-        aboveTile->state = 9;
-        aboveTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position - kLevelWidth, unknownMurphyData);
-    }
-//loc_4E0CD:              ; CODE XREF: update?+238j
-    else if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeExit)
-    {
-//loc_4E674:              ; CODE XREF: update?+242j update?+2AAj ...
-        if (gNumberOfRemainingInfotrons != 0)
-        {
-            return position;
-        }
-        playExitSound();
-        byte_5A19B = 1;
-        gCurrentPlayerLevelState = PlayerLevelStateCompleted;
-        gLevelFailed = 0;
-        if (gHasUserCheated == 0
-            && gShouldUpdateTotalLevelTime != 0)
-        {
-            byte_5A323 = 1;
-            addCurrentGameTimeToPlayer();
-        }
+// //loc_4E56E:              ; CODE XREF: update?+6D9j
+//         aboveTile->state = 9;
+//         aboveTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position - kLevelWidth, unknownMurphyData);
+//     }
+// //loc_4E0CD:              ; CODE XREF: update?+238j
+//     else if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeExit)
+//     {
+// //loc_4E674:              ; CODE XREF: update?+242j update?+2AAj ...
+//         if (gNumberOfRemainingInfotrons != 0)
+//         {
+//             return position;
+//         }
+//         playExitSound();
+//         byte_5A19B = 1;
+//         gCurrentPlayerLevelState = PlayerLevelStateCompleted;
+//         gLevelFailed = 0;
+//         if (gHasUserCheated == 0
+//             && gShouldUpdateTotalLevelTime != 0)
+//         {
+//             byte_5A323 = 1;
+//             addCurrentGameTimeToPlayer();
+//         }
 
-//loc_4E6A4:              ; CODE XREF: update?+803j update?+80Aj
-        changePlayerCurrentLevelState();
-        gQuitLevelCountdown = 0x40;
-    //    pop si
-//        dx = 0x0E5E;
-        murphyTile->state = 0xD;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[6]);
-    }
-//loc_4E0D5:              ; CODE XREF: update?+240j
-    else if (aboveTile->tile == LevelTileTypeTerminal)
-    {
-//loc_4E712:              ; CODE XREF: update?+249j update?+3EFj
-        // 01ED:7AAF
-    //    push    si
-    //    mov di, [si+6155h]
-//        si = word_51840;
-        drawMovingFrame(160, 64, position);
-    //    pop si
-        if (gAreYellowDisksDetonated != 0)
-        {
-            gMurphyYawnAndSleepCounter = 0xA;
-            return position;
-        }
+// //loc_4E6A4:              ; CODE XREF: update?+803j update?+80Aj
+//         changePlayerCurrentLevelState();
+//         gQuitLevelCountdown = 0x40;
+//     //    pop si
+// //        dx = 0x0E5E;
+//         murphyTile->state = 0xD;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[6]);
+//     }
+// //loc_4E0D5:              ; CODE XREF: update?+240j
+//     else if (aboveTile->tile == LevelTileTypeTerminal)
+//     {
+// //loc_4E712:              ; CODE XREF: update?+249j update?+3EFj
+//         // 01ED:7AAF
+//     //    push    si
+//     //    mov di, [si+6155h]
+// //        si = word_51840;
+//         drawMovingFrame(160, 64, position);
+//     //    pop si
+//         if (gAreYellowDisksDetonated != 0)
+//         {
+//             gMurphyYawnAndSleepCounter = 0xA;
+//             return position;
+//         }
 
-//loc_4E72D:              ; CODE XREF: update?+894j
-    //    push    si
-    //    mov di, [si+60DDh]
-//        si = kTerminalOnSpriteCoordinates;
-        drawMovingFrame(256, 388, position - kLevelWidth);
-    //    pop si
-        detonateYellowDisks();
-        return position;
-    }
-//loc_4E0DC:              ; CODE XREF: update?+247j
-    else if (aboveTile->tile == LevelTileTypePortUp
-             || aboveTile->tile == LevelTileTypePortVertical
-             || aboveTile->tile == LevelTileTypePort4Way)
-    {
-//loc_4E7DE:              ; CODE XREF: update?+250j update?+257j ...
-        if (aboveAboveTile->state != 0 || aboveAboveTile->tile != LevelTileTypeSpace)
-        {
-            return position;
-        }
+// //loc_4E72D:              ; CODE XREF: update?+894j
+//     //    push    si
+//     //    mov di, [si+60DDh]
+// //        si = kTerminalOnSpriteCoordinates;
+//         drawMovingFrame(256, 388, position - kLevelWidth);
+//     //    pop si
+//         detonateYellowDisks();
+//         return position;
+//     }
+// //loc_4E0DC:              ; CODE XREF: update?+247j
+//     else if (aboveTile->tile == LevelTileTypePortUp
+//              || aboveTile->tile == LevelTileTypePortVertical
+//              || aboveTile->tile == LevelTileTypePort4Way)
+//     {
+// //loc_4E7DE:              ; CODE XREF: update?+250j update?+257j ...
+//         if (aboveAboveTile->state != 0 || aboveAboveTile->tile != LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
 
-//loc_4E7E6:              ; CODE XREF: update?+953j
-//        dx = 0x0FCE;
-        murphyTile->state = 0x18;
-        aboveAboveTile->state = 3;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 1;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[29]);
-    }
-//loc_4E0F1:              ; CODE XREF: update?+25Cj
-    else if (aboveTile->tile == LevelTileTypeRedDisk)
-    {
-        MurphyAnimationDescriptor unknownMurphyData;
+// //loc_4E7E6:              ; CODE XREF: update?+953j
+// //        dx = 0x0FCE;
+//         murphyTile->state = 0x18;
+//         aboveAboveTile->state = 3;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 1;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[29]);
+//     }
+// //loc_4E0F1:              ; CODE XREF: update?+25Cj
+//     else if (aboveTile->tile == LevelTileTypeRedDisk)
+//     {
+//         MurphyAnimationDescriptor unknownMurphyData;
 
-//loc_4E847:              ; CODE XREF: update?+265j
-        if (gIsMurphyLookingLeft != 0)
-        {
-            unknownMurphyData = kMurphyAnimationDescriptors[33]; // dx = 0x100E;
-        }
-        else
-        {
-//loc_4E853:              ; CODE XREF: update?+9BCj
-            unknownMurphyData = kMurphyAnimationDescriptors[34]; // dx = 0x101E;
-        }
+// //loc_4E847:              ; CODE XREF: update?+265j
+//         if (gIsMurphyLookingLeft != 0)
+//         {
+//             unknownMurphyData = kMurphyAnimationDescriptors[33]; // dx = 0x100E;
+//         }
+//         else
+//         {
+// //loc_4E853:              ; CODE XREF: update?+9BCj
+//             unknownMurphyData = kMurphyAnimationDescriptors[34]; // dx = 0x101E;
+//         }
 
-//loc_4E856:              ; CODE XREF: update?+9C1j
-        murphyTile->state = 0x1C;
-        aboveTile->state = 3;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position, unknownMurphyData);
-    }
-//loc_4E0F8:              ; CODE XREF: update?+263j
-    else if (aboveTile->tile == LevelTileTypeYellowDisk)
-    {
-//loc_4E8F9:              ; CODE XREF: update?+26Cj
-        if (aboveAboveTile->state != 0 || aboveAboveTile->tile != LevelTileTypeSpace)
-        {
-            return position;
-        }
+// //loc_4E856:              ; CODE XREF: update?+9C1j
+//         murphyTile->state = 0x1C;
+//         aboveTile->state = 3;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position, unknownMurphyData);
+//     }
+// //loc_4E0F8:              ; CODE XREF: update?+263j
+//     else if (aboveTile->tile == LevelTileTypeYellowDisk)
+//     {
+// //loc_4E8F9:              ; CODE XREF: update?+26Cj
+//         if (aboveAboveTile->state != 0 || aboveAboveTile->tile != LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
 
-//loc_4E903:              ; CODE XREF: update?+A70j
-        aboveAboveTile->state = 0x12;
-    //    push    si
-    //    mov di, [si+6155h]
-//        si = word_5157C;
-        drawMovingFrame(97, 132, position);
-    //    pop si
-//        dx = 0x10AE;
-        murphyTile->state = 0x24;
-        gMurphyCounterToStartPushAnimation = 8;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[43]);
-    }
-//loc_4E0FF:              ; CODE XREF: update?+26Aj
-    else if (checkMurphyMovementToPosition(position - kLevelWidth, UserInputUp) != 1)
-    {
-        return handleMurphyDirectionUp(position);
-    }
-    else
-    {
-        return position;
-    }
+// //loc_4E903:              ; CODE XREF: update?+A70j
+//         aboveAboveTile->state = 0x12;
+//     //    push    si
+//     //    mov di, [si+6155h]
+// //        si = word_5157C;
+//         drawMovingFrame(97, 132, position);
+//     //    pop si
+// //        dx = 0x10AE;
+//         murphyTile->state = 0x24;
+//         gMurphyCounterToStartPushAnimation = 8;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[43]);
+//     }
+// //loc_4E0FF:              ; CODE XREF: update?+26Aj
+//     else if (checkMurphyMovementToPosition(position - kLevelWidth, UserInputUp) != 1)
+//     {
+//         return handleMurphyDirectionUp(position);
+//     }
+//     else
+//     {
+//         return position;
+//     }
 }
 
 int16_t handleMurphyDirectionLeft(int16_t position)
 {
-    // 01ED:74A9
-    StatefulLevelTile *murphyTile = &gCurrentLevelState[position];
-    StatefulLevelTile *leftLeftTile = &gCurrentLevelState[position - 2];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+    return 0;
+//     // 01ED:74A9
+//     StatefulLevelTile *murphyTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *leftLeftTile = &gCurrentLevelState[position - 2];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
 
-//loc_4E10C:              ; CODE XREF: update?+1BBj update?+2F3j
-    gIsMurphyLookingLeft = 1;
-//    mov ax, [si+1832h]
-    if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-    {
-//loc_4E36D:              ; CODE XREF: update?+28Bj
-//        dx = 0x0E1E;
-        leftTile->state = 2;
-        leftTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position - 1, kMurphyAnimationDescriptors[2]);
-    }
-//loc_4E11E:              ; CODE XREF: update?+289j
-    else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeBase) // 01ED:7634
-    {
-//loc_4E41E:              ; CODE XREF: update?+293j
-        // 01ED:77BB
-        playBaseSound();
-//        dx = 0x0E8E;
-        leftTile->state = 2;
-        leftTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position - 1, kMurphyAnimationDescriptors[9]);
-    }
-//loc_4E126:              ; CODE XREF: update?+291j
-    else if (leftTile->tile == LevelTileTypeBug) // 01ED:763B
-    {
-//loc_4E40D:              ; CODE XREF: update?+29Aj
-        if (leftTile->state < 0x80)
-        {
-            detonateBigExplosion(position);
-            return position;
-        }
+// //loc_4E10C:              ; CODE XREF: update?+1BBj update?+2F3j
+//     gIsMurphyLookingLeft = 1;
+// //    mov ax, [si+1832h]
+//     if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//     {
+// //loc_4E36D:              ; CODE XREF: update?+28Bj
+// //        dx = 0x0E1E;
+//         leftTile->state = 2;
+//         leftTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position - 1, kMurphyAnimationDescriptors[2]);
+//     }
+// //loc_4E11E:              ; CODE XREF: update?+289j
+//     else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeBase) // 01ED:7634
+//     {
+// //loc_4E41E:              ; CODE XREF: update?+293j
+//         // 01ED:77BB
+//         playBaseSound();
+// //        dx = 0x0E8E;
+//         leftTile->state = 2;
+//         leftTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position - 1, kMurphyAnimationDescriptors[9]);
+//     }
+// //loc_4E126:              ; CODE XREF: update?+291j
+//     else if (leftTile->tile == LevelTileTypeBug) // 01ED:763B
+//     {
+// //loc_4E40D:              ; CODE XREF: update?+29Aj
+//         if (leftTile->state < 0x80)
+//         {
+//             detonateBigExplosion(position);
+//             return position;
+//         }
 
-//loc_4E418:              ; CODE XREF: update?+582j
-        // 01ED:77B5
-        leftTile->state = 0;
-        leftTile->tile = LevelTileTypeBase;
+// //loc_4E418:              ; CODE XREF: update?+582j
+//         // 01ED:77B5
+//         leftTile->state = 0;
+//         leftTile->tile = LevelTileTypeBase;
 
-//loc_4E41E:              ; CODE XREF: update?+293j
-        playBaseSound();
-//        dx = 0x0E8E;
-        leftTile->state = 2;
-        leftTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position - 1, kMurphyAnimationDescriptors[9]);
-    }
-//loc_4E12D:              ; CODE XREF: update?+298j
-    else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeInfotron)
-    {
-//loc_4E588:              ; CODE XREF: update?+2A2j
-        playInfotronSound();
-//        dx = 0x0F2E;
-        leftTile->state = 10;
-        leftTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position - 1, kMurphyAnimationDescriptors[19]);
-    }
-//loc_4E135:              ; CODE XREF: update?+2A0j
-    else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeExit)
-    {
-//loc_4E674:              ; CODE XREF: update?+242j update?+2AAj ...
-        if (gNumberOfRemainingInfotrons != 0)
-        {
-            return position;
-        }
-        playExitSound();
-        byte_5A19B = 1;
-        gCurrentPlayerLevelState = PlayerLevelStateCompleted;
-        gLevelFailed = 0;
-        if (gHasUserCheated == 0
-            && gShouldUpdateTotalLevelTime != 0)
-        {
-            byte_5A323 = 1;
-            addCurrentGameTimeToPlayer();
-        }
+// //loc_4E41E:              ; CODE XREF: update?+293j
+//         playBaseSound();
+// //        dx = 0x0E8E;
+//         leftTile->state = 2;
+//         leftTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position - 1, kMurphyAnimationDescriptors[9]);
+//     }
+// //loc_4E12D:              ; CODE XREF: update?+298j
+//     else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeInfotron)
+//     {
+// //loc_4E588:              ; CODE XREF: update?+2A2j
+//         playInfotronSound();
+// //        dx = 0x0F2E;
+//         leftTile->state = 10;
+//         leftTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position - 1, kMurphyAnimationDescriptors[19]);
+//     }
+// //loc_4E135:              ; CODE XREF: update?+2A0j
+//     else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeExit)
+//     {
+// //loc_4E674:              ; CODE XREF: update?+242j update?+2AAj ...
+//         if (gNumberOfRemainingInfotrons != 0)
+//         {
+//             return position;
+//         }
+//         playExitSound();
+//         byte_5A19B = 1;
+//         gCurrentPlayerLevelState = PlayerLevelStateCompleted;
+//         gLevelFailed = 0;
+//         if (gHasUserCheated == 0
+//             && gShouldUpdateTotalLevelTime != 0)
+//         {
+//             byte_5A323 = 1;
+//             addCurrentGameTimeToPlayer();
+//         }
 
-//loc_4E6A4:              ; CODE XREF: update?+803j update?+80Aj
-        changePlayerCurrentLevelState();
-        gQuitLevelCountdown = 0x40;
-    //    pop si
-//        dx = 0x0E5E;
-        murphyTile->state = 0xD;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[6]);
-    }
-//loc_4E13D:              ; CODE XREF: update?+2A8j
-    else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeZonk)
-    {
-//loc_4E6BA:              ; CODE XREF: update?+2B2j
-    //    mov ax, [si+1830h]
-        if (leftLeftTile->state != 0 || leftLeftTile->tile != LevelTileTypeSpace)
-        {
-            return position;
-        }
+// //loc_4E6A4:              ; CODE XREF: update?+803j update?+80Aj
+//         changePlayerCurrentLevelState();
+//         gQuitLevelCountdown = 0x40;
+//     //    pop si
+// //        dx = 0x0E5E;
+//         murphyTile->state = 0xD;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[6]);
+//     }
+// //loc_4E13D:              ; CODE XREF: update?+2A8j
+//     else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeZonk)
+//     {
+// //loc_4E6BA:              ; CODE XREF: update?+2B2j
+//     //    mov ax, [si+1830h]
+//         if (leftLeftTile->state != 0 || leftLeftTile->tile != LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
 
-//loc_4E6C4:              ; CODE XREF: update?+831j
-        leftLeftTile->state = 1;
-    //    push    si
-    //    mov di, [si+6155h]
-//        si = word_5157A;
-        drawMovingFrame(64, 132, position);
-    //    pop si
-//        dx = 0x0FAE;
-        murphyTile->state = 0xE;
-        gMurphyCounterToStartPushAnimation = 8;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[27]);
-    }
-//loc_4E145:              ; CODE XREF: update?+2B0j
-    else if (leftTile->tile == LevelTileTypeTerminal)
-    {
-//loc_4E73C:              ; CODE XREF: update?+2B9j update?+41Fj
-    //    push    si
-    //    mov di, [si+6155h]
-//        si = word_51842;
-        drawMovingFrame(208, 16, position);
-    //    pop si
-        if (gAreYellowDisksDetonated != 0)
-        {
-            gMurphyYawnAndSleepCounter = 0xA;
-            return position;
-        }
+// //loc_4E6C4:              ; CODE XREF: update?+831j
+//         leftLeftTile->state = 1;
+//     //    push    si
+//     //    mov di, [si+6155h]
+// //        si = word_5157A;
+//         drawMovingFrame(64, 132, position);
+//     //    pop si
+// //        dx = 0x0FAE;
+//         murphyTile->state = 0xE;
+//         gMurphyCounterToStartPushAnimation = 8;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[27]);
+//     }
+// //loc_4E145:              ; CODE XREF: update?+2B0j
+//     else if (leftTile->tile == LevelTileTypeTerminal)
+//     {
+// //loc_4E73C:              ; CODE XREF: update?+2B9j update?+41Fj
+//     //    push    si
+//     //    mov di, [si+6155h]
+// //        si = word_51842;
+//         drawMovingFrame(208, 16, position);
+//     //    pop si
+//         if (gAreYellowDisksDetonated != 0)
+//         {
+//             gMurphyYawnAndSleepCounter = 0xA;
+//             return position;
+//         }
 
-//loc_4E757:              ; CODE XREF: update?+8BEj
-    //    push    si
-    //    mov di, [si+6153h]
-//        si = kTerminalOnSpriteCoordinates;
-        drawMovingFrame(256, 388, position - 1);
-    //    pop si
-        detonateYellowDisks();
-        return position;
-    }
-//loc_4E14C:              ; CODE XREF: update?+2B7j
-    else if (leftTile->tile == LevelTileTypePortLeft
-        || leftTile->tile == LevelTileTypePortHorizontal
-        || leftTile->tile == LevelTileTypePort4Way)
-    {
-//loc_4E7F5:              ; CODE XREF: update?+2C0j update?+2C7j ...
-        if (leftLeftTile->state != 0 || leftLeftTile->tile != LevelTileTypeSpace)
-        {
-            return position;
-        }
+// //loc_4E757:              ; CODE XREF: update?+8BEj
+//     //    push    si
+//     //    mov di, [si+6153h]
+// //        si = kTerminalOnSpriteCoordinates;
+//         drawMovingFrame(256, 388, position - 1);
+//     //    pop si
+//         detonateYellowDisks();
+//         return position;
+//     }
+// //loc_4E14C:              ; CODE XREF: update?+2B7j
+//     else if (leftTile->tile == LevelTileTypePortLeft
+//         || leftTile->tile == LevelTileTypePortHorizontal
+//         || leftTile->tile == LevelTileTypePort4Way)
+//     {
+// //loc_4E7F5:              ; CODE XREF: update?+2C0j update?+2C7j ...
+//         if (leftLeftTile->state != 0 || leftLeftTile->tile != LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
 
-//loc_4E7FD:              ; CODE XREF: update?+96Aj
-//        dx = 0x0FDE;
-        murphyTile->state = 0x19;
-        leftLeftTile->state = 3;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 1;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[30]);
-    }
-//loc_4E161:              ; CODE XREF: update?+2CCj
-    else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeRedDisk)
-    {
-//loc_4E863:              ; CODE XREF: update?+2D6j
-//        dx = 0x102E;
-        leftTile->state = 0x1D;
-        leftTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position - 1, kMurphyAnimationDescriptors[35]);
-    }
-//loc_4E169:              ; CODE XREF: update?+2D4j
-    else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeYellowDisk)
-    {
-//loc_4E920:              ; CODE XREF: update?+2DEj
-        if (leftLeftTile->state != 0 || leftLeftTile->tile != LevelTileTypeSpace)
-        {
-            return position;
-        }
+// //loc_4E7FD:              ; CODE XREF: update?+96Aj
+// //        dx = 0x0FDE;
+//         murphyTile->state = 0x19;
+//         leftLeftTile->state = 3;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 1;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[30]);
+//     }
+// //loc_4E161:              ; CODE XREF: update?+2CCj
+//     else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeRedDisk)
+//     {
+// //loc_4E863:              ; CODE XREF: update?+2D6j
+// //        dx = 0x102E;
+//         leftTile->state = 0x1D;
+//         leftTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position - 1, kMurphyAnimationDescriptors[35]);
+//     }
+// //loc_4E169:              ; CODE XREF: update?+2D4j
+//     else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeYellowDisk)
+//     {
+// //loc_4E920:              ; CODE XREF: update?+2DEj
+//         if (leftLeftTile->state != 0 || leftLeftTile->tile != LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
 
-//loc_4E92A:              ; CODE XREF: update?+A97j
-        leftLeftTile->state = 0x12;
-    //    push    si
-    //    mov di, [si+6155h]
-//        si = word_5157A;
-        drawMovingFrame(64, 132, position);
-    //    pop si
-//        dx = 0x10BE;
-        murphyTile->state = 0x25;
-        gMurphyCounterToStartPushAnimation = 8;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[44]);
-    }
-//loc_4E171:              ; CODE XREF: update?+2DCj
-    else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeOrangeDisk)
-    {
-//loc_4E993:              ; CODE XREF: update?+2E6j
-        if (leftLeftTile->state != 0 || leftLeftTile->tile != LevelTileTypeSpace)
-        {
-            return position;
-        }
+// //loc_4E92A:              ; CODE XREF: update?+A97j
+//         leftLeftTile->state = 0x12;
+//     //    push    si
+//     //    mov di, [si+6155h]
+// //        si = word_5157A;
+//         drawMovingFrame(64, 132, position);
+//     //    pop si
+// //        dx = 0x10BE;
+//         murphyTile->state = 0x25;
+//         gMurphyCounterToStartPushAnimation = 8;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[44]);
+//     }
+// //loc_4E171:              ; CODE XREF: update?+2DCj
+//     else if (leftTile->state == 0 && leftTile->tile == LevelTileTypeOrangeDisk)
+//     {
+// //loc_4E993:              ; CODE XREF: update?+2E6j
+//         if (leftLeftTile->state != 0 || leftLeftTile->tile != LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
 
-//loc_4E99D:              ; CODE XREF: update?+B0Aj
-        leftLeftTile->state = 8;
-    //    push    si
-    //    mov di, [si+6155h]
-//        si = word_5157A;
-        drawMovingFrame(64, 132, position);
-    //    pop si
-//        dx = 0x10EE;
-        murphyTile->state = 0x28;
-        gMurphyCounterToStartPushAnimation = 8;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[47]);
-    }
-//loc_4E179:              ; CODE XREF: update?+2E4j
-    else if (checkMurphyMovementToPosition(position - 1, UserInputLeft) != 1)
-    {
-        return handleMurphyDirectionLeft(position);
-    }
-    else
-    {
-        return position;
-    }
+// //loc_4E99D:              ; CODE XREF: update?+B0Aj
+//         leftLeftTile->state = 8;
+//     //    push    si
+//     //    mov di, [si+6155h]
+// //        si = word_5157A;
+//         drawMovingFrame(64, 132, position);
+//     //    pop si
+// //        dx = 0x10EE;
+//         murphyTile->state = 0x28;
+//         gMurphyCounterToStartPushAnimation = 8;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[47]);
+//     }
+// //loc_4E179:              ; CODE XREF: update?+2E4j
+//     else if (checkMurphyMovementToPosition(position - 1, UserInputLeft) != 1)
+//     {
+//         return handleMurphyDirectionLeft(position);
+//     }
+//     else
+//     {
+//         return position;
+//     }
 }
 
 int16_t handleMurphyDirectionDown(int16_t position)
 {
-    StatefulLevelTile *murphyTile = &gCurrentLevelState[position];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *belowBelowTile = &gCurrentLevelState[position + kLevelWidth * 2];
-
-//loc_4E186:              ; CODE XREF: update?+1C8j update?+355j
-//    mov ax, leveldata[si+78h]
-    if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
-    {
-        MurphyAnimationDescriptor unknownMurphyData;
-
-//loc_4E38A:              ; CODE XREF: update?+69j update?+2FFj
-        if (gIsMurphyLookingLeft != 0)
-        {
-            unknownMurphyData = kMurphyAnimationDescriptors[3]; // dx = 0x0E2E;
-        }
-        else
-        {
-//loc_4E396:              ; CODE XREF: update?+4FFj
-            unknownMurphyData = kMurphyAnimationDescriptors[4]; // dx = 0x0E3E;
-        }
-
-//loc_4E399:              ; CODE XREF: update?+504j
-        belowTile->state = 3;
-        belowTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position + kLevelWidth, unknownMurphyData);
-    }
-//loc_4E192:              ; CODE XREF: update?+2FDj
-    else if (belowTile->state == 0 && belowTile->tile == LevelTileTypeBase)
-    {
-        MurphyAnimationDescriptor unknownMurphyData;
-
-//loc_4E44F:              ; CODE XREF: update?+307j
-        playBaseSound();
-        if (gIsMurphyLookingLeft != 0)
-        {
-            unknownMurphyData = kMurphyAnimationDescriptors[10]; // dx = 0x0E9E;
-        }
-        else
-        {
-//loc_4E45E:              ; CODE XREF: update?+5C7j
-            unknownMurphyData = kMurphyAnimationDescriptors[11]; // dx = 0x0EAE;
-        }
-
-//loc_4E461:              ; CODE XREF: update?+5CCj
-        belowTile->state = 7;
-        belowTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position + kLevelWidth, unknownMurphyData);
-    }
-//loc_4E19A:              ; CODE XREF: update?+305j
-    else if (belowTile->tile == LevelTileTypeBug)
-    {
-//loc_4E43E:              ; CODE XREF: update?+30Ej
-        if (belowTile->state < 0x80)
-        {
-            detonateBigExplosion(position);
-            return position;
-        }
-
-//loc_4E449:              ; CODE XREF: update?+5B3j
-        belowTile->state = 0;
-        belowTile->tile = LevelTileTypeBase;
-
-        MurphyAnimationDescriptor unknownMurphyData;
-
-//loc_4E44F:              ; CODE XREF: update?+307j
-        playBaseSound();
-        if (gIsMurphyLookingLeft != 0)
-        {
-            unknownMurphyData = kMurphyAnimationDescriptors[10]; // dx = 0x0E9E;
-        }
-        else
-        {
-//loc_4E45E:              ; CODE XREF: update?+5C7j
-            unknownMurphyData = kMurphyAnimationDescriptors[11]; // dx = 0x0EAE;
-        }
-
-//loc_4E461:              ; CODE XREF: update?+5CCj
-        belowTile->state = 7;
-        belowTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position + kLevelWidth, unknownMurphyData);
-    }
-//loc_4E1A1:              ; CODE XREF: update?+30Cj
-    else if (belowTile->tile == LevelTileTypeInfotron)
-    {
-        MurphyAnimationDescriptor unknownMurphyData;
-
-//loc_4E5A8:              ; CODE XREF: update?+316j
-        playInfotronSound();
-        if (gIsMurphyLookingLeft != 0)
-        {
-            unknownMurphyData = kMurphyAnimationDescriptors[20]; // dx = 0x0F3E;
-        }
-        else
-        {
-//loc_4E5B7:              ; CODE XREF: update?+720j
-            unknownMurphyData = kMurphyAnimationDescriptors[21]; // dx = 0x0F4E;
-        }
-
-//loc_4E5BA:              ; CODE XREF: update?+725j
-        belowTile->state = 11;
-        belowTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeBase;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position + kLevelWidth, unknownMurphyData);
-    }
-//loc_4E1A9:              ; CODE XREF: update?+314j
-    else if (belowTile->tile == LevelTileTypeExit)
-    {
-//loc_4E674:              ; CODE XREF: update?+242j update?+2AAj ...
-        if (gNumberOfRemainingInfotrons != 0)
-        {
-            return position;
-        }
-        playExitSound();
-        byte_5A19B = 1;
-        gCurrentPlayerLevelState = PlayerLevelStateCompleted;
-        gLevelFailed = 0;
-        if (gHasUserCheated == 0
-            && gShouldUpdateTotalLevelTime != 0)
-        {
-            byte_5A323 = 1;
-            addCurrentGameTimeToPlayer();
-        }
-
-//loc_4E6A4:              ; CODE XREF: update?+803j update?+80Aj
-        changePlayerCurrentLevelState();
-        gQuitLevelCountdown = 0x40;
-    //    pop si
-//        dx = 0x0E5E;
-        murphyTile->state = 0xD;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[6]);
-    }
-//loc_4E1B1:              ; CODE XREF: update?+31Cj
-    else if (belowTile->tile == LevelTileTypeTerminal)
-    {
-//loc_4E766:              ; CODE XREF: update?+325j update?+449j
-    //    push    si
-    //    mov di, [si+6155h]
-//        si = word_51844;
-        drawMovingFrame(176, 64, position);
-    //    pop si
-        if (gAreYellowDisksDetonated != 0)
-        {
-            gMurphyYawnAndSleepCounter = 0xA;
-            return position;
-        }
-
-//loc_4E781:              ; CODE XREF: update?+8E8j
-    //    push    si
-    //    mov di, [si+61CDh]
-//        si = kTerminalOnSpriteCoordinates;
-        drawMovingFrame(256, 388, position + kLevelWidth);
-    //    pop si
-        detonateYellowDisks();
-        return position;
-    }
-//loc_4E1B8:              ; CODE XREF: update?+323j
-    else if (belowTile->tile == LevelTileTypePortDown
-             || belowTile->tile == LevelTileTypePortVertical
-             || belowTile->tile == LevelTileTypePort4Way)
-    {
-//loc_4E80C:              ; CODE XREF: update?+32Cj update?+333j ...
-        if (belowBelowTile->state != 0 || belowBelowTile->tile != LevelTileTypeSpace)
-        {
-            return position;
-        }
-
-//loc_4E814:              ; CODE XREF: update?+981j
-//        dx = 0x0FEE;
-        murphyTile->state = 0x1A;
-        belowBelowTile->state = 3;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 1;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[31]);
-    }
-//loc_4E1CD:              ; CODE XREF: update?+338j
-    else if (belowTile->tile == LevelTileTypeRedDisk)
-    {
-        MurphyAnimationDescriptor unknownMurphyData;
-
-//loc_4E87F:              ; CODE XREF: update?+341j
-        if (gIsMurphyLookingLeft != 0)
-        {
-            unknownMurphyData = kMurphyAnimationDescriptors[36]; // dx = 0x103E;
-        }
-        else
-        {
-//loc_4E88B:              ; CODE XREF: update?+9F4j
-            unknownMurphyData = kMurphyAnimationDescriptors[37]; // dx = 0x104E;
-        }
-
-//loc_4E88E:              ; CODE XREF: update?+9F9j
-        murphyTile->state = 0x1E;
-        belowTile->state = 3;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position, unknownMurphyData);
-    }
-//loc_4E1D4:              ; CODE XREF: update?+33Fj
-    else if (belowTile->tile == LevelTileTypeYellowDisk)
-    {
-//loc_4E947:              ; CODE XREF: update?+348j
-        if (belowBelowTile->state != 0 || belowBelowTile->tile != LevelTileTypeSpace)
-        {
-            return position;
-        }
-
-//loc_4E951:              ; CODE XREF: update?+ABEj
-        belowBelowTile->state = 0x12;
-    //    push    si
-    //    mov di, [si+6155h]
-//        si = word_5157C;
-        drawMovingFrame(97, 132, position);
-    //    pop si
-//        dx = 0x10CE;
-        murphyTile->state = 0x27;
-        gMurphyCounterToStartPushAnimation = 8;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[45]);
-    }
-//loc_4E1DB:              ; CODE XREF: update?+346j
-    else if (checkMurphyMovementToPosition(position + kLevelWidth, UserInputDown) != 1)
-    {
-        return handleMurphyDirectionDown(position);
-    }
-    else
-    {
-        return position;
-    }
-}
-
-int16_t handleMurphyDirectionRight(int16_t position)
-{
-    StatefulLevelTile *murphyTile = &gCurrentLevelState[position];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
-    StatefulLevelTile *rightRightTile = &gCurrentLevelState[position + 2];
-    StatefulLevelTile *belowRightTile = &gCurrentLevelState[position + kLevelWidth + 1];
-
-//loc_4E1E8:              ; CODE XREF: update?+1D5j update?+3CDj
-    gIsMurphyLookingLeft = 0;
-//    mov ax, leveldata[si+2]
-    if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
-    {
-//loc_4E3B3:              ; CODE XREF: update?+367j
-//        dx = 0x0E4E;
-        rightTile->state = 4;
-        rightTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position + 1, kMurphyAnimationDescriptors[5]);
-    }
-//loc_4E1FA:              ; CODE XREF: update?+365j
-    else if (rightTile->state == 0 && rightTile->tile == LevelTileTypeBase)
-    {
-//loc_4E48C:              ; CODE XREF: update?+36Fj
-        playBaseSound();
-//        dx = 0x0EBE;
-        rightTile->state = 8;
-        rightTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position + 1, kMurphyAnimationDescriptors[12]);
-    }
-//loc_4E202:              ; CODE XREF: update?+36Dj
-    else if (rightTile->tile == LevelTileTypeBug)
-    {
-//loc_4E47B:              ; CODE XREF: update?+376j
-        if (rightTile->state < 0x80)
-        {
-            detonateBigExplosion(position);
-            return position;
-        }
-
-//loc_4E486:              ; CODE XREF: update?+5F0j
-        rightTile->state = 0;
-        rightTile->tile = LevelTileTypeBase;
-
-//loc_4E48C:              ; CODE XREF: update?+36Fj
-        playBaseSound();
-//        dx = 0x0EBE;
-        rightTile->state = 8;
-        rightTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position + 1, kMurphyAnimationDescriptors[12]);
-    }
-//loc_4E209:              ; CODE XREF: update?+374j
-    else if (rightTile->state == 0 && rightTile->tile == LevelTileTypeInfotron)
-    {
-//loc_4E5D4:              ; CODE XREF: update?+37Ej
-        playInfotronSound();
-//        dx = 0x0F5E;
-        rightTile->state = 12;
-        rightTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position + 1, kMurphyAnimationDescriptors[22]);
-    }
-//loc_4E211:              ; CODE XREF: update?+37Cj
-    else if (rightTile->state == 0 && rightTile->tile == LevelTileTypeExit)
-    {
-//loc_4E674:              ; CODE XREF: update?+242j update?+2AAj ...
-        if (gNumberOfRemainingInfotrons != 0)
-        {
-            return position;
-        }
-        playExitSound();
-        byte_5A19B = 1;
-        gCurrentPlayerLevelState = PlayerLevelStateCompleted;
-        gLevelFailed = 0;
-        if (gHasUserCheated == 0
-            && gShouldUpdateTotalLevelTime != 0)
-        {
-            byte_5A323 = 1;
-            addCurrentGameTimeToPlayer();
-        }
-
-//loc_4E6A4:              ; CODE XREF: update?+803j update?+80Aj
-        changePlayerCurrentLevelState();
-        gQuitLevelCountdown = 0x40;
-        murphyTile->state = 0xD;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[6]);
-    }
-//loc_4E219:              ; CODE XREF: update?+384j
-    else if (rightTile->state == 0 && rightTile->tile == LevelTileTypeZonk)
-    {
-//loc_4E6E1:              ; CODE XREF: update?+38Ej
-    //    mov ax, [si+1838h]
-        if (rightRightTile->state != 0 || rightRightTile->tile != LevelTileTypeSpace)
-        {
-            return position;
-        }
-
-//loc_4E6EB:              ; CODE XREF: update?+858j
-    //    mov ax, [si+18AEh]
-        if (belowRightTile->state == 0 && belowRightTile->tile == LevelTileTypeSpace)
-        {
-            return position;
-        }
-
-//loc_4E6F5:              ; CODE XREF: update?+862j
-        rightRightTile->state = 1;
-    //    push    si
-    //    mov di, [si+6155h]
-//        si = word_5157C;
-        drawMovingFrame(97, 132, position);
-    //    pop si
-//        dx = 0x0FBE;
-        murphyTile->state = 0xF;
-        gMurphyCounterToStartPushAnimation = 8;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[28]);
-    }
-//loc_4E221:              ; CODE XREF: update?+38Cj
-    else if (rightTile->tile == LevelTileTypeTerminal)
-    {
-//loc_4E790:              ; CODE XREF: update?+395j update?+479j
-    //    push    si
-    //    mov di, [si+6155h]
-//        si = word_51846;
-        drawMovingFrame(192, 16, position);
-    //    pop si
-        if (gAreYellowDisksDetonated != 0)
-        {
-            gMurphyYawnAndSleepCounter = 0xA;
-            return position;
-        }
-
-//loc_4E7AB:              ; CODE XREF: update?+912j
-    //    push    si
-    //    mov di, [si+6157h]
-//        si = kTerminalOnSpriteCoordinates;
-        drawMovingFrame(256, 388, position + 1);
-    //    pop si
-
-        detonateYellowDisks();
-        return position;
-    }
-//loc_4E228:              ; CODE XREF: update?+393j
-    else if (rightTile->tile == LevelTileTypePortRight
-        || rightTile->tile == LevelTileTypePortHorizontal
-        || rightTile->tile == LevelTileTypePort4Way)
-    {
-//loc_4E823:              ; CODE XREF: update?+39Cj update?+3A3j ...
-        if (rightRightTile->state != 0 || rightRightTile->tile != LevelTileTypeSpace)
-        {
-            return position;
-        }
-
-//loc_4E82B:              ; CODE XREF: update?+998j
-//        dx = 0x0FFE;
-        murphyTile->state = 0x1B;
-        rightRightTile->state = 3;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 1;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[32]);
-    }
-//loc_4E23D:              ; CODE XREF: update?+3A8j
-    else if (rightTile->tile == LevelTileTypeRedDisk)
-    {
-//loc_4E89A:              ; CODE XREF: update?+3B1j
-//        dx = 0x105E;
-        rightTile->state = 0x1F;
-        rightTile->tile = LevelTileTypeMurphy;
-        murphyTile->state = 3;
-        murphyTile->tile = LevelTileTypeSpace;
-        gMurphyCounterToStartPushAnimation = 0;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position + 1, kMurphyAnimationDescriptors[38]);
-    }
-//loc_4E244:              ; CODE XREF: update?+3AFj
-    else if (rightTile->tile == LevelTileTypeYellowDisk)
-    {
-//loc_4E96D:              ; CODE XREF: update?+3B8j
-        if (rightRightTile->state != 0 || rightRightTile->tile != LevelTileTypeSpace)
-        {
-            return position;
-        }
-
-//loc_4E977:              ; CODE XREF: update?+AE4j
-        rightRightTile->state = 0x12;
-    //    push    si
-    //    mov di, [si+6155h]
-//        si = word_5157C;
-        drawMovingFrame(97, 132, position);
-    //    pop si
-//        dx = 0x10DE;
-        murphyTile->state = 0x26;
-        gMurphyCounterToStartPushAnimation = 8;
-        gIsMurphyGoingThroughPortal = 0;
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[46]);
-    }
-//loc_4E24B:              ; CODE XREF: update?+3B6j
-    else if (rightTile->state == 0 && rightTile->tile == LevelTileTypeOrangeDisk)
-    {
-//loc_4E9B9:              ; CODE XREF: update?+3C0j
-        if (rightRightTile->state != 0 || rightRightTile->tile != LevelTileTypeSpace)
-        {
-            return position;
-        }
-
-//loc_4E9C3:              ; CODE XREF: update?+B30j
-        if (belowRightTile->state == 0 && belowRightTile->tile == LevelTileTypeSpace)
-        {
-            return position;
-        }
-
-//loc_4E9CD:              ; CODE XREF: update?+B3Aj
-        rightRightTile->state = 1;
-    //    push    si
-    //    mov di, [si+6155h]
-//        si = word_5157C;
-        drawMovingFrame(97, 132, position);
-    //    pop si
-//        dx = 0x10FE;
-        murphyTile->state = 0x29;
-
-//loc_4E9E7:              ; CODE XREF: update?+84Ej update?+87Fj ...
-        gMurphyCounterToStartPushAnimation = 8;
-
-//loc_4E9ED:              ; CODE XREF: update?+A66j
-        gIsMurphyGoingThroughPortal = 0;
-
-        return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[48]);
-    }
-//loc_4E253:              ; CODE XREF: update?+3BEj
-    else if (checkMurphyMovementToPosition(position + 1, UserInputRight) != 1)
-    {
-        return handleMurphyDirectionRight(position);
-    }
-    else
-    {
-        return position;
-    }
-}
-
-int16_t updateMurphyAnimationInfo(int16_t position, MurphyAnimationDescriptor unknownMurphyData)
-{
-    // 01ED:7D9F
-
-//loc_4E9F3:              ; CODE XREF: update?+4B0j update?+9B4j
-//    di = 0x0DE0;
-//    memcpy(di, si, 7 * 2); // rep movsw
-
-    gCurrentMurphyAnimation = unknownMurphyData;
-
-    return updateMurphyAnimation(position);
-}
-
-int16_t updateMurphyAnimation(int16_t position)
-{
-    // 01ED:7DA4
-
-    StatefulLevelTile *murphyTile = &gCurrentLevelState[position];
-    StatefulLevelTile *leftLeftTile = &gCurrentLevelState[position - 2];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
-    StatefulLevelTile *rightRightTile = &gCurrentLevelState[position + 2];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *belowBelowTile = &gCurrentLevelState[position + kLevelWidth * 2];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *aboveAboveTile = &gCurrentLevelState[position - kLevelWidth * 2];
-    StatefulLevelTile *belowRightRightTile = &gCurrentLevelState[position + kLevelWidth + 2];
-
-//loc_4EA07:              ; CODE XREF: update?+21j
-    gMurphyYawnAndSleepCounter = 0;
-
-    if (gMurphyCounterToStartPushAnimation == 0)
-    {
-        // 01ED:7E08
-        uint8_t currentFrame = gCurrentMurphyAnimation.currentFrame;
-        AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[gCurrentMurphyAnimation.animationIndex];
-        Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
-
-//loc_4EA6B:              ; CODE XREF: update?+B83j
-        gMurphyPositionX += gCurrentMurphyAnimation.speedX;
-        gMurphyPositionY += gCurrentMurphyAnimation.speedY;
-        gCurrentMurphyAnimation.currentFrame++;
-
-        uint16_t dstX = (position % kLevelWidth) * kTileSize;
-        uint16_t dstY = (position / kLevelWidth) * kTileSize;
-
-        int16_t offsetX = (gCurrentMurphyAnimation.animationCoordinatesOffset % 122) * 8;
-        int16_t offsetY = (gCurrentMurphyAnimation.animationCoordinatesOffset / 122);
-
-//loc_4EA9F:              ; CODE XREF: update?+C28j
-        drawMovingSpriteFrameInLevel(frameCoordinates.x,
-                                     frameCoordinates.y,
-                                     gCurrentMurphyAnimation.width * 8,
-                                     gCurrentMurphyAnimation.height,
-                                     dstX + offsetX,
-                                     dstY + offsetY);
-
-        if (gIsMurphyGoingThroughPortal != 0)
-        {
-            // This +1 is because the "opposite" portal animation is always the next one
-            AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[gCurrentMurphyAnimation.animationIndex + 1];
-            Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
-
-            int16_t offsetX = (gCurrentMurphyAnimation.animationCoordinatesOffsetIncrement % 122) * 8;
-            int16_t offsetY = (gCurrentMurphyAnimation.animationCoordinatesOffsetIncrement / 122);
-
-            drawMovingSpriteFrameInLevel(frameCoordinates.x,
-                                         frameCoordinates.y,
-                                         gCurrentMurphyAnimation.width * 8,
-                                         gCurrentMurphyAnimation.height,
-                                         dstX + offsetX,
-                                         dstY + offsetY);
-        }
-        else
-        {
-//loc_4EAFA:              ; CODE XREF: update?+C32j
-            gCurrentMurphyAnimation.animationCoordinatesOffset += gCurrentMurphyAnimation.animationCoordinatesOffsetIncrement;
-        }
-
-//loc_4EB04:              ; CODE XREF: update?+C68j
-        if (gCurrentMurphyAnimation.currentFrame < animationFrameCoordinates.numberOfCoordinates)
-        {
-              return position;
-        }
-
-//loc_4EB10:              ; CODE XREF: update?+C7Bj
-        // 01ED:7EAD
-        gMurphyTileX += gCurrentMurphyAnimation.speedX / 2;
-        gMurphyTileY += gCurrentMurphyAnimation.speedY / 2;
-        uint8_t previousMurphyMovingObject = murphyTile->state;
-        murphyTile->state = 0;
-        if (previousMurphyMovingObject == 1)
-        {
-//loc_4EC93:              ; CODE XREF: update?+CA3j update?+CC3j
-            murphyTile->tile = LevelTileTypeMurphy;
-            handleMurphyCollisionAfterMovement(position + kLevelWidth);
-            return position;
-        }
-//loc_4EB36:              ; CODE XREF: update?+CA1j
-        else if (previousMurphyMovingObject == 2)
-        {
-//loc_4ECB1:              ; CODE XREF: update?+CABj update?+CCBj
-            murphyTile->tile = LevelTileTypeMurphy;
-            handleMurphyCollisionAfterMovement(position + 1);
-            return position;
-        }
-//loc_4EB3E:              ; CODE XREF: update?+CA9j
-        else if (previousMurphyMovingObject == 3)
-        {
-//loc_4ECCF:              ; CODE XREF: update?+CB3j update?+CD3j
-            if (aboveTile->tile != LevelTileTypeExplosion)
-            {
-                aboveTile->state = 0;
-                aboveTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4ECDC:              ; CODE XREF: update?+E44j
-            murphyTile->state = 0;
-            murphyTile->tile = LevelTileTypeMurphy;
-            return position;
-        }
-//loc_4EB46:              ; CODE XREF: update?+CB1j
-        else if (previousMurphyMovingObject == 4)
-        {
-//loc_4EF53:              ; CODE XREF: update?+CBBj update?+CDBj
-            handleMurphyCollisionAfterMovement(position - 1);
-            murphyTile->state = 0;
-            murphyTile->tile = LevelTileTypeMurphy;
-            return position;
-        }
-//loc_4EB4E:              ; CODE XREF: update?+CB9j
-        else if (previousMurphyMovingObject == 5)
-        {
-//loc_4EC93:              ; CODE XREF: update?+CA3j update?+CC3j
-            murphyTile->tile = LevelTileTypeMurphy;
-            handleMurphyCollisionAfterMovement(position + kLevelWidth);
-            return position;
-        }
-//loc_4EB56:              ; CODE XREF: update?+CC1j
-        else if (previousMurphyMovingObject == 6)
-        {
-//loc_4ECB1:              ; CODE XREF: update?+CABj update?+CCBj
-            murphyTile->tile = LevelTileTypeMurphy;
-            handleMurphyCollisionAfterMovement(position + 1);
-            return position;
-        }
-//loc_4EB5E:              ; CODE XREF: update?+CC9j
-        else if (previousMurphyMovingObject == 7)
-        {
-//loc_4ECCF:              ; CODE XREF: update?+CB3j update?+CD3j
-            if (aboveTile->tile != LevelTileTypeExplosion)
-            {
-                aboveTile->state = 0;
-                aboveTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4ECDC:              ; CODE XREF: update?+E44j
-            murphyTile->state = 0;
-            murphyTile->tile = LevelTileTypeMurphy;
-            return position;
-        }
-//loc_4EB66:              ; CODE XREF: update?+CD1j
-        else if (previousMurphyMovingObject == 8)
-        {
-//loc_4EF53:              ; CODE XREF: update?+CBBj update?+CDBj
-            // 01ED:82F0
-            handleMurphyCollisionAfterMovement(position - 1);
-            murphyTile->state = 0;
-            murphyTile->tile = LevelTileTypeMurphy;
-            return position;
-        }
-//loc_4EB6E:              ; CODE XREF: update?+CD9j
-        else if (previousMurphyMovingObject == 9)
-        {
-//loc_4EC85:              ; CODE XREF: update?+CE3j
-            if (gNumberOfRemainingInfotrons > 0)
-            {
-                gNumberOfRemainingInfotrons--;
-            }
-
-//loc_4EC90:              ; CODE XREF: update?+DFAj
-            drawNumberOfRemainingInfotrons();
-
-//loc_4EC93:              ; CODE XREF: update?+CA3j update?+CC3j
-            murphyTile->tile = LevelTileTypeMurphy;
-            handleMurphyCollisionAfterMovement(position + kLevelWidth);
-            return position;
-        }
-//loc_4EB76:              ; CODE XREF: update?+CE1j
-        else if (previousMurphyMovingObject == 10)
-        {
-//loc_4ECA3:              ; CODE XREF: update?+CEBj
-            if (gNumberOfRemainingInfotrons > 0)
-            {
-                gNumberOfRemainingInfotrons--;
-            }
-
-//loc_4ECAE:              ; CODE XREF: update?+E18j
-            drawNumberOfRemainingInfotrons();
-
-//loc_4ECB1:              ; CODE XREF: update?+CABj update?+CCBj
-            murphyTile->tile = LevelTileTypeMurphy;
-            handleMurphyCollisionAfterMovement(position + 1);
-            return position;
-        }
-//loc_4EB7E:              ; CODE XREF: update?+CE9j
-        else if (previousMurphyMovingObject == 11)
-        {
-//loc_4ECC1:              ; CODE XREF: update?+CF3j
-            if (gNumberOfRemainingInfotrons > 0)
-            {
-                gNumberOfRemainingInfotrons--;
-            }
-
-//loc_4ECCC:              ; CODE XREF: update?+E36j
-            drawNumberOfRemainingInfotrons();
-
-//loc_4ECCF:              ; CODE XREF: update?+CB3j update?+CD3j
-            if (aboveTile->tile != LevelTileTypeExplosion)
-            {
-                aboveTile->state = 0;
-                aboveTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4ECDC:              ; CODE XREF: update?+E44j
-            murphyTile->state = 0;
-            murphyTile->tile = LevelTileTypeMurphy;
-            return position;
-        }
-//loc_4EB86:              ; CODE XREF: update?+CF1j
-        else if (previousMurphyMovingObject == 12)
-        {
-//loc_4EF45:              ; CODE XREF: update?+CFBj
-            if (gNumberOfRemainingInfotrons > 0)
-            {
-                gNumberOfRemainingInfotrons--;
-            }
-
-//loc_4EF50:              ; CODE XREF: update?+10BAj
-            drawNumberOfRemainingInfotrons();
-
-//loc_4EF53:              ; CODE XREF: update?+CBBj update?+CDBj
-            handleMurphyCollisionAfterMovement(position - 1);
-            murphyTile->state = 0;
-            murphyTile->tile = LevelTileTypeMurphy;
-            return position;
-        }
-//loc_4EB8E:              ; CODE XREF: update?+CF9j
-        else if (previousMurphyMovingObject == 14)
-        {
-//loc_4ECE3:              ; CODE XREF: update?+D03j
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4ECF0:              ; CODE XREF: update?+E58j
-            leftTile->state = 0;
-            leftTile->tile = LevelTileTypeMurphy;
-            leftLeftTile->state = 0;
-            leftLeftTile->tile = LevelTileTypeZonk;
-            handleZonkPushedByMurphy(position - 2);
-            return position - 1;
-        }
-//loc_4EB96:              ; CODE XREF: update?+D01j
-        else if (previousMurphyMovingObject == 15)
-        {
-//loc_4ED06:              ; CODE XREF: update?+D0Bj
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4ED13:              ; CODE XREF: update?+E7Bj
-            rightTile->state = 0;
-            rightTile->tile = LevelTileTypeMurphy;
-            rightRightTile->state = 0;
-            rightRightTile->tile = LevelTileTypeZonk;
-            handleZonkPushedByMurphy(position + 2);
-            return position + 1;
-        }
-//loc_4EB9E:              ; CODE XREF: update?+D09j
-        else if (previousMurphyMovingObject == 16)
-        {
-//loc_4EF71:              ; CODE XREF: update?+D13j
-            if (aboveTile->tile != LevelTileTypeExplosion)
-            {
-                aboveTile->state = 0;
-                aboveTile->tile = LevelTileTypeSpace;
-            }
-
-            return position;
-        }
-//loc_4EBA6:              ; CODE XREF: update?+D11j
-        else if (previousMurphyMovingObject == 17)
-        {
-//loc_4EF8D:              ; CODE XREF: update?+D1Bj
-            if (leftTile->tile != LevelTileTypeExplosion)
-            {
-                leftTile->state = 0;
-                leftTile->tile = LevelTileTypeSpace;
-            }
-
-            return position;
-        }
-//loc_4EBAE:              ; CODE XREF: update?+D19j
-        else if (previousMurphyMovingObject == 19)
-        {
-//loc_4EFC5:              ; CODE XREF: update?+D23j
-            if (rightTile->tile != LevelTileTypeExplosion)
-            {
-                rightTile->state = 0;
-                rightTile->tile = LevelTileTypeSpace;
-            }
-
-            return position;
-        }
-//loc_4EBB6:              ; CODE XREF: update?+D21j
-        else if (previousMurphyMovingObject == 18)
-        {
-//loc_4EFA9:              ; CODE XREF: update?+D2Bj
-            if (belowTile->tile != LevelTileTypeExplosion)
-            {
-                belowTile->state = 0;
-                belowTile->tile = LevelTileTypeSpace;
-            }
-
-            return position;
-        }
-//loc_4EBBE:              ; CODE XREF: update?+D29j
-        else if (previousMurphyMovingObject == 20)
-        {
-//loc_4EF63:              ; CODE XREF: update?+D33j
-            if (gNumberOfRemainingInfotrons > 0)
-            {
-                gNumberOfRemainingInfotrons--;
-            }
-
-//loc_4EF6E:              ; CODE XREF: update?+10D8j
-            drawNumberOfRemainingInfotrons();
-
-//loc_4EF71:              ; CODE XREF: update?+D13j
-            if (aboveTile->tile != LevelTileTypeExplosion)
-            {
-                aboveTile->state = 0;
-                aboveTile->tile = LevelTileTypeSpace;
-            }
-
-            return position;
-        }
-//loc_4EBC6:              ; CODE XREF: update?+D31j
-        else if (previousMurphyMovingObject == 21)
-        {
-//loc_4EF7F:              ; CODE XREF: update?+D3Bj
-            if (gNumberOfRemainingInfotrons > 0)
-            {
-                gNumberOfRemainingInfotrons--;
-            }
-
-//loc_4EF8A:              ; CODE XREF: update?+10F4j
-            drawNumberOfRemainingInfotrons();
-
-//loc_4EF8D:              ; CODE XREF: update?+D1Bj
-            if (leftTile->tile != LevelTileTypeExplosion)
-            {
-                leftTile->state = 0;
-                leftTile->tile = LevelTileTypeSpace;
-            }
-
-            return position;
-        }
-//loc_4EBCE:              ; CODE XREF: update?+D39j
-        else if (previousMurphyMovingObject == 23)
-        {
-//loc_4EFB7:              ; CODE XREF: update?+D43j
-            if (gNumberOfRemainingInfotrons > 0)
-            {
-                gNumberOfRemainingInfotrons--;
-            }
-
-//loc_4EFC2:              ; CODE XREF: update?+112Cj
-            drawNumberOfRemainingInfotrons();
-
-//loc_4EFC5:              ; CODE XREF: update?+D23j
-            if (rightTile->tile != LevelTileTypeExplosion)
-            {
-                rightTile->state = 0;
-                rightTile->tile = LevelTileTypeSpace;
-            }
-
-            return position;
-        }
-//loc_4EBD6:              ; CODE XREF: update?+D41j
-        else if (previousMurphyMovingObject == 22)
-        {
-//loc_4EF9B:              ; CODE XREF: update?+D4Bj
-            if (gNumberOfRemainingInfotrons > 0)
-            {
-                gNumberOfRemainingInfotrons--;
-            }
-
-//loc_4EFA6:              ; CODE XREF: update?+1110j
-            drawNumberOfRemainingInfotrons();
-
-//loc_4EFA9:              ; CODE XREF: update?+D2Bj
-            if (belowTile->tile != LevelTileTypeExplosion)
-            {
-                belowTile->state = 0;
-                belowTile->tile = LevelTileTypeSpace;
-            }
-
-            return position;
-        }
-//loc_4EBDE:              ; CODE XREF: update?+D49j
-        else if (previousMurphyMovingObject == 13)
-        {
-//loc_4ED42:              ; CODE XREF: update?+D53j
-            gShouldExitLevel = 1;
-            return position;
-        }
-//loc_4EBE6:              ; CODE XREF: update?+D51j
-        else if (previousMurphyMovingObject == 24)
-        {
-//loc_4EFD3:              ; CODE XREF: update?+D5Bj
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4EFE0:              ; CODE XREF: update?+1148j
-            aboveAboveTile->state = 0;
-            aboveAboveTile->tile = LevelTileTypeMurphy;
-            gIsMurphyGoingThroughPortal = 0;
-            position -= kLevelWidth * 2;
-            if (aboveTile->state == 1)
-            {
-                updateSpecialPort(position + kLevelWidth);
-            }
-
-            return position;
-        }
-//loc_4EBEE:              ; CODE XREF: update?+D59j
-        else if (previousMurphyMovingObject == 25)
-        {
-//loc_4F001:              ; CODE XREF: update?+D63j
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F00E:              ; CODE XREF: update?+1176j
-            leftLeftTile->state = 0;
-            leftLeftTile->tile = LevelTileTypeMurphy;
-            gIsMurphyGoingThroughPortal = 0;
-            position -= 2;
-            if (leftTile->state == 1)
-            {
-                updateSpecialPort(position + 1);
-            }
-
-            return position;
-        }
-//loc_4EBF6:              ; CODE XREF: update?+D61j
-        else if (previousMurphyMovingObject == 26)
-        {
-//loc_4F02E:              ; CODE XREF: update?+D6Bj
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F03B:              ; CODE XREF: update?+11A3j
-            belowBelowTile->state = 0;
-            belowBelowTile->tile = LevelTileTypeMurphy;
-            gIsMurphyGoingThroughPortal = 0;
-            position += kLevelWidth * 2;
-            if (belowTile->state == 1)
-            {
-                updateSpecialPort(position - kLevelWidth);
-            }
-
-            return position;
-        }
-//loc_4EBFE:              ; CODE XREF: update?+D69j
-        else if (previousMurphyMovingObject == 27)
-        {
-//loc_4F05C:              ; CODE XREF: update?+D73j
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F069:              ; CODE XREF: update?+11D1j
-            rightRightTile->state = 0;
-            rightRightTile->tile = LevelTileTypeMurphy;
-            gIsMurphyGoingThroughPortal = 0;
-            position += 2;
-            if (rightTile->state == 1)
-            {
-                updateSpecialPort(position - 1);
-            }
-
-            return position;
-        }
-//loc_4EC06:              ; CODE XREF: update?+D71j
-        else if (previousMurphyMovingObject == 28)
-        {
-//loc_4F089:              ; CODE XREF: update?+D7Bj
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F096:              ; CODE XREF: update?+11FEj
-            position -= kLevelWidth;
-
-//loc_4FDAF:              ; CODE XREF: update?+1209j
-//            ; update?:loc_4F0A9j ...
-            aboveTile->state = 0;
-            aboveTile->tile = LevelTileTypeMurphy;
-            decreaseRemainingRedDisksIfNeeded(position);
-            return position;
-        }
-//loc_4EC0E:              ; CODE XREF: update?+D79j
-        else if (previousMurphyMovingObject == 29)
-        {
-//loc_4F09C:              ; CODE XREF: update?+D83j
-            if (rightTile->tile != LevelTileTypeExplosion)
-            {
-                rightTile->state = 0;
-                rightTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4FDAF:              ; CODE XREF: update?+1209j
-//            ; update?:loc_4F0A9j ...
-            murphyTile->state = 0;
-            murphyTile->tile = LevelTileTypeMurphy;
-            decreaseRemainingRedDisksIfNeeded(position);
-            return position;
-        }
-//loc_4EC16:              ; CODE XREF: update?+D81j
-        else if (previousMurphyMovingObject == 30)
-        {
-//loc_4F0AC:              ; CODE XREF: update?+D8Bj
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F0B9:              ; CODE XREF: update?+1221j
-            position += kLevelWidth;
-
-//loc_4FDAF:              ; CODE XREF: update?+1209j
-//            ; update?:loc_4F0A9j ...
-            belowTile->state = 0;
-            belowTile->tile = LevelTileTypeMurphy;
-            decreaseRemainingRedDisksIfNeeded(position);
-            return position;
-        }
-//loc_4EC1E:              ; CODE XREF: update?+D89j
-        else if (previousMurphyMovingObject == 31)
-        {
-//loc_4F0BF:              ; CODE XREF: update?+D93j
-            if (leftTile->tile != LevelTileTypeExplosion)
-            {
-                leftTile->state = 0;
-                leftTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4FDAF:              ; CODE XREF: update?+1209j
-//            ; update?:loc_4F0A9j ...
-            murphyTile->state = 0;
-            murphyTile->tile = LevelTileTypeMurphy;
-            decreaseRemainingRedDisksIfNeeded(position);
-            return position;
-        }
-//loc_4EC26:              ; CODE XREF: update?+D91j
-        else if (previousMurphyMovingObject == 32)
-        {
-//loc_4F0CF:              ; CODE XREF: update?+D9Bj
-            if (aboveTile->tile != LevelTileTypeExplosion)
-            {
-                aboveTile->state = 0;
-                aboveTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F0DC:              ; CODE XREF: update?+1244j
-            decreaseRemainingRedDisksIfNeeded(position - kLevelWidth);
-            return position;
-        }
-//loc_4EC2E:              ; CODE XREF: update?+D99j
-        else if (previousMurphyMovingObject == 33)
-        {
-//loc_4F0E6:              ; CODE XREF: update?+DA3j
-            if (leftTile->tile != LevelTileTypeExplosion)
-            {
-                leftTile->state = 0;
-                leftTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F0F3:              ; CODE XREF: update?+125Bj
-            decreaseRemainingRedDisksIfNeeded(position - 1);
-            return position;
-        }
-//loc_4EC36:              ; CODE XREF: update?+DA1j
-        else if (previousMurphyMovingObject == 34)
-        {
-//loc_4F0FD:              ; CODE XREF: update?+DABj
-            if (belowTile->tile != LevelTileTypeExplosion)
-            {
-                belowTile->state = 0;
-                belowTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F10A:              ; CODE XREF: update?+1272j
-            decreaseRemainingRedDisksIfNeeded(position + kLevelWidth);
-            return position;
-        }
-//loc_4EC3E:              ; CODE XREF: update?+DA9j
-        else if (previousMurphyMovingObject == 35)
-        {
-//loc_4F114:              ; CODE XREF: update?+DB3j
-            if (rightTile->tile != LevelTileTypeExplosion)
-            {
-                rightTile->state = 0;
-                rightTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F121:              ; CODE XREF: update?+1289j
-            decreaseRemainingRedDisksIfNeeded(position + 1);
-            return position;
-        }
-//loc_4EC46:              ; CODE XREF: update?+DB1j
-        else if (previousMurphyMovingObject == 36)
-        {
-//loc_4F12B:              ; CODE XREF: update?+DBBj
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F138:              ; CODE XREF: update?+12A0j
-            aboveTile->state = 0;
-            aboveTile->tile = LevelTileTypeMurphy;
-            aboveAboveTile->state = 0;
-            aboveAboveTile->tile = LevelTileTypeYellowDisk;
-            return position - kLevelWidth;
-        }
-//loc_4EC4E:              ; CODE XREF: update?+DB9j
-        else if (previousMurphyMovingObject == 37)
-        {
-//loc_4F148:              ; CODE XREF: update?+DC3j
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F155:              ; CODE XREF: update?+12BDj
-            leftTile->state = 0;
-            leftTile->tile = LevelTileTypeMurphy;
-            leftLeftTile->state = 0;
-            leftLeftTile->tile = LevelTileTypeYellowDisk;
-            return position - 1;
-        }
-//loc_4EC56:              ; CODE XREF: update?+DC1j
-        else if (previousMurphyMovingObject == 39)
-        {
-//loc_4F165:              ; CODE XREF: update?+DCBj
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F172:              ; CODE XREF: update?+12DAj
-            belowTile->state = 0;
-            belowTile->tile = LevelTileTypeMurphy;
-            belowBelowTile->state = 0;
-            belowBelowTile->tile = LevelTileTypeYellowDisk;
-            return position + kLevelWidth;
-        }
-//loc_4EC5E:              ; CODE XREF: update?+DC9j
-        else if (previousMurphyMovingObject == 38)
-        {
-//loc_4F182:              ; CODE XREF: update?+DD3j
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F18F:              ; CODE XREF: update?+12F7j
-            rightTile->state = 0;
-            rightTile->tile = LevelTileTypeMurphy;
-            rightRightTile->state = 0;
-            rightRightTile->tile = LevelTileTypeYellowDisk;
-            return position + 1;
-        }
-//loc_4EC66:              ; CODE XREF: update?+DD1j
-        else if (previousMurphyMovingObject == 40)
-        {
-//loc_4F19F:              ; CODE XREF: update?+DDBj
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F1AC:              ; CODE XREF: update?+1314j
-            leftTile->state = 0;
-            leftTile->tile = LevelTileTypeMurphy;
-            leftLeftTile->state = 0;
-            leftLeftTile->tile = LevelTileTypeOrangeDisk;
-            return position - 1;
-        }
-//loc_4EC6E:              ; CODE XREF: update?+DD9j
-        else if (previousMurphyMovingObject == 41)
-        {
-//loc_4F1BC:              ; CODE XREF: update?+DE3j
-            if (murphyTile->tile != LevelTileTypeExplosion)
-            {
-                murphyTile->state = 0;
-                murphyTile->tile = LevelTileTypeSpace;
-            }
-
-//loc_4F1C9:              ; CODE XREF: update?+1331j
-            rightTile->state = 0;
-            rightTile->tile = LevelTileTypeMurphy;
-            rightRightTile->state = 0;
-            rightRightTile->tile = LevelTileTypeOrangeDisk;
-            if (belowRightRightTile->state == 0 && belowRightRightTile->tile == LevelTileTypeSpace)
-            {
-                rightRightTile->state = 0x20;
-                belowRightRightTile->state = 8;
-            }
-
-//loc_4F1E6:              ; CODE XREF: update?+134Aj
-            return position + 1;
-        }
-//loc_4EC76:              ; CODE XREF: update?+DE1j
-        else if (previousMurphyMovingObject == 42)
-        {
-//loc_4F1EA:              ; CODE XREF: update?+DEBj
-            murphyTile->state = 0;
-            murphyTile->tile = LevelTileTypeMurphy;
-            gPlantedRedDiskCountdown = 2;
-            gNumberOfRemainingRedDisks--;
-            drawNumberOfRemainingRedDisks();
-            playPushSound();
-            return position;
-        }
-        else
-        {
-//loc_4EC7E:              ; CODE XREF: update?+DE9j
-            gShouldExitLevel = 1;
-            return position;
-        }
-    }
-
-    gMurphyCounterToStartPushAnimation--;
-    if (gMurphyCounterToStartPushAnimation == 0)
-    {
-        playPushSound();
-    }
-
-//loc_4EA1E:              ; CODE XREF: update?+B89j
-    if (murphyTile->state == 0xE)
-    {
-//loc_4ED49:              ; CODE XREF: update?+B97j
-        if (gCurrentUserInput == UserInputLeft
-            && (leftTile->state == 0 && leftTile->tile == LevelTileTypeZonk))
-        {
-            return position;
-        }
-
-//loc_4ED5A:              ; CODE XREF: update?+EC0j update?+EC7j
-        murphyTile->state = 0;
-        murphyTile->tile = LevelTileTypeMurphy;
-        leftTile->state = 0;
-        leftTile->tile = LevelTileTypeZonk;
-        if (leftLeftTile->tile != LevelTileTypeExplosion)
-        {
-            leftLeftTile->state = 0;
-            leftLeftTile->tile = LevelTileTypeSpace;
-        }
-
-//loc_4ED73:              ; CODE XREF: update?+EDBj
-        // si = kMurphyStillSpriteCoordinates;
-        drawMovingFrame(304, 132, position);
-
-        return position;
-    }
-//loc_4EA2A:              ; CODE XREF: update?+B95j
-    else if (murphyTile->state == 0xF)
-    {
-//loc_4ED81:              ; CODE XREF: update?+B9Fj
-        if (gCurrentUserInput == UserInputRight
-            && (rightTile->state == 0 && rightTile->tile == LevelTileTypeZonk))
-        {
-            return position;
-        }
-
-//loc_4ED92:              ; CODE XREF: update?+EF8j update?+EFFj
-        murphyTile->state = 0;
-        murphyTile->tile = LevelTileTypeMurphy;
-        rightTile->state = 0;
-        rightTile->tile = LevelTileTypeZonk;
-        if (rightRightTile->tile != LevelTileTypeExplosion)
-        {
-            rightRightTile->state = 0;
-            rightRightTile->tile = LevelTileTypeSpace;
-        }
-
-//loc_4EDAB:              ; CODE XREF: update?+F13j
-        // si = kMurphyStillSpriteCoordinates;
-        drawMovingFrame(304, 132, position);
-
-        return position;
-    }
-//loc_4EA32:              ; CODE XREF: update?+B9Dj
-    else if (murphyTile->state == 0x28)
-    {
-//loc_4EDB9:              ; CODE XREF: update?+BA7j
-        if (gCurrentUserInput == UserInputLeft
-            && (leftTile->state == 0 && leftTile->tile == LevelTileTypeOrangeDisk))
-        {
-            return position;
-        }
-
-//loc_4EDCA:              ; CODE XREF: update?+F30j update?+F37j
-        murphyTile->state = 0;
-        murphyTile->tile = LevelTileTypeMurphy;
-        leftTile->state = 0;
-        leftTile->tile = LevelTileTypeOrangeDisk;
-        if (leftLeftTile->tile != LevelTileTypeExplosion)
-        {
-            leftLeftTile->state = 0;
-            leftLeftTile->tile = LevelTileTypeSpace;
-        }
-
-//loc_4EDE3:              ; CODE XREF: update?+F4Bj
-        // si = kMurphyStillSpriteCoordinates;
-        drawMovingFrame(304, 132, position);
-
-        return position;
-    }
-//loc_4EA3A:              ; CODE XREF: update?+BA5j
-    else if (murphyTile->state == 0x29)
-    {
-//loc_4EDF1:              ; CODE XREF: update?+BAFj
-        if (gCurrentUserInput == UserInputRight
-            && (rightTile->state == 0 && rightTile->tile == LevelTileTypeOrangeDisk))
-        {
-            return position;
-        }
-
-//loc_4EE02:              ; CODE XREF: update?+F68j update?+F6Fj
-        murphyTile->state = 0;
-        murphyTile->tile = LevelTileTypeMurphy;
-        rightTile->state = 0;
-        rightTile->tile = LevelTileTypeOrangeDisk;
-        if (rightRightTile->tile != LevelTileTypeExplosion)
-        {
-            rightRightTile->state = 0;
-            rightRightTile->tile = LevelTileTypeSpace;
-        }
-
-//loc_4EE1B:              ; CODE XREF: update?+F83j
-        // si = kMurphyStillSpriteCoordinates;
-        drawMovingFrame(304, 132, position);
-
-        return position;
-    }
-//loc_4EA42:              ; CODE XREF: update?+BADj
-    else if (murphyTile->state == 0x24)
-    {
-//loc_4EE29:              ; CODE XREF: update?+BB7j
-        if (gCurrentUserInput == UserInputUp
-            && (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeYellowDisk))
-        {
-            return position;
-        }
-
-//loc_4EE3A:              ; CODE XREF: update?+FA0j update?+FA7j
-        murphyTile->state = 0;
-        murphyTile->tile = LevelTileTypeMurphy;
-        aboveTile->state = 0;
-        aboveTile->tile = LevelTileTypeYellowDisk;
-        if (aboveAboveTile->tile != LevelTileTypeExplosion)
-        {
-            aboveAboveTile->state = 0;
-            aboveAboveTile->tile = LevelTileTypeSpace;
-        }
-
-//loc_4EE53:              ; CODE XREF: update?+FBBj
-        // si = kMurphyStillSpriteCoordinates;
-        drawMovingFrame(304, 132, position);
-
-        return position;
-    }
-//loc_4EA4A:              ; CODE XREF: update?+BB5j
-    else if (murphyTile->state == 0x25)
-    {
-//loc_4EE61:              ; CODE XREF: update?+BBFj
-        if (gCurrentUserInput == UserInputLeft
-            && (leftTile->state == 0 && leftTile->tile == LevelTileTypeYellowDisk))
-        {
-            return position;
-        }
-
-//loc_4EE72:              ; CODE XREF: update?+FD8j update?+FDFj
-        murphyTile->state = 0;
-        murphyTile->tile = LevelTileTypeMurphy;
-        leftTile->state = 0;
-        leftTile->tile = LevelTileTypeYellowDisk;
-        if (leftLeftTile->tile != LevelTileTypeExplosion)
-        {
-            leftLeftTile->state = 0;
-            leftLeftTile->tile = LevelTileTypeSpace;
-        }
-
-//loc_4EE8B:              ; CODE XREF: update?+FF3j
-        // si = kMurphyStillSpriteCoordinates;
-        drawMovingFrame(304, 132, position);
-
-        return position;
-    }
-//loc_4EA52:              ; CODE XREF: update?+BBDj
-    else if (murphyTile->state == 0x27)
-    {
-//loc_4EE99:              ; CODE XREF: update?+BC7j
-        if (gCurrentUserInput == UserInputDown
-            && (belowTile->state == 0 && belowTile->tile == LevelTileTypeYellowDisk))
-        {
-            return position;
-        }
-
-//loc_4EEAA:              ; CODE XREF: update?+1010j
-//                ; update?+1017j
-        murphyTile->state = 0;
-        murphyTile->tile = LevelTileTypeMurphy;
-        belowTile->state = 0;
-        belowTile->tile = LevelTileTypeYellowDisk;
-        if (belowBelowTile->tile != LevelTileTypeExplosion)
-        {
-            belowBelowTile->state = 0;
-            belowBelowTile->tile = LevelTileTypeSpace;
-        }
-
-//loc_4EEC3:              ; CODE XREF: update?+102Bj
-        // si = kMurphyStillSpriteCoordinates;
-        drawMovingFrame(304, 132, position);
-
-        return position;
-    }
-//loc_4EA5A:              ; CODE XREF: update?+BC5j
-    else if (murphyTile->state == 0x26)
-    {
-//loc_4EED1:              ; CODE XREF: update?+BCFj
-        if (gCurrentUserInput == UserInputRight
-            && (rightTile->state == 0 && rightTile->tile == LevelTileTypeYellowDisk))
-        {
-            return position;
-        }
-
-//loc_4EEE2:              ; CODE XREF: update?+1048j
-//                ; update?+104Fj
-        murphyTile->state = 0;
-        murphyTile->tile = LevelTileTypeMurphy;
-        rightTile->state = 0;
-        rightTile->tile = LevelTileTypeYellowDisk;
-        if (rightRightTile->tile != LevelTileTypeExplosion)
-        {
-            rightRightTile->state = 0;
-            rightRightTile->tile = LevelTileTypeSpace;
-        }
-
-//loc_4EEFB:              ; CODE XREF: update?+1063j
-        // si = kMurphyStillSpriteCoordinates;
-        drawMovingFrame(304, 132, position);
-
-        return position;
-    }
-//loc_4EA62:              ; CODE XREF: update?+BCDj
-    else if (murphyTile->state == 0x2A)
-    {
-//loc_4EF09:              ; CODE XREF: update?+BD7j
-        if (gCurrentUserInput == UserInputSpaceOnly)
-        {
-            if (gMurphyCounterToStartPushAnimation > 0x20)
-            {
-                return position;
-            }
-
-            // si = word_51790;
-            drawMovingFrame(288, 132, position);
-            gPlantedRedDiskCountdown = 1;
-
-            return position;
-        }
-
-//loc_4EF2C:              ; CODE XREF: update?+1080j
-        murphyTile->state = 0;
-        murphyTile->tile = LevelTileTypeMurphy;
-
-        // si = kMurphyStillSpriteCoordinates;
-        drawMovingFrame(304, 132, position);
-        gPlantedRedDiskCountdown = 0;
-
-        return position;
-    }
-    else
-    {
-        return position;
-    }
-}
-
-void detonateYellowDisks()
-{
-//loc_4E7B8:              ; CODE XREF: update?+8AAj update?+8D4j ...
-    gTerminalMaxFramesToNextScroll = 7;
-    gAreYellowDisksDetonated = 1;
-
-    for (int i = 0; i < kLevelSize; ++i)
-    {
-//loc_4E7C9:              ; CODE XREF: update?+94Aj
-        StatefulLevelTile *tile = &gCurrentLevelState[i];
-        if (tile->state == 0 && tile->tile == LevelTileTypeYellowDisk)
-        {
-            detonateBigExplosion(i);
-        }
-    }
-}
-
-void handleZonkPushedByMurphy(int16_t position) // sub_4ED29   proc near       ; CODE XREF: update?+E6Fp update?+E92p
-{
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-
-    if (belowTile->tile == LevelTileTypeSnikSnak
-        || belowTile->tile == 0xBB)
-    {
-//loc_4ED38:              ; CODE XREF: handleZonkPushedByMurphy+5j handleZonkPushedByMurphy+Cj
-        detonateBigExplosion(position + kLevelWidth);
-    }
-}
-
-uint8_t checkMurphyMovementToPosition(int16_t position, UserInput userInput) // sub_4F21F   proc near       ; CODE XREF: update?+273p update?+2EDp ...
-{
-    // 01ED:85BC
-    // Parameters:
-    // - si: position
-    // - ax: value of that position (state + tile)
-    // - bl: user input to process
-    StatefulLevelTile *tile = &gCurrentLevelState[position];
-
-    if ((tile->state == 0xFF && tile->tile == 0xFF)
-        || (tile->state == 0xAA && tile->tile == 0xAA)
-        || (tile->state == 0))
-    {
-//loc_4F296:              ; CODE XREF: checkMurphyMovementToPosition+3j checkMurphyMovementToPosition+8j ...
-        return 1;
-    }
-    else if (tile->tile == LevelTileTypeZonk)
-    {
-//loc_4F24F:              ; CODE XREF: checkMurphyMovementToPosition+11j
-        if (userInput == UserInputLeft)
-        {
-//loc_4F25E:              ; CODE XREF: checkMurphyMovementToPosition+33j
-            uint8_t stateType = (tile->state & 0xF0);
-            if (stateType == 0x20
-                || stateType == 0x40
-                || stateType == 0x50
-                || stateType == 0x70)
-            {
-//loc_4F278:              ; CODE XREF: checkMurphyMovementToPosition+45j
-//                ; checkMurphyMovementToPosition+4Aj ...
-                return 1;
-            }
-            detonateBigExplosion(position);
-
-//loc_4F278:              ; CODE XREF: checkMurphyMovementToPosition+45j
-//                ; checkMurphyMovementToPosition+4Aj ...
-            return 1;
-        }
-        else if (userInput != UserInputRight)
-        {
-            detonateBigExplosion(position);
-            return 1;
-        }
-
-//loc_4F27A:              ; CODE XREF: checkMurphyMovementToPosition+38j
-        uint8_t stateType = (tile->state & 0xF0);
-        if (stateType == 0x30
-            || stateType == 0x40
-            || stateType == 0x60
-            || stateType == 0x70)
-        {
-//loc_4F294:              ; CODE XREF: checkMurphyMovementToPosition+61j
-//                ; checkMurphyMovementToPosition+66j ...
-            return 1;
-        }
-        detonateBigExplosion(position);
-
-//loc_4F294:              ; CODE XREF: checkMurphyMovementToPosition+61j
-//                ; checkMurphyMovementToPosition+66j ...
-        return 1;
-    }
-    else if (tile->tile == LevelTileTypeExplosion)
-    {
-//loc_4F298:              ; CODE XREF: checkMurphyMovementToPosition+15j
-        // 01ED:8635
-        if ((tile->state & 0x80) != 0
-            || tile->state < 4)
-        {
-//loc_4F2A2:              ; CODE XREF: checkMurphyMovementToPosition+7Cj
-            detonateBigExplosion(position);
-            return 1;
-        }
-        else
-        {
-//loc_4F2A7:              ; CODE XREF: checkMurphyMovementToPosition+81j
-            tile->state = 0;
-            tile->tile = LevelTileTypeSpace;
-            return 0;
-        }
-    }
-    else if (tile->tile == LevelTileTypeOrangeDisk
-             || tile->tile == LevelTileTypePortRight
-             || tile->tile == LevelTileTypePortDown
-             || tile->tile == LevelTileTypePortLeft
-             || tile->tile == LevelTileTypePortUp)
-    {
-//loc_4F296:              ; CODE XREF: checkMurphyMovementToPosition+3j checkMurphyMovementToPosition+8j ...
-        return 1;
-    }
-    else
-    {
-        detonateBigExplosion(position);
-        return 1;
-    }
-}
-
-void updateSpecialPort(int16_t position) // sub_4F2AF   proc near       ; CODE XREF: update?+116Ap
-                   // ; update?+1197p ...
-{
-    // 01ED:864C
-    if (gNumberOfSpecialPorts == 0)
-    {
-        return;
-    }
-
-    uint8_t isPortInPosition = 0;
-    uint8_t portIndex = 0;
-
-    for (uint8_t i = 0; i < gNumberOfSpecialPorts; ++i)
-    {
-//loc_4F2BD:              ; CODE XREF: updateSpecialPort+19j
-        SpecialPortInfo portInfo = gCurrentLevel.specialPortsInfo[i];
-        // For _reasons_ the port position has its bytes inverted (first high, then low), so we must reverse them
-        uint16_t portPosition = swap16(portInfo.position);
-        portPosition /= 2; // We must divide by 2 because the level format works with words
-
-        if (portPosition == position)
-        {
-            isPortInPosition = 1;
-            portIndex = i;
-            break;
-        }
-    }
-
-    if (isPortInPosition == 0)
-    {
-        return;
-    }
-
-//loc_4F2CB:              ; CODE XREF: updateSpecialPort+14j
-    SpecialPortInfo portInfo = gCurrentLevel.specialPortsInfo[portIndex];
-    gIsGravityEnabled = portInfo.gravity;
-    gAreZonksFrozen = portInfo.freezeZonks;
-    gAreEnemiesFrozen = portInfo.freezeEnemies;
-    // I still don't know where word_510AC is read :fearful:
-    // I tried with a breakpoint on memory read and it was never accessed :shrug:
-    // I can probably forget about it...
-    // word_510AC = word_510AC ^ gRandomGeneratorSeed;
+    return 0;
+//     StatefulLevelTile *murphyTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *belowBelowTile = &gCurrentLevelState[position + kLevelWidth * 2];
+
+// //loc_4E186:              ; CODE XREF: update?+1C8j update?+355j
+// //    mov ax, leveldata[si+78h]
+//     if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
+//     {
+//         MurphyAnimationDescriptor unknownMurphyData;
+
+// //loc_4E38A:              ; CODE XREF: update?+69j update?+2FFj
+//         if (gIsMurphyLookingLeft != 0)
+//         {
+//             unknownMurphyData = kMurphyAnimationDescriptors[3]; // dx = 0x0E2E;
+//         }
+//         else
+//         {
+// //loc_4E396:              ; CODE XREF: update?+4FFj
+//             unknownMurphyData = kMurphyAnimationDescriptors[4]; // dx = 0x0E3E;
+//         }
+
+// //loc_4E399:              ; CODE XREF: update?+504j
+//         belowTile->state = 3;
+//         belowTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position + kLevelWidth, unknownMurphyData);
+//     }
+// //loc_4E192:              ; CODE XREF: update?+2FDj
+//     else if (belowTile->state == 0 && belowTile->tile == LevelTileTypeBase)
+//     {
+//         MurphyAnimationDescriptor unknownMurphyData;
+
+// //loc_4E44F:              ; CODE XREF: update?+307j
+//         playBaseSound();
+//         if (gIsMurphyLookingLeft != 0)
+//         {
+//             unknownMurphyData = kMurphyAnimationDescriptors[10]; // dx = 0x0E9E;
+//         }
+//         else
+//         {
+// //loc_4E45E:              ; CODE XREF: update?+5C7j
+//             unknownMurphyData = kMurphyAnimationDescriptors[11]; // dx = 0x0EAE;
+//         }
+
+// //loc_4E461:              ; CODE XREF: update?+5CCj
+//         belowTile->state = 7;
+//         belowTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position + kLevelWidth, unknownMurphyData);
+//     }
+// //loc_4E19A:              ; CODE XREF: update?+305j
+//     else if (belowTile->tile == LevelTileTypeBug)
+//     {
+// //loc_4E43E:              ; CODE XREF: update?+30Ej
+//         if (belowTile->state < 0x80)
+//         {
+//             detonateBigExplosion(position);
+//             return position;
+//         }
+
+// //loc_4E449:              ; CODE XREF: update?+5B3j
+//         belowTile->state = 0;
+//         belowTile->tile = LevelTileTypeBase;
+
+//         MurphyAnimationDescriptor unknownMurphyData;
+
+// //loc_4E44F:              ; CODE XREF: update?+307j
+//         playBaseSound();
+//         if (gIsMurphyLookingLeft != 0)
+//         {
+//             unknownMurphyData = kMurphyAnimationDescriptors[10]; // dx = 0x0E9E;
+//         }
+//         else
+//         {
+// //loc_4E45E:              ; CODE XREF: update?+5C7j
+//             unknownMurphyData = kMurphyAnimationDescriptors[11]; // dx = 0x0EAE;
+//         }
+
+// //loc_4E461:              ; CODE XREF: update?+5CCj
+//         belowTile->state = 7;
+//         belowTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position + kLevelWidth, unknownMurphyData);
+//     }
+// //loc_4E1A1:              ; CODE XREF: update?+30Cj
+//     else if (belowTile->tile == LevelTileTypeInfotron)
+//     {
+//         MurphyAnimationDescriptor unknownMurphyData;
+
+// //loc_4E5A8:              ; CODE XREF: update?+316j
+//         playInfotronSound();
+//         if (gIsMurphyLookingLeft != 0)
+//         {
+//             unknownMurphyData = kMurphyAnimationDescriptors[20]; // dx = 0x0F3E;
+//         }
+//         else
+//         {
+// //loc_4E5B7:              ; CODE XREF: update?+720j
+//             unknownMurphyData = kMurphyAnimationDescriptors[21]; // dx = 0x0F4E;
+//         }
+
+// //loc_4E5BA:              ; CODE XREF: update?+725j
+//         belowTile->state = 11;
+//         belowTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeBase;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position + kLevelWidth, unknownMurphyData);
+//     }
+// //loc_4E1A9:              ; CODE XREF: update?+314j
+//     else if (belowTile->tile == LevelTileTypeExit)
+//     {
+// //loc_4E674:              ; CODE XREF: update?+242j update?+2AAj ...
+//         if (gNumberOfRemainingInfotrons != 0)
+//         {
+//             return position;
+//         }
+//         playExitSound();
+//         byte_5A19B = 1;
+//         gCurrentPlayerLevelState = PlayerLevelStateCompleted;
+//         gLevelFailed = 0;
+//         if (gHasUserCheated == 0
+//             && gShouldUpdateTotalLevelTime != 0)
+//         {
+//             byte_5A323 = 1;
+//             addCurrentGameTimeToPlayer();
+//         }
+
+// //loc_4E6A4:              ; CODE XREF: update?+803j update?+80Aj
+//         changePlayerCurrentLevelState();
+//         gQuitLevelCountdown = 0x40;
+//     //    pop si
+// //        dx = 0x0E5E;
+//         murphyTile->state = 0xD;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[6]);
+//     }
+// //loc_4E1B1:              ; CODE XREF: update?+31Cj
+//     else if (belowTile->tile == LevelTileTypeTerminal)
+//     {
+// //loc_4E766:              ; CODE XREF: update?+325j update?+449j
+//     //    push    si
+//     //    mov di, [si+6155h]
+// //        si = word_51844;
+//         drawMovingFrame(176, 64, position);
+//     //    pop si
+//         if (gAreYellowDisksDetonated != 0)
+//         {
+//             gMurphyYawnAndSleepCounter = 0xA;
+//             return position;
+//         }
+
+// //loc_4E781:              ; CODE XREF: update?+8E8j
+//     //    push    si
+//     //    mov di, [si+61CDh]
+// //        si = kTerminalOnSpriteCoordinates;
+//         drawMovingFrame(256, 388, position + kLevelWidth);
+//     //    pop si
+//         detonateYellowDisks();
+//         return position;
+//     }
+// //loc_4E1B8:              ; CODE XREF: update?+323j
+//     else if (belowTile->tile == LevelTileTypePortDown
+//              || belowTile->tile == LevelTileTypePortVertical
+//              || belowTile->tile == LevelTileTypePort4Way)
+//     {
+// //loc_4E80C:              ; CODE XREF: update?+32Cj update?+333j ...
+//         if (belowBelowTile->state != 0 || belowBelowTile->tile != LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
+
+// //loc_4E814:              ; CODE XREF: update?+981j
+// //        dx = 0x0FEE;
+//         murphyTile->state = 0x1A;
+//         belowBelowTile->state = 3;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 1;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[31]);
+//     }
+// //loc_4E1CD:              ; CODE XREF: update?+338j
+//     else if (belowTile->tile == LevelTileTypeRedDisk)
+//     {
+//         MurphyAnimationDescriptor unknownMurphyData;
+
+// //loc_4E87F:              ; CODE XREF: update?+341j
+//         if (gIsMurphyLookingLeft != 0)
+//         {
+//             unknownMurphyData = kMurphyAnimationDescriptors[36]; // dx = 0x103E;
+//         }
+//         else
+//         {
+// //loc_4E88B:              ; CODE XREF: update?+9F4j
+//             unknownMurphyData = kMurphyAnimationDescriptors[37]; // dx = 0x104E;
+//         }
+
+// //loc_4E88E:              ; CODE XREF: update?+9F9j
+//         murphyTile->state = 0x1E;
+//         belowTile->state = 3;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position, unknownMurphyData);
+//     }
+// //loc_4E1D4:              ; CODE XREF: update?+33Fj
+//     else if (belowTile->tile == LevelTileTypeYellowDisk)
+//     {
+// //loc_4E947:              ; CODE XREF: update?+348j
+//         if (belowBelowTile->state != 0 || belowBelowTile->tile != LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
+
+// //loc_4E951:              ; CODE XREF: update?+ABEj
+//         belowBelowTile->state = 0x12;
+//     //    push    si
+//     //    mov di, [si+6155h]
+// //        si = word_5157C;
+//         drawMovingFrame(97, 132, position);
+//     //    pop si
+// //        dx = 0x10CE;
+//         murphyTile->state = 0x27;
+//         gMurphyCounterToStartPushAnimation = 8;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[45]);
+//     }
+// //loc_4E1DB:              ; CODE XREF: update?+346j
+//     else if (checkMurphyMovementToPosition(position + kLevelWidth, UserInputDown) != 1)
+//     {
+//         return handleMurphyDirectionDown(position);
+//     }
+//     else
+//     {
+//         return position;
+//     }
+// }
+
+// int16_t handleMurphyDirectionRight(int16_t position)
+// {
+//     StatefulLevelTile *murphyTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+//     StatefulLevelTile *rightRightTile = &gCurrentLevelState[position + 2];
+//     StatefulLevelTile *belowRightTile = &gCurrentLevelState[position + kLevelWidth + 1];
+
+// //loc_4E1E8:              ; CODE XREF: update?+1D5j update?+3CDj
+//     gIsMurphyLookingLeft = 0;
+// //    mov ax, leveldata[si+2]
+//     if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
+//     {
+// //loc_4E3B3:              ; CODE XREF: update?+367j
+// //        dx = 0x0E4E;
+//         rightTile->state = 4;
+//         rightTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position + 1, kMurphyAnimationDescriptors[5]);
+//     }
+// //loc_4E1FA:              ; CODE XREF: update?+365j
+//     else if (rightTile->state == 0 && rightTile->tile == LevelTileTypeBase)
+//     {
+// //loc_4E48C:              ; CODE XREF: update?+36Fj
+//         playBaseSound();
+// //        dx = 0x0EBE;
+//         rightTile->state = 8;
+//         rightTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position + 1, kMurphyAnimationDescriptors[12]);
+//     }
+// //loc_4E202:              ; CODE XREF: update?+36Dj
+//     else if (rightTile->tile == LevelTileTypeBug)
+//     {
+// //loc_4E47B:              ; CODE XREF: update?+376j
+//         if (rightTile->state < 0x80)
+//         {
+//             detonateBigExplosion(position);
+//             return position;
+//         }
+
+// //loc_4E486:              ; CODE XREF: update?+5F0j
+//         rightTile->state = 0;
+//         rightTile->tile = LevelTileTypeBase;
+
+// //loc_4E48C:              ; CODE XREF: update?+36Fj
+//         playBaseSound();
+// //        dx = 0x0EBE;
+//         rightTile->state = 8;
+//         rightTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position + 1, kMurphyAnimationDescriptors[12]);
+//     }
+// //loc_4E209:              ; CODE XREF: update?+374j
+//     else if (rightTile->state == 0 && rightTile->tile == LevelTileTypeInfotron)
+//     {
+// //loc_4E5D4:              ; CODE XREF: update?+37Ej
+//         playInfotronSound();
+// //        dx = 0x0F5E;
+//         rightTile->state = 12;
+//         rightTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position + 1, kMurphyAnimationDescriptors[22]);
+//     }
+// //loc_4E211:              ; CODE XREF: update?+37Cj
+//     else if (rightTile->state == 0 && rightTile->tile == LevelTileTypeExit)
+//     {
+// //loc_4E674:              ; CODE XREF: update?+242j update?+2AAj ...
+//         if (gNumberOfRemainingInfotrons != 0)
+//         {
+//             return position;
+//         }
+//         playExitSound();
+//         byte_5A19B = 1;
+//         gCurrentPlayerLevelState = PlayerLevelStateCompleted;
+//         gLevelFailed = 0;
+//         if (gHasUserCheated == 0
+//             && gShouldUpdateTotalLevelTime != 0)
+//         {
+//             byte_5A323 = 1;
+//             addCurrentGameTimeToPlayer();
+//         }
+
+// //loc_4E6A4:              ; CODE XREF: update?+803j update?+80Aj
+//         changePlayerCurrentLevelState();
+//         gQuitLevelCountdown = 0x40;
+//         murphyTile->state = 0xD;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[6]);
+//     }
+// //loc_4E219:              ; CODE XREF: update?+384j
+//     else if (rightTile->state == 0 && rightTile->tile == LevelTileTypeZonk)
+//     {
+// //loc_4E6E1:              ; CODE XREF: update?+38Ej
+//     //    mov ax, [si+1838h]
+//         if (rightRightTile->state != 0 || rightRightTile->tile != LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
+
+// //loc_4E6EB:              ; CODE XREF: update?+858j
+//     //    mov ax, [si+18AEh]
+//         if (belowRightTile->state == 0 && belowRightTile->tile == LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
+
+// //loc_4E6F5:              ; CODE XREF: update?+862j
+//         rightRightTile->state = 1;
+//     //    push    si
+//     //    mov di, [si+6155h]
+// //        si = word_5157C;
+//         drawMovingFrame(97, 132, position);
+//     //    pop si
+// //        dx = 0x0FBE;
+//         murphyTile->state = 0xF;
+//         gMurphyCounterToStartPushAnimation = 8;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[28]);
+//     }
+// //loc_4E221:              ; CODE XREF: update?+38Cj
+//     else if (rightTile->tile == LevelTileTypeTerminal)
+//     {
+// //loc_4E790:              ; CODE XREF: update?+395j update?+479j
+//     //    push    si
+//     //    mov di, [si+6155h]
+// //        si = word_51846;
+//         drawMovingFrame(192, 16, position);
+//     //    pop si
+//         if (gAreYellowDisksDetonated != 0)
+//         {
+//             gMurphyYawnAndSleepCounter = 0xA;
+//             return position;
+//         }
+
+// //loc_4E7AB:              ; CODE XREF: update?+912j
+//     //    push    si
+//     //    mov di, [si+6157h]
+// //        si = kTerminalOnSpriteCoordinates;
+//         drawMovingFrame(256, 388, position + 1);
+//     //    pop si
+
+//         detonateYellowDisks();
+//         return position;
+//     }
+// //loc_4E228:              ; CODE XREF: update?+393j
+//     else if (rightTile->tile == LevelTileTypePortRight
+//         || rightTile->tile == LevelTileTypePortHorizontal
+//         || rightTile->tile == LevelTileTypePort4Way)
+//     {
+// //loc_4E823:              ; CODE XREF: update?+39Cj update?+3A3j ...
+//         if (rightRightTile->state != 0 || rightRightTile->tile != LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
+
+// //loc_4E82B:              ; CODE XREF: update?+998j
+// //        dx = 0x0FFE;
+//         murphyTile->state = 0x1B;
+//         rightRightTile->state = 3;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 1;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[32]);
+//     }
+// //loc_4E23D:              ; CODE XREF: update?+3A8j
+//     else if (rightTile->tile == LevelTileTypeRedDisk)
+//     {
+// //loc_4E89A:              ; CODE XREF: update?+3B1j
+// //        dx = 0x105E;
+//         rightTile->state = 0x1F;
+//         rightTile->tile = LevelTileTypeMurphy;
+//         murphyTile->state = 3;
+//         murphyTile->tile = LevelTileTypeSpace;
+//         gMurphyCounterToStartPushAnimation = 0;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position + 1, kMurphyAnimationDescriptors[38]);
+//     }
+// //loc_4E244:              ; CODE XREF: update?+3AFj
+//     else if (rightTile->tile == LevelTileTypeYellowDisk)
+//     {
+// //loc_4E96D:              ; CODE XREF: update?+3B8j
+//         if (rightRightTile->state != 0 || rightRightTile->tile != LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
+
+// //loc_4E977:              ; CODE XREF: update?+AE4j
+//         rightRightTile->state = 0x12;
+//     //    push    si
+//     //    mov di, [si+6155h]
+// //        si = word_5157C;
+//         drawMovingFrame(97, 132, position);
+//     //    pop si
+// //        dx = 0x10DE;
+//         murphyTile->state = 0x26;
+//         gMurphyCounterToStartPushAnimation = 8;
+//         gIsMurphyGoingThroughPortal = 0;
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[46]);
+//     }
+// //loc_4E24B:              ; CODE XREF: update?+3B6j
+//     else if (rightTile->state == 0 && rightTile->tile == LevelTileTypeOrangeDisk)
+//     {
+// //loc_4E9B9:              ; CODE XREF: update?+3C0j
+//         if (rightRightTile->state != 0 || rightRightTile->tile != LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
+
+// //loc_4E9C3:              ; CODE XREF: update?+B30j
+//         if (belowRightTile->state == 0 && belowRightTile->tile == LevelTileTypeSpace)
+//         {
+//             return position;
+//         }
+
+// //loc_4E9CD:              ; CODE XREF: update?+B3Aj
+//         rightRightTile->state = 1;
+//     //    push    si
+//     //    mov di, [si+6155h]
+// //        si = word_5157C;
+//         drawMovingFrame(97, 132, position);
+//     //    pop si
+// //        dx = 0x10FE;
+//         murphyTile->state = 0x29;
+
+// //loc_4E9E7:              ; CODE XREF: update?+84Ej update?+87Fj ...
+//         gMurphyCounterToStartPushAnimation = 8;
+
+// //loc_4E9ED:              ; CODE XREF: update?+A66j
+//         gIsMurphyGoingThroughPortal = 0;
+
+//         return updateMurphyAnimationInfo(position, kMurphyAnimationDescriptors[48]);
+//     }
+// //loc_4E253:              ; CODE XREF: update?+3BEj
+//     else if (checkMurphyMovementToPosition(position + 1, UserInputRight) != 1)
+//     {
+//         return handleMurphyDirectionRight(position);
+//     }
+//     else
+//     {
+//         return position;
+//     }
+// }
+
+// int16_t updateMurphyAnimationInfo(int16_t position, MurphyAnimationDescriptor unknownMurphyData)
+// {
+//     // 01ED:7D9F
+
+// //loc_4E9F3:              ; CODE XREF: update?+4B0j update?+9B4j
+// //    di = 0x0DE0;
+// //    memcpy(di, si, 7 * 2); // rep movsw
+
+//     gCurrentMurphyAnimation = unknownMurphyData;
+
+//     return updateMurphyAnimation(position);
+// }
+
+// int16_t updateMurphyAnimation(int16_t position)
+// {
+//     // 01ED:7DA4
+
+//     StatefulLevelTile *murphyTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *leftLeftTile = &gCurrentLevelState[position - 2];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+//     StatefulLevelTile *rightRightTile = &gCurrentLevelState[position + 2];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *belowBelowTile = &gCurrentLevelState[position + kLevelWidth * 2];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *aboveAboveTile = &gCurrentLevelState[position - kLevelWidth * 2];
+//     StatefulLevelTile *belowRightRightTile = &gCurrentLevelState[position + kLevelWidth + 2];
+
+// //loc_4EA07:              ; CODE XREF: update?+21j
+//     gMurphyYawnAndSleepCounter = 0;
+
+//     if (gMurphyCounterToStartPushAnimation == 0)
+//     {
+//         // 01ED:7E08
+//         uint8_t currentFrame = gCurrentMurphyAnimation.currentFrame;
+//         AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[gCurrentMurphyAnimation.animationIndex];
+//         //Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
+
+// //loc_4EA6B:              ; CODE XREF: update?+B83j
+//         gMurphyPositionX += gCurrentMurphyAnimation.speedX;
+//         gMurphyPositionY += gCurrentMurphyAnimation.speedY;
+//         gCurrentMurphyAnimation.currentFrame++;
+
+//         uint16_t dstX = (position % kLevelWidth) * kTileSize;
+//         uint16_t dstY = (position / kLevelWidth) * kTileSize;
+
+//         int16_t offsetX = (gCurrentMurphyAnimation.animationCoordinatesOffset % 122) * 8;
+//         int16_t offsetY = (gCurrentMurphyAnimation.animationCoordinatesOffset / 122);
+
+// //loc_4EA9F:              ; CODE XREF: update?+C28j
+//         drawMovingSpriteFrameInLevel(frameCoordinates.x,
+//                                      frameCoordinates.y,
+//                                      gCurrentMurphyAnimation.width * 8,
+//                                      gCurrentMurphyAnimation.height,
+//                                      dstX + offsetX,
+//                                      dstY + offsetY);
+
+//         if (gIsMurphyGoingThroughPortal != 0)
+//         {
+//             // This +1 is because the "opposite" portal animation is always the next one
+//             AnimationFrameCoordinates animationFrameCoordinates = kMurphyAnimationFrameCoordinates[gCurrentMurphyAnimation.animationIndex + 1];
+//             //Point frameCoordinates = animationFrameCoordinates.coordinates[currentFrame];
+
+//             int16_t offsetX = (gCurrentMurphyAnimation.animationCoordinatesOffsetIncrement % 122) * 8;
+//             int16_t offsetY = (gCurrentMurphyAnimation.animationCoordinatesOffsetIncrement / 122);
+
+//             drawMovingSpriteFrameInLevel(frameCoordinates.x,
+//                                          frameCoordinates.y,
+//                                          gCurrentMurphyAnimation.width * 8,
+//                                          gCurrentMurphyAnimation.height,
+//                                          dstX + offsetX,
+//                                          dstY + offsetY);
+//         }
+//         else
+//         {
+// //loc_4EAFA:              ; CODE XREF: update?+C32j
+//             gCurrentMurphyAnimation.animationCoordinatesOffset += gCurrentMurphyAnimation.animationCoordinatesOffsetIncrement;
+//         }
+
+// //loc_4EB04:              ; CODE XREF: update?+C68j
+//         if (gCurrentMurphyAnimation.currentFrame < animationFrameCoordinates.numberOfCoordinates)
+//         {
+//               return position;
+//         }
+
+// //loc_4EB10:              ; CODE XREF: update?+C7Bj
+//         // 01ED:7EAD
+//         gMurphyTileX += gCurrentMurphyAnimation.speedX / 2;
+//         gMurphyTileY += gCurrentMurphyAnimation.speedY / 2;
+//         uint8_t previousMurphyMovingObject = murphyTile->state;
+//         murphyTile->state = 0;
+//         if (previousMurphyMovingObject == 1)
+//         {
+// //loc_4EC93:              ; CODE XREF: update?+CA3j update?+CC3j
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             handleMurphyCollisionAfterMovement(position + kLevelWidth);
+//             return position;
+//         }
+// //loc_4EB36:              ; CODE XREF: update?+CA1j
+//         else if (previousMurphyMovingObject == 2)
+//         {
+// //loc_4ECB1:              ; CODE XREF: update?+CABj update?+CCBj
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             handleMurphyCollisionAfterMovement(position + 1);
+//             return position;
+//         }
+// //loc_4EB3E:              ; CODE XREF: update?+CA9j
+//         else if (previousMurphyMovingObject == 3)
+//         {
+// //loc_4ECCF:              ; CODE XREF: update?+CB3j update?+CD3j
+//             if (aboveTile->tile != LevelTileTypeExplosion)
+//             {
+//                 aboveTile->state = 0;
+//                 aboveTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4ECDC:              ; CODE XREF: update?+E44j
+//             murphyTile->state = 0;
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             return position;
+//         }
+// //loc_4EB46:              ; CODE XREF: update?+CB1j
+//         else if (previousMurphyMovingObject == 4)
+//         {
+// //loc_4EF53:              ; CODE XREF: update?+CBBj update?+CDBj
+//             handleMurphyCollisionAfterMovement(position - 1);
+//             murphyTile->state = 0;
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             return position;
+//         }
+// //loc_4EB4E:              ; CODE XREF: update?+CB9j
+//         else if (previousMurphyMovingObject == 5)
+//         {
+// //loc_4EC93:              ; CODE XREF: update?+CA3j update?+CC3j
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             handleMurphyCollisionAfterMovement(position + kLevelWidth);
+//             return position;
+//         }
+// //loc_4EB56:              ; CODE XREF: update?+CC1j
+//         else if (previousMurphyMovingObject == 6)
+//         {
+// //loc_4ECB1:              ; CODE XREF: update?+CABj update?+CCBj
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             handleMurphyCollisionAfterMovement(position + 1);
+//             return position;
+//         }
+// //loc_4EB5E:              ; CODE XREF: update?+CC9j
+//         else if (previousMurphyMovingObject == 7)
+//         {
+// //loc_4ECCF:              ; CODE XREF: update?+CB3j update?+CD3j
+//             if (aboveTile->tile != LevelTileTypeExplosion)
+//             {
+//                 aboveTile->state = 0;
+//                 aboveTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4ECDC:              ; CODE XREF: update?+E44j
+//             murphyTile->state = 0;
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             return position;
+//         }
+// //loc_4EB66:              ; CODE XREF: update?+CD1j
+//         else if (previousMurphyMovingObject == 8)
+//         {
+// //loc_4EF53:              ; CODE XREF: update?+CBBj update?+CDBj
+//             // 01ED:82F0
+//             handleMurphyCollisionAfterMovement(position - 1);
+//             murphyTile->state = 0;
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             return position;
+//         }
+// //loc_4EB6E:              ; CODE XREF: update?+CD9j
+//         else if (previousMurphyMovingObject == 9)
+//         {
+// //loc_4EC85:              ; CODE XREF: update?+CE3j
+//             if (gNumberOfRemainingInfotrons > 0)
+//             {
+//                 gNumberOfRemainingInfotrons--;
+//             }
+
+// //loc_4EC90:              ; CODE XREF: update?+DFAj
+//             drawNumberOfRemainingInfotrons();
+
+// //loc_4EC93:              ; CODE XREF: update?+CA3j update?+CC3j
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             handleMurphyCollisionAfterMovement(position + kLevelWidth);
+//             return position;
+//         }
+// //loc_4EB76:              ; CODE XREF: update?+CE1j
+//         else if (previousMurphyMovingObject == 10)
+//         {
+// //loc_4ECA3:              ; CODE XREF: update?+CEBj
+//             if (gNumberOfRemainingInfotrons > 0)
+//             {
+//                 gNumberOfRemainingInfotrons--;
+//             }
+
+// //loc_4ECAE:              ; CODE XREF: update?+E18j
+//             drawNumberOfRemainingInfotrons();
+
+// //loc_4ECB1:              ; CODE XREF: update?+CABj update?+CCBj
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             handleMurphyCollisionAfterMovement(position + 1);
+//             return position;
+//         }
+// //loc_4EB7E:              ; CODE XREF: update?+CE9j
+//         else if (previousMurphyMovingObject == 11)
+//         {
+// //loc_4ECC1:              ; CODE XREF: update?+CF3j
+//             if (gNumberOfRemainingInfotrons > 0)
+//             {
+//                 gNumberOfRemainingInfotrons--;
+//             }
+
+// //loc_4ECCC:              ; CODE XREF: update?+E36j
+//             drawNumberOfRemainingInfotrons();
+
+// //loc_4ECCF:              ; CODE XREF: update?+CB3j update?+CD3j
+//             if (aboveTile->tile != LevelTileTypeExplosion)
+//             {
+//                 aboveTile->state = 0;
+//                 aboveTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4ECDC:              ; CODE XREF: update?+E44j
+//             murphyTile->state = 0;
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             return position;
+//         }
+// //loc_4EB86:              ; CODE XREF: update?+CF1j
+//         else if (previousMurphyMovingObject == 12)
+//         {
+// //loc_4EF45:              ; CODE XREF: update?+CFBj
+//             if (gNumberOfRemainingInfotrons > 0)
+//             {
+//                 gNumberOfRemainingInfotrons--;
+//             }
+
+// //loc_4EF50:              ; CODE XREF: update?+10BAj
+//             drawNumberOfRemainingInfotrons();
+
+// //loc_4EF53:              ; CODE XREF: update?+CBBj update?+CDBj
+//             handleMurphyCollisionAfterMovement(position - 1);
+//             murphyTile->state = 0;
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             return position;
+//         }
+// //loc_4EB8E:              ; CODE XREF: update?+CF9j
+//         else if (previousMurphyMovingObject == 14)
+//         {
+// //loc_4ECE3:              ; CODE XREF: update?+D03j
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4ECF0:              ; CODE XREF: update?+E58j
+//             leftTile->state = 0;
+//             leftTile->tile = LevelTileTypeMurphy;
+//             leftLeftTile->state = 0;
+//             leftLeftTile->tile = LevelTileTypeZonk;
+//             handleZonkPushedByMurphy(position - 2);
+//             return position - 1;
+//         }
+// //loc_4EB96:              ; CODE XREF: update?+D01j
+//         else if (previousMurphyMovingObject == 15)
+//         {
+// //loc_4ED06:              ; CODE XREF: update?+D0Bj
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4ED13:              ; CODE XREF: update?+E7Bj
+//             rightTile->state = 0;
+//             rightTile->tile = LevelTileTypeMurphy;
+//             rightRightTile->state = 0;
+//             rightRightTile->tile = LevelTileTypeZonk;
+//             handleZonkPushedByMurphy(position + 2);
+//             return position + 1;
+//         }
+// //loc_4EB9E:              ; CODE XREF: update?+D09j
+//         else if (previousMurphyMovingObject == 16)
+//         {
+// //loc_4EF71:              ; CODE XREF: update?+D13j
+//             if (aboveTile->tile != LevelTileTypeExplosion)
+//             {
+//                 aboveTile->state = 0;
+//                 aboveTile->tile = LevelTileTypeSpace;
+//             }
+
+//             return position;
+//         }
+// //loc_4EBA6:              ; CODE XREF: update?+D11j
+//         else if (previousMurphyMovingObject == 17)
+//         {
+// //loc_4EF8D:              ; CODE XREF: update?+D1Bj
+//             if (leftTile->tile != LevelTileTypeExplosion)
+//             {
+//                 leftTile->state = 0;
+//                 leftTile->tile = LevelTileTypeSpace;
+//             }
+
+//             return position;
+//         }
+// //loc_4EBAE:              ; CODE XREF: update?+D19j
+//         else if (previousMurphyMovingObject == 19)
+//         {
+// //loc_4EFC5:              ; CODE XREF: update?+D23j
+//             if (rightTile->tile != LevelTileTypeExplosion)
+//             {
+//                 rightTile->state = 0;
+//                 rightTile->tile = LevelTileTypeSpace;
+//             }
+
+//             return position;
+//         }
+// //loc_4EBB6:              ; CODE XREF: update?+D21j
+//         else if (previousMurphyMovingObject == 18)
+//         {
+// //loc_4EFA9:              ; CODE XREF: update?+D2Bj
+//             if (belowTile->tile != LevelTileTypeExplosion)
+//             {
+//                 belowTile->state = 0;
+//                 belowTile->tile = LevelTileTypeSpace;
+//             }
+
+//             return position;
+//         }
+// //loc_4EBBE:              ; CODE XREF: update?+D29j
+//         else if (previousMurphyMovingObject == 20)
+//         {
+// //loc_4EF63:              ; CODE XREF: update?+D33j
+//             if (gNumberOfRemainingInfotrons > 0)
+//             {
+//                 gNumberOfRemainingInfotrons--;
+//             }
+
+// //loc_4EF6E:              ; CODE XREF: update?+10D8j
+//             drawNumberOfRemainingInfotrons();
+
+// //loc_4EF71:              ; CODE XREF: update?+D13j
+//             if (aboveTile->tile != LevelTileTypeExplosion)
+//             {
+//                 aboveTile->state = 0;
+//                 aboveTile->tile = LevelTileTypeSpace;
+//             }
+
+//             return position;
+//         }
+// //loc_4EBC6:              ; CODE XREF: update?+D31j
+//         else if (previousMurphyMovingObject == 21)
+//         {
+// //loc_4EF7F:              ; CODE XREF: update?+D3Bj
+//             if (gNumberOfRemainingInfotrons > 0)
+//             {
+//                 gNumberOfRemainingInfotrons--;
+//             }
+
+// //loc_4EF8A:              ; CODE XREF: update?+10F4j
+//             drawNumberOfRemainingInfotrons();
+
+// //loc_4EF8D:              ; CODE XREF: update?+D1Bj
+//             if (leftTile->tile != LevelTileTypeExplosion)
+//             {
+//                 leftTile->state = 0;
+//                 leftTile->tile = LevelTileTypeSpace;
+//             }
+
+//             return position;
+//         }
+// //loc_4EBCE:              ; CODE XREF: update?+D39j
+//         else if (previousMurphyMovingObject == 23)
+//         {
+// //loc_4EFB7:              ; CODE XREF: update?+D43j
+//             if (gNumberOfRemainingInfotrons > 0)
+//             {
+//                 gNumberOfRemainingInfotrons--;
+//             }
+
+// //loc_4EFC2:              ; CODE XREF: update?+112Cj
+//             drawNumberOfRemainingInfotrons();
+
+// //loc_4EFC5:              ; CODE XREF: update?+D23j
+//             if (rightTile->tile != LevelTileTypeExplosion)
+//             {
+//                 rightTile->state = 0;
+//                 rightTile->tile = LevelTileTypeSpace;
+//             }
+
+//             return position;
+//         }
+// //loc_4EBD6:              ; CODE XREF: update?+D41j
+//         else if (previousMurphyMovingObject == 22)
+//         {
+// //loc_4EF9B:              ; CODE XREF: update?+D4Bj
+//             if (gNumberOfRemainingInfotrons > 0)
+//             {
+//                 gNumberOfRemainingInfotrons--;
+//             }
+
+// //loc_4EFA6:              ; CODE XREF: update?+1110j
+//             drawNumberOfRemainingInfotrons();
+
+// //loc_4EFA9:              ; CODE XREF: update?+D2Bj
+//             if (belowTile->tile != LevelTileTypeExplosion)
+//             {
+//                 belowTile->state = 0;
+//                 belowTile->tile = LevelTileTypeSpace;
+//             }
+
+//             return position;
+//         }
+// //loc_4EBDE:              ; CODE XREF: update?+D49j
+//         else if (previousMurphyMovingObject == 13)
+//         {
+// //loc_4ED42:              ; CODE XREF: update?+D53j
+//             gShouldExitLevel = 1;
+//             return position;
+//         }
+// //loc_4EBE6:              ; CODE XREF: update?+D51j
+//         else if (previousMurphyMovingObject == 24)
+//         {
+// //loc_4EFD3:              ; CODE XREF: update?+D5Bj
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4EFE0:              ; CODE XREF: update?+1148j
+//             aboveAboveTile->state = 0;
+//             aboveAboveTile->tile = LevelTileTypeMurphy;
+//             gIsMurphyGoingThroughPortal = 0;
+//             position -= kLevelWidth * 2;
+//             if (aboveTile->state == 1)
+//             {
+//                 updateSpecialPort(position + kLevelWidth);
+//             }
+
+//             return position;
+//         }
+// //loc_4EBEE:              ; CODE XREF: update?+D59j
+//         else if (previousMurphyMovingObject == 25)
+//         {
+// //loc_4F001:              ; CODE XREF: update?+D63j
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F00E:              ; CODE XREF: update?+1176j
+//             leftLeftTile->state = 0;
+//             leftLeftTile->tile = LevelTileTypeMurphy;
+//             gIsMurphyGoingThroughPortal = 0;
+//             position -= 2;
+//             if (leftTile->state == 1)
+//             {
+//                 updateSpecialPort(position + 1);
+//             }
+
+//             return position;
+//         }
+// //loc_4EBF6:              ; CODE XREF: update?+D61j
+//         else if (previousMurphyMovingObject == 26)
+//         {
+// //loc_4F02E:              ; CODE XREF: update?+D6Bj
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F03B:              ; CODE XREF: update?+11A3j
+//             belowBelowTile->state = 0;
+//             belowBelowTile->tile = LevelTileTypeMurphy;
+//             gIsMurphyGoingThroughPortal = 0;
+//             position += kLevelWidth * 2;
+//             if (belowTile->state == 1)
+//             {
+//                 updateSpecialPort(position - kLevelWidth);
+//             }
+
+//             return position;
+//         }
+// //loc_4EBFE:              ; CODE XREF: update?+D69j
+//         else if (previousMurphyMovingObject == 27)
+//         {
+// //loc_4F05C:              ; CODE XREF: update?+D73j
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F069:              ; CODE XREF: update?+11D1j
+//             rightRightTile->state = 0;
+//             rightRightTile->tile = LevelTileTypeMurphy;
+//             gIsMurphyGoingThroughPortal = 0;
+//             position += 2;
+//             if (rightTile->state == 1)
+//             {
+//                 updateSpecialPort(position - 1);
+//             }
+
+//             return position;
+//         }
+// //loc_4EC06:              ; CODE XREF: update?+D71j
+//         else if (previousMurphyMovingObject == 28)
+//         {
+// //loc_4F089:              ; CODE XREF: update?+D7Bj
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F096:              ; CODE XREF: update?+11FEj
+//             position -= kLevelWidth;
+
+// //loc_4FDAF:              ; CODE XREF: update?+1209j
+// //            ; update?:loc_4F0A9j ...
+//             aboveTile->state = 0;
+//             aboveTile->tile = LevelTileTypeMurphy;
+//             decreaseRemainingRedDisksIfNeeded(position);
+//             return position;
+//         }
+// //loc_4EC0E:              ; CODE XREF: update?+D79j
+//         else if (previousMurphyMovingObject == 29)
+//         {
+// //loc_4F09C:              ; CODE XREF: update?+D83j
+//             if (rightTile->tile != LevelTileTypeExplosion)
+//             {
+//                 rightTile->state = 0;
+//                 rightTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4FDAF:              ; CODE XREF: update?+1209j
+// //            ; update?:loc_4F0A9j ...
+//             murphyTile->state = 0;
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             decreaseRemainingRedDisksIfNeeded(position);
+//             return position;
+//         }
+// //loc_4EC16:              ; CODE XREF: update?+D81j
+//         else if (previousMurphyMovingObject == 30)
+//         {
+// //loc_4F0AC:              ; CODE XREF: update?+D8Bj
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F0B9:              ; CODE XREF: update?+1221j
+//             position += kLevelWidth;
+
+// //loc_4FDAF:              ; CODE XREF: update?+1209j
+// //            ; update?:loc_4F0A9j ...
+//             belowTile->state = 0;
+//             belowTile->tile = LevelTileTypeMurphy;
+//             decreaseRemainingRedDisksIfNeeded(position);
+//             return position;
+//         }
+// //loc_4EC1E:              ; CODE XREF: update?+D89j
+//         else if (previousMurphyMovingObject == 31)
+//         {
+// //loc_4F0BF:              ; CODE XREF: update?+D93j
+//             if (leftTile->tile != LevelTileTypeExplosion)
+//             {
+//                 leftTile->state = 0;
+//                 leftTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4FDAF:              ; CODE XREF: update?+1209j
+// //            ; update?:loc_4F0A9j ...
+//             murphyTile->state = 0;
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             decreaseRemainingRedDisksIfNeeded(position);
+//             return position;
+//         }
+// //loc_4EC26:              ; CODE XREF: update?+D91j
+//         else if (previousMurphyMovingObject == 32)
+//         {
+// //loc_4F0CF:              ; CODE XREF: update?+D9Bj
+//             if (aboveTile->tile != LevelTileTypeExplosion)
+//             {
+//                 aboveTile->state = 0;
+//                 aboveTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F0DC:              ; CODE XREF: update?+1244j
+//             decreaseRemainingRedDisksIfNeeded(position - kLevelWidth);
+//             return position;
+//         }
+// //loc_4EC2E:              ; CODE XREF: update?+D99j
+//         else if (previousMurphyMovingObject == 33)
+//         {
+// //loc_4F0E6:              ; CODE XREF: update?+DA3j
+//             if (leftTile->tile != LevelTileTypeExplosion)
+//             {
+//                 leftTile->state = 0;
+//                 leftTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F0F3:              ; CODE XREF: update?+125Bj
+//             decreaseRemainingRedDisksIfNeeded(position - 1);
+//             return position;
+//         }
+// //loc_4EC36:              ; CODE XREF: update?+DA1j
+//         else if (previousMurphyMovingObject == 34)
+//         {
+// //loc_4F0FD:              ; CODE XREF: update?+DABj
+//             if (belowTile->tile != LevelTileTypeExplosion)
+//             {
+//                 belowTile->state = 0;
+//                 belowTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F10A:              ; CODE XREF: update?+1272j
+//             decreaseRemainingRedDisksIfNeeded(position + kLevelWidth);
+//             return position;
+//         }
+// //loc_4EC3E:              ; CODE XREF: update?+DA9j
+//         else if (previousMurphyMovingObject == 35)
+//         {
+// //loc_4F114:              ; CODE XREF: update?+DB3j
+//             if (rightTile->tile != LevelTileTypeExplosion)
+//             {
+//                 rightTile->state = 0;
+//                 rightTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F121:              ; CODE XREF: update?+1289j
+//             decreaseRemainingRedDisksIfNeeded(position + 1);
+//             return position;
+//         }
+// //loc_4EC46:              ; CODE XREF: update?+DB1j
+//         else if (previousMurphyMovingObject == 36)
+//         {
+// //loc_4F12B:              ; CODE XREF: update?+DBBj
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F138:              ; CODE XREF: update?+12A0j
+//             aboveTile->state = 0;
+//             aboveTile->tile = LevelTileTypeMurphy;
+//             aboveAboveTile->state = 0;
+//             aboveAboveTile->tile = LevelTileTypeYellowDisk;
+//             return position - kLevelWidth;
+//         }
+// //loc_4EC4E:              ; CODE XREF: update?+DB9j
+//         else if (previousMurphyMovingObject == 37)
+//         {
+// //loc_4F148:              ; CODE XREF: update?+DC3j
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F155:              ; CODE XREF: update?+12BDj
+//             leftTile->state = 0;
+//             leftTile->tile = LevelTileTypeMurphy;
+//             leftLeftTile->state = 0;
+//             leftLeftTile->tile = LevelTileTypeYellowDisk;
+//             return position - 1;
+//         }
+// //loc_4EC56:              ; CODE XREF: update?+DC1j
+//         else if (previousMurphyMovingObject == 39)
+//         {
+// //loc_4F165:              ; CODE XREF: update?+DCBj
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F172:              ; CODE XREF: update?+12DAj
+//             belowTile->state = 0;
+//             belowTile->tile = LevelTileTypeMurphy;
+//             belowBelowTile->state = 0;
+//             belowBelowTile->tile = LevelTileTypeYellowDisk;
+//             return position + kLevelWidth;
+//         }
+// //loc_4EC5E:              ; CODE XREF: update?+DC9j
+//         else if (previousMurphyMovingObject == 38)
+//         {
+// //loc_4F182:              ; CODE XREF: update?+DD3j
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F18F:              ; CODE XREF: update?+12F7j
+//             rightTile->state = 0;
+//             rightTile->tile = LevelTileTypeMurphy;
+//             rightRightTile->state = 0;
+//             rightRightTile->tile = LevelTileTypeYellowDisk;
+//             return position + 1;
+//         }
+// //loc_4EC66:              ; CODE XREF: update?+DD1j
+//         else if (previousMurphyMovingObject == 40)
+//         {
+// //loc_4F19F:              ; CODE XREF: update?+DDBj
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F1AC:              ; CODE XREF: update?+1314j
+//             leftTile->state = 0;
+//             leftTile->tile = LevelTileTypeMurphy;
+//             leftLeftTile->state = 0;
+//             leftLeftTile->tile = LevelTileTypeOrangeDisk;
+//             return position - 1;
+//         }
+// //loc_4EC6E:              ; CODE XREF: update?+DD9j
+//         else if (previousMurphyMovingObject == 41)
+//         {
+// //loc_4F1BC:              ; CODE XREF: update?+DE3j
+//             if (murphyTile->tile != LevelTileTypeExplosion)
+//             {
+//                 murphyTile->state = 0;
+//                 murphyTile->tile = LevelTileTypeSpace;
+//             }
+
+// //loc_4F1C9:              ; CODE XREF: update?+1331j
+//             rightTile->state = 0;
+//             rightTile->tile = LevelTileTypeMurphy;
+//             rightRightTile->state = 0;
+//             rightRightTile->tile = LevelTileTypeOrangeDisk;
+//             if (belowRightRightTile->state == 0 && belowRightRightTile->tile == LevelTileTypeSpace)
+//             {
+//                 rightRightTile->state = 0x20;
+//                 belowRightRightTile->state = 8;
+//             }
+
+// //loc_4F1E6:              ; CODE XREF: update?+134Aj
+//             return position + 1;
+//         }
+// //loc_4EC76:              ; CODE XREF: update?+DE1j
+//         else if (previousMurphyMovingObject == 42)
+//         {
+// //loc_4F1EA:              ; CODE XREF: update?+DEBj
+//             murphyTile->state = 0;
+//             murphyTile->tile = LevelTileTypeMurphy;
+//             gPlantedRedDiskCountdown = 2;
+//             gNumberOfRemainingRedDisks--;
+//             drawNumberOfRemainingRedDisks();
+//             playPushSound();
+//             return position;
+//         }
+//         else
+//         {
+// //loc_4EC7E:              ; CODE XREF: update?+DE9j
+//             gShouldExitLevel = 1;
+//             return position;
+//         }
+//     }
+
+//     gMurphyCounterToStartPushAnimation--;
+//     if (gMurphyCounterToStartPushAnimation == 0)
+//     {
+//         playPushSound();
+//     }
+
+// //loc_4EA1E:              ; CODE XREF: update?+B89j
+//     if (murphyTile->state == 0xE)
+//     {
+// //loc_4ED49:              ; CODE XREF: update?+B97j
+//         if (gCurrentUserInput == UserInputLeft
+//             && (leftTile->state == 0 && leftTile->tile == LevelTileTypeZonk))
+//         {
+//             return position;
+//         }
+
+// //loc_4ED5A:              ; CODE XREF: update?+EC0j update?+EC7j
+//         murphyTile->state = 0;
+//         murphyTile->tile = LevelTileTypeMurphy;
+//         leftTile->state = 0;
+//         leftTile->tile = LevelTileTypeZonk;
+//         if (leftLeftTile->tile != LevelTileTypeExplosion)
+//         {
+//             leftLeftTile->state = 0;
+//             leftLeftTile->tile = LevelTileTypeSpace;
+//         }
+
+// //loc_4ED73:              ; CODE XREF: update?+EDBj
+//         // si = kMurphyStillSpriteCoordinates;
+//         drawMovingFrame(304, 132, position);
+
+//         return position;
+//     }
+// //loc_4EA2A:              ; CODE XREF: update?+B95j
+//     else if (murphyTile->state == 0xF)
+//     {
+// //loc_4ED81:              ; CODE XREF: update?+B9Fj
+//         if (gCurrentUserInput == UserInputRight
+//             && (rightTile->state == 0 && rightTile->tile == LevelTileTypeZonk))
+//         {
+//             return position;
+//         }
+
+// //loc_4ED92:              ; CODE XREF: update?+EF8j update?+EFFj
+//         murphyTile->state = 0;
+//         murphyTile->tile = LevelTileTypeMurphy;
+//         rightTile->state = 0;
+//         rightTile->tile = LevelTileTypeZonk;
+//         if (rightRightTile->tile != LevelTileTypeExplosion)
+//         {
+//             rightRightTile->state = 0;
+//             rightRightTile->tile = LevelTileTypeSpace;
+//         }
+
+// //loc_4EDAB:              ; CODE XREF: update?+F13j
+//         // si = kMurphyStillSpriteCoordinates;
+//         drawMovingFrame(304, 132, position);
+
+//         return position;
+//     }
+// //loc_4EA32:              ; CODE XREF: update?+B9Dj
+//     else if (murphyTile->state == 0x28)
+//     {
+// //loc_4EDB9:              ; CODE XREF: update?+BA7j
+//         if (gCurrentUserInput == UserInputLeft
+//             && (leftTile->state == 0 && leftTile->tile == LevelTileTypeOrangeDisk))
+//         {
+//             return position;
+//         }
+
+// //loc_4EDCA:              ; CODE XREF: update?+F30j update?+F37j
+//         murphyTile->state = 0;
+//         murphyTile->tile = LevelTileTypeMurphy;
+//         leftTile->state = 0;
+//         leftTile->tile = LevelTileTypeOrangeDisk;
+//         if (leftLeftTile->tile != LevelTileTypeExplosion)
+//         {
+//             leftLeftTile->state = 0;
+//             leftLeftTile->tile = LevelTileTypeSpace;
+//         }
+
+// //loc_4EDE3:              ; CODE XREF: update?+F4Bj
+//         // si = kMurphyStillSpriteCoordinates;
+//         drawMovingFrame(304, 132, position);
+
+//         return position;
+//     }
+// //loc_4EA3A:              ; CODE XREF: update?+BA5j
+//     else if (murphyTile->state == 0x29)
+//     {
+// //loc_4EDF1:              ; CODE XREF: update?+BAFj
+//         if (gCurrentUserInput == UserInputRight
+//             && (rightTile->state == 0 && rightTile->tile == LevelTileTypeOrangeDisk))
+//         {
+//             return position;
+//         }
+
+// //loc_4EE02:              ; CODE XREF: update?+F68j update?+F6Fj
+//         murphyTile->state = 0;
+//         murphyTile->tile = LevelTileTypeMurphy;
+//         rightTile->state = 0;
+//         rightTile->tile = LevelTileTypeOrangeDisk;
+//         if (rightRightTile->tile != LevelTileTypeExplosion)
+//         {
+//             rightRightTile->state = 0;
+//             rightRightTile->tile = LevelTileTypeSpace;
+//         }
+
+// //loc_4EE1B:              ; CODE XREF: update?+F83j
+//         // si = kMurphyStillSpriteCoordinates;
+//         drawMovingFrame(304, 132, position);
+
+//         return position;
+//     }
+// //loc_4EA42:              ; CODE XREF: update?+BADj
+//     else if (murphyTile->state == 0x24)
+//     {
+// //loc_4EE29:              ; CODE XREF: update?+BB7j
+//         if (gCurrentUserInput == UserInputUp
+//             && (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeYellowDisk))
+//         {
+//             return position;
+//         }
+
+// //loc_4EE3A:              ; CODE XREF: update?+FA0j update?+FA7j
+//         murphyTile->state = 0;
+//         murphyTile->tile = LevelTileTypeMurphy;
+//         aboveTile->state = 0;
+//         aboveTile->tile = LevelTileTypeYellowDisk;
+//         if (aboveAboveTile->tile != LevelTileTypeExplosion)
+//         {
+//             aboveAboveTile->state = 0;
+//             aboveAboveTile->tile = LevelTileTypeSpace;
+//         }
+
+// //loc_4EE53:              ; CODE XREF: update?+FBBj
+//         // si = kMurphyStillSpriteCoordinates;
+//         drawMovingFrame(304, 132, position);
+
+//         return position;
+//     }
+// //loc_4EA4A:              ; CODE XREF: update?+BB5j
+//     else if (murphyTile->state == 0x25)
+//     {
+// //loc_4EE61:              ; CODE XREF: update?+BBFj
+//         if (gCurrentUserInput == UserInputLeft
+//             && (leftTile->state == 0 && leftTile->tile == LevelTileTypeYellowDisk))
+//         {
+//             return position;
+//         }
+
+// //loc_4EE72:              ; CODE XREF: update?+FD8j update?+FDFj
+//         murphyTile->state = 0;
+//         murphyTile->tile = LevelTileTypeMurphy;
+//         leftTile->state = 0;
+//         leftTile->tile = LevelTileTypeYellowDisk;
+//         if (leftLeftTile->tile != LevelTileTypeExplosion)
+//         {
+//             leftLeftTile->state = 0;
+//             leftLeftTile->tile = LevelTileTypeSpace;
+//         }
+
+// //loc_4EE8B:              ; CODE XREF: update?+FF3j
+//         // si = kMurphyStillSpriteCoordinates;
+//         drawMovingFrame(304, 132, position);
+
+//         return position;
+//     }
+// //loc_4EA52:              ; CODE XREF: update?+BBDj
+//     else if (murphyTile->state == 0x27)
+//     {
+// //loc_4EE99:              ; CODE XREF: update?+BC7j
+//         if (gCurrentUserInput == UserInputDown
+//             && (belowTile->state == 0 && belowTile->tile == LevelTileTypeYellowDisk))
+//         {
+//             return position;
+//         }
+
+// //loc_4EEAA:              ; CODE XREF: update?+1010j
+// //                ; update?+1017j
+//         murphyTile->state = 0;
+//         murphyTile->tile = LevelTileTypeMurphy;
+//         belowTile->state = 0;
+//         belowTile->tile = LevelTileTypeYellowDisk;
+//         if (belowBelowTile->tile != LevelTileTypeExplosion)
+//         {
+//             belowBelowTile->state = 0;
+//             belowBelowTile->tile = LevelTileTypeSpace;
+//         }
+
+// //loc_4EEC3:              ; CODE XREF: update?+102Bj
+//         // si = kMurphyStillSpriteCoordinates;
+//         drawMovingFrame(304, 132, position);
+
+//         return position;
+//     }
+// //loc_4EA5A:              ; CODE XREF: update?+BC5j
+//     else if (murphyTile->state == 0x26)
+//     {
+// //loc_4EED1:              ; CODE XREF: update?+BCFj
+//         if (gCurrentUserInput == UserInputRight
+//             && (rightTile->state == 0 && rightTile->tile == LevelTileTypeYellowDisk))
+//         {
+//             return position;
+//         }
+
+// //loc_4EEE2:              ; CODE XREF: update?+1048j
+// //                ; update?+104Fj
+//         murphyTile->state = 0;
+//         murphyTile->tile = LevelTileTypeMurphy;
+//         rightTile->state = 0;
+//         rightTile->tile = LevelTileTypeYellowDisk;
+//         if (rightRightTile->tile != LevelTileTypeExplosion)
+//         {
+//             rightRightTile->state = 0;
+//             rightRightTile->tile = LevelTileTypeSpace;
+//         }
+
+// //loc_4EEFB:              ; CODE XREF: update?+1063j
+//         // si = kMurphyStillSpriteCoordinates;
+//         drawMovingFrame(304, 132, position);
+
+//         return position;
+//     }
+// //loc_4EA62:              ; CODE XREF: update?+BCDj
+//     else if (murphyTile->state == 0x2A)
+//     {
+// //loc_4EF09:              ; CODE XREF: update?+BD7j
+//         if (gCurrentUserInput == UserInputSpaceOnly)
+//         {
+//             if (gMurphyCounterToStartPushAnimation > 0x20)
+//             {
+//                 return position;
+//             }
+
+//             // si = word_51790;
+//             drawMovingFrame(288, 132, position);
+//             gPlantedRedDiskCountdown = 1;
+
+//             return position;
+//         }
+
+// //loc_4EF2C:              ; CODE XREF: update?+1080j
+//         murphyTile->state = 0;
+//         murphyTile->tile = LevelTileTypeMurphy;
+
+//         // si = kMurphyStillSpriteCoordinates;
+//         drawMovingFrame(304, 132, position);
+//         gPlantedRedDiskCountdown = 0;
+
+//         return position;
+//     }
+//     else
+//     {
+//         return position;
+//     }
+// }
+
+// void detonateYellowDisks()
+// {
+// //loc_4E7B8:              ; CODE XREF: update?+8AAj update?+8D4j ...
+//     gTerminalMaxFramesToNextScroll = 7;
+//     gAreYellowDisksDetonated = 1;
+
+//     for (int i = 0; i < kLevelSize; ++i)
+//     {
+// //loc_4E7C9:              ; CODE XREF: update?+94Aj
+//         StatefulLevelTile *tile = &gCurrentLevelState[i];
+//         if (tile->state == 0 && tile->tile == LevelTileTypeYellowDisk)
+//         {
+//             detonateBigExplosion(i);
+//         }
+//     }
+// }
+
+// void handleZonkPushedByMurphy(int16_t position) // sub_4ED29   proc near       ; CODE XREF: update?+E6Fp update?+E92p
+// {
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+
+//     if (belowTile->tile == LevelTileTypeSnikSnak
+//         || belowTile->tile == 0xBB)
+//     {
+// //loc_4ED38:              ; CODE XREF: handleZonkPushedByMurphy+5j handleZonkPushedByMurphy+Cj
+//         detonateBigExplosion(position + kLevelWidth);
+//     }
+// }
+
+// uint8_t checkMurphyMovementToPosition(int16_t position, UserInput userInput) // sub_4F21F   proc near       ; CODE XREF: update?+273p update?+2EDp ...
+// {
+//     // 01ED:85BC
+//     // Parameters:
+//     // - si: position
+//     // - ax: value of that position (state + tile)
+//     // - bl: user input to process
+//     StatefulLevelTile *tile = &gCurrentLevelState[position];
+
+//     if ((tile->state == 0xFF && tile->tile == 0xFF)
+//         || (tile->state == 0xAA && tile->tile == 0xAA)
+//         || (tile->state == 0))
+//     {
+// //loc_4F296:              ; CODE XREF: checkMurphyMovementToPosition+3j checkMurphyMovementToPosition+8j ...
+//         return 1;
+//     }
+//     else if (tile->tile == LevelTileTypeZonk)
+//     {
+// //loc_4F24F:              ; CODE XREF: checkMurphyMovementToPosition+11j
+//         if (userInput == UserInputLeft)
+//         {
+// //loc_4F25E:              ; CODE XREF: checkMurphyMovementToPosition+33j
+//             uint8_t stateType = (tile->state & 0xF0);
+//             if (stateType == 0x20
+//                 || stateType == 0x40
+//                 || stateType == 0x50
+//                 || stateType == 0x70)
+//             {
+// //loc_4F278:              ; CODE XREF: checkMurphyMovementToPosition+45j
+// //                ; checkMurphyMovementToPosition+4Aj ...
+//                 return 1;
+//             }
+//             detonateBigExplosion(position);
+
+// //loc_4F278:              ; CODE XREF: checkMurphyMovementToPosition+45j
+// //                ; checkMurphyMovementToPosition+4Aj ...
+//             return 1;
+//         }
+//         else if (userInput != UserInputRight)
+//         {
+//             detonateBigExplosion(position);
+//             return 1;
+//         }
+
+// //loc_4F27A:              ; CODE XREF: checkMurphyMovementToPosition+38j
+//         uint8_t stateType = (tile->state & 0xF0);
+//         if (stateType == 0x30
+//             || stateType == 0x40
+//             || stateType == 0x60
+//             || stateType == 0x70)
+//         {
+// //loc_4F294:              ; CODE XREF: checkMurphyMovementToPosition+61j
+// //                ; checkMurphyMovementToPosition+66j ...
+//             return 1;
+//         }
+//         detonateBigExplosion(position);
+
+// //loc_4F294:              ; CODE XREF: checkMurphyMovementToPosition+61j
+// //                ; checkMurphyMovementToPosition+66j ...
+//         return 1;
+//     }
+//     else if (tile->tile == LevelTileTypeExplosion)
+//     {
+// //loc_4F298:              ; CODE XREF: checkMurphyMovementToPosition+15j
+//         // 01ED:8635
+//         if ((tile->state & 0x80) != 0
+//             || tile->state < 4)
+//         {
+// //loc_4F2A2:              ; CODE XREF: checkMurphyMovementToPosition+7Cj
+//             detonateBigExplosion(position);
+//             return 1;
+//         }
+//         else
+//         {
+// //loc_4F2A7:              ; CODE XREF: checkMurphyMovementToPosition+81j
+//             tile->state = 0;
+//             tile->tile = LevelTileTypeSpace;
+//             return 0;
+//         }
+//     }
+//     else if (tile->tile == LevelTileTypeOrangeDisk
+//              || tile->tile == LevelTileTypePortRight
+//              || tile->tile == LevelTileTypePortDown
+//              || tile->tile == LevelTileTypePortLeft
+//              || tile->tile == LevelTileTypePortUp)
+//     {
+// //loc_4F296:              ; CODE XREF: checkMurphyMovementToPosition+3j checkMurphyMovementToPosition+8j ...
+//         return 1;
+//     }
+//     else
+//     {
+//         detonateBigExplosion(position);
+//         return 1;
+//     }
+// }
+
+// void updateSpecialPort(int16_t position) // sub_4F2AF   proc near       ; CODE XREF: update?+116Ap
+//                    // ; update?+1197p ...
+// {
+//     // 01ED:864C
+//     if (gNumberOfSpecialPorts == 0)
+//     {
+//         return;
+//     }
+
+//     uint8_t isPortInPosition = 0;
+//     uint8_t portIndex = 0;
+
+//     for (uint8_t i = 0; i < gNumberOfSpecialPorts; ++i)
+//     {
+// //loc_4F2BD:              ; CODE XREF: updateSpecialPort+19j
+//         SpecialPortInfo portInfo = gCurrentLevel.specialPortsInfo[i];
+//         // For _reasons_ the port position has its bytes inverted (first high, then low), so we must reverse them
+//         uint16_t portPosition = swap16(portInfo.position);
+//         portPosition /= 2; // We must divide by 2 because the level format works with words
+
+//         if (portPosition == position)
+//         {
+//             isPortInPosition = 1;
+//             portIndex = i;
+//             break;
+//         }
+//     }
+
+//     if (isPortInPosition == 0)
+//     {
+//         return;
+//     }
+
+// //loc_4F2CB:              ; CODE XREF: updateSpecialPort+14j
+//     SpecialPortInfo portInfo = gCurrentLevel.specialPortsInfo[portIndex];
+//     gIsGravityEnabled = portInfo.gravity;
+//     gAreZonksFrozen = portInfo.freezeZonks;
+//     gAreEnemiesFrozen = portInfo.freezeEnemies;
+//     // I still don't know where word_510AC is read :fearful:
+//     // I tried with a breakpoint on memory read and it was never accessed :shrug:
+//     // I can probably forget about it...
+//     // word_510AC = word_510AC ^ gRandomGeneratorSeed;
 }
 
 void updateSnikSnakTiles(int16_t position) // movefun4  proc near       ; DATA XREF: data:162Co
 {
-    // 01ED:868D
-    if (gAreEnemiesFrozen == 1)
-    {
-        return;
-    }
+//     // 01ED:868D
+//     if (gAreEnemiesFrozen == 1)
+//     {
+//         return;
+//     }
 
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
 
-    if (currentTile->tile != LevelTileTypeSnikSnak)
-    {
-        return;
-    }
+//     if (currentTile->tile != LevelTileTypeSnikSnak)
+//     {
+//         return;
+//     }
 
-    uint8_t frame = currentTile->state;
+//     uint8_t frame = currentTile->state;
 
-    FrameBasedMovingFunction function = kSnikSnakMovingFunctions[frame];
+//     FrameBasedMovingFunction function = kSnikSnakMovingFunctions[frame];
 
-    if (function != NULL)
-    {
-        // 01ED:86AC
-        function(position, frame);
-    }
+//     if (function != NULL)
+//     {
+//         // 01ED:86AC
+//         function(position, frame);
+//     }
 }
 
 void updateSnikSnakTurnLeft(int16_t position, uint8_t frame) // sub_4F312   proc near       ; DATA XREF: data:movingFunctions3o
 {
-    // 01ED:86AF
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+//     // 01ED:86AF
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
 
-    uint16_t value = gFrameCounter & 3;
+//     uint16_t value = gFrameCounter & 3;
 
-    if (value == 0)
-    {
-//loc_4F320:              ; CODE XREF: updateSnikSnakTurnLeft+6j
-        Point frameCoordinates = kSnikSnakAnimationFrameCoordinates[frame];
-        drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
-        frame++;
-        frame &= 7;
-        currentTile->state = frame;
-        return;
-    }
-    else if (value != 3)
-    {
-        return;
-    }
+//     if (value == 0)
+//     {
+// //loc_4F320:              ; CODE XREF: updateSnikSnakTurnLeft+6j
+//         //Point frameCoordinates = kSnikSnakAnimationFrameCoordinates[frame];
+//         drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
+//         frame++;
+//         frame &= 7;
+//         currentTile->state = frame;
+//         return;
+//     }
+//     else if (value != 3)
+//     {
+//         return;
+//     }
 
-//loc_4F362:              ; CODE XREF: updateSnikSnakTurnLeft+Bj
-    uint8_t state = currentTile->state;
-    uint8_t nextMovingObject = 0;
+// //loc_4F362:              ; CODE XREF: updateSnikSnakTurnLeft+Bj
+//     uint8_t state = currentTile->state;
+//     uint8_t nextMovingObject = 0;
 
-    if (state == 0)
-    {
-//loc_4F37B:              ; CODE XREF: updateSnikSnakTurnLeft+57j
-        if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F38E:              ; CODE XREF: updateSnikSnakTurnLeft+6Ej
-            currentTile->state = 0x1;
-            currentTile->tile = 0xBB;
-            aboveTile->state = 0x10;
-            aboveTile->tile = LevelTileTypeSnikSnak;
-            return;
-        }
-        nextMovingObject = aboveTile->state;
-        if (aboveTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else if (state == 2)
-    {
-//loc_4F39E:              ; CODE XREF: updateSnikSnakTurnLeft+5Cj
-        if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F3B1:              ; CODE XREF: updateSnikSnakTurnLeft+91j
-            currentTile->state = 0x2;
-            currentTile->tile = 0xBB;
-            leftTile->state = 0x18;
-            leftTile->tile = LevelTileTypeSnikSnak;
-            return;
-        }
-        nextMovingObject = leftTile->state;
-        if (leftTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else if (state == 4)
-    {
-//loc_4F3C1:              ; CODE XREF: updateSnikSnakTurnLeft+61j
-        if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F3D7:              ; CODE XREF: updateSnikSnakTurnLeft+B4j
-            currentTile->state = 0x3;
-            currentTile->tile = 0xBB;
-            belowTile->state = 0x20;
-            belowTile->tile = LevelTileTypeSnikSnak;
-            return;
-        }
-        nextMovingObject = belowTile->state;
-        if (belowTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else if (state == 6)
-    {
-//loc_4F3E7:              ; CODE XREF: updateSnikSnakTurnLeft+66j
-        if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F3FD:              ; CODE XREF: updateSnikSnakTurnLeft+DAj
-            currentTile->state = 0x4;
-            currentTile->tile = 0xBB;
-            rightTile->state = 0x28;
-            rightTile->tile = LevelTileTypeSnikSnak;
-            return;
-        }
-        nextMovingObject = rightTile->state;
-        if (rightTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else
-    {
-        return;
-    }
+//     if (state == 0)
+//     {
+// //loc_4F37B:              ; CODE XREF: updateSnikSnakTurnLeft+57j
+//         if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F38E:              ; CODE XREF: updateSnikSnakTurnLeft+6Ej
+//             currentTile->state = 0x1;
+//             currentTile->tile = 0xBB;
+//             aboveTile->state = 0x10;
+//             aboveTile->tile = LevelTileTypeSnikSnak;
+//             return;
+//         }
+//         nextMovingObject = aboveTile->state;
+//         if (aboveTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else if (state == 2)
+//     {
+// //loc_4F39E:              ; CODE XREF: updateSnikSnakTurnLeft+5Cj
+//         if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F3B1:              ; CODE XREF: updateSnikSnakTurnLeft+91j
+//             currentTile->state = 0x2;
+//             currentTile->tile = 0xBB;
+//             leftTile->state = 0x18;
+//             leftTile->tile = LevelTileTypeSnikSnak;
+//             return;
+//         }
+//         nextMovingObject = leftTile->state;
+//         if (leftTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else if (state == 4)
+//     {
+// //loc_4F3C1:              ; CODE XREF: updateSnikSnakTurnLeft+61j
+//         if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F3D7:              ; CODE XREF: updateSnikSnakTurnLeft+B4j
+//             currentTile->state = 0x3;
+//             currentTile->tile = 0xBB;
+//             belowTile->state = 0x20;
+//             belowTile->tile = LevelTileTypeSnikSnak;
+//             return;
+//         }
+//         nextMovingObject = belowTile->state;
+//         if (belowTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else if (state == 6)
+//     {
+// //loc_4F3E7:              ; CODE XREF: updateSnikSnakTurnLeft+66j
+//         if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F3FD:              ; CODE XREF: updateSnikSnakTurnLeft+DAj
+//             currentTile->state = 0x4;
+//             currentTile->tile = 0xBB;
+//             rightTile->state = 0x28;
+//             rightTile->tile = LevelTileTypeSnikSnak;
+//             return;
+//         }
+//         nextMovingObject = rightTile->state;
+//         if (rightTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else
+//     {
+//         return;
+//     }
 
-//loc_4F34A:              ; CODE XREF: updateSnikSnakTurnLeft+79j
-//                ; updateSnikSnakTurnLeft+9Cj ...
-    if (nextMovingObject != 0x1B
-        && nextMovingObject != 0x19
-        && nextMovingObject != 0x18
-        && nextMovingObject != 0x1A)
-    {
-        detonateBigExplosion(position);
-    }
+// //loc_4F34A:              ; CODE XREF: updateSnikSnakTurnLeft+79j
+// //                ; updateSnikSnakTurnLeft+9Cj ...
+//     if (nextMovingObject != 0x1B
+//         && nextMovingObject != 0x19
+//         && nextMovingObject != 0x18
+//         && nextMovingObject != 0x1A)
+//     {
+//         detonateBigExplosion(position);
+//     }
 }
 
 void updateSnikSnakTurnRight(int16_t position, uint8_t frame) // sub_4F40D   proc near       ; DATA XREF: data:155Ao
 {
-    // 01ED:87AA
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     // 01ED:87AA
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
 
-    uint16_t value = gFrameCounter & 3;
+//     uint16_t value = gFrameCounter & 3;
 
-    if (value == 0)
-    {
-//loc_4F41B:              ; CODE XREF: updateSnikSnakTurnRight+6j
-        Point frameCoordinates = kSnikSnakAnimationFrameCoordinates[frame];
-        drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
-        frame++;
-        frame &= 7;
-        frame |= 8;
-        currentTile->state = frame;
-        return;
-    }
-    else if (value != 3)
-    {
-        return;
-    }
+//     if (value == 0)
+//     {
+// //loc_4F41B:              ; CODE XREF: updateSnikSnakTurnRight+6j
+//         //Point frameCoordinates = kSnikSnakAnimationFrameCoordinates[frame];
+//         drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
+//         frame++;
+//         frame &= 7;
+//         frame |= 8;
+//         currentTile->state = frame;
+//         return;
+//     }
+//     else if (value != 3)
+//     {
+//         return;
+//     }
 
-//loc_4F45F:              ; CODE XREF: updateSnikSnakTurnRight+Bj
-    uint8_t state = currentTile->state;
-    uint8_t nextMovingObject = 0;
-    if (state == 8)
-    {
-//loc_4F478:              ; CODE XREF: updateSnikSnakTurnRight+59j
-        if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F48B:              ; CODE XREF: updateSnikSnakTurnRight+70j
-            currentTile->state = 0x1;
-            currentTile->tile = 0xBB;
-            aboveTile->state = 0x10;
-            aboveTile->tile = LevelTileTypeSnikSnak;
-            return;
-        }
-        nextMovingObject = aboveTile->state;
-        if (aboveTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else if (state == 0xA)
-    {
-//loc_4F4E4:              ; CODE XREF: updateSnikSnakTurnRight+5Ej
-        if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F4FA:              ; CODE XREF: updateSnikSnakTurnLeft+DAj
-            currentTile->state = 0x4;
-            currentTile->tile = 0xBB;
-            rightTile->state = 0x28;
-            rightTile->tile = LevelTileTypeSnikSnak;
-            return;
-        }
-        nextMovingObject = rightTile->state;
-        if (rightTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else if (state == 0xC)
-    {
-//loc_4F4BE:              ; CODE XREF: updateSnikSnakTurnRight+63j
-        if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F4D4:              ; CODE XREF: updateSnikSnakTurnRight+B6j
-            currentTile->state = 0x3;
-            currentTile->tile = 0xBB;
-            belowTile->state = 0x20;
-            belowTile->tile = LevelTileTypeSnikSnak;
-            return;
-        }
-        nextMovingObject = belowTile->state;
-        if (belowTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else if (state == 0xE)
-    {
-//loc_4F49B:              ; CODE XREF: updateSnikSnakTurnRight+68j
-        if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F4AE:              ; CODE XREF: updateSnikSnakTurnRight+93j
-            currentTile->state = 0x2;
-            currentTile->tile = 0xBB;
-            leftTile->state = 0x18;
-            leftTile->tile = LevelTileTypeSnikSnak;
-            return;
-        }
-        nextMovingObject = leftTile->state;
-        if (leftTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else
-    {
-        return;
-    }
+// //loc_4F45F:              ; CODE XREF: updateSnikSnakTurnRight+Bj
+//     uint8_t state = currentTile->state;
+//     uint8_t nextMovingObject = 0;
+//     if (state == 8)
+//     {
+// //loc_4F478:              ; CODE XREF: updateSnikSnakTurnRight+59j
+//         if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F48B:              ; CODE XREF: updateSnikSnakTurnRight+70j
+//             currentTile->state = 0x1;
+//             currentTile->tile = 0xBB;
+//             aboveTile->state = 0x10;
+//             aboveTile->tile = LevelTileTypeSnikSnak;
+//             return;
+//         }
+//         nextMovingObject = aboveTile->state;
+//         if (aboveTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else if (state == 0xA)
+//     {
+// //loc_4F4E4:              ; CODE XREF: updateSnikSnakTurnRight+5Ej
+//         if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F4FA:              ; CODE XREF: updateSnikSnakTurnLeft+DAj
+//             currentTile->state = 0x4;
+//             currentTile->tile = 0xBB;
+//             rightTile->state = 0x28;
+//             rightTile->tile = LevelTileTypeSnikSnak;
+//             return;
+//         }
+//         nextMovingObject = rightTile->state;
+//         if (rightTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else if (state == 0xC)
+//     {
+// //loc_4F4BE:              ; CODE XREF: updateSnikSnakTurnRight+63j
+//         if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F4D4:              ; CODE XREF: updateSnikSnakTurnRight+B6j
+//             currentTile->state = 0x3;
+//             currentTile->tile = 0xBB;
+//             belowTile->state = 0x20;
+//             belowTile->tile = LevelTileTypeSnikSnak;
+//             return;
+//         }
+//         nextMovingObject = belowTile->state;
+//         if (belowTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else if (state == 0xE)
+//     {
+// //loc_4F49B:              ; CODE XREF: updateSnikSnakTurnRight+68j
+//         if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F4AE:              ; CODE XREF: updateSnikSnakTurnRight+93j
+//             currentTile->state = 0x2;
+//             currentTile->tile = 0xBB;
+//             leftTile->state = 0x18;
+//             leftTile->tile = LevelTileTypeSnikSnak;
+//             return;
+//         }
+//         nextMovingObject = leftTile->state;
+//         if (leftTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else
+//     {
+//         return;
+//     }
 
-//loc_4F447:              ; CODE XREF: updateSnikSnakTurnRight+7Bj
-//                ; updateSnikSnakTurnRight+9Ej ...
-    if (nextMovingObject != 0x1B
-        && nextMovingObject != 0x19
-        && nextMovingObject != 0x18
-        && nextMovingObject != 0x1A)
-    {
-        detonateBigExplosion(position);
-    }
+// //loc_4F447:              ; CODE XREF: updateSnikSnakTurnRight+7Bj
+// //                ; updateSnikSnakTurnRight+9Ej ...
+//     if (nextMovingObject != 0x1B
+//         && nextMovingObject != 0x19
+//         && nextMovingObject != 0x18
+//         && nextMovingObject != 0x1A)
+//     {
+//         detonateBigExplosion(position);
+//     }
 }
 
 void updateSnikSnakMovementUp(int16_t position, uint8_t frame) // sub_4F50A    proc near       ; DATA XREF: data:156Ao
 {
-    // 01ED:88A7
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+    return;
+//     // 01ED:88A7
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
 
-    uint16_t finalPosition = position + kLevelWidth;
-    Point frameCoordinates = kSnikSnakAnimationFrameCoordinates[frame];
-    // sub bx, 1Eh
-    frame -= 15; // 0x1E / 2
-    uint16_t offset = kFallAnimationGravityOffsets[frame];
+//     uint16_t finalPosition = position + kLevelWidth;
+//     //Point frameCoordinates = kSnikSnakAnimationFrameCoordinates[frame];
+//     // sub bx, 1Eh
+//     frame -= 15; // 0x1E / 2
+//     uint16_t offset = kFallAnimationGravityOffsets[frame];
 
-    uint8_t tileX = (finalPosition % kLevelWidth);
-    uint8_t tileY = (finalPosition / kLevelWidth);
+//     uint8_t tileX = (finalPosition % kLevelWidth);
+//     uint8_t tileY = (finalPosition / kLevelWidth);
 
-    uint16_t dstX = tileX * kTileSize - (offset % 122) * 2;
-    uint16_t dstY = tileY * kTileSize - (offset / 122) * 2;
+//     uint16_t dstX = tileX * kTileSize - (offset % 122) * 2;
+//     uint16_t dstY = tileY * kTileSize - (offset / 122) * 2;
 
-    drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
-                                 kTileSize,
-                                 kTileSize + 2,
-                                 dstX, dstY);
-    if (frame == 7)
-    {
-        if (belowTile->tile != LevelTileTypeExplosion)
-        {
-            belowTile->state = 0;
-            belowTile->tile = LevelTileTypeSpace;
-        }
-    }
-//loc_4F546:              ; CODE XREF: updateSnikSnakMovementUp+2Dj
-//                ; updateSnikSnakMovementUp+34j
-    if (frame < 8)
-    {
-        frame += 0x10;
-        currentTile->state = frame;
-        return;
-    }
+//     drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
+//                                  kTileSize,
+//                                  kTileSize + 2,
+//                                  dstX, dstY);
+//     if (frame == 7)
+//     {
+//         if (belowTile->tile != LevelTileTypeExplosion)
+//         {
+//             belowTile->state = 0;
+//             belowTile->tile = LevelTileTypeSpace;
+//         }
+//     }
+// //loc_4F546:              ; CODE XREF: updateSnikSnakMovementUp+2Dj
+// //                ; updateSnikSnakMovementUp+34j
+//     if (frame < 8)
+//     {
+//         frame += 0x10;
+//         currentTile->state = frame;
+//         return;
+//     }
 
-//loc_4F553:              ; CODE XREF: updateSnikSnakMovementUp+3Fj
-    currentTile->state = 0;
-    currentTile->tile = LevelTileTypeSnikSnak;
+// //loc_4F553:              ; CODE XREF: updateSnikSnakMovementUp+3Fj
+//     currentTile->state = 0;
+//     currentTile->tile = LevelTileTypeSnikSnak;
 
-    if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 1;
-        return;
-    }
+//     if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 1;
+//         return;
+//     }
 
-//loc_4F566:              ; CODE XREF: updateSnikSnakMovementUp+54j
-    if (leftTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 1;
-        return;
-    }
+// //loc_4F566:              ; CODE XREF: updateSnikSnakMovementUp+54j
+//     if (leftTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 1;
+//         return;
+//     }
 
-//loc_4F573:              ; CODE XREF: updateSnikSnakMovementUp+61j
-    if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 1;
-        currentTile->tile = 0xBB;
-        aboveTile->state = 0x10;
-        aboveTile->tile = LevelTileTypeSnikSnak;
-        return;
-    }
+// //loc_4F573:              ; CODE XREF: updateSnikSnakMovementUp+61j
+//     if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 1;
+//         currentTile->tile = 0xBB;
+//         aboveTile->state = 0x10;
+//         aboveTile->tile = LevelTileTypeSnikSnak;
+//         return;
+//     }
 
-//loc_4F58A:              ; CODE XREF: updateSnikSnakMovementUp+6Ej
-    if (aboveTile->tile == LevelTileTypeMurphy)
-    {
-        detonateBigExplosion(position);
-        return;
-    }
+// //loc_4F58A:              ; CODE XREF: updateSnikSnakMovementUp+6Ej
+//     if (aboveTile->tile == LevelTileTypeMurphy)
+//     {
+//         detonateBigExplosion(position);
+//         return;
+//     }
 
-//loc_4F595:              ; CODE XREF: updateSnikSnakMovementUp+85j
-    if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
-    {
-        // 01ED:8939
-        currentTile->state = 9;
-        return;
-    }
+// //loc_4F595:              ; CODE XREF: updateSnikSnakMovementUp+85j
+//     if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
+//     {
+//         // 01ED:8939
+//         currentTile->state = 9;
+//         return;
+//     }
 
-//loc_4F5A2:              ; CODE XREF: updateSnikSnakMovementUp+90j
-    if (rightTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 9;
-        return;
-    }
+// //loc_4F5A2:              ; CODE XREF: updateSnikSnakMovementUp+90j
+//     if (rightTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 9;
+//         return;
+//     }
 
-//loc_4F5AF:              ; CODE XREF: updateSnikSnakMovementUp+9Dj
-    currentTile->state = 1;
-}
+// //loc_4F5AF:              ; CODE XREF: updateSnikSnakMovementUp+9Dj
+//     currentTile->state = 1;
+// }
 
-void updateSnikSnakMovementLeft(int16_t position, uint8_t frame) // sub_4F5B5   proc near       ; DATA XREF: data:157Ao
-{
-    // 01ED:8952
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+// void updateSnikSnakMovementLeft(int16_t position, uint8_t frame) // sub_4F5B5   proc near       ; DATA XREF: data:157Ao
+// {
+//     // 01ED:8952
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
 
-    Point frameCoordinates = kSnikSnakAnimationFrameCoordinates[frame];
+//     //Point frameCoordinates = kSnikSnakAnimationFrameCoordinates[frame];
 
-    uint8_t tileX = (position % kLevelWidth);
-    uint8_t tileY = (position / kLevelWidth);
+//     uint8_t tileX = (position % kLevelWidth);
+//     uint8_t tileY = (position / kLevelWidth);
 
-    uint16_t dstX = tileX * kTileSize;
-    uint16_t dstY = tileY * kTileSize;
+//     uint16_t dstX = tileX * kTileSize;
+//     uint16_t dstY = tileY * kTileSize;
 
-    drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
-                                 kTileSize * 2,
-                                 kTileSize,
-                                 dstX, dstY);
+//     drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
+//                                  kTileSize * 2,
+//                                  kTileSize,
+//                                  dstX, dstY);
 
-    frame &= 7;
-    frame++;
-    if (frame == 7)
-    {
-        if (rightTile->tile != LevelTileTypeExplosion)
-        {
-            rightTile->state = 0;
-            rightTile->tile = LevelTileTypeSpace;
-        }
-    }
-//loc_4F5EC:              ; CODE XREF: updateSnikSnakMovementLeft+28j
-//                ; updateSnikSnakMovementLeft+2Fj
-    if (frame < 8)
-    {
-        frame += 0x18;
-        currentTile->state = frame;
-        return;
-    }
+//     frame &= 7;
+//     frame++;
+//     if (frame == 7)
+//     {
+//         if (rightTile->tile != LevelTileTypeExplosion)
+//         {
+//             rightTile->state = 0;
+//             rightTile->tile = LevelTileTypeSpace;
+//         }
+//     }
+// //loc_4F5EC:              ; CODE XREF: updateSnikSnakMovementLeft+28j
+// //                ; updateSnikSnakMovementLeft+2Fj
+//     if (frame < 8)
+//     {
+//         frame += 0x18;
+//         currentTile->state = frame;
+//         return;
+//     }
 
-//loc_4F5F9:              ; CODE XREF: updateSnikSnakMovementLeft+3Aj
-    currentTile->state = 0;
-    currentTile->tile = LevelTileTypeSnikSnak;
+// //loc_4F5F9:              ; CODE XREF: updateSnikSnakMovementLeft+3Aj
+//     currentTile->state = 0;
+//     currentTile->tile = LevelTileTypeSnikSnak;
 
-    if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 3;
-        return;
-    }
+//     if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 3;
+//         return;
+//     }
 
-//loc_4F60C:              ; CODE XREF: updateSnikSnakMovementLeft+4Fj
-    if (belowTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 3;
-        return;
-    }
+// //loc_4F60C:              ; CODE XREF: updateSnikSnakMovementLeft+4Fj
+//     if (belowTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 3;
+//         return;
+//     }
 
-//loc_4F619:              ; CODE XREF: updateSnikSnakMovementLeft+5Cj
-    if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 2;
-        currentTile->tile = 0xBB;
-        leftTile->state = 0x18;
-        leftTile->tile = LevelTileTypeSnikSnak;
-        return;
-    }
+// //loc_4F619:              ; CODE XREF: updateSnikSnakMovementLeft+5Cj
+//     if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 2;
+//         currentTile->tile = 0xBB;
+//         leftTile->state = 0x18;
+//         leftTile->tile = LevelTileTypeSnikSnak;
+//         return;
+//     }
 
-//loc_4F630:              ; CODE XREF: updateSnikSnakMovementLeft+69j
-    if (leftTile->tile == LevelTileTypeMurphy)
-    {
-        detonateBigExplosion(position);
-        return;
-    }
+// //loc_4F630:              ; CODE XREF: updateSnikSnakMovementLeft+69j
+//     if (leftTile->tile == LevelTileTypeMurphy)
+//     {
+//         detonateBigExplosion(position);
+//         return;
+//     }
 
-//loc_4F63B:              ; CODE XREF: updateSnikSnakMovementLeft+80j
-    if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 0xF;
-        return;
-    }
+// //loc_4F63B:              ; CODE XREF: updateSnikSnakMovementLeft+80j
+//     if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 0xF;
+//         return;
+//     }
 
-//loc_4F648:              ; CODE XREF: updateSnikSnakMovementLeft+8Bj
-    if (aboveTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 0xF;
-        return;
-    }
+// //loc_4F648:              ; CODE XREF: updateSnikSnakMovementLeft+8Bj
+//     if (aboveTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 0xF;
+//         return;
+//     }
 
-//loc_4F655:              ; CODE XREF: updateSnikSnakMovementLeft+98j
-    currentTile->state = 3;
-}
+// //loc_4F655:              ; CODE XREF: updateSnikSnakMovementLeft+98j
+//     currentTile->state = 3;
+// }
 
-void updateSnikSnakMovementDown(int16_t position, uint8_t frame) // sub_4F65B   proc near       ; DATA XREF: data:158Ao
-{
-    // 01ED:89F8
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+// void updateSnikSnakMovementDown(int16_t position, uint8_t frame) // sub_4F65B   proc near       ; DATA XREF: data:158Ao
+// {
+//     // 01ED:89F8
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
 
-    uint16_t finalPosition = position - kLevelWidth;
-    Point frameCoordinates = kSnikSnakAnimationFrameCoordinates[frame];
-    //sub bx, 40h ; '@'
-    frame -= 0x20; // 0x40 / 2
+//     uint16_t finalPosition = position - kLevelWidth;
+//     //Point frameCoordinates = kSnikSnakAnimationFrameCoordinates[frame];
+//     //sub bx, 40h ; '@'
+//     frame -= 0x20; // 0x40 / 2
 
-    uint16_t offset = kFallAnimationGravityOffsets[frame];
+//     uint16_t offset = kFallAnimationGravityOffsets[frame];
 
-    uint8_t tileX = (finalPosition % kLevelWidth);
-    uint8_t tileY = (finalPosition / kLevelWidth);
+//     uint8_t tileX = (finalPosition % kLevelWidth);
+//     uint8_t tileY = (finalPosition / kLevelWidth);
 
-    uint16_t dstX = tileX * kTileSize + (offset % 122) * 2;
-    uint16_t dstY = tileY * kTileSize + (offset / 122) * 2;
+//     uint16_t dstX = tileX * kTileSize + (offset % 122) * 2;
+//     uint16_t dstY = tileY * kTileSize + (offset / 122) * 2;
 
-    drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
-                                 kTileSize,
-                                 kTileSize + 2,
-                                 dstX, dstY);
+//     drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
+//                                  kTileSize,
+//                                  kTileSize + 2,
+//                                  dstX, dstY);
 
-    frame++;
-    if (frame == 7)
-    {
-        if (aboveTile->tile != LevelTileTypeExplosion)
-        {
-            aboveTile->state = 0;
-            aboveTile->tile = LevelTileTypeSpace;
-        }
-    }
-//loc_4F699:              ; CODE XREF: sub_4F66B+1Fj
-//                ; sub_4F66B+26j
-    if (frame < 8)
-    {
-        frame += 0x20;
-        currentTile->state = frame;
-        return;
-    }
+//     frame++;
+//     if (frame == 7)
+//     {
+//         if (aboveTile->tile != LevelTileTypeExplosion)
+//         {
+//             aboveTile->state = 0;
+//             aboveTile->tile = LevelTileTypeSpace;
+//         }
+//     }
+// //loc_4F699:              ; CODE XREF: sub_4F66B+1Fj
+// //                ; sub_4F66B+26j
+//     if (frame < 8)
+//     {
+//         frame += 0x20;
+//         currentTile->state = frame;
+//         return;
+//     }
 
-//loc_4F6A6:              ; CODE XREF: sub_4F66B+31j
-    currentTile->state = 0;
-    currentTile->tile = LevelTileTypeSnikSnak;
+// //loc_4F6A6:              ; CODE XREF: sub_4F66B+31j
+//     currentTile->state = 0;
+//     currentTile->tile = LevelTileTypeSnikSnak;
 
-    if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 5;
-        return;
-    }
+//     if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 5;
+//         return;
+//     }
 
-//loc_4F6B9:              ; CODE XREF: sub_4F66B+46j
-    if (rightTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 5;
-        return;
-    }
+// //loc_4F6B9:              ; CODE XREF: sub_4F66B+46j
+//     if (rightTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 5;
+//         return;
+//     }
 
-//loc_4F6C6:              ; CODE XREF: sub_4F66B+53j
-    if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 3;
-        currentTile->tile = 0xBB;
-        belowTile->state = 0x20;
-        belowTile->tile = LevelTileTypeSnikSnak;
-        return;
-    }
+// //loc_4F6C6:              ; CODE XREF: sub_4F66B+53j
+//     if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 3;
+//         currentTile->tile = 0xBB;
+//         belowTile->state = 0x20;
+//         belowTile->tile = LevelTileTypeSnikSnak;
+//         return;
+//     }
 
-//loc_4F6DD:              ; CODE XREF: sub_4F66B+60j
-    if (belowTile->tile == LevelTileTypeMurphy)
-    {
-        detonateBigExplosion(position);
-        return;
-    }
+// //loc_4F6DD:              ; CODE XREF: sub_4F66B+60j
+//     if (belowTile->tile == LevelTileTypeMurphy)
+//     {
+//         detonateBigExplosion(position);
+//         return;
+//     }
 
-//loc_4F6E8:              ; CODE XREF: sub_4F66B+77j
-    if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-    {
-        // 01ED:8A8C
-        currentTile->state = 0xD;
-        return;
-    }
+// //loc_4F6E8:              ; CODE XREF: sub_4F66B+77j
+//     if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//     {
+//         // 01ED:8A8C
+//         currentTile->state = 0xD;
+//         return;
+//     }
 
-//loc_4F6F5:              ; CODE XREF: sub_4F66B+82j
-    if (leftTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 0xD;
-        return;
-    }
+// //loc_4F6F5:              ; CODE XREF: sub_4F66B+82j
+//     if (leftTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 0xD;
+//         return;
+//     }
 
-//loc_4F702:              ; CODE XREF: sub_4F66B+8Fj
-    currentTile->state = 5;
-}
+// //loc_4F702:              ; CODE XREF: sub_4F66B+8Fj
+//     currentTile->state = 5;
+// }
 
-void updateSnikSnakMovementRight(int16_t position, uint8_t frame) // sub_4F708   proc near       ; DATA XREF: data:159Ao
-{
-    // 01ED:8AA5
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+// void updateSnikSnakMovementRight(int16_t position, uint8_t frame) // sub_4F708   proc near       ; DATA XREF: data:159Ao
+// {
+//     // 01ED:8AA5
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
 
-    Point frameCoordinates = kSnikSnakAnimationFrameCoordinates[frame];
+//     //Point frameCoordinates = kSnikSnakAnimationFrameCoordinates[frame];
 
-    uint16_t finalPosition = position - 1;
+//     uint16_t finalPosition = position - 1;
 
-    uint8_t tileX = (finalPosition % kLevelWidth);
-    uint8_t tileY = (finalPosition / kLevelWidth);
+//     uint8_t tileX = (finalPosition % kLevelWidth);
+//     uint8_t tileY = (finalPosition / kLevelWidth);
 
-    uint16_t dstX = tileX * kTileSize;
-    uint16_t dstY = tileY * kTileSize;
+//     uint16_t dstX = tileX * kTileSize;
+//     uint16_t dstY = tileY * kTileSize;
 
-    drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
-                                 kTileSize * 2,
-                                 kTileSize,
-                                 dstX, dstY);
-    frame &= 7;
-    frame++;
-    if (frame == 7)
-    {
-        if (leftTile->tile != LevelTileTypeExplosion)
-        {
-            leftTile->state = 0;
-            leftTile->tile = LevelTileTypeSpace;
-        }
-    }
-//loc_4F740:              ; CODE XREF: updateSnikSnakMovementRight+29j
-//                ; updateSnikSnakMovementRight+30j
-    if (frame < 8)
-    {
-        frame += 0x28;
-        currentTile->state = frame;
-        return;
-    }
+//     drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
+//                                  kTileSize * 2,
+//                                  kTileSize,
+//                                  dstX, dstY);
+//     frame &= 7;
+//     frame++;
+//     if (frame == 7)
+//     {
+//         if (leftTile->tile != LevelTileTypeExplosion)
+//         {
+//             leftTile->state = 0;
+//             leftTile->tile = LevelTileTypeSpace;
+//         }
+//     }
+// //loc_4F740:              ; CODE XREF: updateSnikSnakMovementRight+29j
+// //                ; updateSnikSnakMovementRight+30j
+//     if (frame < 8)
+//     {
+//         frame += 0x28;
+//         currentTile->state = frame;
+//         return;
+//     }
 
-//loc_4F74D:              ; CODE XREF: updateSnikSnakMovementRight+3Bj
-    currentTile->state = 0;
-    currentTile->tile = LevelTileTypeSnikSnak;
+// //loc_4F74D:              ; CODE XREF: updateSnikSnakMovementRight+3Bj
+//     currentTile->state = 0;
+//     currentTile->tile = LevelTileTypeSnikSnak;
 
-    if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 7;
-        return;
-    }
+//     if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 7;
+//         return;
+//     }
 
-//loc_4F760:              ; CODE XREF: updateSnikSnakMovementRight+50j
-    if (aboveTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 7;
-        return;
-    }
+// //loc_4F760:              ; CODE XREF: updateSnikSnakMovementRight+50j
+//     if (aboveTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 7;
+//         return;
+//     }
 
-//loc_4F76D:              ; CODE XREF: updateSnikSnakMovementRight+5Dj
-    if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 4;
-        currentTile->tile = 0xBB;
-        rightTile->state = 0x28;
-        rightTile->tile = LevelTileTypeSnikSnak;
-        return;
-    }
+// //loc_4F76D:              ; CODE XREF: updateSnikSnakMovementRight+5Dj
+//     if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 4;
+//         currentTile->tile = 0xBB;
+//         rightTile->state = 0x28;
+//         rightTile->tile = LevelTileTypeSnikSnak;
+//         return;
+//     }
 
-//loc_4F784:              ; CODE XREF: updateSnikSnakMovementRight+6Aj
-    if (rightTile->tile == LevelTileTypeMurphy)
-    {
-        detonateBigExplosion(position);
-        return;
-    }
+// //loc_4F784:              ; CODE XREF: updateSnikSnakMovementRight+6Aj
+//     if (rightTile->tile == LevelTileTypeMurphy)
+//     {
+//         detonateBigExplosion(position);
+//         return;
+//     }
 
-//loc_4F78F:              ; CODE XREF: updateSnikSnakMovementRight+81j
-    if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 0xB;
-        return;
-    }
+// //loc_4F78F:              ; CODE XREF: updateSnikSnakMovementRight+81j
+//     if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 0xB;
+//         return;
+//     }
 
-//loc_4F79C:              ; CODE XREF: updateSnikSnakMovementRight+8Cj
-    if (belowTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 0xB;
-        return;
-    }
+// //loc_4F79C:              ; CODE XREF: updateSnikSnakMovementRight+8Cj
+//     if (belowTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 0xB;
+//         return;
+//     }
 
-//loc_4F7A9:              ; CODE XREF: updateSnikSnakMovementRight+99j
-    currentTile->state = 7;
+// //loc_4F7A9:              ; CODE XREF: updateSnikSnakMovementRight+99j
+//     currentTile->state = 7;
 }
 
 void updateElectronTiles(int16_t position) // movefun6  proc near       ; DATA XREF: data:163Ao
 {
-    // 01ED:8B4C
-    if (gAreEnemiesFrozen == 1)
-    {
-        return;
-    }
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     // 01ED:8B4C
+//     if (gAreEnemiesFrozen == 1)
+//     {
+//         return;
+//     }
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
 
-    if (currentTile->tile != LevelTileTypeElectron)
-    {
-        return;
-    }
+//     if (currentTile->tile != LevelTileTypeElectron)
+//     {
+//         return;
+//     }
 
-    uint8_t frame = currentTile->state;
+//     uint8_t frame = currentTile->state;
 
-    FrameBasedMovingFunction function = kElectronMovingFunctions[frame];
+//     FrameBasedMovingFunction function = kElectronMovingFunctions[frame];
 
-    if (function != NULL)
-    {
-        // 01ED:8B6B
-        function(position, frame);
-    }
+//     if (function != NULL)
+//     {
+//         // 01ED:8B6B
+//         function(position, frame);
+//     }
 }
 
 void updateElectronTurnLeft(int16_t position, uint8_t frame) // sub_4F7D1   proc near       ; DATA XREF: data:movingFunctions2o
 {
-    // 01ED:8B6E
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+//     // 01ED:8B6E
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
 
-    uint16_t value = gFrameCounter & 3;
+//     uint16_t value = gFrameCounter & 3;
 
-    if (value == 0)
-    {
-//loc_4F7DF:              ; CODE XREF: updateElectronTurnLeft+6j
-        Point frameCoordinates = kElectronAnimationFrameCoordinates[frame];
-        drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
-        frame++;
-        frame &= 7;
-        currentTile->state = frame;
-        return;
-    }
-    else if (value != 3)
-    {
-        return;
-    }
+//     if (value == 0)
+//     {
+// //loc_4F7DF:              ; CODE XREF: updateElectronTurnLeft+6j
+//         //Point frameCoordinates = kElectronAnimationFrameCoordinates[frame];
+//         drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
+//         frame++;
+//         frame &= 7;
+//         currentTile->state = frame;
+//         return;
+//     }
+//     else if (value != 3)
+//     {
+//         return;
+//     }
 
-//loc_4F80D:              ; CODE XREF: updateElectronTurnLeft+Bj
-    uint8_t state = currentTile->state;
-    if (state == 0)
-    {
-//loc_4F826:              ; CODE XREF: updateElectronTurnLeft+43j
-        if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F835:              ; CODE XREF: updateElectronTurnLeft+5Aj
-            currentTile->state = 0x1;
-            currentTile->tile = 0xBB;
-            aboveTile->state = 0x10;
-            aboveTile->tile = LevelTileTypeElectron;
-            return;
-        }
-        else if (aboveTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else if (state == 2)
-    {
-//loc_4F845:              ; CODE XREF: updateElectronTurnLeft+48j
-        if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F854:              ; CODE XREF: updateElectronTurnLeft+79j
-            currentTile->state = 0x2;
-            currentTile->tile = 0xBB;
-            leftTile->state = 0x18;
-            leftTile->tile = LevelTileTypeElectron;
-            return;
-        }
-        else if (leftTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else if (state == 4)
-    {
-//loc_4F864:              ; CODE XREF: updateElectronTurnLeft+4Dj
-        if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F873:              ; CODE XREF: updateElectronTurnLeft+98j
-            currentTile->state = 0x3;
-            currentTile->tile = 0xBB;
-            belowTile->state = 0x20;
-            belowTile->tile = LevelTileTypeElectron;
-            return;
-        }
-        else if (belowTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else if (state == 6)
-    {
-//loc_4F883:              ; CODE XREF: updateElectronTurnLeft+52j
-        if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F895:              ; CODE XREF: updateElectronTurnLeft+B7j
-            currentTile->state = 0x4;
-            currentTile->tile = 0xBB;
-            rightTile->state = 0x28;
-            rightTile->tile = LevelTileTypeElectron;
-            return;
-        }
-        else if (rightTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else
-    {
-        return;
-    }
+// //loc_4F80D:              ; CODE XREF: updateElectronTurnLeft+Bj
+//     uint8_t state = currentTile->state;
+//     if (state == 0)
+//     {
+// //loc_4F826:              ; CODE XREF: updateElectronTurnLeft+43j
+//         if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F835:              ; CODE XREF: updateElectronTurnLeft+5Aj
+//             currentTile->state = 0x1;
+//             currentTile->tile = 0xBB;
+//             aboveTile->state = 0x10;
+//             aboveTile->tile = LevelTileTypeElectron;
+//             return;
+//         }
+//         else if (aboveTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else if (state == 2)
+//     {
+// //loc_4F845:              ; CODE XREF: updateElectronTurnLeft+48j
+//         if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F854:              ; CODE XREF: updateElectronTurnLeft+79j
+//             currentTile->state = 0x2;
+//             currentTile->tile = 0xBB;
+//             leftTile->state = 0x18;
+//             leftTile->tile = LevelTileTypeElectron;
+//             return;
+//         }
+//         else if (leftTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else if (state == 4)
+//     {
+// //loc_4F864:              ; CODE XREF: updateElectronTurnLeft+4Dj
+//         if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F873:              ; CODE XREF: updateElectronTurnLeft+98j
+//             currentTile->state = 0x3;
+//             currentTile->tile = 0xBB;
+//             belowTile->state = 0x20;
+//             belowTile->tile = LevelTileTypeElectron;
+//             return;
+//         }
+//         else if (belowTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else if (state == 6)
+//     {
+// //loc_4F883:              ; CODE XREF: updateElectronTurnLeft+52j
+//         if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F895:              ; CODE XREF: updateElectronTurnLeft+B7j
+//             currentTile->state = 0x4;
+//             currentTile->tile = 0xBB;
+//             rightTile->state = 0x28;
+//             rightTile->tile = LevelTileTypeElectron;
+//             return;
+//         }
+//         else if (rightTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else
+//     {
+//         return;
+//     }
 
-//loc_4F809:              ; CODE XREF: updateElectronTurnLeft+61j
-//                ; updateElectronTurnLeft+80j ...
-    detonateBigExplosion(position);
-}
+// //loc_4F809:              ; CODE XREF: updateElectronTurnLeft+61j
+// //                ; updateElectronTurnLeft+80j ...
+//     detonateBigExplosion(position);
+// }
 
-void updateElectronTurnRight(int16_t position, uint8_t frame) // sub_4F8A5   proc near       ; DATA XREF: data:15BAo
-{
-    // 01ED:8C42
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+// void updateElectronTurnRight(int16_t position, uint8_t frame) // sub_4F8A5   proc near       ; DATA XREF: data:15BAo
+// {
+//     // 01ED:8C42
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
 
-    uint16_t value = gFrameCounter & 3;
+//     uint16_t value = gFrameCounter & 3;
 
-    if (value == 0)
-    {
-//loc_4F8B3:              ; CODE XREF: updateElectronTurnRight+6j
-        Point frameCoordinates = kElectronAnimationFrameCoordinates[frame];
-        drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
-        frame++;
-        frame &= 7;
-        frame |= 8;
-        currentTile->state = frame;
-        return;
-    }
-    else if (value != 3)
-    {
-        return;
-    }
+//     if (value == 0)
+//     {
+// //loc_4F8B3:              ; CODE XREF: updateElectronTurnRight+6j
+//         //Point frameCoordinates = kElectronAnimationFrameCoordinates[frame];
+//         drawMovingFrame(frameCoordinates.x, frameCoordinates.y, position);
+//         frame++;
+//         frame &= 7;
+//         frame |= 8;
+//         currentTile->state = frame;
+//         return;
+//     }
+//     else if (value != 3)
+//     {
+//         return;
+//     }
 
-//loc_4F8E3:              ; CODE XREF: updateElectronTurnRight+Bj
-    uint8_t state = currentTile->state;
-    if (state == 8)
-    {
-//loc_4F8FC:              ; CODE XREF: updateElectronTurnRight+45j
-        if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F90B:              ; CODE XREF: updateElectronTurnRight+5Cj
-            currentTile->state = 0x1;
-            currentTile->tile = 0xBB;
-            aboveTile->state = 0x10;
-            aboveTile->tile = LevelTileTypeElectron;
-            return;
-        }
-        else if (aboveTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else if (state == 0xA)
-    {
-//loc_4F959:              ; CODE XREF: updateElectronTurnRight+4Aj
-        if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F96B:              ; CODE XREF: updateElectronTurnRight+B9j
-            currentTile->state = 0x4;
-            currentTile->tile = 0xBB;
-            rightTile->state = 0x28;
-            rightTile->tile = LevelTileTypeElectron;
-            return;
-        }
-        else if (rightTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else if (state == 0xC)
-    {
-//loc_4F93A:              ; CODE XREF: updateElectronTurnRight+4Fj
-        if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F949:              ; CODE XREF: updateElectronTurnRight+9Aj
-            currentTile->state = 0x3;
-            currentTile->tile = 0xBB;
-            belowTile->state = 0x20;
-            belowTile->tile = LevelTileTypeElectron;
-            return;
-        }
-        else if (belowTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else if (state == 0xE)
-    {
-//loc_4F91B:              ; CODE XREF: updateElectronTurnRight+54j
-        if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-        {
-//loc_4F92A:              ; CODE XREF: updateElectronTurnRight+7Bj
-            currentTile->state = 0x2;
-            currentTile->tile = 0xBB;
-            leftTile->state = 0x18;
-            leftTile->tile = LevelTileTypeElectron;
-            return;
-        }
-        else if (leftTile->tile != LevelTileTypeMurphy)
-        {
-            return;
-        }
-    }
-    else
-    {
-        return;
-    }
+// //loc_4F8E3:              ; CODE XREF: updateElectronTurnRight+Bj
+//     uint8_t state = currentTile->state;
+//     if (state == 8)
+//     {
+// //loc_4F8FC:              ; CODE XREF: updateElectronTurnRight+45j
+//         if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F90B:              ; CODE XREF: updateElectronTurnRight+5Cj
+//             currentTile->state = 0x1;
+//             currentTile->tile = 0xBB;
+//             aboveTile->state = 0x10;
+//             aboveTile->tile = LevelTileTypeElectron;
+//             return;
+//         }
+//         else if (aboveTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else if (state == 0xA)
+//     {
+// //loc_4F959:              ; CODE XREF: updateElectronTurnRight+4Aj
+//         if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F96B:              ; CODE XREF: updateElectronTurnRight+B9j
+//             currentTile->state = 0x4;
+//             currentTile->tile = 0xBB;
+//             rightTile->state = 0x28;
+//             rightTile->tile = LevelTileTypeElectron;
+//             return;
+//         }
+//         else if (rightTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else if (state == 0xC)
+//     {
+// //loc_4F93A:              ; CODE XREF: updateElectronTurnRight+4Fj
+//         if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F949:              ; CODE XREF: updateElectronTurnRight+9Aj
+//             currentTile->state = 0x3;
+//             currentTile->tile = 0xBB;
+//             belowTile->state = 0x20;
+//             belowTile->tile = LevelTileTypeElectron;
+//             return;
+//         }
+//         else if (belowTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else if (state == 0xE)
+//     {
+// //loc_4F91B:              ; CODE XREF: updateElectronTurnRight+54j
+//         if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//         {
+// //loc_4F92A:              ; CODE XREF: updateElectronTurnRight+7Bj
+//             currentTile->state = 0x2;
+//             currentTile->tile = 0xBB;
+//             leftTile->state = 0x18;
+//             leftTile->tile = LevelTileTypeElectron;
+//             return;
+//         }
+//         else if (leftTile->tile != LevelTileTypeMurphy)
+//         {
+//             return;
+//         }
+//     }
+//     else
+//     {
+//         return;
+//     }
 
-//loc_4F8DF:              ; CODE XREF: updateElectronTurnRight+63j
-//                ; updateElectronTurnRight+82j ...
-    detonateBigExplosion(position);
+// //loc_4F8DF:              ; CODE XREF: updateElectronTurnRight+63j
+// //                ; updateElectronTurnRight+82j ...
+//     detonateBigExplosion(position);
 }
 
 void updateElectronMovementUp(int16_t position, uint8_t frame) // sub_4F97B   proc near       ; DATA XREF: data:15CAo
 {
-    // 01ED:8D18
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+//     // 01ED:8D18
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
 
-    uint16_t finalPosition = position + kLevelWidth;
-    Point frameCoordinates = kElectronAnimationFrameCoordinates[frame];
-    // sub bx, 1Eh
-    frame -= 15; // 0x1E / 2
-    uint16_t offset = kFallAnimationGravityOffsets[frame];
+//     uint16_t finalPosition = position + kLevelWidth;
+//     //Point frameCoordinates = kElectronAnimationFrameCoordinates[frame];
+//     // sub bx, 1Eh
+//     frame -= 15; // 0x1E / 2
+//     uint16_t offset = kFallAnimationGravityOffsets[frame];
 
-    uint8_t tileX = (finalPosition % kLevelWidth);
-    uint8_t tileY = (finalPosition / kLevelWidth);
+//     uint8_t tileX = (finalPosition % kLevelWidth);
+//     uint8_t tileY = (finalPosition / kLevelWidth);
 
-    uint16_t dstX = tileX * kTileSize - (offset % 122) * 2;
-    uint16_t dstY = tileY * kTileSize - (offset / 122) * 2;
+//     uint16_t dstX = tileX * kTileSize - (offset % 122) * 2;
+//     uint16_t dstY = tileY * kTileSize - (offset / 122) * 2;
 
-    drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
-                                 kTileSize,
-                                 kTileSize + 2,
-                                 dstX, dstY);
+//     drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
+//                                  kTileSize,
+//                                  kTileSize + 2,
+//                                  dstX, dstY);
 
-    if (frame == 7)
-    {
-        if (belowTile->tile != LevelTileTypeExplosion)
-        {
-            belowTile->state = 0;
-            belowTile->tile = LevelTileTypeSpace;
-        }
-    }
+//     if (frame == 7)
+//     {
+//         if (belowTile->tile != LevelTileTypeExplosion)
+//         {
+//             belowTile->state = 0;
+//             belowTile->tile = LevelTileTypeSpace;
+//         }
+//     }
 
-//loc_4F9B7:              ; CODE XREF: updateElectronMovementUp+2Dj
-//                ; updateElectronMovementUp+34j
-    if (frame < 8)
-    {
-        frame += 0x10;
-        currentTile->state = frame;
-        return;
-    }
+// //loc_4F9B7:              ; CODE XREF: updateElectronMovementUp+2Dj
+// //                ; updateElectronMovementUp+34j
+//     if (frame < 8)
+//     {
+//         frame += 0x10;
+//         currentTile->state = frame;
+//         return;
+//     }
 
-//loc_4F9C4:              ; CODE XREF: updateElectronMovementUp+3Fj
-    currentTile->state = 0;
-    currentTile->tile = LevelTileTypeElectron;
+// //loc_4F9C4:              ; CODE XREF: updateElectronMovementUp+3Fj
+//     currentTile->state = 0;
+//     currentTile->tile = LevelTileTypeElectron;
 
-    if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 1;
-        return;
-    }
+//     if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 1;
+//         return;
+//     }
 
-//loc_4F9D7:              ; CODE XREF: updateElectronMovementUp+54j
-    if (leftTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 1;
-        return;
-    }
+// //loc_4F9D7:              ; CODE XREF: updateElectronMovementUp+54j
+//     if (leftTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 1;
+//         return;
+//     }
 
-//loc_4F9E4:              ; CODE XREF: updateElectronMovementUp+61j
-    if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 1;
-        currentTile->tile = 0xBB;
-        aboveTile->state = 0x10;
-        aboveTile->tile = LevelTileTypeElectron;
-        return;
-    }
+// //loc_4F9E4:              ; CODE XREF: updateElectronMovementUp+61j
+//     if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 1;
+//         currentTile->tile = 0xBB;
+//         aboveTile->state = 0x10;
+//         aboveTile->tile = LevelTileTypeElectron;
+//         return;
+//     }
 
-//loc_4F9FB:              ; CODE XREF: updateElectronMovementUp+6Ej
-    if (aboveTile->tile == LevelTileTypeMurphy)
-    {
-        detonateBigExplosion(position);
-        return;
-    }
+// //loc_4F9FB:              ; CODE XREF: updateElectronMovementUp+6Ej
+//     if (aboveTile->tile == LevelTileTypeMurphy)
+//     {
+//         detonateBigExplosion(position);
+//         return;
+//     }
 
-//loc_4FA06:              ; CODE XREF: updateElectronMovementUp+85j
-    if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 9;
-        return;
-    }
+// //loc_4FA06:              ; CODE XREF: updateElectronMovementUp+85j
+//     if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 9;
+//         return;
+//     }
 
-//loc_4FA13:              ; CODE XREF: updateElectronMovementUp+90j
-    if (rightTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 9;
-        return;
-    }
+// //loc_4FA13:              ; CODE XREF: updateElectronMovementUp+90j
+//     if (rightTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 9;
+//         return;
+//     }
 
-//loc_4FA20:              ; CODE XREF: updateElectronMovementUp+9Dj
-    currentTile->state = 1;
+// //loc_4FA20:              ; CODE XREF: updateElectronMovementUp+9Dj
+//     currentTile->state = 1;
 }
 
 void updateElectronMovementDown(int16_t position, uint8_t frame) // sub_4FA26   proc near       ; DATA XREF: data:15DAo
 {
-    // 01ED:8DC3
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+//     // 01ED:8DC3
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
 
-    Point frameCoordinates = kElectronAnimationFrameCoordinates[frame];
+//     //Point frameCoordinates = kElectronAnimationFrameCoordinates[frame];
 
-    uint8_t tileX = (position % kLevelWidth);
-    uint8_t tileY = (position / kLevelWidth);
+//     uint8_t tileX = (position % kLevelWidth);
+//     uint8_t tileY = (position / kLevelWidth);
 
-    uint16_t dstX = tileX * kTileSize;
-    uint16_t dstY = tileY * kTileSize;
+//     uint16_t dstX = tileX * kTileSize;
+//     uint16_t dstY = tileY * kTileSize;
 
-    drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
-                                 kTileSize * 2,
-                                 kTileSize,
-                                 dstX, dstY);
+//     drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
+//                                  kTileSize * 2,
+//                                  kTileSize,
+//                                  dstX, dstY);
 
-    frame &= 7;
-    frame++;
-    if (frame == 7)
-    {
-        if (rightTile->tile != LevelTileTypeExplosion)
-        {
-            rightTile->state = 0;
-            rightTile->tile = LevelTileTypeSpace;
-        }
-    }
+//     frame &= 7;
+//     frame++;
+//     if (frame == 7)
+//     {
+//         if (rightTile->tile != LevelTileTypeExplosion)
+//         {
+//             rightTile->state = 0;
+//             rightTile->tile = LevelTileTypeSpace;
+//         }
+//     }
 
-//loc_4FA5D:              ; CODE XREF: updateElectronMovementDown+28j
-//                ; updateElectronMovementDown+2Fj
-    if (frame < 8)
-    {
-        frame += 0x18;
-        currentTile->state = frame;
-        return;
-    }
+// //loc_4FA5D:              ; CODE XREF: updateElectronMovementDown+28j
+// //                ; updateElectronMovementDown+2Fj
+//     if (frame < 8)
+//     {
+//         frame += 0x18;
+//         currentTile->state = frame;
+//         return;
+//     }
 
-//loc_4FA6A:              ; CODE XREF: updateElectronMovementDown+3Aj
-    currentTile->state = 0;
-    currentTile->tile = LevelTileTypeElectron;
+// //loc_4FA6A:              ; CODE XREF: updateElectronMovementDown+3Aj
+//     currentTile->state = 0;
+//     currentTile->tile = LevelTileTypeElectron;
 
-    if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 3;
-        return;
-    }
+//     if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 3;
+//         return;
+//     }
 
-//loc_4FA7D:              ; CODE XREF: updateElectronMovementDown+4Fj
-    if (belowTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 3;
-        return;
-    }
+// //loc_4FA7D:              ; CODE XREF: updateElectronMovementDown+4Fj
+//     if (belowTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 3;
+//         return;
+//     }
 
-//loc_4FA8A:              ; CODE XREF: updateElectronMovementDown+5Cj
-    if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 2;
-        currentTile->tile = 0xBB;
-        leftTile->state = 0x18;
-        leftTile->tile = LevelTileTypeElectron;
-        return;
-    }
+// //loc_4FA8A:              ; CODE XREF: updateElectronMovementDown+5Cj
+//     if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 2;
+//         currentTile->tile = 0xBB;
+//         leftTile->state = 0x18;
+//         leftTile->tile = LevelTileTypeElectron;
+//         return;
+//     }
 
-//loc_4FAA1:              ; CODE XREF: updateElectronMovementDown+69j
-    if (leftTile->tile == LevelTileTypeMurphy)
-    {
-        detonateBigExplosion(position);
-        return;
-    }
+// //loc_4FAA1:              ; CODE XREF: updateElectronMovementDown+69j
+//     if (leftTile->tile == LevelTileTypeMurphy)
+//     {
+//         detonateBigExplosion(position);
+//         return;
+//     }
 
-//loc_4FAAC:              ; CODE XREF: updateElectronMovementDown+80j
-    if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 0xF;
-        return;
-    }
+// //loc_4FAAC:              ; CODE XREF: updateElectronMovementDown+80j
+//     if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 0xF;
+//         return;
+//     }
 
-//loc_4FAB9:              ; CODE XREF: updateElectronMovementDown+8Bj
-    if (aboveTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 0xF;
-        return;
-    }
+// //loc_4FAB9:              ; CODE XREF: updateElectronMovementDown+8Bj
+//     if (aboveTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 0xF;
+//         return;
+//     }
 
-//loc_4FAC6:              ; CODE XREF: updateElectronMovementDown+98j
-    currentTile->state = 3;
+// //loc_4FAC6:              ; CODE XREF: updateElectronMovementDown+98j
+//     currentTile->state = 3;
 }
 
 void updateElectronMovementRight(int16_t position, uint8_t frame) // sub_4FACC   proc near       ; DATA XREF: data:15EAo
 {
-    // 01ED:8E69
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+//     // 01ED:8E69
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
 
-    uint16_t finalPosition = position - kLevelWidth;
-    Point frameCoordinates = kElectronAnimationFrameCoordinates[frame];
-    //sub bx, 40h ; '@'
-    frame -= 0x20; // 0x40 / 2
+//     uint16_t finalPosition = position - kLevelWidth;
+//     //Point frameCoordinates = kElectronAnimationFrameCoordinates[frame];
+//     //sub bx, 40h ; '@'
+//     frame -= 0x20; // 0x40 / 2
 
-    uint16_t offset = kFallAnimationGravityOffsets[frame];
+//     uint16_t offset = kFallAnimationGravityOffsets[frame];
 
-    uint8_t tileX = (finalPosition % kLevelWidth);
-    uint8_t tileY = (finalPosition / kLevelWidth);
+//     uint8_t tileX = (finalPosition % kLevelWidth);
+//     uint8_t tileY = (finalPosition / kLevelWidth);
 
-    uint16_t dstX = tileX * kTileSize + (offset % 122) * 2;
-    uint16_t dstY = tileY * kTileSize + (offset / 122) * 2;
+//     uint16_t dstX = tileX * kTileSize + (offset % 122) * 2;
+//     uint16_t dstY = tileY * kTileSize + (offset / 122) * 2;
 
-    drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
-                                 kTileSize,
-                                 kTileSize + 2,
-                                 dstX, dstY);
+//     drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
+//                                  kTileSize,
+//                                  kTileSize + 2,
+//                                  dstX, dstY);
 
-    frame++;
-    if (frame == 7)
-    {
-        if (aboveTile->tile != LevelTileTypeExplosion)
-        {
-            aboveTile->state = 0;
-            aboveTile->tile = LevelTileTypeSpace;
-        }
-    }
+//     frame++;
+//     if (frame == 7)
+//     {
+//         if (aboveTile->tile != LevelTileTypeExplosion)
+//         {
+//             aboveTile->state = 0;
+//             aboveTile->tile = LevelTileTypeSpace;
+//         }
+//     }
 
-//loc_4FB0A:              ; CODE XREF: updateElectronMovementRight+2Fj
-//                ; updateElectronMovementRight+36j
-    if (frame < 8)
-    {
-        frame += 0x20;
-        currentTile->state = frame;
-        return;
-    }
+// //loc_4FB0A:              ; CODE XREF: updateElectronMovementRight+2Fj
+// //                ; updateElectronMovementRight+36j
+//     if (frame < 8)
+//     {
+//         frame += 0x20;
+//         currentTile->state = frame;
+//         return;
+//     }
 
-//loc_4FB17:              ; CODE XREF: updateElectronMovementRight+41j
-    currentTile->state = 0;
-    currentTile->tile = LevelTileTypeElectron;
+// //loc_4FB17:              ; CODE XREF: updateElectronMovementRight+41j
+//     currentTile->state = 0;
+//     currentTile->tile = LevelTileTypeElectron;
 
-    if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 5;
-        return;
-    }
+//     if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 5;
+//         return;
+//     }
 
-//loc_4FB2A:              ; CODE XREF: updateElectronMovementRight+56j
-    if (rightTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 5;
-        return;
-    }
+// //loc_4FB2A:              ; CODE XREF: updateElectronMovementRight+56j
+//     if (rightTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 5;
+//         return;
+//     }
 
-//loc_4FB37:              ; CODE XREF: updateElectronMovementRight+63j
-    if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 3;
-        currentTile->tile = 0xBB;
-        belowTile->state = 0x20;
-        belowTile->tile = LevelTileTypeElectron;
-        return;
-    }
+// //loc_4FB37:              ; CODE XREF: updateElectronMovementRight+63j
+//     if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 3;
+//         currentTile->tile = 0xBB;
+//         belowTile->state = 0x20;
+//         belowTile->tile = LevelTileTypeElectron;
+//         return;
+//     }
 
-//loc_4FB4E:              ; CODE XREF: updateElectronMovementRight+70j
-    if (belowTile->tile == LevelTileTypeMurphy)
-    {
-        detonateBigExplosion(position);
-        return;
-    }
+// //loc_4FB4E:              ; CODE XREF: updateElectronMovementRight+70j
+//     if (belowTile->tile == LevelTileTypeMurphy)
+//     {
+//         detonateBigExplosion(position);
+//         return;
+//     }
 
-//loc_4FB59:              ; CODE XREF: updateElectronMovementRight+87j
-    if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
-    {
-        // 01ED:8A8C
-        currentTile->state = 0xD;
-        return;
-    }
+// //loc_4FB59:              ; CODE XREF: updateElectronMovementRight+87j
+//     if (leftTile->state == 0 && leftTile->tile == LevelTileTypeSpace)
+//     {
+//         // 01ED:8A8C
+//         currentTile->state = 0xD;
+//         return;
+//     }
 
-//loc_4FB66:              ; CODE XREF: updateElectronMovementRight+92j
-    if (leftTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 0xD;
-        return;
-    }
+// //loc_4FB66:              ; CODE XREF: updateElectronMovementRight+92j
+//     if (leftTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 0xD;
+//         return;
+//     }
 
-//loc_4FB73:              ; CODE XREF: updateElectronMovementRight+9Fj
-    currentTile->state = 5;
+// //loc_4FB73:              ; CODE XREF: updateElectronMovementRight+9Fj
+//     currentTile->state = 5;
 }
 
 void updateElectronMovementLeft(int16_t position, uint8_t frame) // sub_4FB79   proc near       ; DATA XREF: data:15FAo
 {
-    // 01ED:8F16
-    StatefulLevelTile *currentTile = &gCurrentLevelState[position];
-    StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
-    StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
-    StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
-    StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
+//     // 01ED:8F16
+//     StatefulLevelTile *currentTile = &gCurrentLevelState[position];
+//     StatefulLevelTile *belowTile = &gCurrentLevelState[position + kLevelWidth];
+//     StatefulLevelTile *leftTile = &gCurrentLevelState[position - 1];
+//     StatefulLevelTile *aboveTile = &gCurrentLevelState[position - kLevelWidth];
+//     StatefulLevelTile *rightTile = &gCurrentLevelState[position + 1];
 
-    Point frameCoordinates = kElectronAnimationFrameCoordinates[frame];
+//     //Point frameCoordinates = kElectronAnimationFrameCoordinates[frame];
 
-    uint16_t finalPosition = position - 1;
+//     uint16_t finalPosition = position - 1;
 
-    uint8_t tileX = (finalPosition % kLevelWidth);
-    uint8_t tileY = (finalPosition / kLevelWidth);
+//     uint8_t tileX = (finalPosition % kLevelWidth);
+//     uint8_t tileY = (finalPosition / kLevelWidth);
 
-    uint16_t dstX = tileX * kTileSize;
-    uint16_t dstY = tileY * kTileSize;
+//     uint16_t dstX = tileX * kTileSize;
+//     uint16_t dstY = tileY * kTileSize;
 
-    drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
-                                 kTileSize * 2,
-                                 kTileSize,
-                                 dstX, dstY);
-    frame &= 7;
-    frame++;
-    if (frame == 7)
-    {
-        if (leftTile->tile != LevelTileTypeExplosion)
-        {
-            leftTile->state = 0;
-            leftTile->tile = LevelTileTypeSpace;
-        }
-    }
+//     drawMovingSpriteFrameInLevel(frameCoordinates.x, frameCoordinates.y,
+//                                  kTileSize * 2,
+//                                  kTileSize,
+//                                  dstX, dstY);
+//     frame &= 7;
+//     frame++;
+//     if (frame == 7)
+//     {
+//         if (leftTile->tile != LevelTileTypeExplosion)
+//         {
+//             leftTile->state = 0;
+//             leftTile->tile = LevelTileTypeSpace;
+//         }
+//     }
 
-//loc_4FBB1:              ; CODE XREF: updateElectronMovementLeft+29j
-//                ; updateElectronMovementLeft+30j
-    if (frame < 8)
-    {
-        frame += 0x28;
-        currentTile->state = frame;
-        return;
-    }
+// //loc_4FBB1:              ; CODE XREF: updateElectronMovementLeft+29j
+// //                ; updateElectronMovementLeft+30j
+//     if (frame < 8)
+//     {
+//         frame += 0x28;
+//         currentTile->state = frame;
+//         return;
+//     }
 
-//loc_4FBBE:              ; CODE XREF: updateElectronMovementLeft+3Bj
-    currentTile->state = 0;
-    currentTile->tile = LevelTileTypeElectron;
+// //loc_4FBBE:              ; CODE XREF: updateElectronMovementLeft+3Bj
+//     currentTile->state = 0;
+//     currentTile->tile = LevelTileTypeElectron;
 
-    if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 7;
-        return;
-    }
+//     if (aboveTile->state == 0 && aboveTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 7;
+//         return;
+//     }
 
-//loc_4FBD1:              ; CODE XREF: updateElectronMovementLeft+50j
-    if (aboveTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 7;
-        return;
-    }
+// //loc_4FBD1:              ; CODE XREF: updateElectronMovementLeft+50j
+//     if (aboveTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 7;
+//         return;
+//     }
 
-//loc_4FBDE:              ; CODE XREF: updateElectronMovementLeft+5Dj
-    if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 4;
-        currentTile->tile = 0xBB;
-        rightTile->state = 0x28;
-        rightTile->tile = LevelTileTypeElectron;
-        return;
-    }
+// //loc_4FBDE:              ; CODE XREF: updateElectronMovementLeft+5Dj
+//     if (rightTile->state == 0 && rightTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 4;
+//         currentTile->tile = 0xBB;
+//         rightTile->state = 0x28;
+//         rightTile->tile = LevelTileTypeElectron;
+//         return;
+//     }
 
-//loc_4FBF5:              ; CODE XREF: updateElectronMovementLeft+6Aj
-    if (rightTile->tile == LevelTileTypeMurphy)
-    {
-        detonateBigExplosion(position);
-        return;
-    }
+// //loc_4FBF5:              ; CODE XREF: updateElectronMovementLeft+6Aj
+//     if (rightTile->tile == LevelTileTypeMurphy)
+//     {
+//         detonateBigExplosion(position);
+//         return;
+//     }
 
-//loc_4FC00:              ; CODE XREF: updateElectronMovementLeft+81j
-    if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
-    {
-        currentTile->state = 0xB;
-        return;
-    }
+// //loc_4FC00:              ; CODE XREF: updateElectronMovementLeft+81j
+//     if (belowTile->state == 0 && belowTile->tile == LevelTileTypeSpace)
+//     {
+//         currentTile->state = 0xB;
+//         return;
+//     }
 
-//loc_4FC0D:              ; CODE XREF: updateElectronMovementLeft+8Cj
-    if (belowTile->tile == LevelTileTypeMurphy)
-    {
-        currentTile->state = 0xB;
-        return;
-    }
+// //loc_4FC0D:              ; CODE XREF: updateElectronMovementLeft+8Cj
+//     if (belowTile->tile == LevelTileTypeMurphy)
+//     {
+//         currentTile->state = 0xB;
+//         return;
+//     }
 
-//loc_4FC1A:              ; CODE XREF: updateElectronMovementLeft+99j
-    currentTile->state = 7;
+// //loc_4FC1A:              ; CODE XREF: updateElectronMovementLeft+99j
+//     currentTile->state = 7;
 }
 
 void drawGamePanelText() // sub_4FC20  proc near       ; CODE XREF: stopRecordingDemo:loc_4944Fp

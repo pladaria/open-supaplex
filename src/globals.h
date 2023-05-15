@@ -363,9 +363,9 @@ extern uint8_t gDemoCurrentInput; // byte_510E1 -> 0xDD1
 extern uint8_t gDemoCurrentInputRepeatCounter; // -> 0xDD2 -> byte_510E2
 extern uint16_t gDemoIndexOrDemoLevelNumber; // word_510E6
 extern uint16_t gMurphyPositionX; // word_510E8
-extern uint16_t gMurphyPositionY; // word_510EA
+extern uint16_t gMurMurphyAnimationDescriptorphyPositionY; // word_510EA
 extern uint16_t gMurphyCounterToStartPushAnimation; // word_510EE -> also used in the "release red disk" animation
-extern MurphyAnimationDescriptor gCurrentMurphyAnimation; // -> starts at 0x0DE0
+// extern MurphyAnimationDescriptor gCurrentMurphyAnimation; // -> starts at 0x0DE0
 extern uint8_t gNumberOfRemainingInfotrons; // byte_5195A
 extern uint8_t gTotalNumberOfInfotrons; // byte_5195B
 extern uint8_t gNumberOfRemainingRedDisks; // byte_5195C

@@ -156,7 +156,7 @@ uint16_t gDemoIndexOrDemoLevelNumber = 0; // word_510E6
 uint16_t gMurphyPositionX = 0; // word_510E8
 uint16_t gMurphyPositionY = 0; // word_510EA
 uint16_t gMurphyCounterToStartPushAnimation = 0;
-MurphyAnimationDescriptor gCurrentMurphyAnimation; // -> starts at 0x0DE0
+// MurphyAnimationDescriptor gCurrentMurphyAnimation; // -> starts at 0x0DE0
 uint8_t gNumberOfRemainingInfotrons = 0; // byte_5195A
 uint8_t gTotalNumberOfInfotrons = 0; // byte_5195B
 uint8_t gNumberOfRemainingRedDisks = 0; // byte_5195C
