@@ -1069,10 +1069,10 @@ void decreaseAdvancedMenuRecordDemoIndex()
 
 void increaseAdvancedMenuRecordDemoIndex()
 {
-    if (gAdvancedMenuRecordDemoIndex < kNumberOfDemos - 1)
-    {
-        gAdvancedMenuRecordDemoIndex++;
-    }
+    // if (gAdvancedMenuRecordDemoIndex < kNumberOfDemos - 1)
+    // {
+    //     gAdvancedMenuRecordDemoIndex++;
+    // }
 }
 
 void decreaseAdvancedMenuPlayDemoIndex()
@@ -1085,10 +1085,10 @@ void decreaseAdvancedMenuPlayDemoIndex()
 
 void increaseAdvancedMenuPlayDemoIndex()
 {
-    if (gAdvancedMenuPlayDemoIndex < kNumberOfDemos - 1)
-    {
-        gAdvancedMenuPlayDemoIndex++;
-    }
+    // if (gAdvancedMenuPlayDemoIndex < kNumberOfDemos - 1)
+    // {
+    //     gAdvancedMenuPlayDemoIndex++;
+    // }
 }
 
 void decreaseAdvancedMenuScalingMode()
@@ -4419,139 +4419,139 @@ void updateUserInputInScrollMovementMode() // sub_4914A   proc near       ; CODE
 void simulateDemoInput() // sub_492A8   proc near       ; CODE XREF: handleGameUserInput+27p
                    // ; restartLevel+76p
 {
-    // 01ED:2645
-    if (gDemoCurrentInputRepeatCounter > 1)
-    {
-        gDemoCurrentInputRepeatCounter--;
-        return;
-    }
+//     // 01ED:2645
+//     if (gDemoCurrentInputRepeatCounter > 1)
+//     {
+//         gDemoCurrentInputRepeatCounter--;
+//         return;
+//     }
 
-//loc_492B3:              ; CODE XREF: simulateDemoInput+5j
-    uint8_t newInput = gDemos.demoData[gDemoCurrentInputIndex];
+// //loc_492B3:              ; CODE XREF: simulateDemoInput+5j
+//     uint8_t newInput = gDemos.demoData[gDemoCurrentInputIndex];
 
-    if (newInput == 0xFF)
-    {
-        gQuitLevelCountdown = 0x64;
-        gShouldExitLevel = 1;
-    }
-    else
-    {
-        gDemoCurrentInputIndex++;
-    }
+//     if (newInput == 0xFF)
+//     {
+//         gQuitLevelCountdown = 0x64;
+//         gShouldExitLevel = 1;
+//     }
+//     else
+//     {
+//         gDemoCurrentInputIndex++;
+//     }
 
-//loc_492CA:              ; CODE XREF: simulateDemoInput+47j
-    gCurrentUserInput = newInput & 0xF;
-    gDemoCurrentInputRepeatCounter = (newInput >> 4) + 1;
+// //loc_492CA:              ; CODE XREF: simulateDemoInput+47j
+//     gCurrentUserInput = newInput & 0xF;
+//     gDemoCurrentInputRepeatCounter = (newInput >> 4) + 1;
 }
 
 void saveInputForDemo() // sub_492F1   proc near       ; CODE XREF: handleGameUserInput+1Dp
 {
-    gDemoCurrentInputRepeatCounter++;
+//     gDemoCurrentInputRepeatCounter++;
 
-    if (gDemoCurrentInputRepeatCounter == 0xFF)
-    {
-        gDemoCurrentInput = gCurrentUserInput;
-        gDemoRecordingRandomGeneratorSeed = gRandomGeneratorSeed;
-        gDemoRecordingRandomGeneratorSeedLow = (gDemoRecordingRandomGeneratorSeed >> 8); // ah;
-        gDemoRecordingRandomGeneratorSeedHigh = (gDemoRecordingRandomGeneratorSeed & 0xFF); // al;
-    }
+//     if (gDemoCurrentInputRepeatCounter == 0xFF)
+//     {
+//         gDemoCurrentInput = gCurrentUserInput;
+//         gDemoRecordingRandomGeneratorSeed = gRandomGeneratorSeed;
+//         gDemoRecordingRandomGeneratorSeedLow = (gDemoRecordingRandomGeneratorSeed >> 8); // ah;
+//         gDemoRecordingRandomGeneratorSeedHigh = (gDemoRecordingRandomGeneratorSeed & 0xFF); // al;
+//     }
 
-//loc_49311:              ; CODE XREF: saveInputForDemo+Dj
-    if (gDemoCurrentInput == gCurrentUserInput
-        && gDemoCurrentInputRepeatCounter != 0xF)
-    {
-        return;
-    }
+// //loc_49311:              ; CODE XREF: saveInputForDemo+Dj
+//     if (gDemoCurrentInput == gCurrentUserInput
+//         && gDemoCurrentInputRepeatCounter != 0xF)
+//     {
+//         return;
+//     }
 
-//loc_4931E:              ; CODE XREF: saveInputForDemo+24j
-    gDemoCurrentInput = (gDemoCurrentInput
-                                    | (gDemoCurrentInputRepeatCounter << 4));
+// //loc_4931E:              ; CODE XREF: saveInputForDemo+24j
+//     gDemoCurrentInput = (gDemoCurrentInput
+//                                     | (gDemoCurrentInputRepeatCounter << 4));
 
-    gDemoRecordingRandomGeneratorSeedHigh += gDemoCurrentInputRepeatCounter;
-    gDemoRecordingRandomGeneratorSeedHigh++;
+//     gDemoRecordingRandomGeneratorSeedHigh += gDemoCurrentInputRepeatCounter;
+//     gDemoRecordingRandomGeneratorSeedHigh++;
 
-    fileWriteUInt8(gDemoCurrentInput, gCurrentRecordingDemoFile);
-    gDemoCurrentInputRepeatCounter = 0xFF;
-    gDemoCurrentInput = gCurrentUserInput;
+//     fileWriteUInt8(gDemoCurrentInput, gCurrentRecordingDemoFile);
+//     gDemoCurrentInputRepeatCounter = 0xFF;
+//     gDemoCurrentInput = gCurrentUserInput;
 }
 
 void stopRecordingDemo() // somethingspsig  proc near       ; CODE XREF: runLevel+355p
                      // ; recordDemo+30p ...
 {
-    uint8_t scrambleSpeedLow = (gDemoRecordingLowestSpeed ^ gDemoRecordingRandomGeneratorSeedLow);
-    uint8_t scrambleSpeedHigh = (gDemoRecordingLowestSpeed ^ gDemoRecordingRandomGeneratorSeedHigh);
-    uint16_t scrambleSpeed = ((scrambleSpeedHigh << 8)
-                              | scrambleSpeedLow);
+//     uint8_t scrambleSpeedLow = (gDemoRecordingLowestSpeed ^ gDemoRecordingRandomGeneratorSeedLow);
+//     uint8_t scrambleSpeedHigh = (gDemoRecordingLowestSpeed ^ gDemoRecordingRandomGeneratorSeedHigh);
+//     uint16_t scrambleSpeed = ((scrambleSpeedHigh << 8)
+//                               | scrambleSpeedLow);
 
-    fseek(gCurrentRecordingDemoFile, 1532, SEEK_SET);
-    fileWriteUInt16(scrambleSpeed, gCurrentRecordingDemoFile);
+//     fseek(gCurrentRecordingDemoFile, 1532, SEEK_SET);
+//     fileWriteUInt16(scrambleSpeed, gCurrentRecordingDemoFile);
 
-    fileWriteUInt16(gDemoRecordingRandomGeneratorSeed, gCurrentRecordingDemoFile);
+//     fileWriteUInt16(gDemoRecordingRandomGeneratorSeed, gCurrentRecordingDemoFile);
 
-    fseek(gCurrentRecordingDemoFile, 0, SEEK_END);
+//     fseek(gCurrentRecordingDemoFile, 0, SEEK_END);
 
-    gDemoCurrentInput = 0xFF;
+//     gDemoCurrentInput = 0xFF;
 
-    fileWriteUInt8(gDemoCurrentInput, gCurrentRecordingDemoFile);
-    if (byte_5A19B != 0)
-    {
-        FILE *sigFile = openWritableFileWithReadonlyFallback("MYSPSIG.TXT", "rb");
-        if (sigFile != NULL)
-        {
-            if (fseek(sigFile, 0, SEEK_END) == 0)
-            {
-                long sigFileSize = ftell(sigFile);
-                sigFileSize = MIN(sigFileSize, kMaxDemoSignatureLength);
+//     fileWriteUInt8(gDemoCurrentInput, gCurrentRecordingDemoFile);
+//     if (byte_5A19B != 0)
+//     {
+//         FILE *sigFile = openWritableFileWithReadonlyFallback("MYSPSIG.TXT", "rb");
+//         if (sigFile != NULL)
+//         {
+//             if (fseek(sigFile, 0, SEEK_END) == 0)
+//             {
+//                 long sigFileSize = ftell(sigFile);
+//                 sigFileSize = MIN(sigFileSize, kMaxDemoSignatureLength);
 
-                if (sigFileSize > 0)
-                {
-//loc_493EB:              ; CODE XREF: stopRecordingDemo+85j
-//                ; stopRecordingDemo+8Dj
-                    if (fseek(sigFile, 0, SEEK_SET) == 0)
-                    {
-                        uint8_t signature[kMaxDemoSignatureLength + 1];
-                        size_t bytes = fileReadBytes(signature, sigFileSize, sigFile);
+//                 if (sigFileSize > 0)
+//                 {
+// //loc_493EB:              ; CODE XREF: stopRecordingDemo+85j
+// //                ; stopRecordingDemo+8Dj
+//                     if (fseek(sigFile, 0, SEEK_SET) == 0)
+//                     {
+//                         uint8_t signature[kMaxDemoSignatureLength + 1];
+//                         size_t bytes = fileReadBytes(signature, sigFileSize, sigFile);
 
-                        if (bytes == (size_t)sigFileSize)
-                        {
-                            long idx = 0;
-                            for (idx = 0; idx < sigFileSize; ++idx)
-                            {
-                                if (signature[idx] == 0xFF)
-                                {
-                                    break;
-                                }
-                            }
+//                         if (bytes == (size_t)sigFileSize)
+//                         {
+//                             long idx = 0;
+//                             for (idx = 0; idx < sigFileSize; ++idx)
+//                             {
+//                                 if (signature[idx] == 0xFF)
+//                                 {
+//                                     break;
+//                                 }
+//                             }
 
-                            // Make sure the signature is terminated with 0xFF
-                            signature[idx] = 0xFF;
-                            sigFileSize = idx;
+//                             // Make sure the signature is terminated with 0xFF
+//                             signature[idx] = 0xFF;
+//                             sigFileSize = idx;
 
-//loc_4941C:              ; CODE XREF: stopRecordingDemo+BCj
-                            fileWriteBytes(signature, sigFileSize, sigFile);
-                        }
-                    }
-                }
-            }
+// //loc_4941C:              ; CODE XREF: stopRecordingDemo+BCj
+//                             fileWriteBytes(signature, sigFileSize, sigFile);
+//                         }
+//                     }
+//                 }
+//             }
 
-//loc_49430:              ; CODE XREF: stopRecordingDemo+7Ej
-//                ; stopRecordingDemo+89j ...
-            fclose(sigFile);
-        }
-    }
-//loc_49435:              ; CODE XREF: stopRecordingDemo+65j
-//                ; stopRecordingDemo+6Fj
-    fclose(gCurrentRecordingDemoFile);
-    gIsRecordingDemo = 0;
-    if (gHasUserInterruptedDemo != 0)
-    {
-        gIsPlayingDemo = 1;
-    }
+// //loc_49430:              ; CODE XREF: stopRecordingDemo+7Ej
+// //                ; stopRecordingDemo+89j ...
+//             fclose(sigFile);
+//         }
+//     }
+// //loc_49435:              ; CODE XREF: stopRecordingDemo+65j
+// //                ; stopRecordingDemo+6Fj
+//     fclose(gCurrentRecordingDemoFile);
+//     gIsRecordingDemo = 0;
+//     if (gHasUserInterruptedDemo != 0)
+//     {
+//         gIsPlayingDemo = 1;
+//     }
 
-//loc_4944F:              ; CODE XREF: stopRecordingDemo+EEj
-    drawGamePanelText();
-    gIsGameBusy = 1;
-    gIsPlayingDemo = 0;
+// //loc_4944F:              ; CODE XREF: stopRecordingDemo+EEj
+//     drawGamePanelText();
+//     gIsGameBusy = 1;
+//     gIsPlayingDemo = 0;
 }
 
 size_t writeCurrentLevelToFile(FILE *file)
@@ -14432,44 +14432,44 @@ void updateElectronMovementLeft(int16_t position, uint8_t frame) // sub_4FB79   
 void drawGamePanelText() // sub_4FC20  proc near       ; CODE XREF: stopRecordingDemo:loc_4944Fp
                    // ; drawGamePanel+22p ...
 {
-    if (gFastMode == FastModeTypeUltra)
-    {
-        return;
-    }
+//     if (gFastMode == FastModeTypeUltra)
+//     {
+//         return;
+//     }
 
-    // 01ED:8FBD
-    if (gIsRecordingDemo != 0) // Recording demo?
-    {
-//    mov si, 87D1h // "  DEMO  "
-        drawTextWithChars8FontToGamePanel(72, 3, 8, "  DEMO  ");
-//    mov si, 87DAh // "000" -> this address is the ".SP" text
-        drawTextWithChars8FontToGamePanel(16, 14, 8, gCurrentDemoLevelName);
-//        mov si, 87F6h // "--- RECORDING DEMO0 ---"
-        drawTextWithChars8FontToGamePanel(64, 14, 8, gRecordingDemoMessage);
-    }
-//loc_4FC6F:              ; CODE XREF: drawGamePanelText+5j
-    else if (gIsPlayingDemo != 0) // Playing demo?
-    {
-        drawTextWithChars8FontToGamePanel(72, 3, 8, "  DEMO  ");
-//      mov si, 87DAh // "000" -> this address is the ".SP" text
-        drawTextWithChars8FontToGamePanel(16, 14, 8, gCurrentDemoLevelName);
-//      mov si, 87DEh // "----- DEMO LEVEL! -----"
-        drawTextWithChars8FontToGamePanel(64, 14, 8, &gCurrentDemoLevelName[4]);
-    }
-    else
-    {
-//loc_4FCD6:              ; CODE XREF: drawGamePanelText+B1j
-        drawTextWithChars8FontToGamePanel(72, 3, 6, gPlayerName);
-        char levelNumber[4] = "000";
-        memcpy(levelNumber, gCurrentLevelName, 3);
-        drawTextWithChars8FontToGamePanel(16, 14, 8, levelNumber);
-        drawTextWithChars8FontToGamePanel(64, 14, 8, &gCurrentLevelName[4]);
-    }
+//     // 01ED:8FBD
+//     if (gIsRecordingDemo != 0) // Recording demo?
+//     {
+// //    mov si, 87D1h // "  DEMO  "
+//         drawTextWithChars8FontToGamePanel(72, 3, 8, "  DEMO  ");
+// //    mov si, 87DAh // "000" -> this address is the ".SP" text
+//         drawTextWithChars8FontToGamePanel(16, 14, 8, gCurrentDemoLevelName);
+// //        mov si, 87F6h // "--- RECORDING DEMO0 ---"
+//         drawTextWithChars8FontToGamePanel(64, 14, 8, gRecordingDemoMessage);
+//     }
+// //loc_4FC6F:              ; CODE XREF: drawGamePanelText+5j
+//     else if (gIsPlayingDemo != 0) // Playing demo?
+//     {
+//         drawTextWithChars8FontToGamePanel(72, 3, 8, "  DEMO  ");
+// //      mov si, 87DAh // "000" -> this address is the ".SP" text
+//         drawTextWithChars8FontToGamePanel(16, 14, 8, gCurrentDemoLevelName);
+// //      mov si, 87DEh // "----- DEMO LEVEL! -----"
+//         drawTextWithChars8FontToGamePanel(64, 14, 8, &gCurrentDemoLevelName[4]);
+//     }
+//     else
+//     {
+// //loc_4FCD6:              ; CODE XREF: drawGamePanelText+B1j
+//         drawTextWithChars8FontToGamePanel(72, 3, 6, gPlayerName);
+//         char levelNumber[4] = "000";
+//         memcpy(levelNumber, gCurrentLevelName, 3);
+//         drawTextWithChars8FontToGamePanel(16, 14, 8, levelNumber);
+//         drawTextWithChars8FontToGamePanel(64, 14, 8, &gCurrentLevelName[4]);
+//     }
 
-//loc_4FD1A:              ; CODE XREF: drawGamePanelText+4Cj
-//                ; drawGamePanelText+A0j ...
-    drawNumberOfRemainingInfotrons();
-    drawGameTime();
+// //loc_4FD1A:              ; CODE XREF: drawGamePanelText+4Cj
+// //                ; drawGamePanelText+A0j ...
+//     drawNumberOfRemainingInfotrons();
+//     drawGameTime();
 }
 
 void drawNumberOfRemainingInfotrons() // sub_4FD21   proc near       ; CODE XREF: resetNumberOfInfotrons+13p
