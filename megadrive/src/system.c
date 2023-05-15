@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include "genesis.h"
 
 void initializeSystem(void)
 {
@@ -19,10 +20,13 @@ void exitWithError(const char *format, ...)
 void handleSystemEvents(void)
 {
 }
+
 uint32_t getTicks(void)
 {
-    return 0;
+    // returns time in 1/256 seconds
+    return getTime(0);
 }
+
 void waitTime(uint32_t time)
 {
 }

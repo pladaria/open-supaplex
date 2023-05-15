@@ -143,6 +143,9 @@ void drawTextWithChars8FontToGamePanel(size_t destX, size_t destY, uint8_t color
 
 void videoLoop(void)
 {
+    handleSystemEvents(); // Make sure the app stays responsive
+    render();
+    present();
 }
 
 void readPalettes(void)
