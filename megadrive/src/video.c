@@ -15,13 +15,17 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "../video.h"
+#include "video.h"
 
-#include "../logging.h"
-#include "../utils.h"
+#include "logging.h"
+#include "utils.h"
 
-
+#ifdef __MEGADRIVE__
+uint8_t kScreenPixels[1];
+#else
 uint8_t kScreenPixels[kScreenWidth * kScreenHeight];
+#endif
+
 uint8_t *gScreenPixels = kScreenPixels;
 ScalingMode gScalingMode = ScalingModeAspectFit;
 
