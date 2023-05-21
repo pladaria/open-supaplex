@@ -18,6 +18,7 @@
 #ifndef video_h
 #define video_h
 
+#include "genesis.h"
 #include <stdint.h>
 
 #define kScreenWidth 320

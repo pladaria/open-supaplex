@@ -180,10 +180,10 @@ uint8_t isMusicEnabled = 0; // byte_59886
 uint8_t isFXEnabled = 0; // byte_59885
 
 uint8_t gIsFlashingBackgroundModeEnabled = 0; // flashingbackgroundon
-const float kSpeedTimeFactors[kNumberOfGameSpeeds] = { 3.5, 3.0, 2.5, 2.0, 1.5, 1.0, 0.75, 2.0 / 3.0, 5.0 / 8.0, 3.0 / 5.0, 1.0 / 70.0 };
+// const float kSpeedTimeFactors[kNumberOfGameSpeeds] = { 3.5, 3.0, 2.5, 2.0, 1.5, 1.0, 0.75, 2.0 / 3.0, 5.0 / 8.0, 3.0 / 5.0, 1.0 / 70.0 };
 
 // Used to measure game speed (reference is 35 iterations per second)
-float gGameIterationRate = 0.f;
+// float gGameIterationRate = 0.f;
 uint32_t gGameIterationRateReferenceTime = 0;
 
 // Used to limit game speed
@@ -1528,12 +1528,12 @@ void runAdvancedOptionsRootMenu()
 }
 
 #ifdef __MEGADRIVE__
-#define __MAIN_FUNCTION__ supaplex_main
+#define SUPAPLEX_MAIN supaplex_main
 #else
-#define __MAIN_FUNCTION__ main
+#define SUPAPLEX_MAIN main
 #endif
 
-int __MAIN_FUNCTION__(int argc, char *argv[])
+int SUPAPLEX_MAIN(int argc, char *argv[])
 {
     parseCommandLineOptions(argc, argv);
 
@@ -1581,6 +1581,7 @@ int __MAIN_FUNCTION__(int argc, char *argv[])
         fadeToPalette(titleDatPalette);
     }
 
+return 0; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //isFastMode:              //; CODE XREF: start+2ADj
     loadMurphySprites(); // 01ED:029D
     // Conditions to whether show
@@ -2283,6 +2284,9 @@ uint8_t readDemoFiles() //    proc near       ; CODE XREF: readEverything+12p
 
 void openCreditsBlock() // proc near      ; CODE XREF: start+2E9p
 {
+#ifdef __MEGADRIVE__
+    return;
+#else
     static const int kEdgeWidth = 13;
     static const int kEdgeHeight = 148;
     static const int kEdgeStep = 4;
@@ -2368,6 +2372,7 @@ void openCreditsBlock() // proc near      ; CODE XREF: start+2E9p
     ColorPalette title2Palette;
     convertPaletteDataToPalette(gTitle2PaletteData, title2Palette);
     fadeToPalette(title2Palette); // fades current frame buffer into the title 2.dat (screen with the credits)
+#endif
 }
 
 void loadScreen2() // proc near       ; CODE XREF: start:loc_46F00p
@@ -4065,6 +4070,10 @@ void handleGameIterationStarted()
 
 void handleGameIterationFinished()
 {
+#ifdef __MEGADRIVE__
+    // @TODO pladaria: this produces compiler errors due to missing helper functions for float conversion
+    return;
+#else
     const float kOriginalIterationDuration = 1000.0 / 35; // 35 iterations per second in the original game
     float currentIterationDuration = getTicks() - gGameIterationStartTime;
 
@@ -4082,10 +4091,7 @@ void handleGameIterationFinished()
 
     gNumberOfGameIterations++;
 
-#ifdef __MEGADRIVE__
-    // @TODO pladaria: this produces compiler errors due to missing helper functions for float conversion
-    return;
-#else
+
     if (gGameIterationRateReferenceTime == 0)
     {
         gGameIterationRateReferenceTime = getTicks();
@@ -5816,7 +5822,13 @@ void generateRandomSeedFromClock() // getTicks    proc near       ; CODE XREF: s
     // If 1 second is 18.2 clock counts, we need to divide the time
     // by 1000 to get the seconds, and then multiply by 18.2.
     //
+#ifdef __MEGADRIVE__
+    // getTime in SGDK returns the time in 1/256 of a second
+    // approximation, multiply by 19 (between 50/60fps)
+    uint32_t clockCount = (timeInMilliseconds * 16) / 256;
+#else
     uint32_t clockCount = timeInMilliseconds * 18.2 / 1000;
+#endif
     uint16_t lowValue = (clockCount & 0xFFFF);
     uint16_t highValue = ((clockCount >> 16) & 0xFFFF);
     gRandomGeneratorSeed = highValue ^ lowValue;

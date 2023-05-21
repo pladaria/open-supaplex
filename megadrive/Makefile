@@ -1,9 +1,13 @@
 FOLDER := $(shell basename $(CURDIR))
-BLASTEM := /home/pladaria/bin/blastem64-0.6.2/blastem
+BLASTEM := $(HOME)/bin/blastem64-0.6.2/blastem
+BLASTEM_WIN := $(HOME)/bin/blastem-win64-0.6.3-pre-a8080240cb92/blastem
 USER_NAME := $(shell id -u ${USER})
 USER_GROUP := $(shell id -g ${USER})
 
 dev: opensupaplex
+	wine $(BLASTEM_WIN) "out\rom.bin"
+
+dev2: opensupaplex
 	$(BLASTEM) "$(CURDIR)/out/rom.bin"
 
 prepare:

@@ -7,7 +7,7 @@
                 "${workspaceFolder}/../../SGDK/inc",
                 "${workspaceFolder}/../../SGDK/res"
             ],
-            "defines": [],
+            "defines": ["__MEGADRIVE__"],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
             "cppStandard": "c++98",

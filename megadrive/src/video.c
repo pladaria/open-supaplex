@@ -1,42 +1,23 @@
-/*
-* This file is part of the OpenSupaplex distribution (https://github.com/sergiou87/open-supaplex).
-* Copyright (c) 2020 Sergio Padrino
-*
-* This program is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, version 3.
-*
-* This program is distributed in the hope that it will be useful, but
-* WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-* General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with this program. If not, see <http://www.gnu.org/licenses/>.
-*/
+#include "genesis.h"
+#include "supaplex/video.h"
 
-#include "video.h"
+uint8_t kScreenPixels[1]; // @TODO pladaria: remove this
 
-#include "logging.h"
-#include "utils.h"
-
-#ifdef __MEGADRIVE__
-uint8_t kScreenPixels[1];
-#else
-uint8_t kScreenPixels[kScreenWidth * kScreenHeight];
-#endif
-
-uint8_t *gScreenPixels = kScreenPixels;
-ScalingMode gScalingMode = ScalingModeAspectFit;
+uint8_t *gScreenPixels = kScreenPixels; // @TODO pladaria: remove this
+ScalingMode gScalingMode = ScalingModeAspectFit; // @TODO pladaria: remove this
 
 void initializeVideo(uint8_t fastMode)
 {
-    //int ret = SDL_Init(SDL_INIT_TIMER | SDL_INIT_JOYSTICK);
-    // if (ret)
-    // {
-    //     spLogInfo("SDL_Init failed with %d", ret);
-    //     exit(1);
-    // }
+    VDP_setScreenWidth320();
+    VDP_setScreenHeight224();
+
+    PAL_setPalette(0, palette_black, CPU);
+    PAL_setPalette(1, palette_black, CPU);
+    PAL_setPalette(2, palette_black, CPU);
+    PAL_setPalette(3, palette_black, CPU);
+
+    VDP_clearPlane(BG_A, 0);
+    VDP_clearPlane(BG_B, 0);
 }
 
 void render()
@@ -61,11 +42,6 @@ ScalingMode getScalingMode(void)
 
 void setScalingMode(ScalingMode mode)
 {
-    if (mode == gScalingMode)
-    {
-        return;
-    }
-
     gScalingMode = mode;
 }
 
