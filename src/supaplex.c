@@ -1581,7 +1581,6 @@ int SUPAPLEX_MAIN(int argc, char *argv[])
         fadeToPalette(titleDatPalette);
     }
 
-return 0; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //isFastMode:              //; CODE XREF: start+2ADj
     loadMurphySprites(); // 01ED:029D
     // Conditions to whether show
@@ -1596,6 +1595,7 @@ return 0; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     {
 //openingSequence:
         loadScreen2();    // 01ED:02B9
+return 0; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         readEverything(); // 01ED:02BC
         drawSpeedFixTitleAndVersion(); // 01ED:02BF
         openCreditsBlock(); // credits inside the block // 01ED:02C2
