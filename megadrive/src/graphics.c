@@ -2,6 +2,7 @@
 #include "supaplex/graphics.h"
 #include "supaplex/system.h"
 #include "../res/images.h"
+#include "ui.h"
 
 #define kPaleteDataSize (kNumberOfColors * 4)
 #define kNumberOfPalettes 4
@@ -86,7 +87,7 @@ void readAndRenderTitle1Dat(void)
 void readTitle2Dat(void)
 {
     u16 tileIndex = TILE_USER_INDEX + imgTitle1.tileset->numTile;
-    VDP_drawImageEx(BG_B, &imgTitle2, TILE_ATTR_FULL(PAL0, FALSE, FALSE, FALSE, tileIndex), 0, 0, FALSE, FALSE);
+    VDP_drawImageEx(BG_B, &imgTitle2, TILE_ATTR_FULL(PAL2, FALSE, FALSE, FALSE, tileIndex), 0, 0, FALSE, FALSE);
 }
 
 void readGfxDat(void)

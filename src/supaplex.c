@@ -56,6 +56,7 @@ PSP_HEAP_SIZE_KB(-1024);
 #ifdef __MEGADRIVE__
 #include "genesis.h"
 #include "../../res/images.h"
+#include "../ui.h"
 #endif
 
 // title1DataBuffer -> A000:4DAC - A000:CAAC
@@ -1585,7 +1586,7 @@ int SUPAPLEX_MAIN(int argc, char *argv[])
         convertPaletteDataToPalette(gTitlePaletteData, titleDatPalette);
         fadeToPalette(titleDatPalette);
         #ifdef __MEGADRIVE__
-        // JOY_waitPressBtn(); // @TODO pladaria: uncomment
+        JOY_waitPressBtn(); // @TODO pladaria: uncomment
         PAL_fadeOut(0, 15, 12, FALSE);
         #endif
     }
@@ -2305,21 +2306,23 @@ void openCreditsBlock() // proc near      ; CODE XREF: start+2E9p
     u16 y1 = 32;
     u16 y2 = 98;
 
-    Sprite *topLeft = SPR_addSprite(&sprTitleEdge, x1, y1, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));
-    SPR_setVRAMTileIndex(topLeft, tileIndex);
+    Sprite *creditsBlockEdgeTopLeft = SPR_addSprite(&sprTitleEdge, x1, y1, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));
+    SPR_setVRAMTileIndex(creditsBlockEdgeTopLeft, tileIndex);
 
-    Sprite *topRight = SPR_addSprite(&sprTitleEdge, x2, y1, TILE_ATTR(PAL1, FALSE, FALSE, TRUE));
-    SPR_setAutoTileUpload(topRight, FALSE);
-    SPR_setVRAMTileIndex(topRight, tileIndex);
+    Sprite *creditsBlockEdgeTopRight = SPR_addSprite(&sprTitleEdge, x2, y1, TILE_ATTR(PAL1, FALSE, FALSE, TRUE));
+    SPR_setAutoTileUpload(creditsBlockEdgeTopRight, FALSE);
+    SPR_setVRAMTileIndex(creditsBlockEdgeTopRight, tileIndex);
 
-    Sprite *bottomLeft = SPR_addSprite(&sprTitleEdge, x1, y2, TILE_ATTR(PAL1, FALSE, TRUE, FALSE));
-    SPR_setAutoTileUpload(bottomLeft, FALSE);
-    SPR_setVRAMTileIndex(bottomLeft, tileIndex);
+    Sprite *creditsBlockEdgeBottomLeft = SPR_addSprite(&sprTitleEdge, x1, y2, TILE_ATTR(PAL1, FALSE, TRUE, FALSE));
+    SPR_setAutoTileUpload(creditsBlockEdgeBottomLeft, FALSE);
+    SPR_setVRAMTileIndex(creditsBlockEdgeBottomLeft, tileIndex);
 
-    Sprite *bottomRight = SPR_addSprite(&sprTitleEdge, x2, y2, TILE_ATTR(PAL1, FALSE, TRUE, TRUE));
-    SPR_setAutoTileUpload(bottomRight, FALSE);
-    SPR_setVRAMTileIndex(bottomRight, tileIndex);
+    Sprite *creditsBlockEdgeBottomRight = SPR_addSprite(&sprTitleEdge, x2, y2, TILE_ATTR(PAL1, FALSE, TRUE, TRUE));
+    SPR_setAutoTileUpload(creditsBlockEdgeBottomRight, FALSE);
+    SPR_setVRAMTileIndex(creditsBlockEdgeBottomRight, tileIndex);
 
+    PAL_setPalette(PAL0, imgTitle1.palette->data, CPU);
+    PAL_setPalette(PAL2, imgTitle1.palette->data, CPU);
     PAL_setPalette(PAL1, sprTitleEdge.palette->data, CPU);
     videoLoop();
 
@@ -2329,16 +2332,13 @@ void openCreditsBlock() // proc near      ; CODE XREF: start+2E9p
     {
         x1 -= 2;
         x2 += 2;
-        SPR_setPosition(topLeft, x1, y1);
-        SPR_setPosition(topRight, x2, y1);
-        SPR_setPosition(bottomLeft, x1, y2);
-        SPR_setPosition(bottomRight, x2, y2);
+        SPR_setPosition(creditsBlockEdgeTopLeft, x1, y1);
+        SPR_setPosition(creditsBlockEdgeTopRight, x2, y1);
+        SPR_setPosition(creditsBlockEdgeBottomLeft, x1, y2);
+        SPR_setPosition(creditsBlockEdgeBottomRight, x2, y2);
         videoLoop();
     }
-    KLog("loaded");
-    KLog_U1("SPR_getUsedVDPSprite: ", SPR_getUsedVDPSprite());
-    KLog_U1("MEM_getLargestFreeBlock: ", MEM_getLargestFreeBlock());
-    KLog_U1("SPR_getNumActiveSprite: ", SPR_getNumActiveSprite());
+    PAL_fadeToPalette(PAL2, imgTitle2.palette->data, 16, FALSE);
 #else
     static const int kEdgeWidth = 13;
     static const int kEdgeHeight = 148;
@@ -2433,9 +2433,12 @@ void loadScreen2() // proc near       ; CODE XREF: start:loc_46F00p
     readAndRenderTitle1Dat();
 
 //loc_4792E:              //; CODE XREF: loadScreen2+76j
+#ifndef __MEGADRIVE__
     ColorPalette title1DatPalette;
+    KLog("convertPaletteDataToPalette(title1DatPalette);");
     convertPaletteDataToPalette(gTitle1PaletteData, title1DatPalette);
     setPalette(title1DatPalette);
+#endif
     videoLoop();
 
     readTitle2Dat();

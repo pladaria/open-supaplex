@@ -21,3 +21,4 @@ clean:
 	rm -f res/**.h
 	rm -f res/**.rs
 	find . -name "*.o" -type f -delete
+
