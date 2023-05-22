@@ -75,15 +75,20 @@ void readBitmapFonts(void)
 
 void readAndRenderTitleDat(void)
 {
-    VDP_drawImageEx(BG_A, &imgTitle, TILE_ATTR_FULL(PAL0, FALSE, FALSE, FALSE, TILE_USER_INDEX), 0, 0, FALSE, FALSE);
+    VDP_drawImageEx(BG_A, &imgTitle, TILE_ATTR_FULL(PAL0, TRUE, FALSE, FALSE, TILE_USER_INDEX), 0, 0, FALSE, FALSE);
 }
 
 void readAndRenderTitle1Dat(void)
 {
+    VDP_drawImageEx(BG_A, &imgTitle1, TILE_ATTR_FULL(PAL0, TRUE, FALSE, FALSE, TILE_USER_INDEX), 0, 0, FALSE, FALSE);
 }
+
 void readTitle2Dat(void)
 {
+    u16 tileIndex = TILE_USER_INDEX + imgTitle1.tileset->numTile;
+    VDP_drawImageEx(BG_B, &imgTitle2, TILE_ATTR_FULL(PAL0, FALSE, FALSE, FALSE, tileIndex), 0, 0, FALSE, FALSE);
 }
+
 void readGfxDat(void)
 {
 }
@@ -177,7 +182,7 @@ void videoLoop(void)
 
     // @TODO pladaria: remove previous calls, probably not needed at all
     SPR_update();
-    VDP_waitVSync();
+    SYS_doVBlankProcess();
 }
 
 void readPalettes(void)
@@ -220,12 +225,15 @@ void convertPaletteDataToPalette(ColorPaletteData paletteData, ColorPalette outP
 {
     int kExponent = 4; // no idea why (yet)
 
+    KLog("convertPaletteDataToPalette");
     for (int i = 0; i < kNumberOfColors; ++i)
     {
         outPalette[i].r = paletteData[i * 4 + 0] << kExponent;
         outPalette[i].g = paletteData[i * 4 + 1] << kExponent;
         outPalette[i].b = paletteData[i * 4 + 2] << kExponent;
         outPalette[i].a = paletteData[i * 4 + 3] << kExponent; // intensity, for now
+        KLog_U1("Index: ", i);
+        KLog_U3("Color: ", outPalette[i].r, ", ", outPalette[i].g, ", ", outPalette[i].b);
     }
 }
 

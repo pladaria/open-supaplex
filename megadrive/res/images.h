@@ -2,5 +2,8 @@
 #define _RES_IMAGES_H_
 
 extern const Image imgTitle;
+extern const Image imgTitle1;
+extern const Image imgTitle2;
+extern const SpriteDefinition sprTitleEdge;
 
 #endif // _RES_IMAGES_H_

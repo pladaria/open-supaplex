@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include "genesis.h"
 
 void initializeControllers(void) {
 }

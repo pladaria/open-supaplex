@@ -16,6 +16,7 @@ void initializeVideo(uint8_t fastMode)
     PAL_setPalette(2, palette_black, CPU);
     PAL_setPalette(3, palette_black, CPU);
 
+    SPR_init();
     VDP_clearPlane(BG_A, 0);
     VDP_clearPlane(BG_B, 0);
 }
@@ -32,7 +33,7 @@ void present()
 
 void destroyVideo()
 {
-    // Do nothing
+    SPR_end();
 }
 
 ScalingMode getScalingMode(void)

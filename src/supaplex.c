@@ -53,6 +53,11 @@ PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER | THREAD_ATTR_VFPU);
 PSP_HEAP_SIZE_KB(-1024);
 #endif
 
+#ifdef __MEGADRIVE__
+#include "genesis.h"
+#include "../../res/images.h"
+#endif
+
 // title1DataBuffer -> A000:4DAC - A000:CAAC
 // title2DataBuffer -> 0x4DD4 - 0xCAD4
 
@@ -1579,6 +1584,10 @@ int SUPAPLEX_MAIN(int argc, char *argv[])
         ColorPalette titleDatPalette; // si = 0x5F15;
         convertPaletteDataToPalette(gTitlePaletteData, titleDatPalette);
         fadeToPalette(titleDatPalette);
+        #ifdef __MEGADRIVE__
+        // JOY_waitPressBtn(); // @TODO pladaria: uncomment
+        PAL_fadeOut(0, 15, 12, FALSE);
+        #endif
     }
 
 //isFastMode:              //; CODE XREF: start+2ADj
@@ -1595,13 +1604,13 @@ int SUPAPLEX_MAIN(int argc, char *argv[])
     {
 //openingSequence:
         loadScreen2();    // 01ED:02B9
-return 0; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         readEverything(); // 01ED:02BC
-        drawSpeedFixTitleAndVersion(); // 01ED:02BF
+        // drawSpeedFixTitleAndVersion(); // 01ED:02BF
         openCreditsBlock(); // credits inside the block // 01ED:02C2
-        drawSpeedFixCredits();   // credits below the block (herman perk and elmer productions) // 01ED:02C5
+        // drawSpeedFixCredits();   // credits below the block (herman perk and elmer productions) // 01ED:02C5
     }
 
+return 0; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //afterOpeningSequence:              //; CODE XREF: start+2DEj
     readConfig();
     if (byte_50946 == 0)
@@ -2285,7 +2294,51 @@ uint8_t readDemoFiles() //    proc near       ; CODE XREF: readEverything+12p
 void openCreditsBlock() // proc near      ; CODE XREF: start+2E9p
 {
 #ifdef __MEGADRIVE__
-    return;
+    KLog_U1("MEM_getLargestFreeBlock: ", MEM_getLargestFreeBlock());
+
+    // In Megadrive the "curtain effect" is made using four opaque sprites that are moved to the left and right
+    // It is the same sprite flipped horizontally and vertically
+    u16 tileIndex = TILE_USER_INDEX + imgTitle1.tileset->numTile + imgTitle2.tileset->numTile;
+
+    u16 x1 = 48;
+    u16 x2 = 48 + 112;
+    u16 y1 = 32;
+    u16 y2 = 98;
+
+    Sprite *topLeft = SPR_addSprite(&sprTitleEdge, x1, y1, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));
+    SPR_setVRAMTileIndex(topLeft, tileIndex);
+
+    Sprite *topRight = SPR_addSprite(&sprTitleEdge, x2, y1, TILE_ATTR(PAL1, FALSE, FALSE, TRUE));
+    SPR_setAutoTileUpload(topRight, FALSE);
+    SPR_setVRAMTileIndex(topRight, tileIndex);
+
+    Sprite *bottomLeft = SPR_addSprite(&sprTitleEdge, x1, y2, TILE_ATTR(PAL1, FALSE, TRUE, FALSE));
+    SPR_setAutoTileUpload(bottomLeft, FALSE);
+    SPR_setVRAMTileIndex(bottomLeft, tileIndex);
+
+    Sprite *bottomRight = SPR_addSprite(&sprTitleEdge, x2, y2, TILE_ATTR(PAL1, FALSE, TRUE, TRUE));
+    SPR_setAutoTileUpload(bottomRight, FALSE);
+    SPR_setVRAMTileIndex(bottomRight, tileIndex);
+
+    PAL_setPalette(PAL1, sprTitleEdge.palette->data, CPU);
+    videoLoop();
+
+    x1--;
+    x2++;
+    for (int i = 0; i < 61; i++)
+    {
+        x1 -= 2;
+        x2 += 2;
+        SPR_setPosition(topLeft, x1, y1);
+        SPR_setPosition(topRight, x2, y1);
+        SPR_setPosition(bottomLeft, x1, y2);
+        SPR_setPosition(bottomRight, x2, y2);
+        videoLoop();
+    }
+    KLog("loaded");
+    KLog_U1("SPR_getUsedVDPSprite: ", SPR_getUsedVDPSprite());
+    KLog_U1("MEM_getLargestFreeBlock: ", MEM_getLargestFreeBlock());
+    KLog_U1("SPR_getNumActiveSprite: ", SPR_getNumActiveSprite());
 #else
     static const int kEdgeWidth = 13;
     static const int kEdgeHeight = 148;
