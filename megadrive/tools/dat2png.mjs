@@ -39,7 +39,7 @@ const convertPaletteDataToPalette = (paletteData) => {
     return new Uint32Array(outPalette.buffer);
 };
 
-const readDat = ({ name, palette, width, height, out }) => {
+const readBitmap = ({ name, palette, width, height, out }) => {
     const raw = new Uint8Array(fs.readFileSync(path.join("../../resources", name)));
 
     const bytesPerRow = width / 2;
@@ -84,15 +84,48 @@ const readDat = ({ name, palette, width, height, out }) => {
     });
 };
 
-const tasks = [
+const readFont = ({ name, charHeight, charWidth, out }) => {
+    const tileSize = 8;
+    const data = fs.readFileSync(path.join("../../resources", name));
+    const numberOfCharactersInBitmapFont = 64;
+    const imageWidth = tileSize * numberOfCharactersInBitmapFont;
+
+    new Jimp(imageWidth, tileSize, (err, image) => {
+        image.opaque();
+        if (err) throw err;
+        for (let i = 0; i < numberOfCharactersInBitmapFont; ++i) {
+            for (let w = 0; w < charWidth; ++w) {
+                for (let h = 0; h < charHeight; ++h) {
+                    const row = data[i + h * numberOfCharactersInBitmapFont];
+                    const pixel = (row >> (7 - w)) & 0x1;
+
+                    image.setPixelColor(pixel ? 0xffffffff : 0x000000ff, i * tileSize + w + (tileSize - charWidth), h);
+                }
+            }
+        }
+        image.write(out, (err) => {
+            if (err) throw err;
+        });
+    });
+};
+
+const bitmaps = [
     { name: "TITLE.DAT", palette: TitlePaletteData, width: 320, height: 200, out: "out/title.png" },
     { name: "TITLE1.DAT", palette: Title1PaletteData, width: 320, height: 200, out: "out/title1.png" },
     { name: "TITLE2.DAT", palette: Title2PaletteData, width: 320, height: 200, out: "out/title2.png" },
 ];
 
+const fonts = [
+    {name: "CHARS8.DAT", charHeight: 8, charWidth: 8, out: "out/chars8.png"},
+    {name: "CHARS6.DAT", charHeight: 7, charWidth: 6, out: "out/chars6.png"},
+]
+
 async function main() {
-    for (const task of tasks) {
-        readDat(task);
+    for (const params of bitmaps) {
+        readBitmap(params);
+    }
+    for (const params of fonts) {
+        readFont(params);
     }
 }
 
