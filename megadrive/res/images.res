@@ -32,6 +32,7 @@
 IMAGE imgTitle images/title-224p.png BEST ALL
 IMAGE imgTitle1 images/title1-224p.png BEST ALL
 IMAGE imgTitle2 images/title2-224p.png BEST ALL
+IMAGE fontChars8  "images/chars8.png" BEST NONE
 
 # SPRITE
 # ------

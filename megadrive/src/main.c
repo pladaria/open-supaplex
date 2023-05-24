@@ -6,6 +6,8 @@ int main(bool hardReset) {
     {
         SYS_hardReset();
     }
+    KLog("Starting Supaplex");
+    KLog_U1("MEM_getLargestFreeBlock: ", MEM_getLargestFreeBlock());
 
     return supaplex_main(0, NULL);
 }

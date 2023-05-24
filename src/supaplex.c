@@ -56,7 +56,6 @@ PSP_HEAP_SIZE_KB(-1024);
 #ifdef __MEGADRIVE__
 #include "genesis.h"
 #include "../../res/images.h"
-#include "../ui.h"
 #endif
 
 // title1DataBuffer -> A000:4DAC - A000:CAAC
@@ -79,113 +78,113 @@ typedef enum {
 
 static const uint8_t kUserInputSpaceAndDirectionOffset = (UserInputSpaceUp - 1);
 
-uint8_t byte_50919 = 0;
-uint8_t byte_5091A = 0;
+static uint8_t byte_50919 = 0;
+static uint8_t byte_5091A = 0;
 UserInput gCurrentUserInput = 0; // byte_50941 -> 0x0631
-uint8_t byte_50946 = 0;
-uint16_t word_50947 = 0;
-uint16_t word_50949 = 0;
-uint8_t byte_50953 = 0;
-uint8_t byte_50954 = 0;
-uint8_t gShouldAutoselectNextLevelToPlay = 0; // byte_51ABE
-uint8_t gHasChangedLevelSetFromAdvancedMenu = 0;
-uint8_t byte_58D47 = 0; //
-uint8_t byte_59821 = 0; //
-uint8_t byte_59822 = 0; //
-uint8_t byte_59823 = 0; //
-uint8_t gDemoRecordingRandomGeneratorSeedHigh = 0; // byte_59B5C
-uint8_t gDemoRecordingRandomGeneratorSeedLow = 0; // byte_59B5F
-uint8_t gToggleFancyEasyTilesThrottleCounter = 0; // byte_59B7A -> data_subrest
-uint8_t gIsShowingFancyTiles = 1; // byte_59B7B -> data_subrstflg
-uint8_t gToggleGravityAutorepeatFlag = 0; // byte_59B7C
-uint8_t gToggleZonksFrozenAutorepeatFlag = 0; // byte_59B7D
-uint8_t gToggleEnemiesFrozenAutorepeatFlag = 0; // byte_59B7E
-uint8_t gDebugSkipPreviousLevelAutorepeatFlag_1 = 0; // byte_59B7F
-uint8_t gDebugSkipPreviousLevelAutorepeatFlag_2 = 0; // byte_59B80
-uint8_t gDebugSkipNextLevelAutorepeatFlag_1 = 0; // byte_59B81
-uint8_t gDebugSkipNextLevelAutorepeatFlag_2 = 0; // byte_59B82
-uint8_t byte_59B83 = 0;
-uint8_t byte_59B86 = 0;
-uint16_t gDemoRecordingRandomGeneratorSeed = 0; // word_5A199
-// uint8_t byte_5A140 = 0; // speedFixMagicNumber inside of level
-uint8_t byte_5A19B = 0;
-uint8_t gIsLevelStartedAsDemo = 0; // byte_5A19C
-uint8_t gDemoRecordingJustStarted = 0; // byte_5A2F8
-uint8_t gHasUserCheated = 0; // byte_5A2F9
-uint8_t byte_5A323 = 0;
-uint16_t word_5A33C = 0;
-uint8_t gHasUserInterruptedDemo = 0; // byte_5A33E
-uint8_t gIsGameBusy = 0; // byte_5A33F -> this was used mainly to avoid some graphic glitches when some text from the main menu was written on the game field
-// uint8_t gIsMouseAvailable = 0; // byte_58487
-uint8_t gLevelListButtonPressed = 0; // byte_50918
-uint8_t gLevelListDownButtonPressed = 0; // byte_50916
-uint8_t gLevelListUpButtonPressed = 0; // byte_50917
-uint8_t gNewPlayerEntryIndex = 0; // byte_59820
-uint8_t gPlayerListButtonPressed = 0; // byte_50912
-uint8_t gPlayerListDownButtonPressed = 0; // byte_50910
-uint8_t gPlayerListUpButtonPressed = 0; // byte_50911
-uint8_t gRankingListButtonPressed = 0; // byte_50915
-uint8_t gRankingListDownButtonPressed = 0; // byte_50913
-uint8_t gRankingListUpButtonPressed = 0; // byte_50914
-uint16_t gCurrentSelectedLevelIndex = 0; // word_51ABC
-uint16_t gNewPlayerNameLength = 0; // word_58475
+static uint8_t byte_50946 = 0;
+static uint16_t word_50947 = 0;
+static uint16_t word_50949 = 0;
+static uint8_t byte_50953 = 0;
+static uint8_t byte_50954 = 0;
+static uint8_t gShouldAutoselectNextLevelToPlay = 0; // byte_51ABE
+static uint8_t gHasChangedLevelSetFromAdvancedMenu = 0;
+static uint8_t byte_58D47 = 0; //
+static uint8_t byte_59821 = 0; //
+static uint8_t byte_59822 = 0; //
+static uint8_t byte_59823 = 0; //
+static uint8_t gDemoRecordingRandomGeneratorSeedHigh = 0; // byte_59B5C
+static uint8_t gDemoRecordingRandomGeneratorSeedLow = 0; // byte_59B5F
+static uint8_t gToggleFancyEasyTilesThrottleCounter = 0; // byte_59B7A -> data_subrest
+static uint8_t gIsShowingFancyTiles = 1; // byte_59B7B -> data_subrstflg
+static uint8_t gToggleGravityAutorepeatFlag = 0; // byte_59B7C
+static uint8_t gToggleZonksFrozenAutorepeatFlag = 0; // byte_59B7D
+static uint8_t gToggleEnemiesFrozenAutorepeatFlag = 0; // byte_59B7E
+static uint8_t gDebugSkipPreviousLevelAutorepeatFlag_1 = 0; // byte_59B7F
+static uint8_t gDebugSkipPreviousLevelAutorepeatFlag_2 = 0; // byte_59B80
+static uint8_t gDebugSkipNextLevelAutorepeatFlag_1 = 0; // byte_59B81
+static uint8_t gDebugSkipNextLevelAutorepeatFlag_2 = 0; // byte_59B82
+static uint8_t byte_59B83 = 0;
+static uint8_t byte_59B86 = 0;
+static uint16_t gDemoRecordingRandomGeneratorSeed = 0; // word_5A199
+// static uint8_t byte_5A140 = 0; // speedFixMagicNumber inside of level
+static uint8_t byte_5A19B = 0;
+static uint8_t gIsLevelStartedAsDemo = 0; // byte_5A19C
+static uint8_t gDemoRecordingJustStarted = 0; // byte_5A2F8
+static uint8_t gHasUserCheated = 0; // byte_5A2F9
+static uint8_t byte_5A323 = 0;
+static uint16_t word_5A33C = 0;
+static uint8_t gHasUserInterruptedDemo = 0; // byte_5A33E
+static uint8_t gIsGameBusy = 0; // byte_5A33F -> this was used mainly to avoid some graphic glitches when some text from the main menu was written on the game field
+// static uint8_t gIsMouseAvailable = 0; // byte_58487
+static uint8_t gLevelListButtonPressed = 0; // byte_50918
+static uint8_t gLevelListDownButtonPressed = 0; // byte_50916
+static uint8_t gLevelListUpButtonPressed = 0; // byte_50917
+static uint8_t gNewPlayerEntryIndex = 0; // byte_59820
+static uint8_t gPlayerListButtonPressed = 0; // byte_50912
+static uint8_t gPlayerListDownButtonPressed = 0; // byte_50910
+static uint8_t gPlayerListUpButtonPressed = 0; // byte_50911
+static uint8_t gRankingListButtonPressed = 0; // byte_50915
+static uint8_t gRankingListDownButtonPressed = 0; // byte_50913
+static uint8_t gRankingListUpButtonPressed = 0; // byte_50914
+static uint16_t gCurrentSelectedLevelIndex = 0; // word_51ABC
+static uint16_t gNewPlayerNameLength = 0; // word_58475
 
-uint16_t word_5157A = 0x4A62; // -> 0x126A -> (64, 132)
-uint16_t word_5157C = 0x0502; // -> 0x126C -> (97, 132)
-uint16_t kMurphyStillSpriteCoordinates = 0x4A80; // word_5157E -> 0x126E -> (304, 132)
-uint16_t word_51580 = 0x1AB2; // -> 0x1270 -> (0, 32)
-uint16_t word_515A2 = 0x32A2; // -> 0x1292 -> (224, 82) ??
+static uint16_t word_5157A = 0x4A62; // -> 0x126A -> (64, 132)
+static uint16_t word_5157C = 0x0502; // -> 0x126C -> (97, 132)
+static uint16_t kMurphyStillSpriteCoordinates = 0x4A80; // word_5157E -> 0x126E -> (304, 132)
+static uint16_t word_51580 = 0x1AB2; // -> 0x1270 -> (0, 32)
+static uint16_t word_515A2 = 0x32A2; // -> 0x1292 -> (224, 82) ??
 
-uint16_t word_515C4 = 0x1358; // (240, 178) -> 0x12B4
+static uint16_t word_515C4 = 0x1358; // (240, 178) -> 0x12B4
 
 // { 128, 64 }, // -> 0x2a02 -> 12f6 -> orange disk falling
 
-uint16_t word_5177E = 0x0CAE; //  -> 0x129 -> (256, 164)
-uint16_t word_51790 = 0x4A7E; //  -> 0x129 -> (288, 132)
-uint16_t word_5182E = 0x2A64; // -> (272, 388)
-uint16_t word_51840 = 0x2A06; //  -> 0x129 -> (160, 64)
-uint16_t word_51842 = 0x132C; //  -> 0x129 -> (208, 16) confirmed
-uint16_t word_51844 = 0x2A08; //  -> 0x129 -> (176, 64)
-uint16_t word_51846 = 0x132A; //  -> 0x129 -> (192, 16)
-uint16_t kTerminalOnSpriteCoordinates = 0x2A62; // word_51848 -> 0x1268 -> (256, 388) I don't get the math for this one, but the coordinates are right
-uint16_t word_5184A = 0x2A66; //  -> 0x1268 -> (
-uint16_t word_5184C = 0x2A67; //  -> 0x1268 -> (
-uint16_t word_5184E = 0x2E36; //  -> 0x1268 -> (
-uint16_t word_51850 = 0x2E37; //  -> 0x1268 -> (
-uint16_t word_51852 = 0x2A68; //  -> 0x1268 -> (
-uint16_t word_51854 = 0x2A69; //  -> 0x1268 -> (
-uint16_t word_51856 = 0x2E38; //  -> 0x1268 -> (
-uint16_t word_51858 = 0x2E39; //  -> 0x1268 -> (
-uint16_t gIsMoveScrollModeEnabled = 0; // word_51A01
-uint16_t gDebugExtraRenderDelay = 1; // this was used to add an extra delay in debug mode using keys 1-9
-uint16_t word_58463 = 0;
-uint8_t gIsInMainMenu = 0;
-uint16_t gAutomaticDemoPlaybackCountdown = 0; // word_58465
-uint16_t word_58467 = 0;
-uint16_t gLevelListThrottleCurrentCounter = 0; // word_58469
-uint16_t gLevelListThrottleNextCounter = 0;
-uint16_t gPlayerListThrottleCurrentCounter = 0; // word_5846D
-uint16_t gPlayerListThrottleNextCounter = 0; // word_5846F
-uint16_t gRankingListThrottleCurrentCounter = 0; // word_58471
-uint16_t gRankingListThrottleNextCounter = 0; // word_58473
-uint16_t gSelectedOriginalDemoIndex = 0; // word_599D6 -> used loading old demo files demo
-uint16_t gSelectedOriginalDemoLevelNumber = 0; // word_599D8 -> used loading old demo files demo -> the high byte is set to -1 in readLevels for some unknown reason
+static uint16_t word_5177E = 0x0CAE; //  -> 0x129 -> (256, 164)
+static uint16_t word_51790 = 0x4A7E; //  -> 0x129 -> (288, 132)
+static uint16_t word_5182E = 0x2A64; // -> (272, 388)
+static uint16_t word_51840 = 0x2A06; //  -> 0x129 -> (160, 64)
+static uint16_t word_51842 = 0x132C; //  -> 0x129 -> (208, 16) confirmed
+static uint16_t word_51844 = 0x2A08; //  -> 0x129 -> (176, 64)
+static uint16_t word_51846 = 0x132A; //  -> 0x129 -> (192, 16)
+static uint16_t kTerminalOnSpriteCoordinates = 0x2A62; // word_51848 -> 0x1268 -> (256, 388) I don't get the math for this one, but the coordinates are right
+static uint16_t word_5184A = 0x2A66; //  -> 0x1268 -> (
+static uint16_t word_5184C = 0x2A67; //  -> 0x1268 -> (
+static uint16_t word_5184E = 0x2E36; //  -> 0x1268 -> (
+static uint16_t word_51850 = 0x2E37; //  -> 0x1268 -> (
+static uint16_t word_51852 = 0x2A68; //  -> 0x1268 -> (
+static uint16_t word_51854 = 0x2A69; //  -> 0x1268 -> (
+static uint16_t word_51856 = 0x2E38; //  -> 0x1268 -> (
+static uint16_t word_51858 = 0x2E39; //  -> 0x1268 -> (
+static uint16_t gIsMoveScrollModeEnabled = 0; // word_51A01
+static uint16_t gDebugExtraRenderDelay = 1; // this was used to add an extra delay in debug mode using keys 1-9
+static uint16_t word_58463 = 0;
+static uint8_t gIsInMainMenu = 0;
+static uint16_t gAutomaticDemoPlaybackCountdown = 0; // word_58465
+static uint16_t word_58467 = 0;
+static uint16_t gLevelListThrottleCurrentCounter = 0; // word_58469
+static uint16_t gLevelListThrottleNextCounter = 0;
+static uint16_t gPlayerListThrottleCurrentCounter = 0; // word_5846D
+static uint16_t gPlayerListThrottleNextCounter = 0; // word_5846F
+static uint16_t gRankingListThrottleCurrentCounter = 0; // word_58471
+static uint16_t gRankingListThrottleNextCounter = 0; // word_58473
+static uint16_t gSelectedOriginalDemoIndex = 0; // word_599D6 -> used loading old demo files demo
+static uint16_t gSelectedOriginalDemoLevelNumber = 0; // word_599D8 -> used loading old demo files demo -> the high byte is set to -1 in readLevels for some unknown reason
 // These two store the scroll offset to get back to Murphy when we're in "free mode"
-uint16_t gMurphyScrollOffsetX = 0; // word_59B88
-uint16_t gMurphyScrollOffsetY = 0; // word_59B8A
-uint16_t gLevelSetRotationThrottleCurrentCounter = 0; // word_59B8C
-uint16_t gLevelSetRotationThrottleNextCounter = 0; // word_59B8E
-uint16_t gLastDrawnMinutesAndSeconds; // word_510B7
-uint8_t gLastDrawnHours; // byte_510B9
+static uint16_t gMurphyScrollOffsetX = 0; // word_59B88
+static uint16_t gMurphyScrollOffsetY = 0; // word_59B8A
+static uint16_t gLevelSetRotationThrottleCurrentCounter = 0; // word_59B8C
+static uint16_t gLevelSetRotationThrottleNextCounter = 0; // word_59B8E
+static uint16_t gLastDrawnMinutesAndSeconds; // word_510B7
+static uint8_t gLastDrawnHours; // byte_510B9
 FILE *gCurrentRecordingDemoFile; // word_510E4
-uint8_t gDemoRecordingLowestSpeed; // speed?2
+static uint8_t gDemoRecordingLowestSpeed; // speed?2
 int16_t gAdditionalScrollOffsetX; // word_51963
 int16_t gAdditionalScrollOffsetY; // word_51965
-uint8_t isJoystickEnabled = 0; // byte_50940
-uint8_t isMusicEnabled = 0; // byte_59886
-uint8_t isFXEnabled = 0; // byte_59885
+static uint8_t isJoystickEnabled = 0; // byte_50940
+static uint8_t isMusicEnabled = 0; // byte_59886
+static uint8_t isFXEnabled = 0; // byte_59885
 
-uint8_t gIsFlashingBackgroundModeEnabled = 0; // flashingbackgroundon
+static uint8_t gIsFlashingBackgroundModeEnabled = 0; // flashingbackgroundon
 // const float kSpeedTimeFactors[kNumberOfGameSpeeds] = { 3.5, 3.0, 2.5, 2.0, 1.5, 1.0, 0.75, 2.0 / 3.0, 5.0 / 8.0, 3.0 / 5.0, 1.0 / 70.0 };
 
 // Used to measure game speed (reference is 35 iterations per second)
@@ -1585,13 +1584,13 @@ int SUPAPLEX_MAIN(int argc, char *argv[])
         ColorPalette titleDatPalette; // si = 0x5F15;
         convertPaletteDataToPalette(gTitlePaletteData, titleDatPalette);
         fadeToPalette(titleDatPalette);
-        #ifdef __MEGADRIVE__
-        JOY_waitPressBtn(); // @TODO pladaria: uncomment
+#ifdef __MEGADRIVE__
+        waitForKeyMouseOrJoystick();
         PAL_fadeOut(0, 15, 12, FALSE);
-        #endif
+#endif
     }
 
-//isFastMode:              //; CODE XREF: start+2ADj
+    // isFastMode:              //; CODE XREF: start+2ADj
     loadMurphySprites(); // 01ED:029D
     // Conditions to whether show
     if (gShouldStartFromSavedSnapshot
@@ -1606,9 +1605,9 @@ int SUPAPLEX_MAIN(int argc, char *argv[])
 //openingSequence:
         loadScreen2();    // 01ED:02B9
         readEverything(); // 01ED:02BC
-        // drawSpeedFixTitleAndVersion(); // 01ED:02BF
+        drawSpeedFixTitleAndVersion(); // 01ED:02BF
         openCreditsBlock(); // credits inside the block // 01ED:02C2
-        // drawSpeedFixCredits();   // credits below the block (herman perk and elmer productions) // 01ED:02C5
+        drawSpeedFixCredits();   // credits below the block (herman perk and elmer productions) // 01ED:02C5
     }
 
 return 0; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -2295,8 +2294,6 @@ uint8_t readDemoFiles() //    proc near       ; CODE XREF: readEverything+12p
 void openCreditsBlock() // proc near      ; CODE XREF: start+2E9p
 {
 #ifdef __MEGADRIVE__
-    KLog_U1("MEM_getLargestFreeBlock: ", MEM_getLargestFreeBlock());
-
     // In Megadrive the "curtain effect" is made using four opaque sprites that are moved to the left and right
     // It is the same sprite flipped horizontally and vertically
     u16 tileIndex = TILE_USER_INDEX + imgTitle1.tileset->numTile + imgTitle2.tileset->numTile;
@@ -2617,6 +2614,9 @@ void readEverything() //  proc near       ; CODE XREF: start+2DBp start+2E3p .
 void waitForKeyMouseOrJoystick() // sub_47E98  proc near       ; CODE XREF: recoverFilesFromFloppyDisk+4Ap
 //                    ; handleStatisticsOptionClick+216p ...
 {
+#ifdef __MEGADRIVE__
+    JOY_waitPressBtn();
+#else
     byte_59B86 = 0;
 
     do
@@ -2707,6 +2707,7 @@ void waitForKeyMouseOrJoystick() // sub_47E98  proc near       ; CODE XREF: reco
         }
         while (gCurrentUserInput > kUserInputSpaceAndDirectionOffset);
     }
+#endif
 }
 
 void updateZonkTiles(int16_t position) //   proc near       ; DATA XREF: data:160Co
@@ -8018,6 +8019,7 @@ void drawTextWithChars6FontWithOpaqueBackgroundIfPossible(size_t destX, size_t d
     // - ah is the color index in the current palette
 
     // Address: 01ED:4DFC
+
     if (gIsGameBusy == 1)
     {
         return;
@@ -14667,15 +14669,25 @@ void drawGamePanel() // sub_501C0   proc near       ; CODE XREF: start+338p han
 
 void drawSpeedFixTitleAndVersion() //   proc near       ; CODE XREF: start+2E6p
 {
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 11, PAL0, "SUPAPLEX VERSION " VERSION_STRING);
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(102, 11, 1, "SUPAPLEX VERSION " VERSION_STRING);
+#endif
 }
 
 void drawSpeedFixCredits() // showNewCredits  proc near       ; CODE XREF: start+2ECp
 {
+#ifdef __MEGADRIVE__
+    PAL_setColor(16 * 3 +1, RGB8_8_8_TO_VDPCOLOR(96,96,96));
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(60, 168 + 8, PAL3, "V.1-4 + 6.X BY HERMAN PERK");
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(60, 176 + 8, PAL3, "V.5.X BY ELMER PRODUCTIONS");
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(60, 184 + 8, PAL3, "V.7.X BY SERGIO PADRINO  ");
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(60, 168, 0xE, "VERSIONS 1-4 + 6.X BY HERMAN PERK");
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(60, 176, 0xE, "VERSIONS 5.X BY ELMER PRODUCTIONS");
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(60, 184, 0xE, "  VERSION 7.X BY SERGIO PADRINO  ");
-
+#endif
     videoLoop();
 
     do

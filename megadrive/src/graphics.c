@@ -2,7 +2,6 @@
 #include "supaplex/graphics.h"
 #include "supaplex/system.h"
 #include "../res/images.h"
-#include "ui.h"
 
 #define kPaleteDataSize (kNumberOfColors * 4)
 #define kNumberOfPalettes 4
@@ -72,6 +71,7 @@ void readBackDat(void)
 }
 void readBitmapFonts(void)
 {
+    VDP_loadFont(fontChars8.tileset, CPU);
 }
 
 void readAndRenderTitleDat(void)
@@ -161,14 +161,17 @@ void renderAdvancedOptionsMenu(AdvancedOptionsMenu *menu)
 
 void drawTextWithChars6FontWithOpaqueBackground(size_t destX, size_t destY, uint8_t color, const char *text)
 {
+    VDP_drawTextEx(BG_A, text, TILE_ATTR(color, FALSE, FALSE, FALSE), (destX >> 3), destY >> 3, CPU);
 }
 
 void drawTextWithChars6FontWithTransparentBackground(size_t destX, size_t destY, uint8_t color, const char *text)
 {
+    VDP_drawTextBG(BG_A, text, (destX >> 3), destY >> 3);
 }
 
 void drawTextWithChars8Font(size_t destX, size_t destY, uint8_t color, const char *text)
 {
+    VDP_drawTextBG(BG_A, text, (destX >> 3), destY >> 3);
 }
 
 void drawTextWithChars8FontToGamePanel(size_t destX, size_t destY, uint8_t color, const char *text)
@@ -198,8 +201,8 @@ static void convertRgbPaletteToVdpPalette(ColorPalette palette, u16 *outVdpPalet
 {
     for (int i = 0; i < 16; i++)
     {
-        // const u32 color = palette[i].r << 16 | palette[i].g << 8 | palette[i].b;
-        const u32 color = *((u32 *)&palette[i]) >> 8;
+        const u32 color = palette[i].r << 16 | palette[i].g << 8 | palette[i].b;
+        // const u32 color = *((u32 *)&palette[i]) >> 8;
         outVdpPalette[i] = RGB24_TO_VDPCOLOR(color);
     }
 }
@@ -233,8 +236,8 @@ void convertPaletteDataToPalette(ColorPaletteData paletteData, ColorPalette outP
         outPalette[i].g = paletteData[i * 4 + 1] << kExponent;
         outPalette[i].b = paletteData[i * 4 + 2] << kExponent;
         outPalette[i].a = paletteData[i * 4 + 3] << kExponent; // intensity, for now
-        KLog_U1("Index: ", i);
-        KLog_U3("Color: ", outPalette[i].r, ", ", outPalette[i].g, ", ", outPalette[i].b);
+        // KLog_U1("Index: ", i);
+        // KLog_U3("Color: ", outPalette[i].r, ", ", outPalette[i].g, ", ", outPalette[i].b);
     }
 }
 
