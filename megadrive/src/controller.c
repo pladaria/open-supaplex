@@ -56,7 +56,8 @@ uint8_t getGameControllerButtonRightShoulder(void)
 
 uint8_t isAnyGameControllerButtonPressed(void)
 {
-    return 0;
+    JOY_update();
+    return JOY_readJoypad(JOY_1) != 0;
 }
 
 uint8_t getGameControllerConfirmButton(void)

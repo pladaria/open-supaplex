@@ -17,28 +17,28 @@ ColorPalette gCurrentPalette;
 // - 3: ???
 //
 ColorPalette gPalettes[kNumberOfPalettes];
-ColorPalette gPalettes[kNumberOfPalettes];
-ColorPalette gBlackPalette = {
+
+const ColorPalette gBlackPalette = {
     // 60D5h
     {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0},
     {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0},
 };
 
-ColorPaletteData gTitlePaletteData = {
+const ColorPaletteData gTitlePaletteData = {
     0x02, 0x03, 0x05, 0x00, 0x0D, 0x0A, 0x04, 0x0C, 0x02, 0x06, 0x06, 0x02, 0x03, 0x09, 0x09, 0x03,
     0x0B, 0x08, 0x03, 0x06, 0x02, 0x07, 0x07, 0x0A, 0x08, 0x06, 0x0D, 0x09, 0x06, 0x04, 0x0B, 0x01,
     0x09, 0x01, 0x00, 0x04, 0x0B, 0x01, 0x00, 0x04, 0x0D, 0x01, 0x00, 0x0C, 0x0F, 0x01, 0x00, 0x0C,
     0x0F, 0x06, 0x04, 0x0C, 0x02, 0x05, 0x06, 0x08, 0x0F, 0x0C, 0x06, 0x0E, 0x0C, 0x0C, 0x0D, 0x0E,
 };
 
-ColorPaletteData gTitle1PaletteData = {
+const ColorPaletteData gTitle1PaletteData = {
     0x00, 0x00, 0x00, 0x00, 0x0F, 0x0F, 0x0F, 0x0F, 0x08, 0x08, 0x08, 0x08, 0x0A, 0x0A, 0x0A, 0x07,
     0x0A, 0x0A, 0x0A, 0x07, 0x0B, 0x0B, 0x0B, 0x07, 0x0E, 0x01, 0x01, 0x04, 0x09, 0x09, 0x09, 0x07,
     0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x09, 0x00, 0x00, 0x04, 0x0B, 0x00, 0x00, 0x0C,
     0x08, 0x08, 0x08, 0x08, 0x05, 0x05, 0x05, 0x08, 0x06, 0x06, 0x06, 0x08, 0x08, 0x08, 0x08, 0x08,
 };
 
-ColorPaletteData gTitle2PaletteData = {
+const ColorPaletteData gTitle2PaletteData = {
     0x00, 0x00, 0x00, 0x00, 0x0F, 0x0F, 0x0F, 0x0F, 0x06, 0x06, 0x06, 0x08, 0x0A, 0x0A, 0x0A, 0x07,
     0x0A, 0x0A, 0x0A, 0x07, 0x0B, 0x0B, 0x0B, 0x07, 0x0E, 0x01, 0x01, 0x04, 0x09, 0x09, 0x09, 0x07,
     0x01, 0x03, 0x07, 0x00, 0x08, 0x08, 0x08, 0x08, 0x09, 0x00, 0x00, 0x04, 0x0B, 0x00, 0x00, 0x0C,
@@ -57,18 +57,26 @@ uint8_t gScrollDestinationScreenBitmapData[kFullScreenFramebufferLength];
 // Time difference between 2 consecutive renders
 uint32_t gRenderDeltaTime;
 
+static Sprite *cursorSprite;
+
 void readMenuDat(void)
 {
 }
+
 void loadMurphySprites(void)
 {
+    // Load sprite cursor
+    // SPR_addSprite(&sprCursor, 160, 112, TILE_ATTR(PAL1, TRUE, FALSE, FALSE));
 }
+
 void readPanelDat(void)
 {
 }
+
 void readBackDat(void)
 {
 }
+
 void readBitmapFonts(void)
 {
     VDP_loadFont(fontChars8.tileset, CPU);
@@ -93,6 +101,7 @@ void readTitle2Dat(void)
 void readGfxDat(void)
 {
 }
+
 void readControlsDat(void)
 {
 }
@@ -100,37 +109,48 @@ void readControlsDat(void)
 void saveLastMouseAreaBitmap(void)
 {
 }
+
 void restoreLastMouseAreaBitmap(void)
 {
 }
+
 void drawMouseCursor(void)
 {
 }
+
 void drawMenuBackground(void)
 {
 }
+
 void drawOptionsBackground(uint8_t *dest)
 {
 }
+
 void drawBackBackground(void)
 {
 }
+
 void drawGfxTutorBackground(uint8_t *dest)
 {
 }
+
 void drawFixedLevel(void)
 {
 }
+
 void drawLevelViewport(uint16_t x, uint16_t y, uint16_t width, uint16_t height)
 {
 }
+
 void drawCurrentLevelViewport(uint16_t panelHeight)
 {
 }
+
 void drawMovingSpriteFrameInLevel(uint16_t srcX, uint16_t srcY, uint16_t width, uint16_t height, int16_t dstX,
                                   int16_t dstY)
 {
 }
+
 void drawMovingFrame(uint16_t srcX, uint16_t srcY, uint16_t destPosition)
 {
 }
@@ -197,7 +217,7 @@ void replaceCurrentPaletteColor(uint8_t index, Color color)
 {
 }
 
-static void convertRgbPaletteToVdpPalette(ColorPalette palette, u16 *outVdpPalette)
+static void convertRgbPaletteToVdpPalette(const ColorPalette palette, u16 *outVdpPalette)
 {
     for (int i = 0; i < 16; i++)
     {
@@ -207,18 +227,18 @@ static void convertRgbPaletteToVdpPalette(ColorPalette palette, u16 *outVdpPalet
     }
 }
 
-void setPalette(ColorPalette palette)
+void setPalette(const ColorPalette palette)
 {
     u16 pal[16];
     convertRgbPaletteToVdpPalette(palette, pal);
     PAL_setPalette(PAL0, pal, CPU);
 }
 
-void fadeToPalette(ColorPalette palette)
+void fadeToPalette(const ColorPalette palette)
 {
-    // The original animation consisted of 64 steps and was designed to be displayed on screens with a refresh rate of 70Hz.
-    // However, since the Megadrive console only supports 8 levels of color intensity per channel, I am reducing the number of fade steps.
-    // This adjustment ensures that the color transition is subtle yet still perceptible.
+    // The original animation consisted of 64 steps and was designed to be displayed on screens with a refresh rate of
+    // 70Hz. However, since the Megadrive console only supports 8 levels of color intensity per channel, I am reducing
+    // the number of fade steps. This adjustment ensures that the color transition is subtle yet still perceptible.
     u16 steps = 12;
     u16 pal[16];
     convertRgbPaletteToVdpPalette(palette, pal);

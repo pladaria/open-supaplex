@@ -10,19 +10,24 @@ const TitlePaletteData = [
     0x0c, 0x06, 0x0e, 0x0c, 0x0c, 0x0d, 0x0e,
 ];
 
-const Title1PaletteData = [
+const title1PaletteData = [
     0x00, 0x00, 0x00, 0x00, 0x0f, 0x0f, 0x0f, 0x0f, 0x08, 0x08, 0x08, 0x08, 0x0a, 0x0a, 0x0a, 0x07, 0x0a, 0x0a, 0x0a,
     0x07, 0x0b, 0x0b, 0x0b, 0x07, 0x0e, 0x01, 0x01, 0x04, 0x09, 0x09, 0x09, 0x07, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08,
     0x08, 0x08, 0x09, 0x00, 0x00, 0x04, 0x0b, 0x00, 0x00, 0x0c, 0x08, 0x08, 0x08, 0x08, 0x05, 0x05, 0x05, 0x08, 0x06,
     0x06, 0x06, 0x08, 0x08, 0x08, 0x08, 0x08,
 ];
 
-const Title2PaletteData = [
+const title2PaletteData = [
     0x00, 0x00, 0x00, 0x00, 0x0f, 0x0f, 0x0f, 0x0f, 0x06, 0x06, 0x06, 0x08, 0x0a, 0x0a, 0x0a, 0x07, 0x0a, 0x0a, 0x0a,
     0x07, 0x0b, 0x0b, 0x0b, 0x07, 0x0e, 0x01, 0x01, 0x04, 0x09, 0x09, 0x09, 0x07, 0x01, 0x03, 0x07, 0x00, 0x08, 0x08,
     0x08, 0x08, 0x09, 0x00, 0x00, 0x04, 0x0b, 0x00, 0x00, 0x0c, 0x00, 0x02, 0x0a, 0x01, 0x05, 0x05, 0x05, 0x08, 0x06,
     0x06, 0x06, 0x08, 0x08, 0x08, 0x08, 0x07,
 ];
+
+const pal0 = new Uint8Array(64);
+const pal1 = new Uint8Array(64);
+const pal2 = new Uint8Array(64);
+const pal3 = new Uint8Array(64);
 
 const convertPaletteDataToPalette = (paletteData) => {
     const outPalette = new Uint8Array(16 * 4);
@@ -37,6 +42,14 @@ const convertPaletteDataToPalette = (paletteData) => {
     }
 
     return new Uint32Array(outPalette.buffer);
+};
+
+const readPalettes = () => {
+    const palettes = new Uint8Array(fs.readFileSync("../../resources/PALETTES.DAT"));
+    pal0.set(palettes.slice(0, 64));
+    pal1.set(palettes.slice(64, 128));
+    pal2.set(palettes.slice(128, 192));
+    pal3.set(palettes.slice(192, 256));
 };
 
 const readBitmap = ({ name, palette, width, height, out }) => {
@@ -111,16 +124,18 @@ const readFont = ({ name, charHeight, charWidth, out }) => {
 
 const bitmaps = [
     { name: "TITLE.DAT", palette: TitlePaletteData, width: 320, height: 200, out: "out/title.png" },
-    { name: "TITLE1.DAT", palette: Title1PaletteData, width: 320, height: 200, out: "out/title1.png" },
-    { name: "TITLE2.DAT", palette: Title2PaletteData, width: 320, height: 200, out: "out/title2.png" },
+    { name: "TITLE1.DAT", palette: title1PaletteData, width: 320, height: 200, out: "out/title1.png" },
+    { name: "TITLE2.DAT", palette: title2PaletteData, width: 320, height: 200, out: "out/title2.png" },
+    { name: "MOVING.DAT", palette: pal1, width: 320, height: 462, out: "out/moving.png" },
 ];
 
 const fonts = [
-    {name: "CHARS8.DAT", charHeight: 8, charWidth: 8, out: "out/chars8.png"},
-    {name: "CHARS6.DAT", charHeight: 7, charWidth: 6, out: "out/chars6.png"},
-]
+    { name: "CHARS8.DAT", charHeight: 8, charWidth: 8, out: "out/chars8.png" },
+    { name: "CHARS6.DAT", charHeight: 7, charWidth: 6, out: "out/chars6.png" },
+];
 
 async function main() {
+    readPalettes();
     for (const params of bitmaps) {
         readBitmap(params);
     }
