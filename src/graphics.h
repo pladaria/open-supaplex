@@ -122,7 +122,7 @@ void readPalettes(void);
 void replaceCurrentPaletteColor(uint8_t index, Color color);
 void setPalette(const ColorPalette palette);
 void fadeToPalette(const ColorPalette palette);
-void convertPaletteDataToPalette(ColorPaletteData paletteData, ColorPalette outPalette);
+void convertPaletteDataToPalette(const ColorPaletteData paletteData, ColorPalette outPalette);
 
 void startTrackingRenderDeltaTime(void);
 uint32_t updateRenderDeltaTime(void);

@@ -22,7 +22,11 @@
 #include <stdint.h>
 
 #define kScreenWidth 320
+#ifdef __MEGADRIVE__
+#define kScreenHeight 224
+#else
 #define kScreenHeight 200
+#endif
 
 typedef struct
 {

@@ -1,7 +1,7 @@
 #include "genesis.h"
 #include "supaplex/graphics.h"
 #include "supaplex/system.h"
-#include "../res/images.h"
+#include "../res/resources.h"
 
 #define kPaleteDataSize (kNumberOfColors * 4)
 #define kNumberOfPalettes 4
@@ -16,6 +16,8 @@ ColorPalette gCurrentPalette;
 // - 2: ???
 // - 3: ???
 //
+
+// @TODO pladaria: instead of converting dat to rgb, we could store in ROM rgb directly
 ColorPalette gPalettes[kNumberOfPalettes];
 
 const ColorPalette gBlackPalette = {
@@ -65,8 +67,11 @@ void readMenuDat(void)
 
 void loadMurphySprites(void)
 {
-    // Load sprite cursor
-    // SPR_addSprite(&sprCursor, 160, 112, TILE_ATTR(PAL1, TRUE, FALSE, FALSE));
+    KLog("*** Load cursor sprite");
+    cursorSprite = SPR_addSprite(&sprCursor, 160, 112, TILE_ATTR(PAL1, TRUE, FALSE, FALSE));
+    SPR_setVisibility(cursorSprite, HIDDEN);
+    KLog_U1("MEM_getFree: ", MEM_getFree());
+    KLog_U1("MEM_getLargestFreeBlock: ", MEM_getLargestFreeBlock());
 }
 
 void readPanelDat(void)
@@ -95,7 +100,7 @@ void readAndRenderTitle1Dat(void)
 void readTitle2Dat(void)
 {
     u16 tileIndex = TILE_USER_INDEX + imgTitle1.tileset->numTile;
-    VDP_drawImageEx(BG_B, &imgTitle2, TILE_ATTR_FULL(PAL2, FALSE, FALSE, FALSE, tileIndex), 0, 0, FALSE, FALSE);
+    VDP_drawImageEx(BG_B, &imgTitle2, TILE_ATTR_FULL(PAL1, FALSE, FALSE, FALSE, tileIndex), 0, 0, FALSE, FALSE);
 }
 
 void readGfxDat(void)
@@ -116,10 +121,13 @@ void restoreLastMouseAreaBitmap(void)
 
 void drawMouseCursor(void)
 {
+    SPR_setVisibility(cursorSprite, VISIBLE);
 }
 
 void drawMenuBackground(void)
 {
+    KLog("*** drawMenuBackground");
+    VDP_drawImageEx(BG_A, &imgMenu, TILE_ATTR_FULL(PAL0, FALSE, FALSE, FALSE, TILE_USER_INDEX), 0, 0, FALSE, FALSE);
 }
 
 void drawOptionsBackground(uint8_t *dest)
@@ -211,6 +219,11 @@ void videoLoop(void)
 
 void readPalettes(void)
 {
+    KLog("*** readPalettes");
+    convertPaletteDataToPalette(&binPalettes[0], gPalettes[0]);
+    convertPaletteDataToPalette(&binPalettes[64], gPalettes[1]);
+    convertPaletteDataToPalette(&binPalettes[128], gPalettes[2]);
+    convertPaletteDataToPalette(&binPalettes[192], gPalettes[3]);
 }
 
 void replaceCurrentPaletteColor(uint8_t index, Color color)
@@ -219,11 +232,14 @@ void replaceCurrentPaletteColor(uint8_t index, Color color)
 
 static void convertRgbPaletteToVdpPalette(const ColorPalette palette, u16 *outVdpPalette)
 {
+    KLog("*** convertRgbPaletteToVdpPalette");
     for (int i = 0; i < 16; i++)
     {
         const u32 color = palette[i].r << 16 | palette[i].g << 8 | palette[i].b;
         // const u32 color = *((u32 *)&palette[i]) >> 8;
         outVdpPalette[i] = RGB24_TO_VDPCOLOR(color);
+        KLog_U2("Index: ", i, " => ", outVdpPalette[i]);
+        KLog_U3("Color: ", palette[i].r, ", ", palette[i].g, ", ", palette[i].b);
     }
 }
 
@@ -236,6 +252,7 @@ void setPalette(const ColorPalette palette)
 
 void fadeToPalette(const ColorPalette palette)
 {
+    KLog("*** fadeToPalette");
     // The original animation consisted of 64 steps and was designed to be displayed on screens with a refresh rate of
     // 70Hz. However, since the Megadrive console only supports 8 levels of color intensity per channel, I am reducing
     // the number of fade steps. This adjustment ensures that the color transition is subtle yet still perceptible.
@@ -245,11 +262,11 @@ void fadeToPalette(const ColorPalette palette)
     PAL_fadeIn(0, 15, pal, steps, FALSE);
 }
 
-void convertPaletteDataToPalette(ColorPaletteData paletteData, ColorPalette outPalette)
+void convertPaletteDataToPalette(const ColorPaletteData paletteData, ColorPalette outPalette)
 {
     int kExponent = 4; // no idea why (yet)
 
-    KLog("convertPaletteDataToPalette");
+    KLog("*** convertPaletteDataToPalette");
     for (int i = 0; i < kNumberOfColors; ++i)
     {
         outPalette[i].r = paletteData[i * 4 + 0] << kExponent;

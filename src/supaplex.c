@@ -55,7 +55,7 @@ PSP_HEAP_SIZE_KB(-1024);
 
 #ifdef __MEGADRIVE__
 #include "genesis.h"
-#include "../../res/images.h"
+#include "../../res/resources.h"
 static Sprite *creditsBlockEdgeTopLeft;
 static Sprite *creditsBlockEdgeTopRight;
 static Sprite *creditsBlockEdgeBottomLeft;
@@ -165,7 +165,7 @@ static uint16_t gDebugExtraRenderDelay = 1;            // this was used to add a
 static uint16_t word_58463 = 0;
 static uint8_t gIsInMainMenu = 0;
 static uint16_t gAutomaticDemoPlaybackCountdown = 0; // word_58465
-static uint16_t word_58467 = 0;
+static uint16_t word_58467 = 0; // @TODO pladaria: rename to shouldDrawMainMenu
 static uint16_t gLevelListThrottleCurrentCounter = 0; // word_58469
 static uint16_t gLevelListThrottleNextCounter = 0;
 static uint16_t gPlayerListThrottleCurrentCounter = 0;  // word_5846D
@@ -1610,6 +1610,7 @@ int SUPAPLEX_MAIN(int argc, char *argv[])
     {
 // isNotFastMode:              //; CODE XREF: start+30Aj
 #ifdef __MEGADRIVE__
+        KLog("*** Release credits block sprites");
         PAL_fadeOutAll(12, FALSE);
         SPR_releaseSprite(creditsBlockEdgeTopLeft);
         SPR_releaseSprite(creditsBlockEdgeTopRight);
@@ -2304,24 +2305,27 @@ void openCreditsBlock() // proc near      ; CODE XREF: start+2E9p
     u16 y1 = 32;
     u16 y2 = 98;
 
-    creditsBlockEdgeTopLeft = SPR_addSprite(&sprTitleEdge, x1, y1, TILE_ATTR(PAL1, FALSE, FALSE, FALSE));
+    KLog("*** Create credits block sprites");
+    KLog_U1("MEM_getFree: ", MEM_getFree());
+    KLog_U1("MEM_getLargestFreeBlock: ", MEM_getLargestFreeBlock());
+
+    creditsBlockEdgeTopLeft = SPR_addSprite(&sprTitleEdge, x1, y1, TILE_ATTR(PAL0, FALSE, FALSE, FALSE));
     SPR_setVRAMTileIndex(creditsBlockEdgeTopLeft, tileIndex);
 
-    creditsBlockEdgeTopRight = SPR_addSprite(&sprTitleEdge, x2, y1, TILE_ATTR(PAL1, FALSE, FALSE, TRUE));
+    creditsBlockEdgeTopRight = SPR_addSprite(&sprTitleEdge, x2, y1, TILE_ATTR(PAL0, FALSE, FALSE, TRUE));
     SPR_setAutoTileUpload(creditsBlockEdgeTopRight, FALSE);
     SPR_setVRAMTileIndex(creditsBlockEdgeTopRight, tileIndex);
 
-    creditsBlockEdgeBottomLeft = SPR_addSprite(&sprTitleEdge, x1, y2, TILE_ATTR(PAL1, FALSE, TRUE, FALSE));
+    creditsBlockEdgeBottomLeft = SPR_addSprite(&sprTitleEdge, x1, y2, TILE_ATTR(PAL0, FALSE, TRUE, FALSE));
     SPR_setAutoTileUpload(creditsBlockEdgeBottomLeft, FALSE);
     SPR_setVRAMTileIndex(creditsBlockEdgeBottomLeft, tileIndex);
 
-    creditsBlockEdgeBottomRight = SPR_addSprite(&sprTitleEdge, x2, y2, TILE_ATTR(PAL1, FALSE, TRUE, TRUE));
+    creditsBlockEdgeBottomRight = SPR_addSprite(&sprTitleEdge, x2, y2, TILE_ATTR(PAL0, FALSE, TRUE, TRUE));
     SPR_setAutoTileUpload(creditsBlockEdgeBottomRight, FALSE);
     SPR_setVRAMTileIndex(creditsBlockEdgeBottomRight, tileIndex);
 
     PAL_setPalette(PAL0, imgTitle1.palette->data, CPU);
-    PAL_setPalette(PAL2, imgTitle1.palette->data, CPU);
-    PAL_setPalette(PAL1, sprTitleEdge.palette->data, CPU);
+    PAL_setPalette(PAL1, imgTitle1.palette->data, CPU);
     videoLoop();
 
     x1--;
@@ -2336,7 +2340,7 @@ void openCreditsBlock() // proc near      ; CODE XREF: start+2E9p
         SPR_setPosition(creditsBlockEdgeBottomRight, x2, y2);
         videoLoop();
     }
-    PAL_fadeToPalette(PAL2, imgTitle2.palette->data, 16, FALSE);
+    PAL_fadeToPalette(PAL1, imgTitle2.palette->data, 16, FALSE);
 #else
     static const int kEdgeWidth = 13;
     static const int kEdgeHeight = 148;
@@ -8659,7 +8663,7 @@ void handleOptionsExitAreaClick() // loc_4C78D
 
 void runMainMenu() // proc near       ; CODE XREF: start+43Ap
 {
-    KLog("MAIN MENU");
+    KLog("*** Run main menu");
     // 01ED:5B31
     gIsInMainMenu = 1;
     gHasUserInterruptedDemo = 0;

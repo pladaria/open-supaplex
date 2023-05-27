@@ -6,6 +6,9 @@ uint8_t kScreenPixels[1]; // @TODO pladaria: remove this
 uint8_t *gScreenPixels = kScreenPixels; // @TODO pladaria: remove this
 ScalingMode gScalingMode = ScalingModeAspectFit; // @TODO pladaria: remove this
 
+static s16 mouseX = 320 / 2;
+static s16 mouseY = 224 / 2;
+
 void initializeVideo(uint8_t fastMode)
 {
     VDP_setScreenWidth320();
@@ -48,51 +51,54 @@ void setScalingMode(ScalingMode mode)
 
 void getWindowSize(int *width, int *height)
 {
-    // Do nothing
+    width = VDP_getScreenWidth();
+    height = VDP_getScreenHeight();
 }
 
 void centerMouse()
 {
-    // Do nothing
+    mouseX = VDP_getScreenWidth() >> 1;
+    mouseY = VDP_getScreenHeight() >> 1;
 }
 
 void moveMouse(int x, int y)
 {
-    // Do nothing
+    mouseX = x;
+    mouseY = y;
 }
 
 void hideMouse(void)
 {
-    // Do nothing
+    mouseX = -100;
+    mouseY = -100;
 }
 
 void getMouseState(int *x, int *y, uint8_t *leftButton, uint8_t *rightButton)
 {
-    // Do nothing
+    u16 joy1 = JOY_readJoypad(JOY_1);
+    x = mouseX;
+    y = mouseY;
+    leftButton = joy1 & BUTTON_A;
+    rightButton = joy1 & BUTTON_B;
 }
 
 void toggleFullscreen()
 {
-    // Do nothing
 }
 
 void setFullscreenMode(uint8_t fullscreen)
 {
-    // Do nothing
 }
 
 uint8_t getFullscreenMode(void)
 {
-    // Do nothing
     return 1;
 }
 
 void setGlobalPaletteColor(const uint8_t index, const Color color)
 {
-    // Do nothing
 }
 
 void setColorPalette(const ColorPalette palette)
 {
-    // Do nothing
 }

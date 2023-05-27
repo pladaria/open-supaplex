@@ -17,7 +17,8 @@
 IMAGE imgTitle images/title-224p.png BEST ALL
 IMAGE imgTitle1 images/title1-224p.png BEST ALL
 IMAGE imgTitle2 images/title2-224p.png BEST ALL
-IMAGE fontChars8  "images/chars8.png" BEST NONE
+IMAGE imgMenu "images/menu-224p.png" BEST ALL
+IMAGE fontChars8 "images/chars8.png" BEST NONE
 
 # SPRITE name img_file width height [compression [time [collision [opt_type [opt_level]]]]]
 #
@@ -46,3 +47,5 @@ IMAGE fontChars8  "images/chars8.png" BEST NONE
 #                         3 / MAX       = maximum optimisation level, genetic algorithm (500000 iterations), ~100 time slower than FAST
 SPRITE sprTitleEdge images/title-edge.png 14 10 BEST 0 NONE BALANCED FAST
 SPRITE sprCursor images/cursor.png 1 1 FAST 2 NONE BALANCED FAST
+
+BIN binPalettes bin/palettes.dat 2 2 0 NONE

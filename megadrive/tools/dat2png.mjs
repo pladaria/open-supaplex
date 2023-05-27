@@ -127,6 +127,7 @@ const bitmaps = [
     { name: "TITLE1.DAT", palette: title1PaletteData, width: 320, height: 200, out: "out/title1.png" },
     { name: "TITLE2.DAT", palette: title2PaletteData, width: 320, height: 200, out: "out/title2.png" },
     { name: "MOVING.DAT", palette: pal1, width: 320, height: 462, out: "out/moving.png" },
+    { name: "MENU.DAT", palette: pal1, width: 320, height: 200, out: "out/menu.png" },
 ];
 
 const fonts = [
