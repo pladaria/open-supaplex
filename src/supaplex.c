@@ -9729,8 +9729,14 @@ void getMouseStatus(uint16_t *mouseX, uint16_t *mouseY, uint16_t *mouseButtonSta
 #ifdef __MEGADRIVE__
     u8 leftButton = 0;
     u8 rightButton = 0;
-    getMouseState(mouseX, mouseY, &leftButton, &rightButton);
+    int mx = 0;
+    int my = 0;
+    getMouseState(&mx, &my, &leftButton, &rightButton);
+    *mouseX = (u16)mx;
+    *mouseY = (u16)my;
     *mouseButtonStatus = (rightButton << 1) | leftButton;
+    SPR_setPosition(cursorSprite, *mouseX, *mouseY);
+    kprintf("mouseX: %d, mouseY: %d, mouseButtonStatus: %d\n", *mouseX, *mouseY, *mouseButtonStatus);
 #else
     // Returns coordinate X in CX (0-320) and coordinate Y in DX (0-200).
     // Also button status in BX.

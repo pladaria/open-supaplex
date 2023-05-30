@@ -18,12 +18,12 @@
 #ifndef video_h
 #define video_h
 
-#include "genesis.h"
 #include <stdint.h>
 
 #define kScreenWidth 320
 #ifdef __MEGADRIVE__
 #define kScreenHeight 224
+Sprite *cursorSprite;
 #else
 #define kScreenHeight 200
 #endif

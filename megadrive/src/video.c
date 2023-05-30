@@ -6,6 +6,7 @@ uint8_t kScreenPixels[1]; // @TODO pladaria: remove this
 uint8_t *gScreenPixels = kScreenPixels;          // @TODO pladaria: remove this
 ScalingMode gScalingMode = ScalingModeAspectFit; // @TODO pladaria: remove this
 
+Sprite *cursorSprite;
 static s16 mouseX = 320 / 2;
 static s16 mouseY = 224 / 2;
 
@@ -69,8 +70,7 @@ void moveMouse(int x, int y)
 
 void hideMouse(void)
 {
-    mouseX = -100;
-    mouseY = -100;
+    SPR_setVisibility(cursorSprite, HIDDEN);
 }
 
 void getMouseState(int *x, int *y, uint8_t *leftButton, uint8_t *rightButton)
@@ -84,12 +84,18 @@ void getMouseState(int *x, int *y, uint8_t *leftButton, uint8_t *rightButton)
     {
         mouseX += 2;
     }
-    kprintf("mouseX: %d; mouseY: %d", mouseX, mouseY);
-    *x = mouseX;
-    *y = mouseY;
-    *leftButton = joy1 & BUTTON_A;
-    *rightButton = joy1 & BUTTON_B;
-
+    if (joy1 & BUTTON_UP)
+    {
+        mouseY -= 2;
+    }
+    else if (joy1 & BUTTON_DOWN)
+    {
+        mouseY += 2;
+    }
+    *x = clamp(mouseX, 0, VDP_getScreenWidth() - 1);
+    *y = clamp(mouseY, 0, VDP_getScreenHeight() - 1);
+    *leftButton = (joy1 & BUTTON_A) != 0;
+    *rightButton = (joy1 & BUTTON_B) != 0;
 }
 
 void toggleFullscreen()

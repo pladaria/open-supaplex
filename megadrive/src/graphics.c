@@ -59,8 +59,6 @@ uint8_t gScrollDestinationScreenBitmapData[kFullScreenFramebufferLength];
 // Time difference between 2 consecutive renders
 uint32_t gRenderDeltaTime;
 
-static Sprite *cursorSprite;
-
 void readMenuDat(void)
 {
 }
