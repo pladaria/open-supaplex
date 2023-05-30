@@ -1,6 +1,6 @@
 # copy using hardlinks
-rm -rf src/supaplex
-mkdir -p src/supaplex
+# rm -rf src/supaplex
+# mkdir -p src/supaplex
 cp -al ../src/* src/supaplex
 echo "This folder will contain hardlinks to sources" > src/supaplex/README.txt
 

@@ -218,6 +218,8 @@ void handlePrintHelpOption(void)
 
 void handleForceLevelSetOption(void)
 {
+#if __MEGADRIVE__
+#else
     // Force level SET number at start (nn=0...99), else original set
     int numberValue = atoi(optarg);
     if (numberValue < 0 || numberValue > 99)
@@ -240,6 +242,7 @@ void handleForceLevelSetOption(void)
     {
         strcpy(&gSavegameSavFilename[10], newSuffix);
     }
+#endif
 }
 
 void handleForceLevelNumberOption(void)

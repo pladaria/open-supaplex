@@ -48,4 +48,18 @@ IMAGE fontChars8 "images/chars8.png" BEST NONE
 SPRITE sprTitleEdge images/title-edge.png 14 10 BEST 0 NONE BALANCED FAST
 SPRITE sprCursor images/cursor.png 1 1 FAST 2 NONE BALANCED FAST
 
-BIN binPalettes bin/palettes.dat 2 2 0 NONE
+# BIN name file [align [size_align [fill [compression [far]]]]]
+#
+#     name            BIN data variable name
+#     file            path of the data file to convert to binary data array
+#     align           memory address alignment for generated data array (default is 2)
+#     size_align      size alignment for the generated data array (default is 2)
+#     fill            fill value for the size alignment (default is 0)
+#     compression     compression type, accepted values:
+#                         0 / NONE        = no compression
+#                         1 / APLIB       = aplib library (good compression ratio but slow)
+#                         2 / FAST / LZ4W = custom lz4 compression (average compression ratio but fast)
+#     far             'far' binary data flag to put it at the end of the ROM (useful for bank switch, default = TRUE)
+BIN binPalettes bin/PALETTES.DAT 2 2 0 NONE
+BIN binLevelLst bin/LEVEL.LST 2 2 0 NONE
+BIN binLevelsDat bin/LEVELS.DAT 2 2 0 NONE

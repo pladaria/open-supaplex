@@ -67,11 +67,11 @@ void readMenuDat(void)
 
 void loadMurphySprites(void)
 {
-    KLog("*** Load cursor sprite");
-    cursorSprite = SPR_addSprite(&sprCursor, 160, 112, TILE_ATTR(PAL1, TRUE, FALSE, FALSE));
+    kprintf("*** Load cursor sprite");
+    cursorSprite = SPR_addSprite(&sprCursor, 160, 112, TILE_ATTR(PAL0, TRUE, FALSE, FALSE));
     SPR_setVisibility(cursorSprite, HIDDEN);
-    KLog_U1("MEM_getFree: ", MEM_getFree());
-    KLog_U1("MEM_getLargestFreeBlock: ", MEM_getLargestFreeBlock());
+    kprintf("MEM_getFree: %d", MEM_getFree());
+    kprintf("MEM_getLargestFreeBlock: %d", MEM_getLargestFreeBlock());
 }
 
 void readPanelDat(void)
@@ -126,7 +126,7 @@ void drawMouseCursor(void)
 
 void drawMenuBackground(void)
 {
-    KLog("*** drawMenuBackground");
+    kprintf("*** drawMenuBackground");
     VDP_drawImageEx(BG_A, &imgMenu, TILE_ATTR_FULL(PAL0, FALSE, FALSE, FALSE, TILE_USER_INDEX), 0, 0, FALSE, FALSE);
 }
 
@@ -189,21 +189,26 @@ void renderAdvancedOptionsMenu(AdvancedOptionsMenu *menu)
 
 void drawTextWithChars6FontWithOpaqueBackground(size_t destX, size_t destY, uint8_t color, const char *text)
 {
-    VDP_drawTextEx(BG_A, text, TILE_ATTR(color, FALSE, FALSE, FALSE), (destX >> 3), destY >> 3, CPU);
+    kprintf("drawTextWithChars6FontWithOpaqueBackground: %s", text);
+    VDP_drawTextEx(BG_A, text, TILE_ATTR(color, FALSE, FALSE, FALSE), destX >> 3, destY >> 3, CPU);
 }
 
 void drawTextWithChars6FontWithTransparentBackground(size_t destX, size_t destY, uint8_t color, const char *text)
 {
-    VDP_drawTextBG(BG_A, text, (destX >> 3), destY >> 3);
+    kprintf("drawTextWithChars6FontWithTransparentBackground: %s", text);
+    VDP_drawTextEx(BG_A, text, TILE_ATTR(color, FALSE, FALSE, FALSE), destX >> 3, destY >> 3, CPU);
 }
 
 void drawTextWithChars8Font(size_t destX, size_t destY, uint8_t color, const char *text)
 {
-    VDP_drawTextBG(BG_A, text, (destX >> 3), destY >> 3);
+    kprintf("drawTextWithChars8Font: %s", text);
+    VDP_drawTextEx(BG_A, text, TILE_ATTR(color, FALSE, FALSE, FALSE), destX >> 3, destY >> 3, CPU);
 }
 
 void drawTextWithChars8FontToGamePanel(size_t destX, size_t destY, uint8_t color, const char *text)
 {
+    kprintf("drawTextWithChars8FontToGamePanel: %s", text);
+    VDP_drawTextEx(BG_A, text, TILE_ATTR(color, FALSE, FALSE, FALSE), destX >> 3, destY >> 3, CPU);
 }
 
 void videoLoop(void)
@@ -219,7 +224,7 @@ void videoLoop(void)
 
 void readPalettes(void)
 {
-    KLog("*** readPalettes");
+    kprintf("*** readPalettes");
     convertPaletteDataToPalette(&binPalettes[0], gPalettes[0]);
     convertPaletteDataToPalette(&binPalettes[64], gPalettes[1]);
     convertPaletteDataToPalette(&binPalettes[128], gPalettes[2]);
@@ -232,14 +237,14 @@ void replaceCurrentPaletteColor(uint8_t index, Color color)
 
 static void convertRgbPaletteToVdpPalette(const ColorPalette palette, u16 *outVdpPalette)
 {
-    KLog("*** convertRgbPaletteToVdpPalette");
+    kprintf("*** convertRgbPaletteToVdpPalette");
     for (int i = 0; i < 16; i++)
     {
         const u32 color = palette[i].r << 16 | palette[i].g << 8 | palette[i].b;
         // const u32 color = *((u32 *)&palette[i]) >> 8;
         outVdpPalette[i] = RGB24_TO_VDPCOLOR(color);
-        KLog_U2("Index: ", i, " => ", outVdpPalette[i]);
-        KLog_U3("Color: ", palette[i].r, ", ", palette[i].g, ", ", palette[i].b);
+        // KLog_U2("Index: ", i, " => ", outVdpPalette[i]);
+        // KLog_U3("Color: ", palette[i].r, ", ", palette[i].g, ", ", palette[i].b);
     }
 }
 
@@ -252,7 +257,7 @@ void setPalette(const ColorPalette palette)
 
 void fadeToPalette(const ColorPalette palette)
 {
-    KLog("*** fadeToPalette");
+    kprintf("*** fadeToPalette");
     // The original animation consisted of 64 steps and was designed to be displayed on screens with a refresh rate of
     // 70Hz. However, since the Megadrive console only supports 8 levels of color intensity per channel, I am reducing
     // the number of fade steps. This adjustment ensures that the color transition is subtle yet still perceptible.
@@ -266,7 +271,7 @@ void convertPaletteDataToPalette(const ColorPaletteData paletteData, ColorPalett
 {
     int kExponent = 4; // no idea why (yet)
 
-    KLog("*** convertPaletteDataToPalette");
+    kprintf("*** convertPaletteDataToPalette");
     for (int i = 0; i < kNumberOfColors; ++i)
     {
         outPalette[i].r = paletteData[i * 4 + 0] << kExponent;

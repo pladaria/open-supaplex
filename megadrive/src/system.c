@@ -4,6 +4,7 @@
 void initializeSystem(void)
 {
 }
+
 void destroySystem(void)
 {
 }
@@ -15,6 +16,9 @@ uint8_t isOld3DSSystem(void)
 
 void exitWithError(const char *format, ...)
 {
+    char buffer[256];
+    strcpy(buffer, format);
+    SYS_die(buffer);
 }
 
 void handleSystemEvents(void)

@@ -46,10 +46,10 @@ char gRankingTextEntries[kNumberOfPlayers + 4][kRankingEntryTextLength] = { //0x
     "                      ",
     "001 SUPAPLEX 000:00:00",
     "002 SUPAPLEX 000:00:00",
-#ifndef __MEGADRIVE__
     "003 SUPAPLEX 000:00:00",
     "004 SUPAPLEX 000:00:00",
     "005 SUPAPLEX 000:00:00",
+#ifndef __MEGADRIVE__
     "006 SUPAPLEX 000:00:00",
     "007 SUPAPLEX 000:00:00",
     "008 SUPAPLEX 000:00:00",

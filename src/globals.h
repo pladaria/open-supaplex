@@ -228,7 +228,7 @@ typedef struct
 } PlayerEntry;
 
 #ifdef __MEGADRIVE__
-#define kNumberOfPlayers 2 /* @TODO pladaria: increase this*/
+#define kNumberOfPlayers 5 /* @TODO pladaria: increase this? */
 #else
 #define kNumberOfPlayers 20
 #endif

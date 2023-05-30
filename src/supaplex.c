@@ -87,37 +87,37 @@ static uint8_t byte_50919 = 0;
 static uint8_t byte_5091A = 0;
 UserInput gCurrentUserInput = 0; // byte_50941 -> 0x0631
 static uint8_t byte_50946 = 0;
-static uint16_t word_50947 = 0;
-static uint16_t word_50949 = 0;
-static uint8_t byte_50953 = 0;
-static uint8_t byte_50954 = 0;
+// static uint16_t word_50947 = 0;
+// static uint16_t word_50949 = 0;
+// static uint8_t byte_50953 = 0;
+// static uint8_t byte_50954 = 0;
 static uint8_t gShouldAutoselectNextLevelToPlay = 0; // byte_51ABE
 static uint8_t gHasChangedLevelSetFromAdvancedMenu = 0;
 static uint8_t byte_58D47 = 0;                              //
 static uint8_t byte_59821 = 0;                              //
 static uint8_t byte_59822 = 0;                              //
 static uint8_t byte_59823 = 0;                              //
-static uint8_t gDemoRecordingRandomGeneratorSeedHigh = 0;   // byte_59B5C
-static uint8_t gDemoRecordingRandomGeneratorSeedLow = 0;    // byte_59B5F
+// static uint8_t gDemoRecordingRandomGeneratorSeedHigh = 0;   // byte_59B5C
+// static uint8_t gDemoRecordingRandomGeneratorSeedLow = 0;    // byte_59B5F
 static uint8_t gToggleFancyEasyTilesThrottleCounter = 0;    // byte_59B7A -> data_subrest
 static uint8_t gIsShowingFancyTiles = 1;                    // byte_59B7B -> data_subrstflg
-static uint8_t gToggleGravityAutorepeatFlag = 0;            // byte_59B7C
-static uint8_t gToggleZonksFrozenAutorepeatFlag = 0;        // byte_59B7D
-static uint8_t gToggleEnemiesFrozenAutorepeatFlag = 0;      // byte_59B7E
+// static uint8_t gToggleGravityAutorepeatFlag = 0;            // byte_59B7C
+// static uint8_t gToggleZonksFrozenAutorepeatFlag = 0;        // byte_59B7D
+// static uint8_t gToggleEnemiesFrozenAutorepeatFlag = 0;      // byte_59B7E
 static uint8_t gDebugSkipPreviousLevelAutorepeatFlag_1 = 0; // byte_59B7F
 static uint8_t gDebugSkipPreviousLevelAutorepeatFlag_2 = 0; // byte_59B80
 static uint8_t gDebugSkipNextLevelAutorepeatFlag_1 = 0;     // byte_59B81
 static uint8_t gDebugSkipNextLevelAutorepeatFlag_2 = 0;     // byte_59B82
 static uint8_t byte_59B83 = 0;
-static uint8_t byte_59B86 = 0;
-static uint16_t gDemoRecordingRandomGeneratorSeed = 0; // word_5A199
+// static uint8_t byte_59B86 = 0;
+// static uint16_t gDemoRecordingRandomGeneratorSeed = 0; // word_5A199
 // static uint8_t byte_5A140 = 0; // speedFixMagicNumber inside of level
 static uint8_t byte_5A19B = 0;
 static uint8_t gIsLevelStartedAsDemo = 0;     // byte_5A19C
 static uint8_t gDemoRecordingJustStarted = 0; // byte_5A2F8
 static uint8_t gHasUserCheated = 0;           // byte_5A2F9
 static uint8_t byte_5A323 = 0;
-static uint16_t word_5A33C = 0;
+// static uint16_t word_5A33C = 0;
 static uint8_t gHasUserInterruptedDemo = 0; // byte_5A33E
 static uint8_t gIsGameBusy = 0;             // byte_5A33F -> this was used mainly to avoid some graphic glitches when some text from the main menu was written on the game field
 // static uint8_t gIsMouseAvailable = 0; // byte_58487
@@ -134,32 +134,32 @@ static uint8_t gRankingListUpButtonPressed = 0;   // byte_50914
 static uint16_t gCurrentSelectedLevelIndex = 0;   // word_51ABC
 static uint16_t gNewPlayerNameLength = 0;         // word_58475
 
-static uint16_t word_5157A = 0x4A62;                    // -> 0x126A -> (64, 132)
-static uint16_t word_5157C = 0x0502;                    // -> 0x126C -> (97, 132)
-static uint16_t kMurphyStillSpriteCoordinates = 0x4A80; // word_5157E -> 0x126E -> (304, 132)
-static uint16_t word_51580 = 0x1AB2;                    // -> 0x1270 -> (0, 32)
-static uint16_t word_515A2 = 0x32A2;                    // -> 0x1292 -> (224, 82) ??
+// static uint16_t word_5157A = 0x4A62;                    // -> 0x126A -> (64, 132)
+// static uint16_t word_5157C = 0x0502;                    // -> 0x126C -> (97, 132)
+// static uint16_t kMurphyStillSpriteCoordinates = 0x4A80; // word_5157E -> 0x126E -> (304, 132)
+// static uint16_t word_51580 = 0x1AB2;                    // -> 0x1270 -> (0, 32)
+// static uint16_t word_515A2 = 0x32A2;                    // -> 0x1292 -> (224, 82) ??
 
-static uint16_t word_515C4 = 0x1358; // (240, 178) -> 0x12B4
+// static uint16_t word_515C4 = 0x1358; // (240, 178) -> 0x12B4
 
 // { 128, 64 }, // -> 0x2a02 -> 12f6 -> orange disk falling
 
-static uint16_t word_5177E = 0x0CAE;                   //  -> 0x129 -> (256, 164)
-static uint16_t word_51790 = 0x4A7E;                   //  -> 0x129 -> (288, 132)
-static uint16_t word_5182E = 0x2A64;                   // -> (272, 388)
-static uint16_t word_51840 = 0x2A06;                   //  -> 0x129 -> (160, 64)
-static uint16_t word_51842 = 0x132C;                   //  -> 0x129 -> (208, 16) confirmed
-static uint16_t word_51844 = 0x2A08;                   //  -> 0x129 -> (176, 64)
-static uint16_t word_51846 = 0x132A;                   //  -> 0x129 -> (192, 16)
-static uint16_t kTerminalOnSpriteCoordinates = 0x2A62; // word_51848 -> 0x1268 -> (256, 388) I don't get the math for this one, but the coordinates are right
-static uint16_t word_5184A = 0x2A66;                   //  -> 0x1268 -> (
-static uint16_t word_5184C = 0x2A67;                   //  -> 0x1268 -> (
-static uint16_t word_5184E = 0x2E36;                   //  -> 0x1268 -> (
-static uint16_t word_51850 = 0x2E37;                   //  -> 0x1268 -> (
-static uint16_t word_51852 = 0x2A68;                   //  -> 0x1268 -> (
-static uint16_t word_51854 = 0x2A69;                   //  -> 0x1268 -> (
-static uint16_t word_51856 = 0x2E38;                   //  -> 0x1268 -> (
-static uint16_t word_51858 = 0x2E39;                   //  -> 0x1268 -> (
+// static uint16_t word_5177E = 0x0CAE;                   //  -> 0x129 -> (256, 164)
+// static uint16_t word_51790 = 0x4A7E;                   //  -> 0x129 -> (288, 132)
+// static uint16_t word_5182E = 0x2A64;                   // -> (272, 388)
+// static uint16_t word_51840 = 0x2A06;                   //  -> 0x129 -> (160, 64)
+// static uint16_t word_51842 = 0x132C;                   //  -> 0x129 -> (208, 16) confirmed
+// static uint16_t word_51844 = 0x2A08;                   //  -> 0x129 -> (176, 64)
+// static uint16_t word_51846 = 0x132A;                   //  -> 0x129 -> (192, 16)
+// static uint16_t kTerminalOnSpriteCoordinates = 0x2A62; // word_51848 -> 0x1268 -> (256, 388) I don't get the math for this one, but the coordinates are right
+// static uint16_t word_5184A = 0x2A66;                   //  -> 0x1268 -> (
+// static uint16_t word_5184C = 0x2A67;                   //  -> 0x1268 -> (
+// static uint16_t word_5184E = 0x2E36;                   //  -> 0x1268 -> (
+// static uint16_t word_51850 = 0x2E37;                   //  -> 0x1268 -> (
+// static uint16_t word_51852 = 0x2A68;                   //  -> 0x1268 -> (
+// static uint16_t word_51854 = 0x2A69;                   //  -> 0x1268 -> (
+// static uint16_t word_51856 = 0x2E38;                   //  -> 0x1268 -> (
+// static uint16_t word_51858 = 0x2E39;                   //  -> 0x1268 -> (
 static uint16_t gIsMoveScrollModeEnabled = 0;          // word_51A01
 static uint16_t gDebugExtraRenderDelay = 1;            // this was used to add an extra delay in debug mode using keys 1-9
 static uint16_t word_58463 = 0;
@@ -172,7 +172,7 @@ static uint16_t gPlayerListThrottleCurrentCounter = 0;  // word_5846D
 static uint16_t gPlayerListThrottleNextCounter = 0;     // word_5846F
 static uint16_t gRankingListThrottleCurrentCounter = 0; // word_58471
 static uint16_t gRankingListThrottleNextCounter = 0;    // word_58473
-static uint16_t gSelectedOriginalDemoIndex = 0;         // word_599D6 -> used loading old demo files demo
+// static uint16_t gSelectedOriginalDemoIndex = 0;         // word_599D6 -> used loading old demo files demo
 static uint16_t gSelectedOriginalDemoLevelNumber = 0;   // word_599D8 -> used loading old demo files demo -> the high byte is set to -1 in readLevels for some unknown reason
 // These two store the scroll offset to get back to Murphy when we're in "free mode"
 static uint16_t gMurphyScrollOffsetX = 0;                    // word_59B88
@@ -736,6 +736,8 @@ static const char *kAdvancedConfigLimitFPSKey = "limitFPS";
 
 void readAdvancedConfig()
 {
+#ifdef __MEGADRIVE__
+#else
     Config *config = initializeConfigForReading("ADVANCED.CFG");
 
     if (config == NULL)
@@ -792,6 +794,7 @@ void readAdvancedConfig()
     setFullscreenMode(fullscreen);
 
     destroyConfig(config);
+#endif
 }
 
 void writeAdvancedConfig()
@@ -1573,7 +1576,7 @@ int SUPAPLEX_MAIN(int argc, char *argv[])
         convertPaletteDataToPalette(gTitlePaletteData, titleDatPalette);
         fadeToPalette(titleDatPalette);
 #ifdef __MEGADRIVE__
-        waitForKeyMouseOrJoystick();
+        // waitForKeyMouseOrJoystick(); // @TODO pladaria: uncomment in final build
         PAL_fadeOut(0, 15, 12, FALSE);
 #endif
     }
@@ -2449,8 +2452,8 @@ void loadScreen2() // proc near       ; CODE XREF: start:loc_46F00p
 void readLevelsLst() //   proc near       ; CODE XREF: readLevelsLst+CCj
                      // ; readEverything+Fp ...
 {
+    KLog("*** readLevelsLst");
     // 01ED:1038
-
     char paddingEntryText[kListLevelNameLength] = "                           ";
     for (int i = 0; i < kNumberOfLevelsWithPadding; ++i)
     {
@@ -2464,6 +2467,8 @@ void readLevelsLst() //   proc near       ; CODE XREF: readLevelsLst+CCj
            kListLevelNameLength);
 
     FILE *file = openWritableFile(gLevelLstFilename, "rb");
+
+#ifndef __MEGADRIVE__
     if (file == NULL)
     {
         // errorOpeningLevelLst:             // ; CODE XREF: readLevelsLst+8j
@@ -2532,7 +2537,7 @@ void readLevelsLst() //   proc near       ; CODE XREF: readLevelsLst+CCj
         }
         return;
     }
-
+#endif
     // successOpeningLevelLst:             // ; CODE XREF: readLevelsLst+Aj
     size_t bytes = fileReadBytes(gLevelListData, kLevelListDataLength, file);
     if (bytes < kLevelListDataLength)
@@ -2552,6 +2557,7 @@ void readLevelsLst() //   proc near       ; CODE XREF: readLevelsLst+CCj
 void readPlayersLst() //  proc near       ; CODE XREF: readEverything+1Bp
                       // ; handleFloppyDiskButtonClick+149p
 {
+    KLog("*** readPlayersLst");
     if (gIsForcedCheatMode != 0)
     {
         return;
@@ -7298,110 +7304,116 @@ void handleGfxTutorOptionClick() // sub_4B149   proc near
 
 void handleDemoOptionClick() // sub_4B159   proc near       ; CODE XREF: runMainMenu+6Fp
 {
-    //     // 01ED:44F6
-    //     if (readDemoFiles() == 0)
-    //     {
-    //         return;
-    //     }
+#ifdef __MEGADRIVE__
+#else
+        // 01ED:44F6
+        if (readDemoFiles() == 0)
+        {
+            return;
+        }
 
-    // //loc_4B163:              ; CODE XREF: handleDemoOptionClick+5j
-    //     gShouldLeaveMainMenu = 1;
-    //     gIsPlayingDemo = 1;
+    //loc_4B163:              ; CODE XREF: handleDemoOptionClick+5j
+        gShouldLeaveMainMenu = 1;
+        gIsPlayingDemo = 1;
 
-    //     uint8_t numberOfDemos = 0;
+        uint8_t numberOfDemos = 0;
 
-    //     uint8_t idx = 0;
-    //     do
-    //     {
-    // //loc_4B17A:              ; CODE XREF: handleDemoOptionClick+2Dj
-    //         if (gDemos.demoFirstIndices[idx] == 0xFFFF)
-    //         {
-    //             break;
-    //         }
-    //         idx++;
-    //         numberOfDemos++;
-    //     }
-    //     while (1);
-    //     // 01ED:4525
+        uint8_t idx = 0;
+        do
+        {
+    //loc_4B17A:              ; CODE XREF: handleDemoOptionClick+2Dj
+            if (gDemos.demoFirstIndices[idx] == 0xFFFF)
+            {
+                break;
+            }
+            idx++;
+            numberOfDemos++;
+        }
+        while (1);
+        // 01ED:4525
 
-    // //loc_4B188:              ; CODE XREF: handleDemoOptionClick+2Aj
-    //     // This picks a random demo
-    //     generateRandomSeedFromClock();
-    //     uint16_t demoIndex = generateRandomNumber() % numberOfDemos;
-    //     uint16_t demoFirstIndex = gDemos.demoFirstIndices[demoIndex];
+    //loc_4B188:              ; CODE XREF: handleDemoOptionClick+2Aj
+        // This picks a random demo
+        generateRandomSeedFromClock();
+        uint16_t demoIndex = generateRandomNumber() % numberOfDemos;
+        uint16_t demoFirstIndex = gDemos.demoFirstIndices[demoIndex];
 
-    //     // This only happens if there are no demos...
-    //     if (demoFirstIndex == 0xFFFF)
-    //     {
-    //         gShouldLeaveMainMenu = 0;
-    //         gIsPlayingDemo = 0;
-    //     }
+        // This only happens if there are no demos...
+        if (demoFirstIndex == 0xFFFF)
+        {
+            gShouldLeaveMainMenu = 0;
+            gIsPlayingDemo = 0;
+        }
 
-    // //loc_4B1AE:              ; CODE XREF: handleDemoOptionClick+48j
-    //     uint8_t demoLevelNumber = gDemos.demoData[demoFirstIndex];
-    //     uint8_t finalLevelNumber = demoIndex;
+    //loc_4B1AE:              ; CODE XREF: handleDemoOptionClick+48j
+        uint8_t demoLevelNumber = gDemos.demoData[demoFirstIndex];
+        uint8_t finalLevelNumber = demoIndex;
 
-    //     gSelectedOriginalDemoIndex = demoIndex;
-    //     gSelectedOriginalDemoLevelNumber = 0;
+        gSelectedOriginalDemoIndex = demoIndex;
+        gSelectedOriginalDemoLevelNumber = 0;
 
-    //     // This checks if the level number has its MSB to 0 and is a valid level number (1-111) for the original DEMO format
-    //     if (demoLevelNumber <= 0x6F // 111
-    //         && demoLevelNumber != 0)
-    //     {
-    //         gSelectedOriginalDemoLevelNumber = (gSelectedOriginalDemoLevelNumber & 0xFF00) | demoLevelNumber; // mov byte ptr gSelectedOriginalDemoLevelNumber, al
-    //         finalLevelNumber = demoLevelNumber;
-    //     }
+        // This checks if the level number has its MSB to 0 and is a valid level number (1-111) for the original DEMO format
+        if (demoLevelNumber <= 0x6F // 111
+            && demoLevelNumber != 0)
+        {
+            gSelectedOriginalDemoLevelNumber = (gSelectedOriginalDemoLevelNumber & 0xFF00) | demoLevelNumber; // mov byte ptr gSelectedOriginalDemoLevelNumber, al
+            finalLevelNumber = demoLevelNumber;
+        }
 
-    // //loc_4B1CF:              ; CODE XREF: handleDemoOptionClick+6Bj
-    // //                ; handleDemoOptionClick+6Fj
-    //     gRandomGeneratorSeed = gDemoRandomSeeds[demoIndex];
-    //     gDemoIndexOrDemoLevelNumber = finalLevelNumber;
+    //loc_4B1CF:              ; CODE XREF: handleDemoOptionClick+6Bj
+    //                ; handleDemoOptionClick+6Fj
+        gRandomGeneratorSeed = gDemoRandomSeeds[demoIndex];
+        gDemoIndexOrDemoLevelNumber = finalLevelNumber;
 
-    //     demoFirstIndex++; // To skip the level number
-    //     gDemoCurrentInputIndex = demoFirstIndex;
-    //     word_5A33C = demoFirstIndex;
-    //     gDemoCurrentInput = UserInputNone;
-    //     gDemoCurrentInputRepeatCounter = 1;
+        demoFirstIndex++; // To skip the level number
+        gDemoCurrentInputIndex = demoFirstIndex;
+        word_5A33C = demoFirstIndex;
+        gDemoCurrentInput = UserInputNone;
+        gDemoCurrentInputRepeatCounter = 1;
+#endif
 }
 
 void playDemo(uint16_t demoIndex) // demoSomething  proc near       ; CODE XREF: start+3BAp
                                   // ; runMainMenu+12Ep ...
 {
-    //     readDemoFiles();
+#ifdef __MEGADRIVE__
+#else
+        readDemoFiles();
 
-    //     gRandomGeneratorSeed = gDemoRandomSeeds[demoIndex];
-    //     gShouldLeaveMainMenu = 1;
-    //     gIsPlayingDemo = 1;
+        gRandomGeneratorSeed = gDemoRandomSeeds[demoIndex];
+        gShouldLeaveMainMenu = 1;
+        gIsPlayingDemo = 1;
 
-    //     uint16_t demoFirstIndex = gDemos.demoFirstIndices[demoIndex];
-    //     if (demoFirstIndex == 0xFFFF)
-    //     {
-    //         gShouldLeaveMainMenu = 0;
-    //         gIsPlayingDemo = 0;
-    //     }
+        uint16_t demoFirstIndex = gDemos.demoFirstIndices[demoIndex];
+        if (demoFirstIndex == 0xFFFF)
+        {
+            gShouldLeaveMainMenu = 0;
+            gIsPlayingDemo = 0;
+        }
 
-    // //loc_4B22F:              ; CODE XREF: playDemo+30j
-    //     gSelectedOriginalDemoLevelNumber = 0;
+    //loc_4B22F:              ; CODE XREF: playDemo+30j
+        gSelectedOriginalDemoLevelNumber = 0;
 
-    //     uint8_t demoLevelNumber = gDemos.demoData[demoFirstIndex];
-    //     uint8_t finalLevelNumber = demoIndex;
+        uint8_t demoLevelNumber = gDemos.demoData[demoFirstIndex];
+        uint8_t finalLevelNumber = demoIndex;
 
-    //     if (demoLevelNumber <= kNumberOfLevels // 111
-    //         && demoLevelNumber != 0)
-    //     {
-    //         finalLevelNumber = demoLevelNumber;
-    //         gSelectedOriginalDemoLevelNumber = (gSelectedOriginalDemoLevelNumber & 0xFF00) | finalLevelNumber; // mov byte ptr gSelectedOriginalDemoLevelNumber, al
-    //     }
+        if (demoLevelNumber <= kNumberOfLevels // 111
+            && demoLevelNumber != 0)
+        {
+            finalLevelNumber = demoLevelNumber;
+            gSelectedOriginalDemoLevelNumber = (gSelectedOriginalDemoLevelNumber & 0xFF00) | finalLevelNumber; // mov byte ptr gSelectedOriginalDemoLevelNumber, al
+        }
 
-    // //loc_4B248:              ; CODE XREF: playDemo+4Bj
-    // //                ; playDemo+4Fj
-    //     gDemoIndexOrDemoLevelNumber = finalLevelNumber;
+    //loc_4B248:              ; CODE XREF: playDemo+4Bj
+    //                ; playDemo+4Fj
+        gDemoIndexOrDemoLevelNumber = finalLevelNumber;
 
-    //     demoFirstIndex++; // To skip the level number
-    //     gDemoCurrentInputIndex = demoFirstIndex;
-    //     word_5A33C = demoFirstIndex;
-    //     gDemoCurrentInput = UserInputNone;
-    //     gDemoCurrentInputRepeatCounter = 1;
+        demoFirstIndex++; // To skip the level number
+        gDemoCurrentInputIndex = demoFirstIndex;
+        word_5A33C = demoFirstIndex;
+        gDemoCurrentInput = UserInputNone;
+        gDemoCurrentInputRepeatCounter = 1;
+#endif
 }
 
 void handleRankingListScrollUp() // loc_4B262
@@ -7581,6 +7593,8 @@ void throttledRotateLevelSet(uint8_t descending) // sub_4B419  proc near
 
 void rotateLevelSet(uint8_t descending) // sub_4B419  proc near
 {
+#ifdef __MEGADRIVE__
+#else
     FILE *file = NULL;
     char currentSuffix[3] = "AT";
 
@@ -7720,6 +7734,7 @@ void rotateLevelSet(uint8_t descending) // sub_4B419  proc near
     }
 
     updateMenuAfterLevelSetChanged();
+#endif
 }
 
 void updateMenuAfterLevelSetChanged() // loc_4B565:              ; CODE XREF: sub_4B419+10Fj
@@ -8224,8 +8239,13 @@ void drawMenuTitleAndDemoLevelResult() // sub_4C2F2   proc near       ; CODE XRE
                                        // ; sub_4C407+1Fp ...
 {
     // 01ED:568F
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 200, 4, "  WELCOME TO SUPAPLEX  ");
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(168, 127, 4, "  WELCOME TO SUPAPLEX  ");
+#endif
     drawPlayerList();
+    return;
     drawLevelList();
     drawHallOfFame();
     drawRankings();
@@ -8663,7 +8683,7 @@ void handleOptionsExitAreaClick() // loc_4C78D
 
 void runMainMenu() // proc near       ; CODE XREF: start+43Ap
 {
-    KLog("*** Run main menu");
+    kprintf("*** Run main menu");
     // 01ED:5B31
     gIsInMainMenu = 1;
     gHasUserInterruptedDemo = 0;
@@ -9707,7 +9727,10 @@ void getMouseStatus(uint16_t *mouseX, uint16_t *mouseY, uint16_t *mouseButtonSta
 //                    ; waitForKeyMouseOrJoystick+3Ep ...
 {
 #ifdef __MEGADRIVE__
-    return;
+    u8 leftButton = 0;
+    u8 rightButton = 0;
+    getMouseState(mouseX, mouseY, &leftButton, &rightButton);
+    *mouseButtonStatus = (rightButton << 1) | leftButton;
 #else
     // Returns coordinate X in CX (0-320) and coordinate Y in DX (0-200).
     // Also button status in BX.

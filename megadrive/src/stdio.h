@@ -1,10 +1,13 @@
 #ifndef _STDIO_H
 #define _STDIO_H 1
 
-#include <stdlib.h>
+#include "stddef.h"
 
-struct _IO_FILE;
-typedef struct _IO_FILE FILE;
+typedef struct {
+    char name[16];
+    uint16_t position;
+    const uint8_t *data;
+} FILE;
 
 #define stderr NULL
 
