@@ -2540,6 +2540,7 @@ void readLevelsLst() //   proc near       ; CODE XREF: readLevelsLst+CCj
 #endif
     // successOpeningLevelLst:             // ; CODE XREF: readLevelsLst+Aj
     size_t bytes = fileReadBytes(gLevelListData, kLevelListDataLength, file);
+
     if (bytes < kLevelListDataLength)
     {
         fclose(file);
@@ -2557,7 +2558,7 @@ void readLevelsLst() //   proc near       ; CODE XREF: readLevelsLst+CCj
 void readPlayersLst() //  proc near       ; CODE XREF: readEverything+1Bp
                       // ; handleFloppyDiskButtonClick+149p
 {
-    KLog("*** readPlayersLst");
+    kprintf("*** readPlayersLst");
     if (gIsForcedCheatMode != 0)
     {
         return;
@@ -8110,16 +8111,25 @@ void prepareRankingTextEntries() // sub_4BF8D  proc near       ; CODE XREF: draw
 void drawRankings() // sub_4C0DD   proc near       ; CODE XREF: handleNewPlayerOptionClick+1E9p
 //                    ; handleDeletePlayerOptionClick+E2p ...
 {
+    kprintf("*** drawRankings");
     // 01ED:547A
     prepareRankingTextEntries();
 
+#ifdef __MEGADRIVE__
+    const uint8_t kDistanceBetweenLines = 8;
+#else
     const uint8_t kDistanceBetweenLines = 9;
+#endif
 
     for (int i = 0; i < 5; ++i)
     {
-        const uint8_t y = 110 + kDistanceBetweenLines * (i - 2);
         const uint8_t color = (i == 2 ? 6 : 8);
+#ifdef __MEGADRIVE__
+        drawTextWithChars6FontWithOpaqueBackgroundIfPossible(144, 57 + i * kDistanceBetweenLines, color, gRankingTextEntries[byte_58D46 + i]);
+#else
+        const uint8_t y = 110 + kDistanceBetweenLines * (i - 2);
         drawTextWithChars6FontWithOpaqueBackgroundIfPossible(8, y, color, gRankingTextEntries[byte_58D46 + i]);
+#endif
     }
 
     char numberString[4] = "001"; // 0x8359
@@ -8129,21 +8139,33 @@ void drawRankings() // sub_4C0DD   proc near       ; CODE XREF: handleNewPlayerO
 
 void drawLevelList() // sub_4C141  proc near       ; CODE XREF: start+41Ap handleGameUserInput+39Bp ...
 {
+    kprintf("*** drawLevelList");
     // 01ED:54DE
     byte_59821 = gCurrentPlayerLevelData[gCurrentSelectedLevelIndex - 2];
     byte_59822 = gCurrentPlayerLevelData[gCurrentSelectedLevelIndex - 1];
     byte_59823 = gCurrentPlayerLevelData[gCurrentSelectedLevelIndex];
 
     char *previousLevelName = (char *)&gLevelListData[(gCurrentSelectedLevelIndex - 2) * kListLevelNameLength];
+
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(96, 120 - 32, 0, previousLevelName);
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(144, 155, byte_59821, previousLevelName);
-
+#endif
     char *currentLevelName = (char *)&gLevelListData[(gCurrentSelectedLevelIndex - 1) * kListLevelNameLength];
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(96, 120 - 32 + 8, 0, currentLevelName);
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(144, 164, byte_59822, currentLevelName);
-
+#endif
     memcpy(gCurrentLevelName, currentLevelName, kListLevelNameLength);
 
     char *nextLevelName = (char *)&gLevelListData[gCurrentSelectedLevelIndex * kListLevelNameLength];
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(96, 120 - 32 + 16, 0, nextLevelName);
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(144, 173, byte_59823, nextLevelName);
+#endif
 }
 
 void drawHallOfFame() // sub_4C1A9   proc near       ; CODE XREF: handleFloppyDiskButtonClick+15Ap
@@ -8168,15 +8190,24 @@ void drawHallOfFame() // sub_4C1A9   proc near       ; CODE XREF: handleFloppyDi
         uint8_t playerNameLength = MIN(strlen(entry.playerName), sizeof(entry.playerName) - 1);
         memcpy(text, entry.playerName, playerNameLength);
 
+#ifdef __MEGADRIVE__
+        drawTextWithChars6FontWithOpaqueBackgroundIfPossible(168, (184 - 32) + i * 8, 0, text);
+#else
         drawTextWithChars6FontWithOpaqueBackgroundIfPossible(184, 28 + i * 9, 8, text);
+#endif
     }
 }
 
 void drawCurrentPlayerRanking() //   proc near       ; CODE XREF: drawPlayerList+5Bp // sub_4C224
 {
+    kprintf("*** drawCurrentPlayerRanking");
     // 01ED:55C1
     PlayerEntry currentPlayerEntry = gPlayerListData[gCurrentPlayerIndex];
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 184 - 32, 8, currentPlayerEntry.name);
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(168, 93, 8, currentPlayerEntry.name);
+#endif
 
     char timeText[10] = "000:00:00";
 
@@ -8191,19 +8222,32 @@ void drawCurrentPlayerRanking() //   proc near       ; CODE XREF: drawPlayerList
     // Hours
     convertNumberTo3DigitStringWithPadding0(currentPlayerEntry.hours, timeText);
 
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 200 - 32, 0, timeText);
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(224, 93, 8, timeText);
+#endif
 
     char nextLevelText[4] = "000";
     convertNumberTo3DigitStringWithPadding0(currentPlayerEntry.nextLevelToPlay, nextLevelText);
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(88, 184 - 32, 0, nextLevelText);
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(288, 93, 8, nextLevelText);
+#endif
 }
 
 void drawPlayerList() // sub_4C293  proc near       ; CODE XREF: start+32Cp start+407p ...
 {
+    kprintf("*** drawPlayerList");
     // 01ED:5630
     PlayerEntry currentPlayer = gPlayerListData[gCurrentPlayerIndex];
     memcpy(gPlayerName, currentPlayer.name, sizeof(currentPlayer.name) - 1);
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 120 - 32, 0, currentPlayer.name);
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 164, 6, currentPlayer.name);
+#endif
 
     char *prevPlayerName = "";
 
@@ -8217,7 +8261,11 @@ void drawPlayerList() // sub_4C293  proc near       ; CODE XREF: start+32Cp sta
     }
 
     // loc_4C2CD:              // ; CODE XREF: drawPlayerList+35j
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 120 - 32 + 8, 0, prevPlayerName);
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 155, 8, prevPlayerName);
+#endif
 
     char *nextPlayerName = "";
 
@@ -8231,7 +8279,11 @@ void drawPlayerList() // sub_4C293  proc near       ; CODE XREF: start+32Cp sta
     }
 
     // loc_4C2E6:              // ; CODE XREF: drawPlayerList+4Ej
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 120 - 32 + 16, 0, nextPlayerName);
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 173, 8, nextPlayerName);
+#endif
     drawCurrentPlayerRanking();
 }
 
@@ -8240,14 +8292,14 @@ void drawMenuTitleAndDemoLevelResult() // sub_4C2F2   proc near       ; CODE XRE
 {
     // 01ED:568F
 #ifdef __MEGADRIVE__
-    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 200, 4, "  WELCOME TO SUPAPLEX  ");
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 200, 0, "  WELCOME TO SUPAPLEX  ");
 #else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(168, 127, 4, "  WELCOME TO SUPAPLEX  ");
 #endif
     drawPlayerList();
-    return;
     drawLevelList();
     drawHallOfFame();
+    return;
     drawRankings();
     if (byte_59B83 == 0)
     {

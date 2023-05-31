@@ -186,28 +186,46 @@ void renderAdvancedOptionsMenu(AdvancedOptionsMenu *menu)
 {
 }
 
+static char line[128];
+
+static void readLine(const char* source)
+{
+    int i = 0;
+    while (source[i] != '\n' && source[i] != '\0')
+    {
+        line[i] = source[i];
+        i++;
+    }
+    line[i] = '\0';
+    kprintf("readLine: %s", line);
+}
+
 void drawTextWithChars6FontWithOpaqueBackground(size_t destX, size_t destY, uint8_t color, const char *text)
 {
-    kprintf("drawTextWithChars6FontWithOpaqueBackground: %s", text);
-    VDP_drawTextEx(BG_A, text, TILE_ATTR(color, FALSE, FALSE, FALSE), destX >> 3, destY >> 3, CPU);
+    readLine(text);
+    kprintf("drawTextWithChars6FontWithOpaqueBackground: %s", line);
+    VDP_drawTextEx(BG_A, line, TILE_ATTR(color, FALSE, FALSE, FALSE), destX >> 3, destY >> 3, CPU);
 }
 
 void drawTextWithChars6FontWithTransparentBackground(size_t destX, size_t destY, uint8_t color, const char *text)
 {
-    kprintf("drawTextWithChars6FontWithTransparentBackground: %s", text);
-    VDP_drawTextEx(BG_A, text, TILE_ATTR(color, FALSE, FALSE, FALSE), destX >> 3, destY >> 3, CPU);
+    readLine(text);
+    kprintf("drawTextWithChars6FontWithTransparentBackground: %s", line);
+    VDP_drawTextEx(BG_A, line, TILE_ATTR(color, FALSE, FALSE, FALSE), destX >> 3, destY >> 3, CPU);
 }
 
 void drawTextWithChars8Font(size_t destX, size_t destY, uint8_t color, const char *text)
 {
-    kprintf("drawTextWithChars8Font: %s", text);
-    VDP_drawTextEx(BG_A, text, TILE_ATTR(color, FALSE, FALSE, FALSE), destX >> 3, destY >> 3, CPU);
+    readLine(text);
+    kprintf("drawTextWithChars8Font: %s", line);
+    VDP_drawTextEx(BG_A, line, TILE_ATTR(color, FALSE, FALSE, FALSE), destX >> 3, destY >> 3, CPU);
 }
 
 void drawTextWithChars8FontToGamePanel(size_t destX, size_t destY, uint8_t color, const char *text)
 {
-    kprintf("drawTextWithChars8FontToGamePanel: %s", text);
-    VDP_drawTextEx(BG_A, text, TILE_ATTR(color, FALSE, FALSE, FALSE), destX >> 3, destY >> 3, CPU);
+    readLine(text);
+    kprintf("drawTextWithChars8FontToGamePanel: %s", line);
+    VDP_drawTextEx(BG_A, line, TILE_ATTR(color, FALSE, FALSE, FALSE), destX >> 3, destY >> 3, CPU);
 }
 
 void videoLoop(void)
