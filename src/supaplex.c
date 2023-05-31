@@ -9726,18 +9726,19 @@ void initializeMouse() //   proc near       ; CODE XREF: start+299p
 void getMouseStatus(uint16_t *mouseX, uint16_t *mouseY, uint16_t *mouseButtonStatus) //   proc near       ; CODE XREF: waitForKeyMouseOrJoystick:mouseIsClickedp
 //                    ; waitForKeyMouseOrJoystick+3Ep ...
 {
-#ifdef __MEGADRIVE__
-    u8 leftButton = 0;
-    u8 rightButton = 0;
-    int mx = 0;
-    int my = 0;
-    getMouseState(&mx, &my, &leftButton, &rightButton);
-    *mouseX = (u16)mx;
-    *mouseY = (u16)my;
-    *mouseButtonStatus = (rightButton << 1) | leftButton;
-    SPR_setPosition(cursorSprite, *mouseX, *mouseY);
-    kprintf("mouseX: %d, mouseY: %d, mouseButtonStatus: %d\n", *mouseX, *mouseY, *mouseButtonStatus);
-#else
+// @TODO pladaria: consider alternative implementation or remove this
+// #ifdef __MEGADRIVE__
+//     u8 leftButton = 0;
+//     u8 rightButton = 0;
+//     int mx = 0;
+//     int my = 0;
+//     getMouseState(&mx, &my, &leftButton, &rightButton);
+//     *mouseX = (u16)mx;
+//     *mouseY = (u16)my;
+//     *mouseButtonStatus = (rightButton << 1) | leftButton;
+//     SPR_setPosition(cursorSprite, *mouseX, *mouseY);
+//     kprintf("mouseX: %d, mouseY: %d, mouseButtonStatus: %d\n", *mouseX, *mouseY, *mouseButtonStatus);
+// #else
     // Returns coordinate X in CX (0-320) and coordinate Y in DX (0-200).
     // Also button status in BX.
 
@@ -9758,12 +9759,16 @@ void getMouseStatus(uint16_t *mouseX, uint16_t *mouseY, uint16_t *mouseButtonSta
                                &controllerY,
                                &controllerLeftButton,
                                &controllerRightButton);
-
     uint8_t shouldCorrectMousePosition = 0;
 
     if (controllerX != 0.0 || controllerY != 0.0)
     {
+#ifdef __MEGADRIVE__
+        // @TODO pladaria: consider to implement acceleration
+        int speed = 2;
+#else
         float speed = (float)windowWidth / 1280;
+#endif
 
         x += speed * controllerX;
         y += speed * controllerY;
@@ -9817,7 +9822,6 @@ void getMouseStatus(uint16_t *mouseX, uint16_t *mouseY, uint16_t *mouseButtonSta
     {
         *mouseButtonStatus = (rightButtonPressed << 1 | leftButtonPressed);
     }
-#endif
 }
 
 #define COPY_LEVEL_DATA(__dest, __size)                  \

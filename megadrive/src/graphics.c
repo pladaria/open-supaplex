@@ -120,6 +120,7 @@ void restoreLastMouseAreaBitmap(void)
 void drawMouseCursor(void)
 {
     SPR_setVisibility(cursorSprite, VISIBLE);
+    SPR_setPosition(cursorSprite, gMouseX, gMouseY);
 }
 
 void drawMenuBackground(void)

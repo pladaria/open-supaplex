@@ -1,7 +1,8 @@
 #include <stdint.h>
 #include "genesis.h"
 
-void initializeControllers(void) {
+void initializeControllers(void)
+{
 }
 
 int8_t getGameControllerX(void)
@@ -72,4 +73,31 @@ uint8_t getGameControllerCancelButton(void)
 
 void gameControllerEmulateMouse(float *x, float *y, uint8_t *leftButton, uint8_t *rightButton)
 {
+    u16 joy1 = JOY_readJoypad(JOY_1);
+    if (joy1 & BUTTON_LEFT)
+    {
+        *x = -1.0;
+    }
+    else if (joy1 & BUTTON_RIGHT)
+    {
+        *x = 1.0;
+    }
+    else
+    {
+        *x = 0.0;
+    }
+    if (joy1 & BUTTON_UP)
+    {
+        *y = -1.0;
+    }
+    else if (joy1 & BUTTON_DOWN)
+    {
+        *y = 1.0;
+    }
+    else
+    {
+        *y = 0.0;
+    }
+    *leftButton = (joy1 & BUTTON_A) != 0;
+    *rightButton = (joy1 & BUTTON_B) != 0;
 }
