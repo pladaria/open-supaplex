@@ -1,5 +1,5 @@
-#ifndef _STDDEF_H
-#define _STDDEF_H 1
+#ifndef _STDDEF_MD_H
+#define _STDDEF_MD_H 1
 
 #define __MEGADRIVE__ 1
 #define HAVE_SDL2 1

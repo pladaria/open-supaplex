@@ -7,22 +7,38 @@ void initializeControllers(void)
 
 int8_t getGameControllerX(void)
 {
+    u16 joy1 = JOY_readJoypad(JOY_1);
+    if (joy1 & BUTTON_LEFT) {
+        return -1;
+    }
+    if (joy1 & BUTTON_RIGHT) {
+        return 1;
+    }
     return 0;
 }
 
 int8_t getGameControllerY(void)
 {
+    u16 joy1 = JOY_readJoypad(JOY_1);
+    if (joy1 & BUTTON_UP) {
+        return -1;
+    }
+    if (joy1 & BUTTON_DOWN) {
+        return 1;
+    }
     return 0;
 }
 
 uint8_t getGameControllerButtonA(void)
 {
-    return 0;
+    u16 joy1 = JOY_readJoypad(JOY_1);
+    return (joy1 & BUTTON_A) != 0;
 }
 
 uint8_t getGameControllerButtonB(void)
 {
-    return 0;
+    u16 joy1 = JOY_readJoypad(JOY_1);
+    return (joy1 & BUTTON_B) != 0;
 }
 
 uint8_t getGameControllerButtonX(void)
@@ -42,7 +58,8 @@ uint8_t getGameControllerButtonBack(void)
 
 uint8_t getGameControllerButtonStart(void)
 {
-    return 0;
+    u16 joy1 = JOY_readJoypad(JOY_1);
+    return (joy1 & BUTTON_START) != 0;
 }
 
 uint8_t getGameControllerButtonLeftShoulder(void)

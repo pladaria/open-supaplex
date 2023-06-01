@@ -197,7 +197,6 @@ static void readLine(const char* source)
         i++;
     }
     line[i] = '\0';
-    kprintf("readLine: %s", line);
 }
 
 void drawTextWithChars6FontWithOpaqueBackground(size_t destX, size_t destY, uint8_t color, const char *text)

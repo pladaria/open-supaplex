@@ -112,6 +112,7 @@ static uint8_t byte_59B83 = 0;
 // static uint8_t byte_59B86 = 0;
 // static uint16_t gDemoRecordingRandomGeneratorSeed = 0; // word_5A199
 // static uint8_t byte_5A140 = 0; // speedFixMagicNumber inside of level
+/** gSkipPrintLevelResultMessage */
 static uint8_t byte_5A19B = 0;
 static uint8_t gIsLevelStartedAsDemo = 0;     // byte_5A19C
 static uint8_t gDemoRecordingJustStarted = 0; // byte_5A2F8
@@ -262,6 +263,93 @@ void handleOkButtonClick(void);
 
 #define kNumberOfMainMenuButtons 17
 static const ButtonDescriptor kMainMenuButtonDescriptors[kNumberOfMainMenuButtons] = { // located in DS:0000
+#ifdef __MEGADRIVE__
+    {
+        5, 6, // startX, startY
+        157, 14, // endX, endY
+        handleNewPlayerOptionClick, // New player
+    },
+    {
+        5, 15,
+        157, 23,
+        handleDeletePlayerOptionClick, // Delete player
+    },
+    {
+        5, 24,
+        157, 32,
+        handleSkipLevelOptionClick, // Skip level
+    },
+    {
+        5, 33,
+        157, 41,
+        handleStatisticsOptionClick, // Statistics
+    },
+    {
+        5, 42,
+        157, 50,
+        handleGfxTutorOptionClick, // GFX-tutor
+    },
+    {
+        5, 51,
+        157, 59,
+        handleDemoOptionClick, // Demo
+    },
+    {
+        5, 60,
+        157, 69,
+        handleControlsOptionClick, // Controls
+    },
+    {
+        140, 90,
+        155, 108,
+        handleRankingListScrollUp, // Rankings arrow up
+    },
+    {
+        140, 121,
+        155, 138,
+        handleRankingListScrollDown, // Rankings arrow down
+    },
+    {
+        96, 140,
+        115, 163,
+        handleOkButtonClick, // Ok button
+    },
+    {
+        83, 168,
+        126, 192,
+        handleFloppyDiskButtonClick, // Insert data disk according to https://supaplex.fandom.com/wiki/Main_menu
+    },
+    {
+        11, 142,
+        67, 153,
+        handlePlayerListScrollUp, // Players arrow up
+    },
+    {
+        11, 181,
+        67, 192,
+        handlePlayerListScrollDown, // Players arrow down
+    },
+    {
+        11, 154,
+        67, 180,
+        handlePlayerListClick, // Players list area
+    },
+    {
+        142, 142,
+        306, 153,
+        handleLevelListScrollUp, // Levels arrow up
+    },
+    {
+        142, 181,
+        306, 192,
+        handleLevelListScrollDown, // Levels arrow down
+    },
+    {
+        297, 37,
+        312, 52,
+        handleLevelCreditsClick, // Credits
+    }
+#else
     {
         5, 6,
         157, 14,
@@ -346,7 +434,9 @@ static const ButtonDescriptor kMainMenuButtonDescriptors[kNumberOfMainMenuButton
         297, 37,
         312, 52,
         handleLevelCreditsClick, // Credits
-    }};
+    }
+#endif
+};
 
 void handleOptionsExitAreaClick(void);
 void handleOptionsMusicClick(void);
@@ -6779,6 +6869,7 @@ void sub_4AAB4(int16_t position) //   proc near       ; CODE XREF: detonateZonk+
 void handleNewPlayerOptionClick() // sub_4AB1B  proc near       ; CODE XREF: runMainMenu+28Fp
 //                    ; DATA XREF: data:off_50318o
 {
+    kprintf("*** handleNewPlayerOptionClick");
     // 01ED:3EB8
     if (gIsForcedCheatMode != 0)
     {
@@ -8123,10 +8214,10 @@ void drawRankings() // sub_4C0DD   proc near       ; CODE XREF: handleNewPlayerO
 
     for (int i = 0; i < 5; ++i)
     {
-        const uint8_t color = (i == 2 ? 6 : 8);
 #ifdef __MEGADRIVE__
-        drawTextWithChars6FontWithOpaqueBackgroundIfPossible(144, 57 + i * kDistanceBetweenLines, color, gRankingTextEntries[byte_58D46 + i]);
+        drawTextWithChars6FontWithOpaqueBackgroundIfPossible(112, 56 - 32 + i * kDistanceBetweenLines, 0, gRankingTextEntries[byte_58D46 + i]);
 #else
+        const uint8_t color = (i == 2 ? 6 : 8);
         const uint8_t y = 110 + kDistanceBetweenLines * (i - 2);
         drawTextWithChars6FontWithOpaqueBackgroundIfPossible(8, y, color, gRankingTextEntries[byte_58D46 + i]);
 #endif
@@ -8134,7 +8225,11 @@ void drawRankings() // sub_4C0DD   proc near       ; CODE XREF: handleNewPlayerO
 
     char numberString[4] = "001"; // 0x8359
     convertNumberTo3DigitStringWithPadding0(byte_58D46 + 1, numberString);
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(184, 40 - 32, 0, &numberString[1]); // Remove the first (left most) digit
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(144, 110, 6, &numberString[1]); // Remove the first (left most) digit
+#endif
 }
 
 void drawLevelList() // sub_4C141  proc near       ; CODE XREF: start+41Ap handleGameUserInput+39Bp ...
@@ -8239,12 +8334,12 @@ void drawCurrentPlayerRanking() //   proc near       ; CODE XREF: drawPlayerList
 
 void drawPlayerList() // sub_4C293  proc near       ; CODE XREF: start+32Cp start+407p ...
 {
-    kprintf("*** drawPlayerList");
+    kprintf("*** drawPlayerList; gCurrentPlayerIndex: %d", gCurrentPlayerIndex);;
     // 01ED:5630
     PlayerEntry currentPlayer = gPlayerListData[gCurrentPlayerIndex];
     memcpy(gPlayerName, currentPlayer.name, sizeof(currentPlayer.name) - 1);
 #ifdef __MEGADRIVE__
-    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 120 - 32, 0, currentPlayer.name);
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 120 - 32 + 8, 0, currentPlayer.name);
 #else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 164, 6, currentPlayer.name);
 #endif
@@ -8262,7 +8357,7 @@ void drawPlayerList() // sub_4C293  proc near       ; CODE XREF: start+32Cp sta
 
     // loc_4C2CD:              // ; CODE XREF: drawPlayerList+35j
 #ifdef __MEGADRIVE__
-    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 120 - 32 + 8, 0, prevPlayerName);
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 120 - 32, 0, prevPlayerName);
 #else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(16, 155, 8, prevPlayerName);
 #endif
@@ -8299,7 +8394,6 @@ void drawMenuTitleAndDemoLevelResult() // sub_4C2F2   proc near       ; CODE XRE
     drawPlayerList();
     drawLevelList();
     drawHallOfFame();
-    return;
     drawRankings();
     if (byte_59B83 == 0)
     {
@@ -8333,7 +8427,11 @@ void drawMenuTitleAndDemoLevelResult() // sub_4C2F2   proc near       ; CODE XRE
 
     // loc_4C33C:              // ; CODE XREF: drawMenuTitleAndDemoLevelResult+34j
     //  ; drawMenuTitleAndDemoLevelResult+39j ...
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 200, 0, message);
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(168, 127, 4, message);
+#endif
     byte_5A19B = 0;
 }
 

@@ -22,3 +22,5 @@ clean:
 	rm -f res/**.rs
 	find . -name "*.o" -type f -delete
 
+sram:
+	hd ~/.wine/drive_c/users/pladaria/Local\ Settings/Application\ Data/blastem/rom/save.sram

@@ -1,8 +1,34 @@
-#include <stdint.h>
-#include "genesis.h"
+#include "stdint.h"
+#include "stdio.h"
+#include "supaplex/globals.h"
 
 void initializeSystem(void)
 {
+    kprintf("*** SRAM check");
+    SRAM_enableRO();
+    uint8_t sramHeaderCheckPass = 1;
+    for (uint16_t i = 0; i < SRAM_HEADER_SIZE; i++)
+    {
+        if (SRAM_readByte(i) != SRAM_HEADER[i])
+        {
+            sramHeaderCheckPass = 0;
+            break;
+        }
+    }
+    if (!sramHeaderCheckPass)
+    {
+        kprintf("SRAM header check failed, initializing...");
+        SRAM_enable();
+        for (uint16_t i = 0; i < SRAM_HEADER_SIZE; i++)
+        {
+            SRAM_writeByte(i, SRAM_HEADER[i]);
+        }
+        for (uint16_t i = SRAM_HEADER_SIZE; i < SRAM_SIZE; i++)
+        {
+            SRAM_writeByte(i, 0);
+        }
+    }
+    SRAM_disable();
 }
 
 void destroySystem(void)

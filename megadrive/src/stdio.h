@@ -3,10 +3,18 @@
 
 #include "stddef.h"
 
+#define SRAM_HEADER "SUPAPLEX-002"
+#define SRAM_HEADER_SIZE sizeof(SRAM_HEADER)
+#define PLAYERS_LIST_OFFSET SRAM_HEADER_SIZE
+#define PLAYERS_LIST_SIZE sizeof(gPlayerListData)
+#define SRAM_SIZE PLAYERS_LIST_OFFSET + PLAYERS_LIST_SIZE
+
 typedef struct {
     char name[16];
+    uint16_t start;
     uint16_t position;
     const uint8_t *data;
+    uint8_t writeable; // if true, uses SRAM
 } FILE;
 
 #define stderr NULL

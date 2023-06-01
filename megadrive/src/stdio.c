@@ -1,5 +1,4 @@
 #include "stdio.h"
-#include "genesis.h"
 #include "../res/resources.h"
 
 int snprintf(char *str, size_t size, const char *format, ...)
@@ -58,10 +57,22 @@ FILE *fopen(const char *filename, const char *mode)
     {
         FILE *file = MEM_alloc(sizeof(FILE));
         strcpy(file->name, filename); // @TODO pladaria: remove, this is for debug purposes
+        file->start = 0;
         file->position = 0;
         file->data = binLevelLst;
+        file->writeable = 0;
         return file;
     }
+    if (strcmp("PLAYER.LST", filename) == 0) {
+        FILE *file = MEM_alloc(sizeof(FILE));
+        strcpy(file->name, filename); // @TODO pladaria: remove, this is for debug purposes
+        file->start = PLAYERS_LIST_OFFSET;
+        file->position = 0;
+        file->data = NULL;
+        file->writeable = 1;
+        return file;
+    }
+    kprintf("FILE NOT HANDLED: '%s'", filename);
     return NULL;
 }
 
@@ -73,13 +84,18 @@ size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)
 
 size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
 {
-    kprintf("fread '%s'; %lu bytes", stream->name, nmemb);
-    // @TODO pladaria: remove check if not needed
-    if (size != 1)
+    if (stream->writeable == 1) {
+        return 0;
+    } else
     {
-        SYS_die("fread size != 1");
+        kprintf("fread '%s'; %lu bytes", stream->name, nmemb);
+        // @TODO pladaria: remove check if not needed
+        if (size != 1)
+        {
+            SYS_die("fread size != 1");
+        }
+        memcpy(ptr, stream->data + stream->position, nmemb);
+        stream->position += nmemb;
+        return nmemb;
     }
-    memcpy(ptr, stream->data + stream->position, nmemb);
-    stream->position += nmemb;
-    return nmemb;
 }
