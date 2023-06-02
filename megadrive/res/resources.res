@@ -18,6 +18,8 @@ IMAGE imgTitle images/title-224p.png BEST ALL
 IMAGE imgTitle1 images/title1-224p.png BEST ALL
 IMAGE imgTitle2 images/title2-224p.png BEST ALL
 IMAGE imgMenu "images/menu-224p.png" BEST ALL
+IMAGE imgKeyboard "images/keyboard.png" BEST ALL
+
 IMAGE fontChars8 "images/chars8.png" BEST NONE
 
 # SPRITE name img_file width height [compression [time [collision [opt_type [opt_level]]]]]

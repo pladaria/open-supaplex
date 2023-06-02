@@ -9,7 +9,7 @@
 #define PLAYERS_LIST_SIZE sizeof(gPlayerListData)
 #define SRAM_SIZE PLAYERS_LIST_OFFSET + PLAYERS_LIST_SIZE
 
-typedef struct {
+typedef struct FILE {
     char name[16];
     uint16_t start;
     uint16_t position;

@@ -32,7 +32,7 @@ uint8_t supportsRealKeyboard(void)
 
 uint8_t supportsVirtualKeyboard(void)
 {
-#if defined(__vita__) || defined(_3DS) || defined(__PSL1GHT__)
+#if defined(__vita__) || defined(_3DS) || defined(__PSL1GHT__) || defined(__MEGADRIVE__)
     return 1;
 #elif defined(__SWITCH__)
     // If app is ran in applet mode, SwKbd will not work

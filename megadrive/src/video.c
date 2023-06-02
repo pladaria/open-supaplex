@@ -11,6 +11,7 @@ Sprite *cursorSprite;
 
 void initializeVideo(uint8_t fastMode)
 {
+    VDP_setPlaneSize(64, 32, TRUE);
     VDP_setScreenWidth320();
     VDP_setScreenHeight224();
 

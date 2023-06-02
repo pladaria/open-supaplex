@@ -4,7 +4,8 @@
 
 void initializeSystem(void)
 {
-    kprintf("*** SRAM check");
+    kprintf("*** initializeSystem");
+    kprintf("Init RAM check...");
     SRAM_enableRO();
     uint8_t sramHeaderCheckPass = 1;
     for (uint16_t i = 0; i < SRAM_HEADER_SIZE; i++)
@@ -27,6 +28,8 @@ void initializeSystem(void)
         {
             SRAM_writeByte(i, 0);
         }
+    } else {
+        kprintf("SRAM check passed");
     }
     SRAM_disable();
 }

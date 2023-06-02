@@ -11,6 +11,7 @@ rm -rf src/supaplex/3ds \
     src/supaplex/graphics.c \
     src/supaplex/savegame.c \
     src/supaplex/null/video.c \
+    src/supaplex/null/virtualKeyboard.c \
     src/supaplex/lib \
     src/supaplex/nds \
     src/supaplex/nx \
