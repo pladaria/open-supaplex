@@ -6995,7 +6995,11 @@ void handleNewPlayerOptionClick() // sub_4AB1B  proc near       ; CODE XREF: run
 
         if (result == 0)
         {
+#ifdef __MEGADRIVE__
+            drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 200, 0, "                       ");
+#else
             drawTextWithChars6FontWithOpaqueBackgroundIfPossible(168, 127, 8, "                       ");
+#endif
             saveLastMouseAreaBitmap();
             drawMouseCursor();
             return;

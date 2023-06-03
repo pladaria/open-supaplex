@@ -11,9 +11,10 @@ Sprite *cursorSprite;
 
 void initializeVideo(uint8_t fastMode)
 {
-    VDP_setPlaneSize(64, 32, TRUE);
+    VDP_setPlaneSize(64, 64, TRUE);
     VDP_setScreenWidth320();
     VDP_setScreenHeight224();
+    VDP_setScrollingMode(HSCROLL_PLANE, VSCROLL_PLANE);
 
     PAL_setPalette(0, palette_black, CPU);
     PAL_setPalette(1, palette_black, CPU);

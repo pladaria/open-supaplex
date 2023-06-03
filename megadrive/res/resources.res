@@ -49,6 +49,7 @@ IMAGE fontChars8 "images/chars8.png" BEST NONE
 #                         3 / MAX       = maximum optimisation level, genetic algorithm (500000 iterations), ~100 time slower than FAST
 SPRITE sprTitleEdge images/title-edge.png 14 10 BEST 0 NONE BALANCED FAST
 SPRITE sprCursor images/cursor.png 1 1 FAST 2 NONE BALANCED FAST
+SPRITE sprKeyboardKeys images/keyboard-keys.png 2 2 FAST 0 NONE BALANCED FAST
 
 # BIN name file [align [size_align [fill [compression [far]]]]]
 #
