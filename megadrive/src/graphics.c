@@ -188,7 +188,7 @@ void renderAdvancedOptionsMenu(AdvancedOptionsMenu *menu)
 
 static char line[128];
 
-static void readLine(const char* source)
+static void readLine(const char *source)
 {
     int i = 0;
     while (source[i] != '\n' && source[i] != '\0')
@@ -241,10 +241,10 @@ void videoLoop(void)
 void readPalettes(void)
 {
     kprintf("*** readPalettes");
-    // convertPaletteDataToPalette(&binPalettes[0], gPalettes[0]);
-    // convertPaletteDataToPalette(&binPalettes[64], gPalettes[1]);
-    // convertPaletteDataToPalette(&binPalettes[128], gPalettes[2]);
-    // convertPaletteDataToPalette(&binPalettes[192], gPalettes[3]);
+    convertPaletteDataToPalette(&binPalettes[0], gPalettes[0]);
+    convertPaletteDataToPalette(&binPalettes[64], gPalettes[1]);
+    convertPaletteDataToPalette(&binPalettes[128], gPalettes[2]);
+    convertPaletteDataToPalette(&binPalettes[192], gPalettes[3]);
 }
 
 void replaceCurrentPaletteColor(uint8_t index, Color color)
@@ -266,6 +266,7 @@ static void convertRgbPaletteToVdpPalette(const ColorPalette palette, u16 *outVd
 
 void setPalette(const ColorPalette palette)
 {
+    kprintf("*** setPalette");
     u16 pal[16];
     convertRgbPaletteToVdpPalette(palette, pal);
     PAL_setPalette(PAL0, pal, CPU);
@@ -277,12 +278,14 @@ void fadeToPalette(const ColorPalette palette)
     const u16 steps = 12;
     if (palette == gGamePalette)
     {
+        kprintf("fadeToPalette: gGamePalette");
         u16 pal[16];
         memcpy(pal, imgMenu.palette->data, sizeof(pal));
         pal[0] = 0x0000;
         PAL_fadeIn(0, 15, pal, steps, FALSE);
         return;
     }
+
     // The original animation consisted of 64 steps and was designed to be displayed on screens with a refresh rate of
     // 70Hz. However, since the Megadrive console only supports 8 levels of color intensity per channel, I am reducing
     // the number of fade steps. This adjustment ensures that the color transition is subtle yet still perceptible.

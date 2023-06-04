@@ -2389,14 +2389,15 @@ uint8_t readDemoFiles() //    proc near       ; CODE XREF: readEverything+12p
 void openCreditsBlock() // proc near      ; CODE XREF: start+2E9p
 {
 #ifdef __MEGADRIVE__
+    kprintf("*** openCreditsBlock");
     // In Megadrive the "curtain effect" is made using four opaque sprites that are moved to the left and right
     // It is the same sprite flipped horizontally and vertically
-    u16 tileIndex = TILE_USER_INDEX + imgTitle1.tileset->numTile + imgTitle2.tileset->numTile;
+    uint16_t tileIndex = TILE_USER_INDEX + imgTitle1.tileset->numTile + imgTitle2.tileset->numTile;
 
-    u16 x1 = 48;
-    u16 x2 = 48 + 112;
-    u16 y1 = 32;
-    u16 y2 = 98;
+    uint16_t x1 = 48;
+    uint16_t x2 = 48 + 112;
+    uint16_t y1 = 32;
+    uint16_t y2 = 98;
 
     KLog("*** Create credits block sprites");
     KLog_U1("MEM_getFree: ", MEM_getFree());
@@ -2417,6 +2418,7 @@ void openCreditsBlock() // proc near      ; CODE XREF: start+2E9p
     SPR_setAutoTileUpload(creditsBlockEdgeBottomRight, FALSE);
     SPR_setVRAMTileIndex(creditsBlockEdgeBottomRight, tileIndex);
 
+    videoLoop();
     PAL_setPalette(PAL0, imgTitle1.palette->data, CPU);
     PAL_setPalette(PAL1, imgTitle1.palette->data, CPU);
     videoLoop();
@@ -14738,6 +14740,7 @@ void drawGamePanel() // sub_501C0   proc near       ; CODE XREF: start+338p han
 void drawSpeedFixTitleAndVersion() //   proc near       ; CODE XREF: start+2E6p
 {
 #ifdef __MEGADRIVE__
+    kprintf("*** drawSpeedFixTitleAndVersion");
     PAL_setColor(16 * 2 + 1, RGB8_8_8_TO_VDPCOLOR(255, 255, 255));
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 11, PAL2, "SUPAPLEX VERSION " VERSION_STRING);
 #else

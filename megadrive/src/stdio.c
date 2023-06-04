@@ -68,11 +68,12 @@ FILE *fopen(const char *filename, const char *mode)
         SRAM_enableRO();
         uint8_t firstByte = SRAM_readByte(PLAYERS_LIST_OFFSET);
         SRAM_disable();
-        if (firstByte == 0)
+        if (mode[0] == "r" && firstByte == 0)
         {
             kprintf("PLAYER.LST not initialized");
             return NULL;
         }
+        kprintf("PLAYER.LST initialized");
         FILE *file = MEM_alloc(sizeof(FILE));
         strcpy(file->name, filename); // @TODO pladaria: remove, this is for debug purposes
         file->start = PLAYERS_LIST_OFFSET;
@@ -108,7 +109,7 @@ size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)
 
 size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
 {
-    if (stream = NULL) {
+    if (stream == NULL) {
         SYS_die("fread stream is NULL");
     }
     if (stream->writeable == 1)
