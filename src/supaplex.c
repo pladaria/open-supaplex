@@ -14738,7 +14738,8 @@ void drawGamePanel() // sub_501C0   proc near       ; CODE XREF: start+338p han
 void drawSpeedFixTitleAndVersion() //   proc near       ; CODE XREF: start+2E6p
 {
 #ifdef __MEGADRIVE__
-    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 11, PAL0, "SUPAPLEX VERSION " VERSION_STRING);
+    PAL_setColor(16 * 2 + 1, RGB8_8_8_TO_VDPCOLOR(255, 255, 255));
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 11, PAL2, "SUPAPLEX VERSION " VERSION_STRING);
 #else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(102, 11, 1, "SUPAPLEX VERSION " VERSION_STRING);
 #endif

@@ -1,7 +1,6 @@
 #ifndef _RES_RESOURCES_H_
 #define _RES_RESOURCES_H_
 
-extern const u8 binPalettes[256];
 extern const u8 binLevelLst[3108];
 extern const u8 binLevelsDat[170496];
 extern const Image imgTitle;

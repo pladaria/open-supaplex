@@ -63,11 +63,13 @@ FILE *fopen(const char *filename, const char *mode)
         file->writeable = 0;
         return file;
     }
-    if (strcmp("PLAYER.LST", filename) == 0) {
+    if (strcmp("PLAYER.LST", filename) == 0)
+    {
         SRAM_enableRO();
         uint8_t firstByte = SRAM_readByte(PLAYERS_LIST_OFFSET);
         SRAM_disable();
-        if (firstByte == 0) {
+        if (firstByte == 0)
+        {
             kprintf("PLAYER.LST not initialized");
             return NULL;
         }
@@ -90,16 +92,30 @@ size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)
     {
         kprintf("FILE NOT WRITEABLE: '%s'", stream->name);
         return 0;
-    } else {
-        return 0;
+    }
+    else
+    {
+        kprintf("Write to SRAM: '%s'", stream->name);
+        SRAM_enable();
+        for (uint16_t i = 0; i < nmemb; i++)
+        {
+            SRAM_writeByte(stream->start + stream->position + i, ((uint8_t *)ptr)[i]);
+        }
+        SRAM_disable();
+        return nmemb;
     }
 }
 
 size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
 {
-    if (stream->writeable == 1) {
+    if (stream = NULL) {
+        SYS_die("fread stream is NULL");
+    }
+    if (stream->writeable == 1)
+    {
         return 0;
-    } else
+    }
+    else
     {
         kprintf("fread '%s'; %lu bytes", stream->name, nmemb);
         // @TODO pladaria: remove check if not needed

@@ -63,6 +63,6 @@ SPRITE sprKeyboardKeys images/keyboard-keys.png 2 2 FAST 0 NONE BALANCED FAST
 #                         1 / APLIB       = aplib library (good compression ratio but slow)
 #                         2 / FAST / LZ4W = custom lz4 compression (average compression ratio but fast)
 #     far             'far' binary data flag to put it at the end of the ROM (useful for bank switch, default = TRUE)
-BIN binPalettes bin/PALETTES.DAT 2 2 0 NONE
+# BIN binPalettes bin/PALETTES.DAT 2 2 0 NONE
 BIN binLevelLst bin/LEVEL.LST 2 2 0 NONE
 BIN binLevelsDat bin/LEVELS.DAT 2 2 0 NONE

@@ -113,7 +113,10 @@ uint8_t inputVirtualKeyboardText(const char *title, uint16_t maxLength, char *ou
                 outText[textLength++] = keys[key];
             }
             waitUntilKeyReleased(0);
-            VDP_drawTextBG(BG_B, outText, 200 >> 3, (SCREEN_HEIGHT + 48 - 32) >> 3);
+            char previewText[9] = "        ";
+            memcpy(previewText, outText, textLength);
+            kprintf(previewText);
+            VDP_drawTextBG(BG_B, previewText, 200 >> 3, (SCREEN_HEIGHT + 48 - 32) >> 3);
         }
         else if (getGameControllerButtonB())
         {

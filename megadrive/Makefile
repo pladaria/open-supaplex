@@ -5,6 +5,7 @@ USER_NAME := $(shell id -u ${USER})
 USER_GROUP := $(shell id -g ${USER})
 
 dev: opensupaplex
+	@echo wine $(BLASTEM_WIN) "out\rom.bin"
 	wine $(BLASTEM_WIN) "out\rom.bin"
 
 dev2: opensupaplex
