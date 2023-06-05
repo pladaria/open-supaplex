@@ -1032,6 +1032,9 @@ void buildFXVolumeOptionTitle(char output[kMaxAdvancedOptionsMenuEntryTitleLengt
 
 void buildScalingModeOptionTitle(char output[kMaxAdvancedOptionsMenuEntryTitleLength])
 {
+#ifdef __MEGADRIVE__
+    return;
+#else
     static const char *kAspectFitScalingModeString = "NORMAL";
     static const char *kAspectFillScalingModeString = "ZOOM";
     static const char *kIntegerFactorScalingModeString = "INTEGER FACTOR";
@@ -1060,6 +1063,7 @@ void buildScalingModeOptionTitle(char output[kMaxAdvancedOptionsMenuEntryTitleLe
     }
 
     snprintf(output, kMaxAdvancedOptionsMenuEntryTitleLength, "SCALING MODE: %s", mode);
+#endif
 }
 
 void buildBooleanOptionTitle(char output[kMaxAdvancedOptionsMenuEntryTitleLength], char title[kMaxAdvancedOptionsMenuEntryTitleLength], uint8_t value)
@@ -1313,6 +1317,9 @@ void runAdvancedOptionsSubMenu(AdvancedOptionsMenu menu)
 
 void handleDebugOptionSelection()
 {
+#ifdef __MEGADRIVE__
+    return;
+#else
     AdvancedOptionsMenu menu;
     initializeAdvancedOptionsMenu(&menu);
 
@@ -1400,6 +1407,7 @@ void handleDebugOptionSelection()
     }
 
     runAdvancedOptionsSubMenu(menu);
+#endif
 }
 
 void buildLevelSetOptionTitle(char output[kMaxAdvancedOptionsMenuEntryTitleLength])
@@ -1431,6 +1439,9 @@ void increaseLevelSet()
 
 void runAdvancedOptionsRootMenu()
 {
+#ifdef __MEGADRIVE__
+    return;
+#else
     AdvancedOptionsMenu menu;
     initializeAdvancedOptionsMenu(&menu);
 
@@ -1611,6 +1622,7 @@ void runAdvancedOptionsRootMenu()
         updateMenuAfterLevelSetChanged();
         gHasChangedLevelSetFromAdvancedMenu = 0;
     }
+#endif
 }
 
 #ifdef __MEGADRIVE__
@@ -1730,6 +1742,7 @@ int SUPAPLEX_MAIN(int argc, char *argv[])
         // loc_46F3E:              //; CODE XREF: start+428j start+444j
         if (shouldSkipFirstPart == 0)
         {
+            kprintf("START GAME???");
             readLevels(); // 01ED:02F7
             fadeToPalette(gBlackPalette);
             gIsGameBusy = 0;
@@ -7624,6 +7637,7 @@ void showCongratulationsScreen() // sub_4B2FC   proc near       ; CODE XREF: han
 
 void handleOkButtonClick() // sub_4B375  proc near       ; CODE XREF: runMainMenu+11Ep
 {
+    kprintf("*** handleOkButtonClick");
     // 01ED:4712
     PlayerEntry currentPlayerEntry = gPlayerListData[gCurrentPlayerIndex];
 
@@ -10052,6 +10066,7 @@ void mapLevelFileData(char *levelFileData, Level *level)
 void readLevels() //  proc near       ; CODE XREF: start:loc_46F3Ep
                   // ; fetchAndInitializeLevelp
 {
+    kprintf("*** readLevels");
     //     // 01ED:68E5
     //     char *filename = "";
     //     FILE *file = NULL;

@@ -1,5 +1,6 @@
 #include "stdio.h"
 #include "../res/resources.h"
+#include "supaplex/globals.h"
 
 int snprintf(char *str, size_t size, const char *format, ...)
 {
@@ -63,7 +64,7 @@ FILE *fopen(const char *filename, const char *mode)
         file->writeable = 0;
         return file;
     }
-    if (strcmp("PLAYER.LST", filename) == 0)
+    else if (strcmp("PLAYER.LST", filename) == 0)
     {
         SRAM_enableRO();
         uint8_t firstByte = SRAM_readByte(PLAYERS_LIST_OFFSET);
@@ -77,6 +78,24 @@ FILE *fopen(const char *filename, const char *mode)
         FILE *file = MEM_alloc(sizeof(FILE));
         strcpy(file->name, filename); // @TODO pladaria: remove, this is for debug purposes
         file->start = PLAYERS_LIST_OFFSET;
+        file->position = 0;
+        file->data = NULL;
+        file->writeable = 1;
+        return file;
+    }
+    else if (strcmp("HALLFAME.LST", filename) == 0) {
+        SRAM_enableRO();
+        uint8_t firstByte = SRAM_readByte(HALL_OF_FAME_OFFSET);
+        SRAM_disable();
+        if (mode[0] == 'r' && firstByte == 0)
+        {
+            kprintf("HALLFAME.LST not initialized");
+            return NULL;
+        }
+        kprintf("HALLFAME.LST initialized");
+        FILE *file = MEM_alloc(sizeof(FILE));
+        strcpy(file->name, filename); // @TODO pladaria: remove, this is for debug purposes
+        file->start = HALL_OF_FAME_OFFSET;
         file->position = 0;
         file->data = NULL;
         file->writeable = 1;
@@ -96,12 +115,14 @@ size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)
     }
     else
     {
-        kprintf("Write to SRAM: '%s'", stream->name);
+        uint16_t pos = stream->start + stream->position;
+        kprintf("Write to SRAM: '%s'; %lu bytes; Position %lu", stream->name, nmemb, pos);
         SRAM_enable();
         for (uint16_t i = 0; i < nmemb; i++)
         {
-            SRAM_writeByte(stream->start + stream->position + i, ((uint8_t *)ptr)[i]);
+            SRAM_writeByte(pos++, ((uint8_t *)ptr)[i]);
         }
+        stream->position += nmemb;
         SRAM_disable();
         return nmemb;
     }

@@ -4,8 +4,9 @@ BLASTEM_WIN := $(HOME)/bin/blastem-win64-0.6.3-pre-a8080240cb92/blastem
 USER_NAME := $(shell id -u ${USER})
 USER_GROUP := $(shell id -g ${USER})
 
-dev: opensupaplex
-	@echo wine $(BLASTEM_WIN) "out\rom.bin"
+dev: opensupaplex blastem
+
+blastem:
 	wine $(BLASTEM_WIN) "out\rom.bin"
 
 dev2: opensupaplex
