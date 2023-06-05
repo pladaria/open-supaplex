@@ -68,7 +68,7 @@ FILE *fopen(const char *filename, const char *mode)
         SRAM_enableRO();
         uint8_t firstByte = SRAM_readByte(PLAYERS_LIST_OFFSET);
         SRAM_disable();
-        if (mode[0] == "r" && firstByte == 0)
+        if (mode[0] == 'r' && firstByte == 0)
         {
             kprintf("PLAYER.LST not initialized");
             return NULL;
@@ -109,12 +109,21 @@ size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)
 
 size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
 {
-    if (stream == NULL) {
+    if (stream == NULL)
+    {
         SYS_die("fread stream is NULL");
     }
     if (stream->writeable == 1)
     {
-        return 0;
+        SRAM_enable();
+        uint16_t pos = stream->start + stream->position;
+        for (uint16_t i = 0; i < nmemb; i++)
+        {
+            ((uint8_t *)ptr)[i] = SRAM_readByte(pos++);
+        }
+        stream->position += nmemb;
+        SRAM_disable();
+        return nmemb;
     }
     else
     {

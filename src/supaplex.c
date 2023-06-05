@@ -6876,7 +6876,11 @@ void handleNewPlayerOptionClick() // sub_4AB1B  proc near       ; CODE XREF: run
     if (gIsForcedCheatMode != 0)
     {
         // jnz short loc_4AB4A
+#ifdef __MEGADRIVE__
+        drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 200, 0, "PLAYER LIST FULL       ");
+#else
         drawTextWithChars6FontWithOpaqueBackgroundIfPossible(168, 127, 6, "PLAYER LIST FULL       ");
+#endif
         return;
     }
 
@@ -6900,7 +6904,11 @@ void handleNewPlayerOptionClick() // sub_4AB1B  proc near       ; CODE XREF: run
     {
         // loc_4AB4A:              ; CODE XREF: handleNewPlayerOptionClick+5j
         //         mov di, 89F7h
+#ifdef __MEGADRIVE__
+            drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 200, 0, "PLAYER LIST FULL       ");
+#else
         drawTextWithChars6FontWithOpaqueBackgroundIfPossible(168, 127, 6, "PLAYER LIST FULL       ");
+#endif
         return;
     }
 
@@ -7045,7 +7053,11 @@ void handleNewPlayerOptionClick() // sub_4AB1B  proc near       ; CODE XREF: run
     // Completely empty name: ignore
     if (strcmp(newPlayerName, "        ") == 0)
     {
+#ifdef __MEGADRIVE__
+            drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 200, 0, "                       ");
+#else
         drawTextWithChars6FontWithOpaqueBackgroundIfPossible(168, 127, 8, "                       ");
+#endif
         saveLastMouseAreaBitmap();
         drawMouseCursor();
         return;
@@ -7056,7 +7068,11 @@ void handleNewPlayerOptionClick() // sub_4AB1B  proc near       ; CODE XREF: run
     //  Name with all dashes: invalid
     if (strcmp(newPlayerName, "--------") == 0)
     {
+#ifdef __MEGADRIVE__
+            drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 200, 0, "INVALID NAME           ");
+#else
         drawTextWithChars6FontWithOpaqueBackgroundIfPossible(168, 127, 6, "INVALID NAME           ");
+#endif
         saveLastMouseAreaBitmap();
         drawMouseCursor();
         return;
@@ -7085,7 +7101,11 @@ void handleNewPlayerOptionClick() // sub_4AB1B  proc near       ; CODE XREF: run
         // loc_4AC73:              ; CODE XREF: handleNewPlayerOptionClick+18Cj
         if (strcmp(player.name, newPlayerName) == 0)
         {
+#ifdef __MEGADRIVE__
+            drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 200, 0, "PLAYER EXISTS          ");
+#else
             drawTextWithChars6FontWithOpaqueBackgroundIfPossible(168, 127, 6, "PLAYER EXISTS          ");
+#endif
             saveLastMouseAreaBitmap();
             drawMouseCursor();
             return;
@@ -7097,7 +7117,11 @@ void handleNewPlayerOptionClick() // sub_4AB1B  proc near       ; CODE XREF: run
     PlayerEntry *newPlayerEntry = &gPlayerListData[gCurrentPlayerIndex];
     memcpy(newPlayerEntry->name, newPlayerName, sizeof(newPlayerName));
 
+#ifdef __MEGADRIVE__
+    drawTextWithChars6FontWithOpaqueBackgroundIfPossible(80, 200, 0, "                       ");
+#else
     drawTextWithChars6FontWithOpaqueBackgroundIfPossible(168, 127, 8, "                       ");
+#endif
     savePlayerListData();
     saveHallOfFameData();
     gShouldAutoselectNextLevelToPlay = 1;
