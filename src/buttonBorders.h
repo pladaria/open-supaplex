@@ -18,31 +18,31 @@
 #ifndef buttonBorders_h
 #define buttonBorders_h
 
-#include <stdint.h>
+// #include <stdint.h>
 
-enum ButtonBorderLineType {
-    ButtonBorderLineTypeHorizontal = 0, // from left to right
-    ButtonBorderLineTypeVertical = 1, // from bottom to top
-    ButtonBorderLineTypeBottomLeftToTopRightDiagonal = 2,
-    ButtonBorderLineTypeTopLeftToBottomRightDiagonal = 3,
-};
+// enum ButtonBorderLineType {
+//     ButtonBorderLineTypeHorizontal = 0, // from left to right
+//     ButtonBorderLineTypeVertical = 1, // from bottom to top
+//     ButtonBorderLineTypeBottomLeftToTopRightDiagonal = 2,
+//     ButtonBorderLineTypeTopLeftToBottomRightDiagonal = 3,
+// };
 
-typedef struct {
-    uint8_t type;
-    uint16_t x;
-    uint16_t y;
-    uint16_t length;
-} ButtonBorderLineDescriptor;
+// typedef struct {
+//     uint8_t type;
+//     uint16_t x;
+//     uint16_t y;
+//     uint16_t length;
+// } ButtonBorderLineDescriptor;
 
-typedef struct {
-    ButtonBorderLineDescriptor lines[15];
-    uint8_t numberOfLines;
-} ButtonBorderDescriptor;
+// typedef struct {
+//     ButtonBorderLineDescriptor lines[15];
+//     uint8_t numberOfLines;
+// } ButtonBorderDescriptor;
 
-#define kNumberOfOptionsMenuBorders 20
-extern const ButtonBorderDescriptor kOptionsMenuBorders[kNumberOfOptionsMenuBorders];
+// #define kNumberOfOptionsMenuBorders 20
+// extern const ButtonBorderDescriptor kOptionsMenuBorders[kNumberOfOptionsMenuBorders];
 
-#define kNumberOfMainMenuButtonBorders 12
-extern const ButtonBorderDescriptor kMainMenuButtonBorders[kNumberOfMainMenuButtonBorders];
+// #define kNumberOfMainMenuButtonBorders 12
+// extern const ButtonBorderDescriptor kMainMenuButtonBorders[kNumberOfMainMenuButtonBorders];
 
 #endif /* buttonBorders_h */

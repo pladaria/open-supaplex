@@ -1,19 +1,19 @@
 /*
-* This file is part of the OpenSupaplex distribution (https://github.com/sergiou87/open-supaplex).
-* Copyright (c) 2020 Sergio Padrino
-*
-* This program is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, version 3.
-*
-* This program is distributed in the hope that it will be useful, but
-* WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-* General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with this program. If not, see <http://www.gnu.org/licenses/>.
-*/
+ * This file is part of the OpenSupaplex distribution (https://github.com/sergiou87/open-supaplex).
+ * Copyright (c) 2020 Sergio Padrino
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #include "graphics.h"
 
@@ -33,32 +33,225 @@ ColorPalette gCurrentPalette;
 // - 3: ???
 //
 ColorPalette gPalettes[kNumberOfPalettes];
-ColorPalette gBlackPalette = { // 60D5h
-    {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0},
-    {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0},
-    {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0},
-    {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0},
+ColorPalette gBlackPalette = {
+    // 60D5h
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
+    {0, 0, 0, 0},
 };
 
 ColorPaletteData gTitlePaletteData = {
-    0x02, 0x03, 0x05, 0x00, 0x0D, 0x0A, 0x04, 0x0C, 0x02, 0x06, 0x06, 0x02, 0x03, 0x09, 0x09, 0x03,
-    0x0B, 0x08, 0x03, 0x06, 0x02, 0x07, 0x07, 0x0A, 0x08, 0x06, 0x0D, 0x09, 0x06, 0x04, 0x0B, 0x01,
-    0x09, 0x01, 0x00, 0x04, 0x0B, 0x01, 0x00, 0x04, 0x0D, 0x01, 0x00, 0x0C, 0x0F, 0x01, 0x00, 0x0C,
-    0x0F, 0x06, 0x04, 0x0C, 0x02, 0x05, 0x06, 0x08, 0x0F, 0x0C, 0x06, 0x0E, 0x0C, 0x0C, 0x0D, 0x0E,
+    0x02,
+    0x03,
+    0x05,
+    0x00,
+    0x0D,
+    0x0A,
+    0x04,
+    0x0C,
+    0x02,
+    0x06,
+    0x06,
+    0x02,
+    0x03,
+    0x09,
+    0x09,
+    0x03,
+    0x0B,
+    0x08,
+    0x03,
+    0x06,
+    0x02,
+    0x07,
+    0x07,
+    0x0A,
+    0x08,
+    0x06,
+    0x0D,
+    0x09,
+    0x06,
+    0x04,
+    0x0B,
+    0x01,
+    0x09,
+    0x01,
+    0x00,
+    0x04,
+    0x0B,
+    0x01,
+    0x00,
+    0x04,
+    0x0D,
+    0x01,
+    0x00,
+    0x0C,
+    0x0F,
+    0x01,
+    0x00,
+    0x0C,
+    0x0F,
+    0x06,
+    0x04,
+    0x0C,
+    0x02,
+    0x05,
+    0x06,
+    0x08,
+    0x0F,
+    0x0C,
+    0x06,
+    0x0E,
+    0x0C,
+    0x0C,
+    0x0D,
+    0x0E,
 };
 
 ColorPaletteData gTitle1PaletteData = {
-    0x00, 0x00, 0x00, 0x00, 0x0F, 0x0F, 0x0F, 0x0F, 0x08, 0x08, 0x08, 0x08, 0x0A, 0x0A, 0x0A, 0x07,
-    0x0A, 0x0A, 0x0A, 0x07, 0x0B, 0x0B, 0x0B, 0x07, 0x0E, 0x01, 0x01, 0x04, 0x09, 0x09, 0x09, 0x07,
-    0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x09, 0x00, 0x00, 0x04, 0x0B, 0x00, 0x00, 0x0C,
-    0x08, 0x08, 0x08, 0x08, 0x05, 0x05, 0x05, 0x08, 0x06, 0x06, 0x06, 0x08, 0x08, 0x08, 0x08, 0x08,
+    0x00,
+    0x00,
+    0x00,
+    0x00,
+    0x0F,
+    0x0F,
+    0x0F,
+    0x0F,
+    0x08,
+    0x08,
+    0x08,
+    0x08,
+    0x0A,
+    0x0A,
+    0x0A,
+    0x07,
+    0x0A,
+    0x0A,
+    0x0A,
+    0x07,
+    0x0B,
+    0x0B,
+    0x0B,
+    0x07,
+    0x0E,
+    0x01,
+    0x01,
+    0x04,
+    0x09,
+    0x09,
+    0x09,
+    0x07,
+    0x08,
+    0x08,
+    0x08,
+    0x08,
+    0x08,
+    0x08,
+    0x08,
+    0x08,
+    0x09,
+    0x00,
+    0x00,
+    0x04,
+    0x0B,
+    0x00,
+    0x00,
+    0x0C,
+    0x08,
+    0x08,
+    0x08,
+    0x08,
+    0x05,
+    0x05,
+    0x05,
+    0x08,
+    0x06,
+    0x06,
+    0x06,
+    0x08,
+    0x08,
+    0x08,
+    0x08,
+    0x08,
 };
 
 ColorPaletteData gTitle2PaletteData = {
-    0x00, 0x00, 0x00, 0x00, 0x0F, 0x0F, 0x0F, 0x0F, 0x06, 0x06, 0x06, 0x08, 0x0A, 0x0A, 0x0A, 0x07,
-    0x0A, 0x0A, 0x0A, 0x07, 0x0B, 0x0B, 0x0B, 0x07, 0x0E, 0x01, 0x01, 0x04, 0x09, 0x09, 0x09, 0x07,
-    0x01, 0x03, 0x07, 0x00, 0x08, 0x08, 0x08, 0x08, 0x09, 0x00, 0x00, 0x04, 0x0B, 0x00, 0x00, 0x0C,
-    0x00, 0x02, 0x0A, 0x01, 0x05, 0x05, 0x05, 0x08, 0x06, 0x06, 0x06, 0x08, 0x08, 0x08, 0x08, 0x07,
+    0x00,
+    0x00,
+    0x00,
+    0x00,
+    0x0F,
+    0x0F,
+    0x0F,
+    0x0F,
+    0x06,
+    0x06,
+    0x06,
+    0x08,
+    0x0A,
+    0x0A,
+    0x0A,
+    0x07,
+    0x0A,
+    0x0A,
+    0x0A,
+    0x07,
+    0x0B,
+    0x0B,
+    0x0B,
+    0x07,
+    0x0E,
+    0x01,
+    0x01,
+    0x04,
+    0x09,
+    0x09,
+    0x09,
+    0x07,
+    0x01,
+    0x03,
+    0x07,
+    0x00,
+    0x08,
+    0x08,
+    0x08,
+    0x08,
+    0x09,
+    0x00,
+    0x00,
+    0x04,
+    0x0B,
+    0x00,
+    0x00,
+    0x0C,
+    0x00,
+    0x02,
+    0x0A,
+    0x01,
+    0x05,
+    0x05,
+    0x05,
+    0x08,
+    0x06,
+    0x06,
+    0x06,
+    0x08,
+    0x08,
+    0x08,
+    0x08,
+    0x07,
 };
 
 #define kBitmapFontCharacter8Width 8
@@ -132,7 +325,7 @@ void readMenuDat() // proc near       ; CODE XREF: readEverything+9p
         exitWithError("Error opening MENU.DAT\n");
     }
 
-//loc_4AAED:             // ; CODE XREF: readMenuDat+8j
+    // loc_4AAED:             // ; CODE XREF: readMenuDat+8j
 
     size_t bytes = fileReadBytes(gMenuBitmapData, sizeof(gMenuBitmapData), file);
     if (bytes < sizeof(gMenuBitmapData))
@@ -140,7 +333,7 @@ void readMenuDat() // proc near       ; CODE XREF: readEverything+9p
         exitWithError("Error reading MENU.DAT\n");
     }
 
-//loc_4AB0B:              // ; CODE XREF: readMenuDat+25j
+    // loc_4AB0B:              // ; CODE XREF: readMenuDat+25j
     if (fclose(file) != 0)
     {
         exitWithError("Error closing MENU.DAT\n");
@@ -148,7 +341,7 @@ void readMenuDat() // proc near       ; CODE XREF: readEverything+9p
 }
 
 void loadMurphySprites() // readMoving  proc near       ; CODE XREF: start:isFastModep
-                    //; start+382p ...
+                         //; start+382p ...
 {
     if (gFastMode == FastModeTypeUltra)
     {
@@ -157,24 +350,24 @@ void loadMurphySprites() // readMoving  proc near       ; CODE XREF: start:isFas
 
     // 01ED:0D84
 
-//loc_479ED:              // ; CODE XREF: loadMurphySprites+27j
+    // loc_479ED:              // ; CODE XREF: loadMurphySprites+27j
 
-// IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
-// IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
-// MOVING.DAT bitmap size is 320x462
-// IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
-// IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+    // IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+    // IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+    // MOVING.DAT bitmap size is 320x462
+    // IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+    // IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
 
     FILE *file = openReadonlyFile("MOVING.DAT", "rb");
 
     if (file == NULL)
     {
-//    loc_47A10:              ; CODE XREF: loadMurphySprites+13j
-//                    ; loadMurphySprites+25j
+        //    loc_47A10:              ; CODE XREF: loadMurphySprites+13j
+        //                    ; loadMurphySprites+25j
         exitWithError("Error opening MOVING.DAT\n");
     }
 
-//loc_47A13:              ; CODE XREF: loadMurphySprites+Ej
+    // loc_47A13:              ; CODE XREF: loadMurphySprites+Ej
 
     // There is an error in the original code, it uses height 464 (which should be
     // harmless in the original implementation since fileReadBytes doesn't fail there, just
@@ -189,10 +382,10 @@ void loadMurphySprites() // readMoving  proc near       ; CODE XREF: start:isFas
             exitWithError("Error reading MOVING.DAT\n");
         }
 
-//loc_47A40:              ; CODE XREF: loadMurphySprites+BAj
+        // loc_47A40:              ; CODE XREF: loadMurphySprites+BAj
         for (int x = 0; x < kMovingBitmapWidth; ++x)
         {
-//loc_47A45:              ; CODE XREF: loadMurphySprites+AEj
+            // loc_47A45:              ; CODE XREF: loadMurphySprites+AEj
             uint32_t destPixelAddress = y * kMovingBitmapWidth + x;
 
             uint8_t sourcePixelAddress = x / 8;
@@ -203,10 +396,7 @@ void loadMurphySprites() // readMoving  proc near       ; CODE XREF: start:isFas
             uint8_t r = (fileData[sourcePixelAddress + 80] >> sourcePixelBitPosition) & 0x1;
             uint8_t i = (fileData[sourcePixelAddress + 120] >> sourcePixelBitPosition) & 0x1;
 
-            uint8_t finalColor = ((b << 0)
-                                  | (g << 1)
-                                  | (r << 2)
-                                  | (i << 3));
+            uint8_t finalColor = ((b << 0) | (g << 1) | (r << 2) | (i << 3));
 
             // Store a copy of the decoded value in a buffer with 4bit per pixel
             gMovingDecodedBitmapData[destPixelAddress] = finalColor;
@@ -217,12 +407,12 @@ void loadMurphySprites() // readMoving  proc near       ; CODE XREF: start:isFas
         exitWithError("Error closing MOVING.DAT\n");
     }
 
-//loc_47AB1:              ; CODE XREF: loadMurphySprites+C5j
-    // IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
-    // IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
-    // FIXED.DAT bitmap size is 640x16
-    // IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
-    // IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+    // loc_47AB1:              ; CODE XREF: loadMurphySprites+C5j
+    //  IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+    //  IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+    //  FIXED.DAT bitmap size is 640x16
+    //  IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+    //  IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
 
     file = openReadonlyFile("FIXED.DAT", "rb");
     if (file == NULL)
@@ -230,7 +420,7 @@ void loadMurphySprites() // readMoving  proc near       ; CODE XREF: start:isFas
         exitWithError("Error opening FIXED.DAT\n");
     }
 
-//loc_47ABE:              //; CODE XREF: loadMurphySprites+D2j
+    // loc_47ABE:              //; CODE XREF: loadMurphySprites+D2j
     uint8_t bitmapData[kFixedBitmapWidth * kFixedBitmapHeight / 2];
     size_t bytes = fileReadBytes(bitmapData, sizeof(bitmapData), file);
     if (bytes < sizeof(bitmapData))
@@ -252,17 +442,14 @@ void loadMurphySprites() // readMoving  proc near       ; CODE XREF: start:isFas
             uint8_t r = (bitmapData[sourcePixelAddress + 160] >> sourcePixelBitPosition) & 0x1;
             uint8_t i = (bitmapData[sourcePixelAddress + 240] >> sourcePixelBitPosition) & 0x1;
 
-            uint8_t finalColor = ((b << 0)
-                                  | (g << 1)
-                                  | (r << 2)
-                                  | (i << 3));
+            uint8_t finalColor = ((b << 0) | (g << 1) | (r << 2) | (i << 3));
 
             // Store a copy of the decoded value in a buffer with 4bit per pixel
             gFixedDecodedBitmapData[destPixelAddress] = finalColor;
         }
     }
 
-//loc_47AD5:              //; CODE XREF: loadMurphySprites+E9j
+    // loc_47AD5:              //; CODE XREF: loadMurphySprites+E9j
     if (fclose(file) != 0)
     {
         exitWithError("Error closing FIXED.DAT\n");
@@ -283,7 +470,7 @@ void readPanelDat() //    proc near       ; CODE XREF: readPanelDat+14j
         exitWithError("Error opening PANEL.DAT\n");
     }
 
-//loc_47B0A:             // ; CODE XREF: readPanelDat+8j
+    // loc_47B0A:             // ; CODE XREF: readPanelDat+8j
     uint8_t bitmapData[kPanelBitmapWidth * kPanelBitmapHeight / 2];
     size_t bytes = fileReadBytes(bitmapData, sizeof(bitmapData), file);
     if (bytes < sizeof(bitmapData))
@@ -305,17 +492,14 @@ void readPanelDat() //    proc near       ; CODE XREF: readPanelDat+14j
             uint8_t r = (bitmapData[sourcePixelAddress + 80] >> sourcePixelBitPosition) & 0x1;
             uint8_t i = (bitmapData[sourcePixelAddress + 120] >> sourcePixelBitPosition) & 0x1;
 
-            uint8_t finalColor = ((b << 0)
-                                  | (g << 1)
-                                  | (r << 2)
-                                  | (i << 3));
+            uint8_t finalColor = ((b << 0) | (g << 1) | (r << 2) | (i << 3));
 
             // Store a copy of the decoded value in a buffer with 4bit per pixel
             gPanelDecodedBitmapData[destPixelAddress] = finalColor;
         }
     }
 
-//loc_47B21:              // ; CODE XREF: readPanelDat+2Bj
+    // loc_47B21:              // ; CODE XREF: readPanelDat+2Bj
     if (fclose(file) != 0)
     {
         exitWithError("Error closing PANEL.DAT\n");
@@ -323,7 +507,7 @@ void readPanelDat() //    proc near       ; CODE XREF: readPanelDat+14j
 }
 
 void readBackDat() // proc near       ; CODE XREF: readBackDat+14j
-                    // ; readEverything+15p
+                   // ; readEverything+15p
 {
     if (gFastMode == FastModeTypeUltra)
     {
@@ -337,14 +521,14 @@ void readBackDat() // proc near       ; CODE XREF: readBackDat+14j
         exitWithError("Error opening BACK.DAT\n");
     }
 
-//loc_47B49:             // ; CODE XREF: readBackDat+8j
+    // loc_47B49:             // ; CODE XREF: readBackDat+8j
     size_t bytes = fileReadBytes(gBackBitmapData, sizeof(gBackBitmapData), file);
     if (bytes < sizeof(gBackBitmapData))
     {
         exitWithError("Error reading BACK.DAT\n");
     }
 
-//loc_47B67:              //; CODE XREF: readBackDat+31j
+    // loc_47B67:              //; CODE XREF: readBackDat+31j
     if (fclose(file) != 0)
     {
         exitWithError("Error closing BACK.DAT\n");
@@ -360,7 +544,7 @@ void readBackDat() // proc near       ; CODE XREF: readBackDat+14j
 //   in the font).
 //
 void readBitmapFonts() //   proc near       ; CODE XREF: readBitmapFonts+14j
-                    // ; readEverything+3p
+                       // ; readEverything+3p
 {
     if (gFastMode == FastModeTypeUltra)
     {
@@ -373,34 +557,34 @@ void readBitmapFonts() //   proc near       ; CODE XREF: readBitmapFonts+14j
         exitWithError("Error opening CHARS6.DAT\n");
     }
 
-//loc_47B90:              // ; CODE XREF: readBitmapFonts+8j
+    // loc_47B90:              // ; CODE XREF: readBitmapFonts+8j
     size_t bytes = fileReadBytes(gChars6BitmapFont, kBitmapFontLength, file);
     if (bytes < kBitmapFontLength)
     {
         exitWithError("Error reading CHARS6.DAT\n");
     }
 
-//loc_47BA7:              // ; CODE XREF: readBitmapFonts+2Bj
+    // loc_47BA7:              // ; CODE XREF: readBitmapFonts+2Bj
     if (fclose(file) != 0)
     {
         exitWithError("Error closing CHARS6.DAT\n");
     }
 
-//loc_47BB5:              //; CODE XREF: readBitmapFonts+39j
+    // loc_47BB5:              //; CODE XREF: readBitmapFonts+39j
     file = openReadonlyFile("CHARS8.DAT", "rb");
     if (file == NULL)
     {
         exitWithError("Error opening CHARS8.DAT\n");
     }
 
-//loc_47BC2:              //; CODE XREF: readBitmapFonts+46j
+    // loc_47BC2:              //; CODE XREF: readBitmapFonts+46j
     bytes = fileReadBytes(gChars8BitmapFont, kBitmapFontLength, file);
     if (bytes < kBitmapFontLength)
     {
         exitWithError("Error reading CHARS8.DAT\n");
     }
 
-//loc_47BD9:             // ; CODE XREF: readBitmapFonts+5Dj
+    // loc_47BD9:             // ; CODE XREF: readBitmapFonts+5Dj
     if (fclose(file) != 0)
     {
         exitWithError("Error closing CHARS8.DAT\n");
@@ -416,15 +600,15 @@ void readAndRenderTitleDat() // proc near  ; CODE XREF: start+2BBp
         exitWithError("Error opening TITLE.DAT\n");
     }
 
-//loc_47C18:              // ; CODE XREF: readAndRenderTitleDat+2Bj
+    // loc_47C18:              // ; CODE XREF: readAndRenderTitleDat+2Bj
 
     const uint8_t kBytesPerRow = kScreenWidth / 2;
     uint8_t fileData[kBytesPerRow];
 
     for (int y = 0; y < kScreenHeight; y++)
     {
-//loc_47C3F:              //; CODE XREF: readAndRenderTitleDat+8Ej
-        // read 160 bytes from title.dat
+        // loc_47C3F:              //; CODE XREF: readAndRenderTitleDat+8Ej
+        //  read 160 bytes from title.dat
         size_t bytesRead = fileReadBytes(fileData, kBytesPerRow, file);
 
         if (bytesRead < kBytesPerRow)
@@ -434,22 +618,19 @@ void readAndRenderTitleDat() // proc near  ; CODE XREF: start+2BBp
 
         for (int x = 0; x < kScreenWidth; ++x)
         {
-//loc_47C54:             // ; CODE XREF: readAndRenderTitleDat+67j
+            // loc_47C54:             // ; CODE XREF: readAndRenderTitleDat+67j
             uint16_t destPixelAddress = y * kScreenWidth + x;
 
             uint8_t sourcePixelAddress = x / 8;
             uint8_t sourcePixelBitPosition = 7 - (x % 8);
 
-//loc_47C59:              ; CODE XREF: readAndRenderTitleDat+88j
+            // loc_47C59:              ; CODE XREF: readAndRenderTitleDat+88j
             uint8_t b = (fileData[sourcePixelAddress + 0] >> sourcePixelBitPosition) & 0x1;
             uint8_t g = (fileData[sourcePixelAddress + 40] >> sourcePixelBitPosition) & 0x1;
             uint8_t r = (fileData[sourcePixelAddress + 80] >> sourcePixelBitPosition) & 0x1;
             uint8_t i = (fileData[sourcePixelAddress + 120] >> sourcePixelBitPosition) & 0x1;
 
-            uint8_t finalColor = ((b << 0)
-                                  | (g << 1)
-                                  | (r << 2)
-                                  | (i << 3));
+            uint8_t finalColor = ((b << 0) | (g << 1) | (r << 2) | (i << 3));
 
             gScreenPixels[destPixelAddress] = finalColor;
         }
@@ -463,7 +644,7 @@ void readAndRenderTitleDat() // proc near  ; CODE XREF: start+2BBp
 
 void readAndRenderTitle1Dat(void)
 {
-//loc_478C0:              // ; CODE XREF: loadScreen2+8j
+    // loc_478C0:              // ; CODE XREF: loadScreen2+8j
     FILE *file = openReadonlyFile("TITLE1.DAT", "rb");
     if (file == NULL)
     {
@@ -475,8 +656,8 @@ void readAndRenderTitle1Dat(void)
 
     for (int y = 0; y < kScreenHeight; y++)
     {
-//loc_478E7:              //; CODE XREF: loadScreen2+6Bj
-        // read 160 bytes from title.dat
+        // loc_478E7:              //; CODE XREF: loadScreen2+6Bj
+        //  read 160 bytes from title.dat
         size_t bytesRead = fileReadBytes(fileData, kBytesPerRow, file);
 
         if (bytesRead < kBytesPerRow)
@@ -496,10 +677,7 @@ void readAndRenderTitle1Dat(void)
             uint8_t r = (fileData[sourcePixelAddress + 80] >> sourcePixelBitPosition) & 0x1;
             uint8_t i = (fileData[sourcePixelAddress + 120] >> sourcePixelBitPosition) & 0x1;
 
-            uint8_t finalColor = ((b << 0)
-                                  | (g << 1)
-                                  | (r << 2)
-                                  | (i << 3));
+            uint8_t finalColor = ((b << 0) | (g << 1) | (r << 2) | (i << 3));
 
             // Copy directly to the screen too
             gScreenPixels[destPixelAddress] = finalColor;
@@ -523,7 +701,7 @@ void readTitle2Dat()
     const uint8_t kBytesPerRow = kScreenWidth / 2;
     uint8_t fileData[kBytesPerRow];
 
-// loc_47978:              //; CODE XREF: loadScreen2+C0j
+    // loc_47978:              //; CODE XREF: loadScreen2+C0j
     for (int y = 0; y < kScreenHeight; y++)
     {
         // loc_47995:              //; CODE XREF: loadScreen2+119j
@@ -537,7 +715,7 @@ void readTitle2Dat()
 
         for (int x = 0; x < kScreenWidth; ++x)
         {
-//loc_479AF:              ; CODE XREF: loadScreen2+113j
+            // loc_479AF:              ; CODE XREF: loadScreen2+113j
             uint16_t destPixelAddress = y * kScreenWidth + x;
 
             uint8_t sourcePixelAddress = x / 8;
@@ -548,10 +726,7 @@ void readTitle2Dat()
             uint8_t r = (fileData[sourcePixelAddress + 80] >> sourcePixelBitPosition) & 0x1;
             uint8_t i = (fileData[sourcePixelAddress + 120] >> sourcePixelBitPosition) & 0x1;
 
-            uint8_t finalColor = ((b << 0)
-                                  | (g << 1)
-                                  | (r << 2)
-                                  | (i << 3));
+            uint8_t finalColor = ((b << 0) | (g << 1) | (r << 2) | (i << 3));
 
             // Store a copy of the decoded value in a buffer with 4bit per pixel
             gTitle2DecodedBitmapData[destPixelAddress] = finalColor;
@@ -583,7 +758,7 @@ void drawLevelViewport(uint16_t x, uint16_t y, uint16_t width, uint16_t height)
 }
 
 void readGfxDat() //  proc near       ; CODE XREF: readGfxDat+14j
-                   // ; readEverything+1Ep
+                  // ; readEverything+1Ep
 {
     if (gFastMode == FastModeTypeUltra)
     {
@@ -596,24 +771,24 @@ void readGfxDat() //  proc near       ; CODE XREF: readGfxDat+14j
         exitWithError("Error opening GFX.DAT\n");
     }
 
-//loc_47DB5:             // ; CODE XREF: readGfxDat+8j
+    // loc_47DB5:             // ; CODE XREF: readGfxDat+8j
     size_t bytes = fileReadBytes(gGfxBitmapData, sizeof(gGfxBitmapData), file);
     if (bytes < sizeof(gGfxBitmapData))
     {
         exitWithError("Error reading GFX.DAT\n");
     }
 
-//loc_47DD3:             // ; CODE XREF: readGfxDat+31j
+    // loc_47DD3:             // ; CODE XREF: readGfxDat+31j
     if (fclose(file) != 0)
     {
         exitWithError("Error closing GFX.DAT\n");
     }
 
-// readGfxDat  endp
+    // readGfxDat  endp
 }
 
 void readControlsDat() // proc near       ; CODE XREF: readControlsDat+14j
-                    // ; readEverything+Cp
+                       // ; readEverything+Cp
 {
     if (gFastMode == FastModeTypeUltra)
     {
@@ -626,14 +801,14 @@ void readControlsDat() // proc near       ; CODE XREF: readControlsDat+14j
         exitWithError("Error opening CONTROLS.DAT\n");
     }
 
-//loc_47DFC:             // ; CODE XREF: readControlsDat+8j
+    // loc_47DFC:             // ; CODE XREF: readControlsDat+8j
     size_t bytes = fileReadBytes(gControlsBitmapData, sizeof(gControlsBitmapData), file);
     if (bytes < sizeof(gControlsBitmapData))
     {
         exitWithError("Error reading CONTROLS.DAT\n");
     }
 
-//loc_47E1A:             // ; CODE XREF: readControlsDat+31j
+    // loc_47E1A:             // ; CODE XREF: readControlsDat+31j
     if (fclose(file) != 0)
     {
         exitWithError("Error closing CONTROLS.DAT\n");
@@ -654,9 +829,7 @@ void saveLastMouseAreaBitmap() // sub_4B85C  proc near       ; CODE XREF: handle
         for (int x = 0; x < kLastMouseCursorAreaSize; ++x)
         {
             uint32_t destAddress = y * kLastMouseCursorAreaSize + x;
-            uint32_t sourceAddress = (gLastMouseCursorOriginAddress
-                                      + y * kScreenWidth
-                                      + x);
+            uint32_t sourceAddress = (gLastMouseCursorOriginAddress + y * kScreenWidth + x);
 
             gLastMouseCursorAreaBitmap[destAddress] = gScreenPixels[sourceAddress];
         }
@@ -673,9 +846,7 @@ void restoreLastMouseAreaBitmap() // sub_4B899  proc near       ; CODE XREF: sta
         for (int x = 0; x < kLastMouseCursorAreaSize; ++x)
         {
             uint32_t destAddress = y * kLastMouseCursorAreaSize + x;
-            uint32_t sourceAddress = (gLastMouseCursorOriginAddress
-                                      + y * kScreenWidth
-                                      + x);
+            uint32_t sourceAddress = (gLastMouseCursorOriginAddress + y * kScreenWidth + x);
 
             gScreenPixels[sourceAddress] = gLastMouseCursorAreaBitmap[destAddress];
         }
@@ -694,9 +865,9 @@ void drawMouseCursor() // sub_4B8BE  proc near       ; CODE XREF: handleNewPlaye
     static const uint32_t kMouseCursorOriginY = 445;
 
     // In the original code, the address below was just 0x1520 (+ the offset for the current frame)
-    const uint32_t kStartMouseCursorAddr = ((kMouseCursorOriginY * kMovingBitmapWidth) // First pixel of the cursor frames in MOVING.DAT
+    const uint32_t kStartMouseCursorAddr = ((kMouseCursorOriginY * kMovingBitmapWidth)                 // First pixel of the cursor frames in MOVING.DAT
                                             + (frameRow * (kMouseCursorSize + 1) * kMovingBitmapWidth) // Y offset depending on the row in which the frame we're gonna draw is. The +1 to the size is because there is 1 pixel separation between rows :shrug:
-                                            + (frameColumn * kMouseCursorSize)); // X offset depending on the column where the frame is
+                                            + (frameColumn * kMouseCursorSize));                       // X offset depending on the column where the frame is
 
     for (int y = 0; y < kMouseCursorSize; ++y)
     {
@@ -714,14 +885,14 @@ void drawMouseCursor() // sub_4B8BE  proc near       ; CODE XREF: handleNewPlaye
 }
 
 void drawMenuBackground() //   proc near       ; CODE XREF: sub_4C407+14p
-                    // ; sub_4C407:scrollLeftToMainMenup ...
+                          // ; sub_4C407:scrollLeftToMainMenup ...
 {
     for (int y = 0; y < kScreenHeight; y++)
     {
-//        loc_4C63E:             // ; CODE XREF: drawMenuBackground+4Dj
+        //        loc_4C63E:             // ; CODE XREF: drawMenuBackground+4Dj
         for (int x = 0; x < kScreenWidth; ++x)
         {
-//loc_4C641:             // ; CODE XREF: drawMenuBackground+47j
+            // loc_4C641:             // ; CODE XREF: drawMenuBackground+47j
             uint32_t destPixelAddress = y * kScreenWidth + x;
 
             uint32_t sourcePixelAddress = y * kScreenWidth / 2 + x / 8;
@@ -732,10 +903,7 @@ void drawMenuBackground() //   proc near       ; CODE XREF: sub_4C407+14p
             uint8_t r = (gMenuBitmapData[sourcePixelAddress + 80] >> sourcePixelBitPosition) & 0x1;
             uint8_t i = (gMenuBitmapData[sourcePixelAddress + 120] >> sourcePixelBitPosition) & 0x1;
 
-            uint8_t finalColor = ((b << 0)
-                                  | (g << 1)
-                                  | (r << 2)
-                                  | (i << 3));
+            uint8_t finalColor = ((b << 0) | (g << 1) | (r << 2) | (i << 3));
 
             gScreenPixels[destPixelAddress] = finalColor;
         }
@@ -773,10 +941,7 @@ void drawFullScreenBitmap(uint8_t *bitmapData, uint8_t *dest)
             uint8_t r = (bitmapData[sourcePixelAddress + 80] >> sourcePixelBitPosition) & 0x1;
             uint8_t i = (bitmapData[sourcePixelAddress + 120] >> sourcePixelBitPosition) & 0x1;
 
-            uint8_t finalColor = ((b << 0)
-                                  | (g << 1)
-                                  | (r << 2)
-                                  | (i << 3));
+            uint8_t finalColor = ((b << 0) | (g << 1) | (r << 2) | (i << 3));
 
             dest[destPixelAddress] = finalColor;
         }
@@ -815,7 +980,7 @@ void drawFixedLevel() // sub_48F6D   proc near       ; CODE XREF: start+335p ru
     {
         for (int x = 0; x < kLevelEdgeSize; ++x)
         {
-//loc_48F86:              ; CODE XREF: drawFixedLevel+20j
+            // loc_48F86:              ; CODE XREF: drawFixedLevel+20j
             size_t srcAddress = (kMovingBitmapTopLeftCornerY + y) * kMovingBitmapWidth + kMovingBitmapTopLeftCornerX + x;
             size_t dstAddress = (y * kLevelBitmapWidth) + x;
             gLevelBitmapData[dstAddress] = gMovingDecodedBitmapData[srcAddress];
@@ -825,10 +990,10 @@ void drawFixedLevel() // sub_48F6D   proc near       ; CODE XREF: start+335p ru
     // Draws top edge
     for (int y = 0; y < kLevelEdgeSize; ++y)
     {
-//loc_48FA0:              ; CODE XREF: drawFixedLevel+41j
+        // loc_48FA0:              ; CODE XREF: drawFixedLevel+41j
         for (int x = kLevelEdgeSize - 1; x < kLevelBitmapWidth - kLevelEdgeSize; ++x)
         {
-//loc_48FA3:              ; CODE XREF: drawFixedLevel+38j
+            // loc_48FA3:              ; CODE XREF: drawFixedLevel+38j
             size_t srcAddress = (kMovingBitmapTopEdgeY + y) * kMovingBitmapWidth + kMovingBitmapTopEdgeX + (x % kLevelEdgeSize);
             size_t dstAddress = (y * kLevelBitmapWidth) + x;
             gLevelBitmapData[dstAddress] = gMovingDecodedBitmapData[srcAddress];
@@ -840,7 +1005,7 @@ void drawFixedLevel() // sub_48F6D   proc near       ; CODE XREF: start+335p ru
     {
         for (int x = kLevelBitmapWidth - 1; x >= kLevelBitmapWidth - kLevelEdgeSize; --x)
         {
-//loc_48FC8:              ; CODE XREF: drawFixedLevel+62j
+            // loc_48FC8:              ; CODE XREF: drawFixedLevel+62j
             int srcX = x - kLevelBitmapWidth + kLevelEdgeSize;
             size_t srcAddress = (kMovingBitmapTopRightCornerY + y) * kMovingBitmapWidth + kMovingBitmapTopRightCornerX + srcX;
             size_t dstAddress = (y * kLevelBitmapWidth) + x;
@@ -851,10 +1016,10 @@ void drawFixedLevel() // sub_48F6D   proc near       ; CODE XREF: start+335p ru
     // Right edge
     for (int y = kLevelEdgeSize - 1; y < kLevelBitmapHeight - kLevelEdgeSize; ++y)
     {
-//loc_48FA0:              ; CODE XREF: drawFixedLevel+41j
+        // loc_48FA0:              ; CODE XREF: drawFixedLevel+41j
         for (int x = kLevelBitmapWidth - 1; x >= kLevelBitmapWidth - kLevelEdgeSize; --x)
         {
-//loc_48FA3:              ; CODE XREF: drawFixedLevel+38j
+            // loc_48FA3:              ; CODE XREF: drawFixedLevel+38j
             int srcX = x - kLevelBitmapWidth + kLevelEdgeSize;
             int srcY = y % kLevelEdgeSize;
             size_t srcAddress = (kMovingBitmapRightEdgeY + srcY) * kMovingBitmapWidth + kMovingBitmapRightEdgeX + srcX;
@@ -868,7 +1033,7 @@ void drawFixedLevel() // sub_48F6D   proc near       ; CODE XREF: start+335p ru
     {
         for (int x = kLevelBitmapWidth - 1; x >= kLevelBitmapWidth - kLevelEdgeSize; --x)
         {
-//loc_48FFE:              ; CODE XREF: drawFixedLevel+98j
+            // loc_48FFE:              ; CODE XREF: drawFixedLevel+98j
             int srcX = x - kLevelBitmapWidth + kLevelEdgeSize;
             int srcY = y - kLevelBitmapHeight + kLevelEdgeSize;
             size_t srcAddress = (kMovingBitmapBottomRightCornerY + srcY) * kMovingBitmapWidth + kMovingBitmapBottomRightCornerX + srcX;
@@ -880,10 +1045,10 @@ void drawFixedLevel() // sub_48F6D   proc near       ; CODE XREF: start+335p ru
     // Bottom edge
     for (int y = kLevelBitmapHeight - 1; y >= kLevelBitmapHeight - kLevelEdgeSize; --y)
     {
-//loc_4901C:              ; CODE XREF: drawFixedLevel+BDj
+        // loc_4901C:              ; CODE XREF: drawFixedLevel+BDj
         for (int x = kLevelEdgeSize - 1; x < kLevelBitmapWidth - kLevelEdgeSize; ++x)
         {
-//loc_4901F:              ; CODE XREF: drawFixedLevel+B4j
+            // loc_4901F:              ; CODE XREF: drawFixedLevel+B4j
             int srcX = x % kLevelEdgeSize;
             int srcY = y - kLevelBitmapHeight + kLevelEdgeSize;
             size_t srcAddress = (kMovingBitmapBottomEdgeY + srcY) * kMovingBitmapWidth + kMovingBitmapBottomEdgeX + srcX;
@@ -896,10 +1061,10 @@ void drawFixedLevel() // sub_48F6D   proc near       ; CODE XREF: start+335p ru
     // Draws left edge
     for (int y = kLevelEdgeSize - 1; y < kLevelBitmapHeight - kLevelEdgeSize; ++y)
     {
-//loc_49047:              ; CODE XREF: drawFixedLevel+EBj
+        // loc_49047:              ; CODE XREF: drawFixedLevel+EBj
         for (int x = 0; x < kLevelEdgeSize; ++x)
         {
-//loc_4904A:              ; CODE XREF: drawFixedLevel+E4j
+            // loc_4904A:              ; CODE XREF: drawFixedLevel+E4j
             int srcY = y % kLevelEdgeSize;
 
             size_t srcAddress = (kMovingBitmapLeftEdgeY + srcY) * kMovingBitmapWidth + kMovingBitmapLeftEdgeX + x;
@@ -914,7 +1079,7 @@ void drawFixedLevel() // sub_48F6D   proc near       ; CODE XREF: start+335p ru
     {
         for (int x = 0; x < kLevelEdgeSize; ++x)
         {
-//loc_49067:              ; CODE XREF: drawFixedLevel+101j
+            // loc_49067:              ; CODE XREF: drawFixedLevel+101j
             int srcY = y - kLevelBitmapHeight + kLevelEdgeSize;
             size_t srcAddress = (kMovingBitmapBottomLeftCornerY + srcY) * kMovingBitmapWidth + kMovingBitmapBottomLeftCornerX + x;
             size_t dstAddress = (y * kLevelBitmapWidth) + x;
@@ -1005,7 +1170,7 @@ void drawMovingSpriteFrameInLevel(uint16_t srcX, uint16_t srcY, uint16_t width, 
 
 // srcX and srcY are the coordinates of the frame to draw in MOVING.DAT
 void drawMovingFrame(uint16_t srcX, uint16_t srcY, uint16_t destPosition) // sub_4F200   proc near       ; CODE XREF: scrollToMurphy+26p
-                   // ; updatePlantedRedDisk+2Ap ...
+                                                                          // ; updatePlantedRedDisk+2Ap ...
 {
     if (gFastMode == FastModeTypeUltra)
     {
@@ -1085,7 +1250,7 @@ void clearAdditionalInfoInGamePanel() // loc_4FD7D:              ; CODE XREF: cl
     uint16_t dstX = 304;
     uint16_t dstY = 14;
 
-//loc_4FD99:              ; CODE XREF: clearAdditionalInfoInGamePanelIfNeeded+3Cj
+    // loc_4FD99:              ; CODE XREF: clearAdditionalInfoInGamePanelIfNeeded+3Cj
     for (int y = 0; y < spriteHeight; ++y)
     {
         uint32_t srcAddress = (srcY + y) * kMovingBitmapWidth + srcX;
@@ -1120,9 +1285,9 @@ void renderAdvancedOptionsMenu(AdvancedOptionsMenu *menu)
     static const uint8_t kEntryTextColorIndex = 254;
     static const uint8_t kSelectedEntryTextColorIndex = 255;
 
-    setGlobalPaletteColor(kTitleTextColorIndex, (Color) { 255, 255, 255 });
-    setGlobalPaletteColor(kEntryTextColorIndex, (Color) { 180, 180, 180 });
-    setGlobalPaletteColor(kSelectedEntryTextColorIndex, (Color) { 224, 16, 16 });
+    setGlobalPaletteColor(kTitleTextColorIndex, (Color){255, 255, 255, 255});
+    setGlobalPaletteColor(kEntryTextColorIndex, (Color){180, 180, 180, 255});
+    setGlobalPaletteColor(kSelectedEntryTextColorIndex, (Color){224, 16, 16, 255});
 
     const uint16_t kMenuTitleX = (kScreenWidth - strlen(menu->title) * kBitmapFontCharacter6Width) / 2;
 
@@ -1133,8 +1298,8 @@ void renderAdvancedOptionsMenu(AdvancedOptionsMenu *menu)
         AdvancedOptionsMenuEntry entries = menu->entries[i];
 
         uint8_t color = (i == menu->selectedEntryIndex
-                         ? kSelectedEntryTextColorIndex
-                         : kEntryTextColorIndex);
+                             ? kSelectedEntryTextColorIndex
+                             : kEntryTextColorIndex);
 
         char *title = entries.title;
 
@@ -1162,14 +1327,14 @@ void drawTextWithChars6FontWithOpaqueBackground(size_t destX, size_t destY, uint
         return;
     }
 
-//loc_4BA9F:             // ; CODE XREF: drawTextWithChars6FontWithOpaqueBackgroundIfPossible+3Bj
+    // loc_4BA9F:             // ; CODE XREF: drawTextWithChars6FontWithOpaqueBackgroundIfPossible+3Bj
     long textLength = strlen(text);
 
     for (long idx = 0; idx < textLength; ++idx)
     {
         char character = text[idx];
 
-//loc_4BA97:             // ; CODE XREF: drawTextWithChars6FontWithOpaqueBackgroundIfPossible+33j
+        // loc_4BA97:             // ; CODE XREF: drawTextWithChars6FontWithOpaqueBackgroundIfPossible+33j
         if (character == '\n')
         {
             return;
@@ -1195,7 +1360,7 @@ void drawTextWithChars6FontWithOpaqueBackground(size_t destX, size_t destY, uint
     }
 }
 
-void drawTextWithChars6FontWithTransparentBackground(size_t destX, size_t destY, uint8_t color, const char *text)  // loc_4BE1E:             // ; CODE XREF: drawTextWithChars6FontWithTransparentBackgroundIfPossible:loc_4BF46j
+void drawTextWithChars6FontWithTransparentBackground(size_t destX, size_t destY, uint8_t color, const char *text) // loc_4BE1E:             // ; CODE XREF: drawTextWithChars6FontWithTransparentBackgroundIfPossible:loc_4BF46j
 {
     if (gFastMode == FastModeTypeUltra)
     {
@@ -1207,14 +1372,14 @@ void drawTextWithChars6FontWithTransparentBackground(size_t destX, size_t destY,
         return;
     }
 
-//loc_4BE30:             // ; CODE XREF: drawTextWithChars6FontWithTransparentBackgroundIfPossible+3Bj
+    // loc_4BE30:             // ; CODE XREF: drawTextWithChars6FontWithTransparentBackgroundIfPossible+3Bj
     long textLength = strlen(text);
 
     for (long idx = 0; idx < textLength; ++idx)
     {
         char character = text[idx];
 
-//loc_4BA97:             // ; CODE XREF: drawTextWithChars6FontWithOpaqueBackgroundIfPossible+33j
+        // loc_4BA97:             // ; CODE XREF: drawTextWithChars6FontWithOpaqueBackgroundIfPossible+33j
         if (character == '\n')
         {
             return;
@@ -1255,20 +1420,20 @@ void drawTextWithChars8FontToBuffer(uint8_t *buffer, size_t destX, size_t destY,
     // - si is the text to be rendered
     // - ah is the color index in the current palette
 
-//loc_4FEBE:              ; CODE XREF: drawTextWithChars8Font_method1+1C3j
+    // loc_4FEBE:              ; CODE XREF: drawTextWithChars8Font_method1+1C3j
     if (text[0] == '\0')
     {
         return;
     }
 
-//loc_4FED0:              ; CODE XREF: drawTextWithChars8Font_method1+2Fj
+    // loc_4FED0:              ; CODE XREF: drawTextWithChars8Font_method1+2Fj
     long textLength = strlen(text);
 
     for (long idx = 0; idx < textLength; ++idx)
     {
         char character = text[idx];
 
-//loc_4FEC8:              ; CODE XREF: drawTextWithChars8Font_method1+27j
+        // loc_4FEC8:              ; CODE XREF: drawTextWithChars8Font_method1+27j
         if (character == '\n')
         {
             return;
@@ -1306,7 +1471,7 @@ void drawTextWithChars8FontToGamePanel(size_t destX, size_t destY, uint8_t color
 
 void limitFPS()
 {
-    #define kMaximumFPS 70.0
+#define kMaximumFPS 70.0
     static const double kFrameDuration = 1000.0 / kMaximumFPS;
     static uint32_t sLastFrameTime = 0;
 
@@ -1317,18 +1482,21 @@ void limitFPS()
 
     if (sLastFrameTime != 0)
     {
-        uint32_t duration = (getTime() - sLastFrameTime);
+        uint32_t duration = (getTicks() - sLastFrameTime);
         if (duration < kFrameDuration)
         {
             waitTime(kFrameDuration - duration);
         }
     }
 
-    sLastFrameTime = getTime();
+    sLastFrameTime = getTicks();
 }
 
 void videoLoop() //   proc near       ; CODE XREF: crt?2+52p crt?1+3Ep ...
 {
+#ifdef __MEGADRIVE__
+    return;
+#else
     if (gShouldShowFPS)
     {
         char frameRateString[5] = "";
@@ -1353,19 +1521,20 @@ void videoLoop() //   proc near       ; CODE XREF: crt?2+52p crt?1+3Ep ...
 
     if (gFrameRateReferenceTime == 0)
     {
-        gFrameRateReferenceTime = getTime();
+        gFrameRateReferenceTime = getTicks();
     }
     else
     {
-        uint32_t difference = getTime() - gFrameRateReferenceTime;
+        uint32_t difference = getTicks() - gFrameRateReferenceTime;
 
         if (difference > 1000)
         {
             gFrameRate = sNumberOfFrames * 1000.f / difference;
             sNumberOfFrames = 0;
-            gFrameRateReferenceTime = getTime();
+            gFrameRateReferenceTime = getTicks();
         }
     }
+#endif
 }
 
 void convertPaletteDataToPalette(ColorPaletteData paletteData, ColorPalette outPalette)
@@ -1381,7 +1550,7 @@ void convertPaletteDataToPalette(ColorPaletteData paletteData, ColorPalette outP
     }
 }
 
-void readPalettes()  // proc near       ; CODE XREF: readEverythingp
+void readPalettes() // proc near       ; CODE XREF: readEverythingp
 {
     if (gFastMode == FastModeTypeUltra)
     {
@@ -1394,7 +1563,7 @@ void readPalettes()  // proc near       ; CODE XREF: readEverythingp
         exitWithError("Error opening PALETTES.DAT\n");
     }
 
-//loc_4779F:              // ; CODE XREF: readPalettes+8j
+    // loc_4779F:              // ; CODE XREF: readPalettes+8j
     ColorPaletteData palettesDataBuffer[kNumberOfPalettes];
     size_t bytes = fileReadBytes(palettesDataBuffer, sizeof(ColorPaletteData) * kNumberOfPalettes, file);
     if (bytes == 0)
@@ -1407,7 +1576,7 @@ void readPalettes()  // proc near       ; CODE XREF: readEverythingp
         convertPaletteDataToPalette(palettesDataBuffer[i], gPalettes[i]);
     }
 
-//loc_477B6:              //; CODE XREF: readPalettes+2Bj
+    // loc_477B6:              //; CODE XREF: readPalettes+2Bj
     if (fclose(file) != 0)
     {
         exitWithError("Error closing PALETTES.DAT\n");
@@ -1448,7 +1617,7 @@ void fadeToPalette(ColorPalette palette) //        proc near       ; CODE XREF: 
             uint8_t g = (palette[i].g * animationFactor) + (gCurrentPalette[i].g * complementaryAnimationFactor);
             uint8_t b = (palette[i].b * animationFactor) + (gCurrentPalette[i].b * complementaryAnimationFactor);
 
-            intermediatePalette[i] = (Color) { r, g, b, 255};
+            intermediatePalette[i] = (Color){r, g, b, 255};
         }
 
         setColorPalette(intermediatePalette);
@@ -1465,8 +1634,8 @@ void replaceCurrentPaletteColor(uint8_t index, Color color)
     setPalette(gCurrentPalette);
 }
 
-void setPalette(ColorPalette palette) // sub_4D836   proc near       ; CODE XREF: start+2B8p
-                   // ; loadScreen2+B5p ...
+void setPalette(const ColorPalette palette) // sub_4D836   proc near       ; CODE XREF: start+2B8p
+                                            // ; loadScreen2+B5p ...
 {
     setColorPalette(palette);
     memcpy(gCurrentPalette, palette, sizeof(ColorPalette));
@@ -1474,12 +1643,12 @@ void setPalette(ColorPalette palette) // sub_4D836   proc near       ; CODE XREF
 
 void startTrackingRenderDeltaTime()
 {
-    gRenderDeltaTime = getTime();
+    gRenderDeltaTime = getTicks();
 }
 
 uint32_t updateRenderDeltaTime()
 {
-    uint32_t duration = getTime() - gRenderDeltaTime;
-    gRenderDeltaTime = getTime();
+    uint32_t duration = getTicks() - gRenderDeltaTime;
+    gRenderDeltaTime = getTicks();
     return duration;
 }

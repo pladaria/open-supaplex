@@ -21,9 +21,15 @@
 #include <stdint.h>
 
 #define kScreenWidth 320
+#ifdef __MEGADRIVE__
+#define kScreenHeight 224
+Sprite *cursorSprite;
+#else
 #define kScreenHeight 200
+#endif
 
-typedef struct
+// force alignment because in megadrive we will cast to uint32_t
+typedef struct __attribute__((aligned(4)))
 {
     uint8_t r;
     uint8_t g;

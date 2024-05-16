@@ -49,6 +49,7 @@ char gRankingTextEntries[kNumberOfPlayers + 4][kRankingEntryTextLength] = { //0x
     "003 SUPAPLEX 000:00:00",
     "004 SUPAPLEX 000:00:00",
     "005 SUPAPLEX 000:00:00",
+#ifndef __MEGADRIVE__
     "006 SUPAPLEX 000:00:00",
     "007 SUPAPLEX 000:00:00",
     "008 SUPAPLEX 000:00:00",
@@ -64,6 +65,7 @@ char gRankingTextEntries[kNumberOfPlayers + 4][kRankingEntryTextLength] = { //0x
     "018 SUPAPLEX 000:00:00",
     "019 SUPAPLEX 000:00:00",
     "020 SUPAPLEX 000:00:00",
+#endif
     "                      ",
     "                      ",
 };
@@ -154,7 +156,7 @@ uint16_t gDemoIndexOrDemoLevelNumber = 0; // word_510E6
 uint16_t gMurphyPositionX = 0; // word_510E8
 uint16_t gMurphyPositionY = 0; // word_510EA
 uint16_t gMurphyCounterToStartPushAnimation = 0;
-MurphyAnimationDescriptor gCurrentMurphyAnimation; // -> starts at 0x0DE0
+// MurphyAnimationDescriptor gCurrentMurphyAnimation; // -> starts at 0x0DE0
 uint8_t gNumberOfRemainingInfotrons = 0; // byte_5195A
 uint8_t gTotalNumberOfInfotrons = 0; // byte_5195B
 uint8_t gNumberOfRemainingRedDisks = 0; // byte_5195C

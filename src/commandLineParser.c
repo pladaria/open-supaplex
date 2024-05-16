@@ -218,6 +218,8 @@ void handlePrintHelpOption(void)
 
 void handleForceLevelSetOption(void)
 {
+#if __MEGADRIVE__
+#else
     // Force level SET number at start (nn=0...99), else original set
     int numberValue = atoi(optarg);
     if (numberValue < 0 || numberValue > 99)
@@ -240,6 +242,7 @@ void handleForceLevelSetOption(void)
     {
         strcpy(&gSavegameSavFilename[10], newSuffix);
     }
+#endif
 }
 
 void handleForceLevelNumberOption(void)
@@ -297,107 +300,107 @@ void handleEnableTestModeOption(void)
 
 void handlePlayDemoFile(FastModeType fastModeType)
 {
-    strcpy(demoFileName, optarg);
+//     strcpy(demoFileName, optarg);
 
-    FILE *file = openWritableFileWithReadonlyFallback(demoFileName, "rb");
-    if (file == NULL)
-    {
-        if (fastModeType != FastModeTypeNone)
-        {
-            spLogDemo("\"@\"-ERROR: Bad or missing file %s. %s", demoFileName, strerror(errno));
-            exit(1);
-        }
+//     FILE *file = openWritableFileWithReadonlyFallback(demoFileName, "rb");
+//     if (file == NULL)
+//     {
+//         if (fastModeType != FastModeTypeNone)
+//         {
+//             spLogDemo("\"@\"-ERROR: Bad or missing file %s. %s", demoFileName, strerror(errno));
+//             exit(1);
+//         }
 
-        strcpy(demoFileName, "");
-        gIsSPDemoAvailableToRun = 0;
-        return;
-    }
+//         strcpy(demoFileName, "");
+//         gIsSPDemoAvailableToRun = 0;
+//         return;
+//     }
 
-    long fileLength = 0;
+//     long fileLength = 0;
 
-    if (fseek(file, 0, SEEK_END) != 0)
-    {
-        fclose(file);
-    }
-    else
-    {
-        fileLength = ftell(file);
+//     if (fseek(file, 0, SEEK_END) != 0)
+//     {
+//         fclose(file);
+//     }
+//     else
+//     {
+//         fileLength = ftell(file);
 
-        if (fileLength >= kLevelDataLength)
-        {
-            fclose(file);
-        }
-    }
+//         if (fileLength >= kLevelDataLength)
+//         {
+//             fclose(file);
+//         }
+//     }
 
-    gSelectedOriginalDemoFromCommandLineLevelNumber = 0;
+//     gSelectedOriginalDemoFromCommandLineLevelNumber = 0;
 
-    if (fileLength > kMaxBaseDemoSize + kMaxDemoSignatureSize + kLevelDataLength)
-    {
-//lookForAtSignInCommandLine:              //; CODE XREF: start+A6j start+ABj
-        if (fastModeType != FastModeTypeNone)
-        {
-            spLogDemo("!! File >> Demo: %s", demoFileName); // (meaning: file too long)
-            exit(1);
-        }
-        else
-        {
-            strcpy(demoFileName, "");
-            gIsSPDemoAvailableToRun = 0;
-            return;
-        }
-    }
+//     if (fileLength > kMaxBaseDemoSize + kMaxDemoSignatureSize + kLevelDataLength)
+//     {
+// //lookForAtSignInCommandLine:              //; CODE XREF: start+A6j start+ABj
+//         if (fastModeType != FastModeTypeNone)
+//         {
+//             spLogDemo("!! File >> Demo: %s", demoFileName); // (meaning: file too long)
+//             exit(1);
+//         }
+//         else
+//         {
+//             strcpy(demoFileName, "");
+//             gIsSPDemoAvailableToRun = 0;
+//             return;
+//         }
+//     }
 
-    if (fileLength < kLevelDataLength) // all demo files with the new format are greater than a level (1536 bytes)
-    {
-// loc_46CB7:              //; CODE XREF: start:loc_46CADj
-        gSelectedOriginalDemoFromCommandLineLevelNumber = getLevelNumberFromOriginalDemoFile(file, fileLength);
+//     if (fileLength < kLevelDataLength) // all demo files with the new format are greater than a level (1536 bytes)
+//     {
+// // loc_46CB7:              //; CODE XREF: start:loc_46CADj
+//         gSelectedOriginalDemoFromCommandLineLevelNumber = getLevelNumberFromOriginalDemoFile(file, fileLength);
 
-        fclose(file);
+//         fclose(file);
 
-        if (gSelectedOriginalDemoFromCommandLineLevelNumber != 0)
-        {
-//loc_46CF6:              //; CODE XREF: start+C2j
-            fileIsDemo = 1;
-            gIsSPDemoAvailableToRun = 2;
-        }
-        else
-        {
-            if (fastModeType != FastModeTypeNone)
-            {
-                spLogDemo("!! File < Level: %s", demoFileName); // (meaning: file too short)
-                exit(1);
-            }
-            else
-            {
-                strcpy(demoFileName, "");
-                gIsSPDemoAvailableToRun = 0;
-                return;
-            }
-        }
-    }
-//loc_46CF4:              //; CODE XREF: start+B4j
-    else if (fileLength == kLevelDataLength) // all demo files are greater than a level (1536 bytes)
-    {
-//loc_46CFB:              //; CODE XREF: start:loc_46CF4j
-        gIsSPDemoAvailableToRun = 2;
-    }
-    else
-    {
-//loc_46CF6:              //; CODE XREF: start+C2j
-        fileIsDemo = 1;
-        gIsSPDemoAvailableToRun = 2;
-    }
+//         if (gSelectedOriginalDemoFromCommandLineLevelNumber != 0)
+//         {
+// //loc_46CF6:              //; CODE XREF: start+C2j
+//             fileIsDemo = 1;
+//             gIsSPDemoAvailableToRun = 2;
+//         }
+//         else
+//         {
+//             if (fastModeType != FastModeTypeNone)
+//             {
+//                 spLogDemo("!! File < Level: %s", demoFileName); // (meaning: file too short)
+//                 exit(1);
+//             }
+//             else
+//             {
+//                 strcpy(demoFileName, "");
+//                 gIsSPDemoAvailableToRun = 0;
+//                 return;
+//             }
+//         }
+//     }
+// //loc_46CF4:              //; CODE XREF: start+B4j
+//     else if (fileLength == kLevelDataLength) // all demo files are greater than a level (1536 bytes)
+//     {
+// //loc_46CFB:              //; CODE XREF: start:loc_46CF4j
+//         gIsSPDemoAvailableToRun = 2;
+//     }
+//     else
+//     {
+// //loc_46CF6:              //; CODE XREF: start+C2j
+//         fileIsDemo = 1;
+//         gIsSPDemoAvailableToRun = 2;
+//     }
 
-    if (fastModeType != FastModeTypeNone)
-    {
-//demoFileNotMissing:              //; CODE XREF: start+10Bj
-        if (fileIsDemo != 1)
-        {
-            spLogDemo("SP without demo: %s", demoFileName); // (meaning: level only)
-            exit(1);
-        }
+//     if (fastModeType != FastModeTypeNone)
+//     {
+// //demoFileNotMissing:              //; CODE XREF: start+10Bj
+//         if (fileIsDemo != 1)
+//         {
+//             spLogDemo("SP without demo: %s", demoFileName); // (meaning: level only)
+//             exit(1);
+//         }
 
-//spHasAtAndDemo:              //; CODE XREF: start+11Cj
-        gFastMode = fastModeType;
-    }
+// //spHasAtAndDemo:              //; CODE XREF: start+11Cj
+//         gFastMode = fastModeType;
+//     }
 }

@@ -28,7 +28,7 @@ uint8_t isOld3DSSystem(void);
 void exitWithError(const char *format, ...);
 
 void handleSystemEvents(void);
-uint32_t getTime(void);
+uint32_t getTicks(void);
 void waitTime(uint32_t time);
 
 #endif /* system_h */

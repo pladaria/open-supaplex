@@ -1,0 +1,4 @@
+out
+src/supaplex/**
+!src/supaplex/README.txt
+*_opt.png

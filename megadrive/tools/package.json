@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@types/node": "^20.1.4"
+  },
+  "dependencies": {
+    "jimp": "^0.22.8"
+  }
+}

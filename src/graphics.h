@@ -1,19 +1,19 @@
 /*
-* This file is part of the OpenSupaplex distribution (https://github.com/sergiou87/open-supaplex).
-* Copyright (c) 2020 Sergio Padrino
-*
-* This program is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, version 3.
-*
-* This program is distributed in the hope that it will be useful, but
-* WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-* General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with this program. If not, see <http://www.gnu.org/licenses/>.
-*/
+ * This file is part of the OpenSupaplex distribution (https://github.com/sergiou87/open-supaplex).
+ * Copyright (c) 2020 Sergio Padrino
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #ifndef graphics_h
 #define graphics_h
@@ -38,16 +38,16 @@ extern ColorPalette gCurrentPalette;
 // - 3: ???
 //
 extern ColorPalette gPalettes[kNumberOfPalettes];
-extern ColorPalette gBlackPalette; // 60D5h
+extern const ColorPalette gBlackPalette; // 60D5h
 
 #define gInformationScreenPalette gPalettes[0]
-#define gGamePalette gPalettes[1] // 0x6015
+#define gGamePalette gPalettes[1]           // 0x6015
 #define gControlsScreenPalette gPalettes[2] // 0x6055
-#define gGameDimmedPalette gPalettes[3] // 6095h
+#define gGameDimmedPalette gPalettes[3]     // 6095h
 
-extern ColorPaletteData gTitlePaletteData;
-extern ColorPaletteData gTitle1PaletteData;
-extern ColorPaletteData gTitle2PaletteData;
+extern const ColorPaletteData gTitlePaletteData;
+extern const ColorPaletteData gTitle1PaletteData;
+extern const ColorPaletteData gTitle2PaletteData;
 
 #define kBitmapFontCharacterHeight 7
 #define kBitmapFontCharacter6Width 6
@@ -57,7 +57,11 @@ extern ColorPaletteData gTitle2PaletteData;
 #define kPanelBitmapHeight 24
 extern uint8_t gCurrentPanelHeight;
 
-#define kFullScreenFramebufferLength (kScreenWidth * kScreenHeight) // We only use 16 colors, but SDL doesn't support that mode, so we use 256 colors
+#ifdef __MEGADRIVE__
+#define kFullScreenFramebufferLength 1
+#else
+#define kFullScreenFramebufferLength (kScreenWidth * kScreenHeight) /* We only use 16 colors, but SDL doesn't support that mode, so we use 256 colors */
+#endif
 
 // This buffer has the contents of TITLE2.DAT after it's been "decoded" (i.e. after picking the different channels
 // every 40 bytes and forming the 4 bit palette index for each pixel).
@@ -116,9 +120,9 @@ void videoLoop(void);
 
 void readPalettes(void);
 void replaceCurrentPaletteColor(uint8_t index, Color color);
-void setPalette(ColorPalette palette);
-void fadeToPalette(ColorPalette palette);
-void convertPaletteDataToPalette(ColorPaletteData paletteData, ColorPalette outPalette);
+void setPalette(const ColorPalette palette);
+void fadeToPalette(const ColorPalette palette);
+void convertPaletteDataToPalette(const ColorPaletteData paletteData, ColorPalette outPalette);
 
 void startTrackingRenderDeltaTime(void);
 uint32_t updateRenderDeltaTime(void);

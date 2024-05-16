@@ -38,19 +38,19 @@ void getReadonlyFilePath(const char *pathname, char outPath[kMaxFilePathLength])
         strncpy(outPath, pathname, kMaxFilePathLength);
         return;
     }
-    
+
     // This can be used to ignore /usr/share and just use local dir
     // Unfortunately, with current Makefile there's no way to build test
     // separately from the main executable, so this allows to run tests during
     // emerge on Gentoo before installing the package.
     char *path = getenv("OPENSUPAPLEX_PATH");
-    
-    if (path && *path) 
+
+    if (path && *path)
     {
         snprintf(outPath, kMaxFilePathLength, "%s/%s", path, pathname);
         return;
     }
-    
+
     snprintf(outPath, kMaxFilePathLength, "%s/%s", FILE_BASE_PATH, pathname);
 }
 
@@ -73,18 +73,18 @@ static int mkdir_p(const char *path)
         errno = ENAMETOOLONG;
         return -1;
     }
-    
+
     strcpy(_path, path);
 
     /* Iterate the string */
-    for (p = _path + 1; *p; p++) 
+    for (p = _path + 1; *p; p++)
     {
-        if (*p == '/') 
+        if (*p == '/')
         {
             /* Temporarily truncate */
             *p = '\0';
 
-            if (mkdir(_path, S_IRWXU) != 0) 
+            if (mkdir(_path, S_IRWXU) != 0)
             {
                 if (errno != EEXIST)
                 {
@@ -96,7 +96,7 @@ static int mkdir_p(const char *path)
         }
     }
 
-    if (mkdir(_path, S_IRWXU) != 0) 
+    if (mkdir(_path, S_IRWXU) != 0)
     {
         if (errno != EEXIST)
         {
@@ -109,33 +109,33 @@ static int mkdir_p(const char *path)
 
 void getWritableFilePath(const char *pathname, char outPath[kMaxFilePathLength])
 {
-    if (pathname[0] == '/') 
+    if (pathname[0] == '/')
     {
         strncpy(outPath, pathname, kMaxFilePathLength);
         return;
     }
-    
+
     char *path = getenv("OPENSUPAPLEX_PATH");
-    
-    if (path && *path) 
+
+    if (path && *path)
     {
         getReadonlyFilePath(pathname, outPath);
         return;
     }
-    
+
     char *xdg = getenv("XDG_DATA_HOME");
     char *home = getenv("HOME");
     char dirPath[kMaxFilePathLength] = {};
-    
-    if (xdg && *xdg) 
+
+    if (xdg && *xdg)
     {
         snprintf(dirPath, kMaxFilePathLength, "%s/OpenSupaplex", xdg);
-    } 
-    else if (home && *home) 
+    }
+    else if (home && *home)
     {
         snprintf(dirPath, kMaxFilePathLength, "%s/.local/share/OpenSupaplex", home);
     }
-    
+
     mkdir_p(dirPath);
     snprintf(outPath, kMaxFilePathLength, "%s/%s", dirPath, pathname);
 }
@@ -177,6 +177,8 @@ FILE *openWritableFile(const char *pathname, const char *mode)
 #define FILE_BASE_PATH "/apps/OpenSupaplex/"
 #elif defined(__WIIU__)
 #define FILE_BASE_PATH "fs:/vol/external01/wiiu/apps/OpenSupaplex/"
+#elif defined(__MEGADRIVE__)
+#include "genesis.h"
 #else
 #define FILE_BASE_PATH ""
 #endif
@@ -187,12 +189,23 @@ FILE *openWritableFile(const char *pathname, const char *mode)
 
 void getReadonlyFilePath(const char *pathname, char outPath[kMaxFilePathLength])
 {
+#ifdef __MEGADRIVE__
+    // return as is
+    strcpy(outPath, pathname);
+#else
     snprintf(outPath, kMaxFilePathLength, FILE_BASE_PATH "%s", pathname);
+#endif
 }
 
 void getWritableFilePath(const char *pathname, char outPath[kMaxFilePathLength])
 {
+#ifdef __MEGADRIVE__
+    // return as is
+    strcpy(outPath, pathname);
+
+#else
     snprintf(outPath, kMaxFilePathLength, FILE_BASE_WRITABLE_PATH "%s", pathname);
+#endif
 }
 
 FILE *openReadonlyFile(const char *pathname, const char *mode)
@@ -204,13 +217,15 @@ FILE *openReadonlyFile(const char *pathname, const char *mode)
 
 FILE *openWritableFile(const char *pathname, const char *mode)
 {
+// #ifdef __MEGADRIVE__
+//     return fopen(pathname, mode);
+// #endif
     // Create base folder in a writable area
 #ifdef __vita__
     sceIoMkdir(FILE_BASE_WRITABLE_PATH, 0777);
 #elif defined(__riscos__) || defined(_3DS)
     mkdir(FILE_BASE_WRITABLE_PATH, 0777);
 #endif
-
     char finalPathname[kMaxFilePathLength];
     getWritableFilePath(pathname, finalPathname);
     return fopen(finalPathname, mode);
